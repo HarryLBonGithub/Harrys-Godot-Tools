@@ -1,0 +1,25 @@
+2a60927148abd1d33b818b535e306557
+::res://::1692578154
+icon.svg::CompressedTexture2D::8360453262726188600::1692578138::1692578154::1::::<><>::
+::res://Character Controllers/::1692578138
+FPSCharacterController.gd::GDScript::-1::1692578138::0::1::::<>CharacterBody3D<>::
+fps_character_controller.tscn::PackedScene::934947315899202677::1692578138::0::1::::<><>::res://Character Controllers/FPSCharacterController.gd
+fps_character_controller_extended.tscn::PackedScene::4421850089830894438::1692578138::0::1::::<><>::res://Character Controllers/FPSCharacterController.gd<>uid://cg3obfppionlq<>uid://cgh22dltjhw5u
+::res://Characters/::1692578138
+::res://Characters/Dummy/::1692578138
+dummy.tscn::PackedScene::8507089550802717638::1692578138::0::1::::<><>::uid://cmvaqhtumtknu
+::res://HUD Items/::1692578138
+::res://HUD Items/Info Checker/::1692578138
+cursor_hint.gd::GDScript::-1::1692578138::0::1::::<>Node<>::
+cursor_hint.tscn::PackedScene::5658488394520562574::1692578138::0::1::::<><>::res://HUD Items/Info Checker/cursor_hint.gd
+info_checker.gd::GDScript::-1::1692578138::0::1::::<>RayCast3D<>::
+info_checker.tscn::PackedScene::5210112824171442256::1692578138::0::1::::<><>::res://HUD Items/Info Checker/info_checker.gd
+::res://Props/::1692578138
+::res://Props/Handhelds/::1692578138
+::res://Props/Handhelds/Basic Flashlight/::1692578138
+basic_flashlight.gd::GDScript::-1::1692578138::0::1::::<>Node3D<>::
+basic_flashlight.tscn::PackedScene::5252629116502310218::1692578138::0::1::::<><>::res://Props/Handhelds/Basic Flashlight/basic_flashlight.gd<>uid://cj2vn66jxnpp
+Click.mp3::AudioStreamMP3::160634679653233577::1692578138::1692578154::1::::<><>::
+::res://Testing Rooms/::1692578138
+testing_rooms.gd::GDScript::-1::1692578138::0::1::::<>Node3D<>::
+testing_room_alpha.tscn::PackedScene::6348619543249823169::1692578138::0::1::::<><>::res://Testing Rooms/testing_rooms.gd<>uid://cmvaqhtumtknu<>uid://b388hwbai2xk5<>uid://dtg5r0ox5x83s
