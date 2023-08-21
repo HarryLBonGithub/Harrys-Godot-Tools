@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cj2vn66jxnpp"
+path="res://.godot/imported/Click.mp3-a3452a156506abeb605d146027b489cd.mp3str"
+
+[deps]
+
+source_file="res://Props/Handhelds/Basic Flashlight/Click.mp3"
+dest_files=["res://.godot/imported/Click.mp3-a3452a156506abeb605d146027b489cd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

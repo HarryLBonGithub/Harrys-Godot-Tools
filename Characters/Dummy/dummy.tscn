@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtg5r0ox5x83s"]
+
+[ext_resource type="PackedScene" uid="uid://cmvaqhtumtknu" path="res://HUD Items/Info Checker/cursor_hint.tscn" id="1_kn546"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jvcyp"]
+radius = 0.4
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ow8dd"]
+radius = 0.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1rtnm"]
+albedo_color = Color(0.827451, 0, 0.219608, 1)
+
+[node name="Dummy" type="CharacterBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_jvcyp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_ow8dd")
+surface_material_override/0 = SubResource("StandardMaterial3D_1rtnm")
+
+[node name="CursorHint" parent="." instance=ExtResource("1_kn546")]
+hint = "Dummy"

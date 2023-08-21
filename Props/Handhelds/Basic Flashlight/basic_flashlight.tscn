@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg3obfppionlq"]
+
+[ext_resource type="Script" path="res://Props/Handhelds/Basic Flashlight/basic_flashlight.gd" id="1_askgy"]
+[ext_resource type="AudioStream" uid="uid://cj2vn66jxnpp" path="res://Props/Handhelds/Basic Flashlight/Click.mp3" id="2_xy3bm"]
+
+[node name="BasicFlashlight" type="SpotLight3D"]
+visible = false
+shadow_enabled = true
+spot_angle = 14.3196
+script = ExtResource("1_askgy")
+
+[node name="clickSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_xy3bm")
+max_db = -4.0
