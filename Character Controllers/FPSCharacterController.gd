@@ -17,6 +17,8 @@ extends CharacterBody3D
 @export var gravityInput = 9.8 * 1
 @onready var gravityActual = gravityInput * -1
 
+@export var floorCheck = false
+
 #movement toggles
 @export var movementEnabled = true
 @export var lookEnabled = true
@@ -36,12 +38,18 @@ var playerVelocity = Vector3()
 
 #node variables
 @onready var cameraNode = $Head/PlayerCamera
+@onready var floorCheckNode = $FloorCheck
 
 
 
 func _ready():
 	
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	
+	if not floorCheck:
+		floorCheckNode.enabled = false
+	else:
+		floorCheckNode.enabled = true
 	
 func _physics_process(delta):
 	aim()

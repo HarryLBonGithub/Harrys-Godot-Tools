@@ -1,8 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://b388hwbai2xk5"]
+[gd_scene load_steps=4 format=3 uid="uid://baqs2t4p5a58i"]
 
-[ext_resource type="Script" path="res://Character Controllers/FPSCharacterController.gd" id="1_vosht"]
-[ext_resource type="PackedScene" uid="uid://cg3obfppionlq" path="res://Props/Handhelds/Basic Flashlight/basic_flashlight.tscn" id="2_mcfn4"]
-[ext_resource type="PackedScene" uid="uid://cgh22dltjhw5u" path="res://HUD Items/Info Checker/info_checker.tscn" id="3_fxs6g"]
+[ext_resource type="Script" path="res://Character Controllers/FPSCharacterController.gd" id="1_hpjc1"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_smuhl"]
 radius = 0.4
@@ -11,19 +9,20 @@ radius = 0.4
 radius = 0.4
 
 [node name="FPSCharacterController" type="CharacterBody3D"]
-script = ExtResource("1_vosht")
+script = ExtResource("1_hpjc1")
+floorCheck = true
 
 [node name="Head" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.71, 0)
 
 [node name="PlayerCamera" type="Camera3D" parent="Head"]
 
-[node name="BasicFlashlight" parent="Head/PlayerCamera" instance=ExtResource("2_mcfn4")]
-
-[node name="InfoChecker" parent="Head/PlayerCamera" instance=ExtResource("3_fxs6g")]
-
 [node name="FPSCharacterMesh" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_smuhl")
 
 [node name="FPSCharacterCollider" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_08tas")
+
+[node name="FloorCheck" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.954661, 0)
+target_position = Vector3(0, -0.25, 0)

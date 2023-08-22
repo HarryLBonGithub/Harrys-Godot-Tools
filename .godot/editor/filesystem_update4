@@ -1,1 +1,10 @@
+res://Character Controllers/fps_character_controller_extended.tscn
 res://Testing Rooms/testing_room_alpha.tscn
+res://HUD Items/Crosshair/crosshair.tscn
+res://HitscanGunBasic.gd
+res://Props/Handhelds/Basic Hitscan Gun/hitscan_gun_basic.tscn
+res://HUD Items/Info Checker/info_checker.tscn
+res://Health.gd
+res://Properties/Health/health.tscn
+res://Properties/Health/Health.gd
+res://Characters/Dummy/dummy.tscn

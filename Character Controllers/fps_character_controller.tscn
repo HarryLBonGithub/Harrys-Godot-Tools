@@ -10,6 +10,7 @@ radius = 0.4
 
 [node name="FPSCharacterController" type="CharacterBody3D"]
 script = ExtResource("1_kqerg")
+floorCheck = true
 
 [node name="Head" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.71, 0)
@@ -21,3 +22,7 @@ mesh = SubResource("CapsuleMesh_smuhl")
 
 [node name="FPSCharacterCollider" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_08tas")
+
+[node name="FloorCheck" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.954661, 0)
+target_position = Vector3(0, -0.25, 0)

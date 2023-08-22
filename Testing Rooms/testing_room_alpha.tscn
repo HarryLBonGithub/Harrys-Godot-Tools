@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cwpk3o2hdiphh"]
+[gd_scene load_steps=6 format=3 uid="uid://cwpk3o2hdiphh"]
 
 [ext_resource type="Script" path="res://Testing Rooms/testing_rooms.gd" id="1_lvbwn"]
-[ext_resource type="PackedScene" uid="uid://cmvaqhtumtknu" path="res://HUD Items/Info Checker/cursor_hint.tscn" id="2_a7iy7"]
-[ext_resource type="PackedScene" uid="uid://b388hwbai2xk5" path="res://Character Controllers/fps_character_controller_extended.tscn" id="2_hdv7s"]
 [ext_resource type="PackedScene" uid="uid://dtg5r0ox5x83s" path="res://Characters/Dummy/dummy.tscn" id="4_jhemo"]
+[ext_resource type="PackedScene" uid="uid://baqs2t4p5a58i" path="res://Character Controllers/fps_character_controller_extended.tscn" id="4_yfru2"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_nb5n6"]
 size = Vector3(20, 1, 20)
@@ -22,14 +21,11 @@ mesh = SubResource("BoxMesh_nb5n6")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_k2gn4")
 
-[node name="CursorHint" parent="Floor/StaticBody3D" instance=ExtResource("2_a7iy7")]
-hint = "I'm a floor"
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.903664, 0.428241, 0, -0.428241, 0.903664, 0, 11.1154, 0)
 
-[node name="FPSCharacterController" parent="." instance=ExtResource("2_hdv7s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-
 [node name="Dummy" parent="." instance=ExtResource("4_jhemo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -2.95903)
+
+[node name="FPSCharacterController" parent="." instance=ExtResource("4_yfru2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)

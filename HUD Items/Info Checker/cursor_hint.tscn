@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cmvaqhtumtknu"]
-
-[ext_resource type="Script" path="res://HUD Items/Info Checker/cursor_hint.gd" id="1_ynb24"]
-
-[node name="CursorHint" type="Node"]
-script = ExtResource("1_ynb24")
