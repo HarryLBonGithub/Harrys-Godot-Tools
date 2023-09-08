@@ -39,6 +39,7 @@ var playerVelocity = Vector3()
 #node variables
 @onready var cameraNode = $Head/PlayerCamera
 @onready var floorCheckNode = $FloorCheck
+@onready var headNode = $Head
 
 
 
@@ -70,7 +71,7 @@ func aim():
 		if lookUpDownEnabled:
 			var change = -cameraMotion.y * mouseSensitivity #stores the ammount of potential change
 			if change + cameraAngleH < headTiltMax and change + cameraAngleH > -headTiltMax: #check tilt does not exceed maximum
-				cameraNode.rotate_x((deg_to_rad(change))) #turn camera
+				headNode.rotate_x((deg_to_rad(change))) #turn head
 				cameraAngleH += change #track the angle for tilt check
 
 	cameraMotion = Vector2()
