@@ -75,7 +75,7 @@ func aim():
 				cameraAngleH += change #track the angle for tilt check
 
 	cameraMotion = Vector2()
-	
+
 func walk(delta): #needs more documentation
 	var motion = Vector3()
 	

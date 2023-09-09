@@ -1,6 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://baqs2t4p5a58i"]
+[gd_scene load_steps=7 format=3 uid="uid://baqs2t4p5a58i"]
 
 [ext_resource type="Script" path="res://Character Controllers/FPSCharacterController.gd" id="1_hpjc1"]
+[ext_resource type="PackedScene" uid="uid://ggljq5ed622m" path="res://HUD Items/Crosshair/crosshair.tscn" id="2_ckjpy"]
+[ext_resource type="PackedScene" uid="uid://cgh22dltjhw5u" path="res://HUD Items/Info Checker/info_checker.tscn" id="3_k6wgg"]
+[ext_resource type="PackedScene" uid="uid://bm00ewhu0i4vl" path="res://Properties/Interaction/interaction_ray.tscn" id="4_muno8"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_smuhl"]
 radius = 0.4
@@ -8,7 +11,7 @@ radius = 0.4
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_08tas"]
 radius = 0.4
 
-[node name="FPSCharacterController" type="CharacterBody3D"]
+[node name="FPSCharacterControllerExt" type="CharacterBody3D"]
 script = ExtResource("1_hpjc1")
 floorCheck = true
 
@@ -16,6 +19,18 @@ floorCheck = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.71, 0)
 
 [node name="PlayerCamera" type="Camera3D" parent="Head"]
+
+[node name="Crosshair" parent="Head" instance=ExtResource("2_ckjpy")]
+
+[node name="InfoChecker" parent="Head" instance=ExtResource("3_k6wgg")]
+
+[node name="InfoLabel" parent="Head/InfoChecker" index="0"]
+offset_left = -28.0
+offset_top = 14.0
+offset_right = 28.0
+offset_bottom = 40.0
+
+[node name="InteractionRay" parent="Head" instance=ExtResource("4_muno8")]
 
 [node name="FPSCharacterMesh" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_smuhl")
@@ -26,3 +41,5 @@ shape = SubResource("CapsuleShape3D_08tas")
 [node name="FloorCheck" type="RayCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.954661, 0)
 target_position = Vector3(0, -0.25, 0)
+
+[editable path="Head/InfoChecker"]

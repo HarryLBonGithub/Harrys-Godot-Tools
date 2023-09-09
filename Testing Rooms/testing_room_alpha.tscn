@@ -22,7 +22,8 @@ mesh = SubResource("BoxMesh_nb5n6")
 shape = SubResource("ConcavePolygonShape3D_k2gn4")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.903664, 0.428241, 0, -0.428241, 0.903664, 0, 11.1154, 0)
+transform = Transform3D(1, 0, 0, 0, 0.475778, 0.879566, 0, -0.879566, 0.475778, 0, 11.1154, 0)
+shadow_enabled = true
 
 [node name="Dummy" parent="." instance=ExtResource("4_jhemo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -2.95903)

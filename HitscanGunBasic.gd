@@ -15,7 +15,7 @@ func _process(delta):
 		
 		self.force_raycast_update()
 		
-		if !self.is_colliding():
+		if self.is_colliding() == false:
 			return
 			
 		var body = self.get_collider()

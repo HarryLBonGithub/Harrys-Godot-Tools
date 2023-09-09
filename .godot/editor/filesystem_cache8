@@ -1,23 +1,23 @@
 2a60927148abd1d33b818b535e306557
-::res://::1694135925
+::res://::1694222843
 HitscanGunBasic.gd::GDScript::-1::1692678696::0::1::::<>RayCast3D<>::
 icon.svg::CompressedTexture2D::8360453262726188600::1692578138::1692578154::1::::<><>::
-::res://Character Controllers/::1692679664
-FPSCharacterController.gd::GDScript::-1::1692671878::0::1::::<>CharacterBody3D<>::
+::res://Character Controllers/::1694136448
+FPSCharacterController.gd::GDScript::-1::1694136082::0::1::::<>CharacterBody3D<>::
 fps_character_controller.tscn::PackedScene::934947315899202677::1692671572::0::1::::<><>::res://Character Controllers/FPSCharacterController.gd
-fps_character_controller_extended.tscn::PackedScene::2420592893527924066::1692679664::0::1::::<><>::res://Character Controllers/FPSCharacterController.gd
+fps_character_controller_extended.tscn::PackedScene::2420592893527924066::1694136448::0::1::::<><>::res://Character Controllers/FPSCharacterController.gd
 ::res://Characters/::1692578138
-::res://Characters/Dummy/::1692679665
-dummy.tscn::PackedScene::8507089550802717638::1692679665::0::1::::<><>::
+::res://Characters/Dummy/::1694136448
+dummy.tscn::PackedScene::8507089550802717638::1694136448::0::1::::<><>::
 ::res://Filler Assets/::1692678632
 Basic Crosshair.png::CompressedTexture2D::4145395000262071667::1692677783::1692677783::1::::<><>::
 Gunshot Short.wav::AudioStreamWAV::3101820702760367243::1692678631::1692678632::1::::<><>::
 ::res://HUD Items/::1692677855
 ::res://HUD Items/Crosshair/::1692679629
 crosshair.tscn::PackedScene::434204174322864182::1692679629::0::1::::<><>::uid://b0ccbx2m35igx
-::res://HUD Items/Info Checker/::1692679548
+::res://HUD Items/Info Checker/::1694136143
 info_checker.gd::GDScript::-1::1692578138::0::1::::<>RayCast3D<>::
-info_checker.tscn::PackedScene::5210112824171442256::1692678724::0::1::::<><>::res://HUD Items/Info Checker/info_checker.gd
+info_checker.tscn::PackedScene::5210112824171442256::1694136143::0::1::::<><>::res://HUD Items/Info Checker/info_checker.gd
 ::res://Properties/::1692679544
 ::res://Properties/Cursor Hint/::1692679548
 cursor_hint.gd::GDScript::-1::1692578138::0::1::::<>Node<>::
@@ -33,6 +33,6 @@ basic_flashlight.tscn::PackedScene::5252629116502310218::1692578138::0::1::::<><
 Click.mp3::AudioStreamMP3::160634679653233577::1692578138::1692578154::1::::<><>::
 ::res://Props/Handhelds/Basic Hitscan Gun/::1692678724
 hitscan_gun_basic.tscn::PackedScene::6613995296577823662::1692678724::0::1::::<><>::res://HitscanGunBasic.gd<>uid://bkgssfcgruuf8
-::res://Testing Rooms/::1692679629
+::res://Testing Rooms/::1694136448
 testing_rooms.gd::GDScript::-1::1692578138::0::1::::<>Node3D<>::
-testing_room_alpha.tscn::PackedScene::6348619543249823169::1692679629::0::1::::<><>::res://Testing Rooms/testing_rooms.gd<>uid://dtg5r0ox5x83s<>uid://baqs2t4p5a58i
+testing_room_alpha.tscn::PackedScene::6348619543249823169::1694136448::0::1::::<><>::res://Testing Rooms/testing_rooms.gd<>uid://dtg5r0ox5x83s<>uid://baqs2t4p5a58i
