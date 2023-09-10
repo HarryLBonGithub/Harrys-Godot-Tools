@@ -1,8 +1,1 @@
-res://Properties/Damage Box/damage_box.tscn
-res://Properties/Damage Box/damage_box.gd
-res://Character Controllers/fps_character_controller_extended.tscn
 res://Testing Rooms/testing_room_alpha.tscn
-res://Characters/Dummy/dummy.tscn
-res://Properties/Interaction/interaction_ray.tscn
-res://Props/Handhelds/Basic Hitscan Gun/hitscan_gun_basic.tscn
-res://Character Controllers/fps_character_controller.tscn
