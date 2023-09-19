@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://b2aexqm1egw0n"]
+
+[ext_resource type="PackedScene" uid="uid://c1h1nawfw1pbb" path="res://Props/Projectiles/projectile.tscn" id="1_lo61r"]
+[ext_resource type="Script" path="res://Projectile.gd" id="2_6bprs"]
+[ext_resource type="PackedScene" uid="uid://j2lecpaynqf8" path="res://Properties/Damage Box/damage_box.tscn" id="3_23pi6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4jvod"]
+resource_local_to_scene = true
+size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qcb3x"]
+size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ajae5"]
+radius = 0.332077
+height = 1.17729
+
+[node name="BulletProjectile" instance=ExtResource("1_lo61r")]
+collision_layer = 0
+gravity_scale = 0.0
+script = ExtResource("2_6bprs")
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("BoxShape3D_4jvod")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="2"]
+mesh = SubResource("BoxMesh_qcb3x")
+
+[node name="DamageBox" parent="." index="3" instance=ExtResource("3_23pi6")]
+
+[node name="DamageShape" parent="DamageBox" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.0195987, 0.999808, 0, -0.999808, 0.0195987, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_ajae5")
+
+[connection signal="area_entered" from="DamageBox" to="." method="_on_damage_box_area_entered"]
+[connection signal="body_entered" from="DamageBox" to="." method="_on_damage_box_body_entered"]
+
+[editable path="DamageBox"]

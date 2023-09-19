@@ -1,5 +1,7 @@
+res://Props/Projectiles/Bullet Projectile
+res://Props/Projectiles
+res://Properties/Health
 res://Properties/Damage Box
 res://Properties/Interaction
-res://Properties/Health
 res://Props/Handhelds/Basic Hitscan Gun
 res://HUD Items/Crosshair

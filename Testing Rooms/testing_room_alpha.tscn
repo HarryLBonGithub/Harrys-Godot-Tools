@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cwpk3o2hdiphh"]
+[gd_scene load_steps=7 format=3 uid="uid://cwpk3o2hdiphh"]
 
 [ext_resource type="Script" path="res://Testing Rooms/testing_rooms.gd" id="1_lvbwn"]
+[ext_resource type="PackedScene" uid="uid://b2aexqm1egw0n" path="res://Props/Projectiles/Bullet Projectile/bullet_projectile.tscn" id="4_1wqon"]
 [ext_resource type="PackedScene" uid="uid://dtg5r0ox5x83s" path="res://Characters/Dummy/dummy.tscn" id="4_jhemo"]
 [ext_resource type="PackedScene" uid="uid://baqs2t4p5a58i" path="res://Character Controllers/fps_character_controller_extended.tscn" id="4_yfru2"]
 
@@ -29,4 +30,13 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -2.95903)
 
 [node name="FPSCharacterController" parent="." instance=ExtResource("4_yfru2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 1.52736)
+transform = Transform3D(-0.0214834, 0, 0.999769, 0, 1, 0, -0.999769, 0, -0.0214834, 3.76567, 1.5, 1.52736)
+
+[node name="BulletProjectile" parent="." instance=ExtResource("4_1wqon")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.90789, 5.1637)
+
+[node name="BulletProjectile2" parent="." instance=ExtResource("4_1wqon")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.90789, 7.30258)
+
+[node name="BulletProjectile3" parent="." instance=ExtResource("4_1wqon")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.90789, 10.5211)

@@ -70,7 +70,3 @@ interact={
 [layer_names]
 
 3d_physics/layer_1="Physical Boundries"
-
-[rendering]
-
-renderer/rendering_method="gl_compatibility"

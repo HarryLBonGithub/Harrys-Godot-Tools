@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1694988607
+::res://::1695157038
 HitscanGunBasic.gd::GDScript::-1::1694222983::0::1::::<>RayCast3D<>::
 icon.svg::CompressedTexture2D::8360453262726188600::1692578138::1692578154::1::::<><>::
 ::res://Character Controllers/::1694315778
@@ -26,13 +26,13 @@ cursor_hint.tscn::PackedScene::-1::1692679548::0::1::::<><>::res://Properties/Cu
 ::res://Properties/Damage Box/::1694315712
 damage_box.gd::GDScript::-1::1694315538::0::1::::<>Area3D<>::
 damage_box.tscn::PackedScene::688112950449324339::1694315712::0::1::::<><>::res://Properties/Damage Box/damage_box.gd
-::res://Properties/Health/::1692679432
+::res://Properties/Health/::1695157421
 Health.gd::GDScript::-1::1692679432::0::1::::<>Node<>::
 health.tscn::PackedScene::2817278139978272009::1692679432::0::1::::<><>::res://Properties/Health/Health.gd
 ::res://Properties/Interaction/::1694315541
 interaction_ray.gd::GDScript::-1::1694223707::0::1::::<>RayCast3D<>::
 interaction_ray.tscn::PackedScene::3281822486465564889::1694315541::0::1::::<><>::res://Properties/Interaction/interaction_ray.gd
-::res://Props/::1692578138
+::res://Props/::1695155383
 ::res://Props/Handhelds/::1692677912
 ::res://Props/Handhelds/Basic Flashlight/::1692578154
 basic_flashlight.gd::GDScript::-1::1692578138::0::1::::<>Node3D<>::
@@ -40,6 +40,10 @@ basic_flashlight.tscn::PackedScene::5252629116502310218::1692578138::0::1::::<><
 Click.mp3::AudioStreamMP3::160634679653233577::1692578138::1692578154::1::::<><>::
 ::res://Props/Handhelds/Basic Hitscan Gun/::1694315541
 hitscan_gun_basic.tscn::PackedScene::6613995296577823662::1694315541::0::1::::<><>::res://HitscanGunBasic.gd<>uid://bkgssfcgruuf8
-::res://Testing Rooms/::1694988591
+::res://Props/Projectiles/::1695157237
+projectile.gd::GDScript::-1::1695156905::0::1::::<>RigidBody3D<>::
+projectile.tscn::PackedScene::6613803837629467183::1695157237::0::1::::<><>::res://Props/Projectiles/projectile.gd
+::res://Props/Projectiles/Generic Projectile/::1695157482
+::res://Testing Rooms/::1695157237
 testing_rooms.gd::GDScript::-1::1692578138::0::1::::<>Node3D<>::
-testing_room_alpha.tscn::PackedScene::6348619543249823169::1694988591::0::1::::<><>::res://Testing Rooms/testing_rooms.gd<>uid://dtg5r0ox5x83s::::res://Characters/Dummy/dummy.tscn<>uid://baqs2t4p5a58i::::res://Character Controllers/fps_character_controller_extended.tscn
+testing_room_alpha.tscn::PackedScene::6348619543249823169::1695157486::0::1::::<><>::res://Testing Rooms/testing_rooms.gd<>uid://dtg5r0ox5x83s::::res://Characters/Dummy/dummy.tscn<>uid://baqs2t4p5a58i::::res://Character Controllers/fps_character_controller_extended.tscn
