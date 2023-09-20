@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://b2aexqm1egw0n"]
 
 [ext_resource type="PackedScene" uid="uid://c1h1nawfw1pbb" path="res://Props/Projectiles/projectile.tscn" id="1_lo61r"]
-[ext_resource type="Script" path="res://Projectile.gd" id="2_6bprs"]
+[ext_resource type="Script" path="res://Props/Projectiles/Bullet Projectile/bullet_projectile.gd" id="2_qye1a"]
 [ext_resource type="PackedScene" uid="uid://j2lecpaynqf8" path="res://Properties/Damage Box/damage_box.tscn" id="3_23pi6"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4jvod"]
@@ -18,7 +18,7 @@ height = 1.17729
 [node name="BulletProjectile" instance=ExtResource("1_lo61r")]
 collision_layer = 0
 gravity_scale = 0.0
-script = ExtResource("2_6bprs")
+script = ExtResource("2_qye1a")
 
 [node name="CollisionShape3D" parent="." index="0"]
 shape = SubResource("BoxShape3D_4jvod")

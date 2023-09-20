@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dim0l6a2xqttt"]
+
+[ext_resource type="Script" path="res://Props/Handhelds/Projectile Launcher/projectile_launcher.gd" id="1_gxvem"]
+[ext_resource type="PackedScene" uid="uid://b2aexqm1egw0n" path="res://Props/Projectiles/Bullet Projectile/bullet_projectile.tscn" id="2_rswot"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ndi02"]
+size = Vector3(0.1, 0.25, 0.5)
+
+[node name="ProjectileLauncher" type="Node3D"]
+script = ExtResource("1_gxvem")
+projectile = ExtResource("2_rswot")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_ndi02")
+
+[node name="Barrel" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0434716, -0.286731)

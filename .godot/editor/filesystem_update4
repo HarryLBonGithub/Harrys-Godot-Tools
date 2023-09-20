@@ -1,3 +1,5 @@
 res://Testing Rooms/testing_room_alpha.tscn
+res://Props/Handhelds/Projectile Launcher/projectile_launcher.tscn
 res://Props/Projectiles/Bullet Projectile/bullet_projectile.tscn
-res://Properties/Damage Box/damage_box.tscn
+res://Props/Projectiles/projectile.tscn
+res://Character Controllers/fps_character_controller_extended.tscn
