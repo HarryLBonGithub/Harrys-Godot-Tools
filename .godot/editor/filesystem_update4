@@ -1,5 +1,6 @@
 res://Testing Rooms/testing_room_alpha.tscn
+res://HUD Items/Info Checker/info_checker.tscn
 res://Props/Handhelds/Projectile Launcher/projectile_launcher.tscn
-res://Props/Projectiles/Bullet Projectile/bullet_projectile.tscn
-res://Props/Projectiles/projectile.tscn
+res://Props/Handhelds/Projectile Launcher/projectile_launcher.gd
+res://HUD Items/Info Checker/info_checker.gd
 res://Character Controllers/fps_character_controller_extended.tscn

@@ -3,7 +3,7 @@ extends RayCast3D
 #looks for a CursorHint node on a colliding area or body, then provides that node's
 #"text property as a message
 
-@onready var info = $InfoLabel
+@export var info : Label
 
 func _ready():
 	pass

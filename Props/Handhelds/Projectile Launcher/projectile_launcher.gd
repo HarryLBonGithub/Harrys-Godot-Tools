@@ -18,6 +18,8 @@ func _process(delta):
 			var proj = projectile.instantiate()
 			proj.transform = barrelNode.global_transform
 			room.add_child(proj)
+			
+			currentAmmo -= 1
 
 func dryFire():
 	pass
