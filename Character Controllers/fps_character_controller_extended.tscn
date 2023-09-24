@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://baqs2t4p5a58i"]
+[gd_scene load_steps=9 format=3 uid="uid://baqs2t4p5a58i"]
 
 [ext_resource type="Script" path="res://Character Controllers/FPSCharacterController.gd" id="1_hpjc1"]
 [ext_resource type="PackedScene" uid="uid://ggljq5ed622m" path="res://HUD Items/Crosshair/crosshair.tscn" id="2_ckjpy"]
 [ext_resource type="PackedScene" uid="uid://cgh22dltjhw5u" path="res://HUD Items/Info Checker/info_checker.tscn" id="3_k6wgg"]
 [ext_resource type="PackedScene" uid="uid://bm00ewhu0i4vl" path="res://Properties/Interaction/interaction_ray.tscn" id="4_muno8"]
 [ext_resource type="PackedScene" uid="uid://dim0l6a2xqttt" path="res://Props/Handhelds/Projectile Launcher/projectile_launcher.tscn" id="5_1fptv"]
+[ext_resource type="PackedScene" uid="uid://bgeyfohldmmx2" path="res://Properties/Health/health.tscn" id="6_bl4qs"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_smuhl"]
 radius = 0.4
@@ -56,5 +57,13 @@ shape = SubResource("CapsuleShape3D_08tas")
 [node name="FloorCheck" type="RayCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.954661, 0)
 target_position = Vector3(0, -0.25, 0)
+
+[node name="Health" parent="." instance=ExtResource("6_bl4qs")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="healthBar" type="ProgressBar" parent="CanvasLayer"]
+offset_right = 281.0
+offset_bottom = 41.0
 
 [editable path="Head/InfoChecker"]
