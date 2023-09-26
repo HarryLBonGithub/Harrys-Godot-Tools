@@ -1,13 +1,14 @@
+MeshInstance3D
+Node
+Label
+HBoxContainer
 ProgressBar
 CanvasLayer
-Label
 Node3D
-MeshInstance3D
 CollisionShape3D
 Area3D
 Timer
 RigidBody3D
-Node
 RayCast3D
 AudioStreamPlayer3D
 TextureRect

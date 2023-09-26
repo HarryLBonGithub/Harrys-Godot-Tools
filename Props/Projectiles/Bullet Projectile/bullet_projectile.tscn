@@ -16,14 +16,13 @@ radius = 0.332077
 height = 1.17729
 
 [node name="BulletProjectile" instance=ExtResource("1_lo61r")]
-collision_layer = 0
 gravity_scale = 0.0
 script = ExtResource("2_qye1a")
 
 [node name="CollisionShape3D" parent="." index="0"]
 shape = SubResource("BoxShape3D_4jvod")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="2"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." index="2"]
 mesh = SubResource("BoxMesh_qcb3x")
 
 [node name="DamageBox" parent="." index="3" instance=ExtResource("3_23pi6")]

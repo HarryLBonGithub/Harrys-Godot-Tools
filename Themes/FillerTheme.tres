@@ -1,0 +1,21 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://cmjnqicbnobds"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rfexm"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fpuad"]
+bg_color = Color(0.0470588, 0.607843, 0, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[resource]
+HealthBar/base_type = &"ProgressBar"
+HealthBar/styles/background = SubResource("StyleBoxFlat_rfexm")
+HealthBar/styles/fill = SubResource("StyleBoxFlat_fpuad")

@@ -1,5 +1,7 @@
 extends RigidBody3D
 
+class_name Projectile
+
 @export var speed = 25
 
 func _ready():

@@ -1,6 +1,8 @@
+res://Props/Projectiles
+res://Properties/Ammo
+res://Themes
 res://Props/Handhelds/Projectile Launcher
 res://Props/Projectiles/Bullet Projectile
-res://Props/Projectiles
 res://Properties/Health
 res://Properties/Damage Box
 res://Properties/Interaction

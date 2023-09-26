@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://baqs2t4p5a58i"]
+[gd_scene load_steps=10 format=3 uid="uid://baqs2t4p5a58i"]
 
 [ext_resource type="Script" path="res://Character Controllers/FPSCharacterController.gd" id="1_hpjc1"]
 [ext_resource type="PackedScene" uid="uid://ggljq5ed622m" path="res://HUD Items/Crosshair/crosshair.tscn" id="2_ckjpy"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bm00ewhu0i4vl" path="res://Properties/Interaction/interaction_ray.tscn" id="4_muno8"]
 [ext_resource type="PackedScene" uid="uid://dim0l6a2xqttt" path="res://Props/Handhelds/Projectile Launcher/projectile_launcher.tscn" id="5_1fptv"]
 [ext_resource type="PackedScene" uid="uid://bgeyfohldmmx2" path="res://Properties/Health/health.tscn" id="6_bl4qs"]
+[ext_resource type="Theme" uid="uid://cmjnqicbnobds" path="res://Themes/FillerTheme.tres" id="7_1cndl"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_smuhl"]
 radius = 0.4
@@ -45,8 +46,10 @@ info = NodePath("../PlayerCamera/CanvasLayer/info")
 
 [node name="InteractionRay" parent="Head" instance=ExtResource("4_muno8")]
 
-[node name="ProjectileLauncher" parent="Head" instance=ExtResource("5_1fptv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.281387, -0.178392, -0.889714)
+[node name="ProjectileLauncher" parent="Head" node_paths=PackedStringArray("maxAmmoUI", "currentAmmoUI") instance=ExtResource("5_1fptv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.498575, -0.311317, -0.935861)
+maxAmmoUI = NodePath("../../CanvasLayer/AmmoCounter/max")
+currentAmmoUI = NodePath("../../CanvasLayer/AmmoCounter/current")
 
 [node name="FPSCharacterMesh" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_smuhl")
@@ -58,12 +61,41 @@ shape = SubResource("CapsuleShape3D_08tas")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.954661, 0)
 target_position = Vector3(0, -0.25, 0)
 
-[node name="Health" parent="." instance=ExtResource("6_bl4qs")]
+[node name="Health" parent="." node_paths=PackedStringArray("healthUI") instance=ExtResource("6_bl4qs")]
+healthUI = NodePath("../CanvasLayer/healthBar")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="healthBar" type="ProgressBar" parent="CanvasLayer"]
-offset_right = 281.0
-offset_bottom = 41.0
+offset_left = 24.0
+offset_top = 21.0
+offset_right = 305.0
+offset_bottom = 62.0
+theme = ExtResource("7_1cndl")
+theme_type_variation = &"HealthBar"
+show_percentage = false
+
+[node name="AmmoCounter" type="HBoxContainer" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -87.0
+offset_bottom = 51.0
+grow_horizontal = 0
+alignment = 1
+
+[node name="current" type="Label" parent="CanvasLayer/AmmoCounter"]
+layout_mode = 2
+text = "0
+"
+
+[node name="sep" type="Label" parent="CanvasLayer/AmmoCounter"]
+layout_mode = 2
+text = "/"
+
+[node name="max" type="Label" parent="CanvasLayer/AmmoCounter"]
+layout_mode = 2
+text = "1
+"
 
 [editable path="Head/InfoChecker"]
