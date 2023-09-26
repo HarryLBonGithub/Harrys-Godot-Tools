@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://baqs2t4p5a58i"]
+[gd_scene load_steps=12 format=3 uid="uid://baqs2t4p5a58i"]
 
 [ext_resource type="Script" path="res://Character Controllers/FPSCharacterController.gd" id="1_hpjc1"]
 [ext_resource type="PackedScene" uid="uid://ggljq5ed622m" path="res://HUD Items/Crosshair/crosshair.tscn" id="2_ckjpy"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dim0l6a2xqttt" path="res://Props/Handhelds/Projectile Launcher/projectile_launcher.tscn" id="5_1fptv"]
 [ext_resource type="PackedScene" uid="uid://bgeyfohldmmx2" path="res://Properties/Health/health.tscn" id="6_bl4qs"]
 [ext_resource type="Theme" uid="uid://cmjnqicbnobds" path="res://Themes/FillerTheme.tres" id="7_1cndl"]
+[ext_resource type="PackedScene" uid="uid://b8pmopdg2rid5" path="res://Organizers/Hand/hand.tscn" id="7_lncrl"]
 [ext_resource type="PackedScene" uid="uid://ddjlj2gpevbbb" path="res://HUD Items/Ammo Tracker/ammo_tracker.tscn" id="8_ercnn"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_smuhl"]
@@ -70,9 +71,11 @@ info = NodePath("../../PlayerUI/info")
 
 [node name="InteractionRay" parent="Head" instance=ExtResource("4_muno8")]
 
-[node name="ProjectileLauncher" parent="Head" node_paths=PackedStringArray("ammoUI") instance=ExtResource("5_1fptv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.498575, -0.311317, -0.935861)
+[node name="Hand" parent="Head" node_paths=PackedStringArray("ammoUI") instance=ExtResource("7_lncrl")]
 ammoUI = NodePath("../../PlayerUI/AmmoTracker")
+
+[node name="ProjectileLauncher" parent="Head/Hand" instance=ExtResource("5_1fptv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.498575, -0.311317, -0.935861)
 
 [node name="FPSCharacterMesh" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_smuhl")
