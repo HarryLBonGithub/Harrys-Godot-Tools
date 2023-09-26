@@ -13,3 +13,7 @@ res://Properties/Ammo/Ammo.gd
 res://Props/Projectiles/projectile.tscn
 res://Props/Projectiles/projectile.gd
 res://Props/Projectiles/Bullet Projectile/bullet_projectile.tscn
+res://Organizers/Hand/hand.tscn
+res://Organizers/Hand/hand.gd
+res://HUD Items/Ammo Tracker/ammo_tracker.tscn
+res://HUD Items/Ammo Tracker/ammo_tracker.gd

@@ -1,10 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1695694710
+::res://::1695698380
 icon.svg::CompressedTexture2D::8360453262726188600::1692578138::1692578154::1::::<><>::
-::res://Character Controllers/::1695694578
+::res://Character Controllers/::1695698365
 FPSCharacterController.gd::GDScript::-1::1694224156::0::1::::<>CharacterBody3D<>::
-fps_character_controller.tscn::PackedScene::934947315899202677::1695694578::0::1::::<><>::res://Character Controllers/FPSCharacterController.gd
-fps_character_controller_extended.tscn::PackedScene::2420592893527924066::1695694578::0::1::::<><>::res://Character Controllers/FPSCharacterController.gd<>uid://ggljq5ed622m::::res://HUD Items/Crosshair/crosshair.tscn<>uid://cgh22dltjhw5u::::res://HUD Items/Info Checker/info_checker.tscn<>uid://bm00ewhu0i4vl::::res://Properties/Interaction/interaction_ray.tscn<>uid://dim0l6a2xqttt::::res://Props/Handhelds/Projectile Launcher/projectile_launcher.tscn<>uid://bgeyfohldmmx2::::res://Properties/Health/health.tscn<>uid://cmjnqicbnobds::::res://Themes/FillerTheme.tres
+fps_character_controller.tscn::PackedScene::934947315899202677::1695696186::0::1::::<><>::res://Character Controllers/FPSCharacterController.gd
+fps_character_controller_extended.tscn::PackedScene::2420592893527924066::1695698365::0::1::::<><>::res://Character Controllers/FPSCharacterController.gd<>uid://ggljq5ed622m::::res://HUD Items/Crosshair/crosshair.tscn<>uid://cgh22dltjhw5u::::res://HUD Items/Info Checker/info_checker.tscn<>uid://bm00ewhu0i4vl::::res://Properties/Interaction/interaction_ray.tscn<>uid://dim0l6a2xqttt::::res://Props/Handhelds/Projectile Launcher/projectile_launcher.tscn<>uid://bgeyfohldmmx2::::res://Properties/Health/health.tscn<>uid://cmjnqicbnobds::::res://Themes/FillerTheme.tres<>uid://ddjlj2gpevbbb::::res://HUD Items/Ammo Tracker/ammo_tracker.tscn
 ::res://Characters/::1692578138
 ::res://Characters/Dummy/::1694315541
 dummy.tscn::PackedScene::8507089550802717638::1694315541::0::1::::<><>::uid://bgeyfohldmmx2
@@ -12,25 +12,32 @@ DummyInteraction.gd::GDScript::-1::1694224070::0::1::::<>Node<>::
 ::res://Filler Assets/::1692678632
 Basic Crosshair.png::CompressedTexture2D::4145395000262071667::1692677783::1692677783::1::::<><>::
 Gunshot Short.wav::AudioStreamWAV::3101820702760367243::1692678631::1692678632::1::::<><>::
-::res://HUD Items/::1692677855
+::res://HUD Items/::1695696658
+::res://HUD Items/Ammo Tracker/::1695698365
+ammo_tracker.gd::GDScript::-1::1695697923::0::1::::AmmoTracker<>Panel<>::
+ammo_tracker.tscn::PackedScene::7389093368932497135::1695698365::0::1::::<><>::res://HUD Items/Ammo Tracker/ammo_tracker.gd
 ::res://HUD Items/Crosshair/::1692679629
 crosshair.tscn::PackedScene::434204174322864182::1692679629::0::1::::<><>::uid://b0ccbx2m35igx
 ::res://HUD Items/Info Checker/::1695487269
 info_checker.gd::GDScript::-1::1695487128::0::1::::<>RayCast3D<>::
 info_checker.tscn::PackedScene::5210112824171442256::1695487269::0::1::::<><>::res://HUD Items/Info Checker/info_checker.gd
-::res://Properties/::1695694710
-Ammo.gd::GDScript::-1::1695694701::0::1::::<>Node<>::
-::res://Properties/Ammo/::1695694710
-ammo.tscn::PackedScene::-1::1695694710::0::1::::<><>::
+::res://Organizers/::1695696426
+::res://Organizers/Hand/::1695698365
+hand.gd::GDScript::-1::1695697713::0::1::::<>Node3D<>::
+hand.tscn::PackedScene::4734372587880969052::1695698365::0::1::::<><>::res://Organizers/Hand/hand.gd
+::res://Properties/::1695694715
+::res://Properties/Ammo/::1695696134
+Ammo.gd::GDScript::-1::1695695582::0::1::::<>Node<>::
+ammo.tscn::PackedScene::6252888870716331759::1695696134::0::1::::<><>::res://Properties/Ammo/Ammo.gd
 ::res://Properties/Cursor Hint/::1692679548
 cursor_hint.gd::GDScript::-1::1692578138::0::1::::<>Node<>::
 cursor_hint.tscn::PackedScene::-1::1692679548::0::1::::<><>::res://Properties/Cursor Hint/cursor_hint.gd
 ::res://Properties/Damage Box/::1695158135
 damage_box.gd::GDScript::-1::1694315538::0::1::::<>Area3D<>::
 damage_box.tscn::PackedScene::688112950449324339::1695158135::0::1::::<><>::res://Properties/Damage Box/damage_box.gd
-::res://Properties/Health/::1695694578
+::res://Properties/Health/::1695696186
 Health.gd::GDScript::-1::1695600880::0::1::::<>Node<>::
-health.tscn::PackedScene::2817278139978272009::1695694578::0::1::::<><>::res://Properties/Health/Health.gd
+health.tscn::PackedScene::2817278139978272009::1695696186::0::1::::<><>::res://Properties/Health/Health.gd
 ::res://Properties/Interaction/::1694315541
 interaction_ray.gd::GDScript::-1::1694223707::0::1::::<>RayCast3D<>::
 interaction_ray.tscn::PackedScene::3281822486465564889::1694315541::0::1::::<><>::res://Properties/Interaction/interaction_ray.gd
@@ -40,20 +47,20 @@ interaction_ray.tscn::PackedScene::3281822486465564889::1694315541::0::1::::<><>
 basic_flashlight.gd::GDScript::-1::1692578138::0::1::::<>Node3D<>::
 basic_flashlight.tscn::PackedScene::5252629116502310218::1692578138::0::1::::<><>::res://Props/Handhelds/Basic Flashlight/basic_flashlight.gd<>uid://cj2vn66jxnpp
 Click.mp3::AudioStreamMP3::160634679653233577::1692578138::1692578154::1::::<><>::
-::res://Props/Handhelds/Basic Hitscan Gun/::1695694578
+::res://Props/Handhelds/Basic Hitscan Gun/::1695696186
 HitscanGunBasic.gd::GDScript::-1::1695693762::0::1::::<>RayCast3D<>::
-hitscan_gun_basic.tscn::PackedScene::6613995296577823662::1695694578::0::1::::<><>::res://Props/Handhelds/Basic Hitscan Gun/HitscanGunBasic.gd<>uid://bkgssfcgruuf8::::res://Filler Assets/Gunshot Short.wav
-::res://Props/Handhelds/Projectile Launcher/::1695694578
-projectile_launcher.gd::GDScript::-1::1695694575::0::1::::<>Node3D<>::
-projectile_launcher.tscn::PackedScene::7747084531266393141::1695694578::0::1::::<><>::res://Props/Handhelds/Projectile Launcher/projectile_launcher.gd<>uid://b2aexqm1egw0n::::res://Props/Projectiles/Bullet Projectile/bullet_projectile.tscn
-::res://Props/Projectiles/::1695177725
-projectile.gd::GDScript::-1::1695156905::0::1::::<>RigidBody3D<>::
-projectile.tscn::PackedScene::6613803837629467183::1695177725::0::1::::<><>::res://Props/Projectiles/projectile.gd
-::res://Props/Projectiles/Bullet Projectile/::1695177725
+hitscan_gun_basic.tscn::PackedScene::6613995296577823662::1695696186::0::1::::<><>::res://Props/Handhelds/Basic Hitscan Gun/HitscanGunBasic.gd<>uid://bkgssfcgruuf8::::res://Filler Assets/Gunshot Short.wav
+::res://Props/Handhelds/Projectile Launcher/::1695698365
+projectile_launcher.gd::GDScript::-1::1695698142::0::1::::<>Node3D<>::
+projectile_launcher.tscn::PackedScene::7747084531266393141::1695698365::0::1::::<><>::res://Props/Handhelds/Projectile Launcher/projectile_launcher.gd<>uid://c1h1nawfw1pbb::::res://Props/Projectiles/projectile.tscn
+::res://Props/Projectiles/::1695696186
+projectile.gd::GDScript::-1::1695695911::0::1::::Projectile<>RigidBody3D<>::
+projectile.tscn::PackedScene::6613803837629467183::1695696186::0::1::::<><>::res://Props/Projectiles/projectile.gd
+::res://Props/Projectiles/Bullet Projectile/::1695696213
 bullet_projectile.gd::GDScript::-1::1695157812::0::1::::<>RigidBody3D<>::
-bullet_projectile.tscn::PackedScene::4281804263249037671::1695177725::0::1::::<><>::uid://c1h1nawfw1pbb
-::res://Testing Rooms/::1695694578
+bullet_projectile.tscn::PackedScene::4281804263249037671::1695696213::0::1::::<><>::uid://c1h1nawfw1pbb::::res://Props/Projectiles/projectile.tscn<>res://Props/Projectiles/Bullet Projectile/bullet_projectile.gd<>uid://j2lecpaynqf8::::res://Properties/Damage Box/damage_box.tscn
+::res://Testing Rooms/::1695698365
 testing_rooms.gd::GDScript::-1::1692578138::0::1::::<>Node3D<>::
-testing_room_alpha.tscn::PackedScene::6348619543249823169::1695694578::0::1::::<><>::res://Testing Rooms/testing_rooms.gd<>uid://dtg5r0ox5x83s::::res://Characters/Dummy/dummy.tscn<>uid://baqs2t4p5a58i::::res://Character Controllers/fps_character_controller_extended.tscn
+testing_room_alpha.tscn::PackedScene::6348619543249823169::1695698365::0::1::::<><>::res://Testing Rooms/testing_rooms.gd<>uid://dtg5r0ox5x83s::::res://Characters/Dummy/dummy.tscn<>uid://baqs2t4p5a58i::::res://Character Controllers/fps_character_controller_extended.tscn
 ::res://Themes/::1695693385
 FillerTheme.tres::Theme::5634505207777340380::1695693385::0::1::::<><>::

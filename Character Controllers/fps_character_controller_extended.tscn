@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://baqs2t4p5a58i"]
+[gd_scene load_steps=11 format=3 uid="uid://baqs2t4p5a58i"]
 
 [ext_resource type="Script" path="res://Character Controllers/FPSCharacterController.gd" id="1_hpjc1"]
 [ext_resource type="PackedScene" uid="uid://ggljq5ed622m" path="res://HUD Items/Crosshair/crosshair.tscn" id="2_ckjpy"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dim0l6a2xqttt" path="res://Props/Handhelds/Projectile Launcher/projectile_launcher.tscn" id="5_1fptv"]
 [ext_resource type="PackedScene" uid="uid://bgeyfohldmmx2" path="res://Properties/Health/health.tscn" id="6_bl4qs"]
 [ext_resource type="Theme" uid="uid://cmjnqicbnobds" path="res://Themes/FillerTheme.tres" id="7_1cndl"]
+[ext_resource type="PackedScene" uid="uid://ddjlj2gpevbbb" path="res://HUD Items/Ammo Tracker/ammo_tracker.tscn" id="8_ercnn"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_smuhl"]
 radius = 0.4
@@ -18,16 +19,34 @@ radius = 0.4
 script = ExtResource("1_hpjc1")
 floorCheck = true
 
-[node name="Head" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.71, 0)
+[node name="PlayerUI" type="CanvasLayer" parent="."]
 
-[node name="PlayerCamera" type="Camera3D" parent="Head"]
+[node name="healthBar" type="ProgressBar" parent="PlayerUI"]
+offset_left = 24.0
+offset_top = 21.0
+offset_right = 305.0
+offset_bottom = 62.0
+theme = ExtResource("7_1cndl")
+theme_type_variation = &"HealthBar"
+show_percentage = false
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Head/PlayerCamera"]
+[node name="AmmoTracker" parent="PlayerUI" instance=ExtResource("8_ercnn")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+grow_horizontal = 0
 
-[node name="Crosshair" parent="Head/PlayerCamera/CanvasLayer" instance=ExtResource("2_ckjpy")]
+[node name="AmmoContainer" parent="PlayerUI/AmmoTracker" index="0"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -108.0
+offset_right = 0.0
+grow_horizontal = 0
 
-[node name="info" type="Label" parent="Head/PlayerCamera/CanvasLayer"]
+[node name="Crosshair" parent="PlayerUI" instance=ExtResource("2_ckjpy")]
+
+[node name="info" type="Label" parent="PlayerUI"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -41,15 +60,19 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
 
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.71, 0)
+
+[node name="PlayerCamera" type="Camera3D" parent="Head"]
+
 [node name="InfoChecker" parent="Head" node_paths=PackedStringArray("info") instance=ExtResource("3_k6wgg")]
-info = NodePath("../PlayerCamera/CanvasLayer/info")
+info = NodePath("../../PlayerUI/info")
 
 [node name="InteractionRay" parent="Head" instance=ExtResource("4_muno8")]
 
-[node name="ProjectileLauncher" parent="Head" node_paths=PackedStringArray("maxAmmoUI", "currentAmmoUI") instance=ExtResource("5_1fptv")]
+[node name="ProjectileLauncher" parent="Head" node_paths=PackedStringArray("ammoUI") instance=ExtResource("5_1fptv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.498575, -0.311317, -0.935861)
-maxAmmoUI = NodePath("../../CanvasLayer/AmmoCounter/max")
-currentAmmoUI = NodePath("../../CanvasLayer/AmmoCounter/current")
+ammoUI = NodePath("../../PlayerUI/AmmoTracker")
 
 [node name="FPSCharacterMesh" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_smuhl")
@@ -62,40 +85,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.954661, 0)
 target_position = Vector3(0, -0.25, 0)
 
 [node name="Health" parent="." node_paths=PackedStringArray("healthUI") instance=ExtResource("6_bl4qs")]
-healthUI = NodePath("../CanvasLayer/healthBar")
+healthUI = NodePath("../PlayerUI/healthBar")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="healthBar" type="ProgressBar" parent="CanvasLayer"]
-offset_left = 24.0
-offset_top = 21.0
-offset_right = 305.0
-offset_bottom = 62.0
-theme = ExtResource("7_1cndl")
-theme_type_variation = &"HealthBar"
-show_percentage = false
-
-[node name="AmmoCounter" type="HBoxContainer" parent="CanvasLayer"]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -87.0
-offset_bottom = 51.0
-grow_horizontal = 0
-alignment = 1
-
-[node name="current" type="Label" parent="CanvasLayer/AmmoCounter"]
-layout_mode = 2
-text = "0
-"
-
-[node name="sep" type="Label" parent="CanvasLayer/AmmoCounter"]
-layout_mode = 2
-text = "/"
-
-[node name="max" type="Label" parent="CanvasLayer/AmmoCounter"]
-layout_mode = 2
-text = "1
-"
-
+[editable path="PlayerUI/AmmoTracker"]
 [editable path="Head/InfoChecker"]

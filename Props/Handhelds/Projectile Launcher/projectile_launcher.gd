@@ -1,11 +1,12 @@
 extends Node3D
 
+@export var toolName = "Launcher"
+
 @export var projectile : PackedScene
 @export var maxAmmo = 10
 @export var currentAmmo = 10
 
-@export var maxAmmoUI:Label
-@export var currentAmmoUI: Label
+@export var ammoUI : AmmoTracker
 
 @export var active = true
 
@@ -19,9 +20,10 @@ func _ready():
 	if !active:
 		return
 	
-	if maxAmmoUI and currentAmmoUI:
-		maxAmmoUI.text = str(maxAmmo)
-		currentAmmoUI.text = str(currentAmmo)
+	if ammoUI:
+		ammoUI.toolName.text = str(toolName)
+		ammoUI.max.text = str(maxAmmo)
+		ammoUI.current.text = str(currentAmmo)
 
 func _process(delta):
 	
@@ -41,8 +43,8 @@ func _process(delta):
 				
 			currentAmmo -= 1
 			
-			if maxAmmoUI and currentAmmoUI:
-				currentAmmoUI.text = str(currentAmmo)
+			if ammoUI:
+				ammoUI.current.text = str(currentAmmo)
 
 func dryFire():
 	pass

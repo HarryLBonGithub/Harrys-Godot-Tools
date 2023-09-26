@@ -1,7 +1,8 @@
-MeshInstance3D
-Node
 Label
 HBoxContainer
+Panel
+MeshInstance3D
+Node
 ProgressBar
 CanvasLayer
 Node3D

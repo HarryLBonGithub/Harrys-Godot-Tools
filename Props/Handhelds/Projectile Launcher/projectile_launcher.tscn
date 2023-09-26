@@ -9,6 +9,8 @@ size = Vector3(0.1, 0.25, 0.5)
 [node name="ProjectileLauncher" type="Node3D"]
 script = ExtResource("1_gxvem")
 projectile = ExtResource("2_e1jn1")
+maxAmmo = 100
+currentAmmo = 100
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_ndi02")
