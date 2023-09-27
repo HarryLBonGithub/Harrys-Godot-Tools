@@ -1,12 +1,20 @@
 extends RayCast3D
 
+
+@export var toolName = "Basic Gun"
+
 @export var damage = 10
+@export var maxAmmo = 10
+@export var currentAmmo = 10
 
 @onready var bangNode = $bang
 
+var active = true
+
+
 func _process(delta):
 	
-	if Input.is_action_just_pressed("use_tool"):
+	if Input.is_action_just_pressed("use_tool") and active:
 		
 		bangNode.play()
 		
