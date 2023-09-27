@@ -28,7 +28,9 @@ func _process(delta):
 	
 	if Input.is_action_pressed("use_tool"):
 		updateUI()
+	
 	cycleUp()
+	cycleDown()
 
 func updateUI():
 	if !ammoUI:
@@ -54,6 +56,22 @@ func cycleUp():
 		belt[activeTool].active = false
 		belt[activeTool].visible = false
 		activeTool +=1
+		if activeTool == len(belt):
+			activeTool = 0
+		belt[activeTool].active = true
+		belt[activeTool].visible = true
+		updateUI()
+
+func cycleDown():
+	if len(belt) < 1:
+		return
+	
+	if Input.is_action_just_released("scroll_down"):
+		belt[activeTool].active = false
+		belt[activeTool].visible = false
+		activeTool -=1
+		if activeTool < 0:
+			activeTool = len(belt) - 1		
 		belt[activeTool].active = true
 		belt[activeTool].visible = true
 		updateUI()
