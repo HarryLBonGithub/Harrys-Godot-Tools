@@ -1,11 +1,7 @@
 extends RayCast3D
 
 
-@export var toolName = "Basic Gun"
-
 @export var damage = 10
-@export var maxAmmo = 10
-@export var currentAmmo = 10
 
 @onready var bangNode = $bang
 

@@ -3,17 +3,13 @@ extends Node3D
 @export var toolName = "Launcher"
 
 @export var projectile : PackedScene
-@export var maxAmmo = 10
-@export var currentAmmo = 10
-
+@export var ammoNode : Ammo
 @export var ammoUI : AmmoTracker
 
 @export var active = true
 
 @onready var room = get_tree().current_scene
 @onready var barrelNode = $Barrel
-
-
 
 func _ready():
 	
@@ -22,8 +18,9 @@ func _ready():
 	
 	if ammoUI:
 		ammoUI.toolName.text = str(toolName)
-		ammoUI.max.text = str(maxAmmo)
-		ammoUI.current.text = str(currentAmmo)
+		if ammoNode:
+			ammoUI.max.text = str(ammoNode.maxAmmo)
+			ammoUI.current.text = str(ammoNode.currentAmmo)
 
 func _process(delta):
 	
@@ -31,20 +28,20 @@ func _process(delta):
 		return
 	
 	if Input.is_action_just_pressed("use_tool"):	
-		if maxAmmo > 0 and currentAmmo <=0:
+		if ammoNode and ammoNode.currentAmmo <=0:
 			dryFire()
 		else:
 			var proj = projectile.instantiate()
 			proj.transform = barrelNode.global_transform
 			room.add_child(proj)
 			
-			if maxAmmo <= 0:
+			if !ammoNode:
 				return
-				
-			currentAmmo -= 1
+			ammoNode.currentAmmo -= 1
 			
-			if ammoUI:
-				ammoUI.current.text = str(currentAmmo)
+			if !ammoUI:
+				return
+			ammoUI.current.text = str(ammoNode.currentAmmo)
 
 func dryFire():
 	pass
