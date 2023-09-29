@@ -5,11 +5,14 @@ extends Node3D
 @export var projectile : PackedScene
 @export var ammoNode : Ammo
 @export var ammoUI : AmmoTracker
+@export var fireRate : Timer
 
 @export var active = true
 
 @onready var room = get_tree().current_scene
 @onready var barrelNode = $Barrel
+
+var readyToFire = true
 
 func _ready():
 	
@@ -23,17 +26,29 @@ func _ready():
 			ammoUI.current.text = str(ammoNode.currentAmmo)
 
 func _process(delta):
+	fire()
+	ready()
 	
-	if !active:
+
+func dryFire():
+	pass
+
+func fire():
+	if !active or !readyToFire:
 		return
+
 	
-	if Input.is_action_just_pressed("use_tool"):	
+	if Input.is_action_pressed("use_tool"):	
 		if ammoNode and ammoNode.currentAmmo <=0:
 			dryFire()
 		else:
 			var proj = projectile.instantiate()
 			proj.transform = barrelNode.global_transform
 			room.add_child(proj)
+			readyToFire = false
+			
+			if fireRate:
+				fireRate.start()
 			
 			if !ammoNode:
 				return
@@ -43,5 +58,14 @@ func _process(delta):
 				return
 			ammoUI.current.text = str(ammoNode.currentAmmo)
 
-func dryFire():
-	pass
+func ready():
+	if Input.is_action_just_released("use_tool"):
+		readyToFire = true
+	
+	if !fireRate:
+		return
+	
+	if fireRate.is_stopped():
+		readyToFire = true
+	
+	

@@ -1,3 +1,4 @@
+Timer
 Label
 HBoxContainer
 Panel
@@ -8,7 +9,6 @@ CanvasLayer
 Node3D
 CollisionShape3D
 Area3D
-Timer
 RigidBody3D
 RayCast3D
 AudioStreamPlayer3D

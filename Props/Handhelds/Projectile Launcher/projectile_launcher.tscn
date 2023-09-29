@@ -7,9 +7,10 @@
 [sub_resource type="BoxMesh" id="BoxMesh_ndi02"]
 size = Vector3(0.1, 0.25, 0.5)
 
-[node name="ProjectileLauncher" type="Node3D"]
+[node name="ProjectileLauncher" type="Node3D" node_paths=PackedStringArray("ammoNode")]
 script = ExtResource("1_gxvem")
 projectile = ExtResource("2_cojhq")
+ammoNode = NodePath("Ammo")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_ndi02")
@@ -18,3 +19,9 @@ mesh = SubResource("BoxMesh_ndi02")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0434716, -0.286731)
 
 [node name="Ammo" parent="." instance=ExtResource("3_732gp")]
+maxAmmo = 100
+currentAmmo = 100
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
