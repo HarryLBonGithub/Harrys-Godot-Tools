@@ -93,8 +93,9 @@ shape = SubResource("CapsuleShape3D_08tas")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.954661, 0)
 target_position = Vector3(0, -0.25, 0)
 
-[node name="Health" parent="." node_paths=PackedStringArray("healthUI") instance=ExtResource("11_wxiug")]
+[node name="Health" parent="." node_paths=PackedStringArray("healthUI", "owningNode") instance=ExtResource("11_wxiug")]
 healthUI = NodePath("../PlayerUI/healthBar")
+owningNode = NodePath("..")
 
 [editable path="PlayerUI/AmmoTracker"]
 [editable path="Head/InfoChecker"]

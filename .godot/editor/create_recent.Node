@@ -1,4 +1,5 @@
 CollisionShape3D
+Area3D
 StaticBody3D
 Timer
 Node
@@ -11,7 +12,6 @@ Panel
 ProgressBar
 CanvasLayer
 Node3D
-Area3D
 RigidBody3D
 RayCast3D
 TextureRect

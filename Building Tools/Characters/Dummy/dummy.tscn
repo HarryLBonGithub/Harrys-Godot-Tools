@@ -22,7 +22,8 @@ shape = SubResource("CapsuleShape3D_jvcyp")
 mesh = SubResource("CapsuleMesh_ow8dd")
 surface_material_override/0 = SubResource("StandardMaterial3D_1rtnm")
 
-[node name="Health" parent="." instance=ExtResource("1_u5hva")]
+[node name="Health" parent="." node_paths=PackedStringArray("owningNode") instance=ExtResource("1_u5hva")]
+owningNode = NodePath("..")
 
 [node name="CursorHint" parent="." instance=ExtResource("2_d50t5")]
 hint = "Dummy"

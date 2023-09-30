@@ -6,3 +6,5 @@ res://Building Tools/Action Scripts/Target Nearest/target_nearest.tscn
 res://Building Tools/Action Scripts/Target Nearest/TargetNearest.gd
 res://Building Tools/Characters/Simple Turret/simple_turret.tscn
 res://Building Tools/Characters/Simple Turret/TurretCommand.gd
+res://Building Tools/Properties/Health/health.tscn
+res://Building Tools/Properties/Health/Health.gd

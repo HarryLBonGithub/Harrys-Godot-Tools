@@ -8,6 +8,7 @@ signal healed
 @export var currentHealth = 30
 
 @export var healthUI : ProgressBar
+@export var owningNode : Node
 
 func _ready():
 	if healthUI:
@@ -21,5 +22,5 @@ func take_damage(damage):
 		healthUI.value = currentHealth
 	
 	if currentHealth <= 0:
-		var parent = get_parent()
-		parent.queue_free()
+		if owningNode:
+			owningNode.queue_free()
