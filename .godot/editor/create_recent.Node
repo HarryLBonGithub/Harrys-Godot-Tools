@@ -1,9 +1,10 @@
-Node
-CollisionShape3D
-Area3D
 StaticBody3D
 Timer
+Node
 MeshInstance3D
+CollisionShape3D
+RigidBody3D
+Area3D
 WorldEnvironment
 AudioStreamPlayer3D
 Label
@@ -12,6 +13,5 @@ Panel
 ProgressBar
 CanvasLayer
 Node3D
-RigidBody3D
 RayCast3D
 TextureRect

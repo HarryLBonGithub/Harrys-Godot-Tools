@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Building Tools/Props/Handhelds/Tool Frame/tool_frame.gd" id="1_vpjjj"]
 [ext_resource type="PackedScene" uid="uid://dim0l6a2xqttt" path="res://Building Tools/Props/Handhelds/Projectile Launcher/projectile_launcher.tscn" id="2_hjowm"]
-[ext_resource type="PackedScene" uid="uid://jctjmh1fp4xm" path="res://Building Tools/Props/Projectiles/Bullet Projectile/blaster_bolt/blaster_bolt.tscn" id="3_gi1qi"]
+[ext_resource type="PackedScene" uid="uid://bf2avvuwarxgh" path="res://Building Tools/Props/Projectiles/Blaster Bolt/blaster_bolt.tscn" id="3_6o3fi"]
 [ext_resource type="AudioStream" uid="uid://dxamylo73r2t5" path="res://Building Tools/Filler Assets/Blaster Fire 2 Clipped.wav" id="4_3ixag"]
 [ext_resource type="PackedScene" uid="uid://cvc7fwcb2lppn" path="res://Building Tools/Properties/Ammo/ammo.tscn" id="5_i7rsq"]
 [ext_resource type="AudioStream" uid="uid://carpdnyb0mhex" path="res://Building Tools/Filler Assets/Blaster Error.wav" id="6_qkmfp"]
@@ -28,7 +28,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_xrtcg")
 
 [node name="ProjectileLauncher" parent="." instance=ExtResource("2_hjowm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.851349)
-projectile = ExtResource("3_gi1qi")
+projectile = ExtResource("3_6o3fi")
 
 [node name="blast" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("4_3ixag")

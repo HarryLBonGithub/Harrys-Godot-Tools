@@ -1,10 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://tn5wrhb6kwdw"]
+[gd_scene load_steps=16 format=3 uid="uid://tn5wrhb6kwdw"]
 
 [ext_resource type="PackedScene" uid="uid://dbuof615a47rw" path="res://Building Tools/Action Scripts/Target Nearest/target_nearest.tscn" id="1_8qqrb"]
 [ext_resource type="PackedScene" uid="uid://dim0l6a2xqttt" path="res://Building Tools/Props/Handhelds/Projectile Launcher/projectile_launcher.tscn" id="1_c2dd0"]
-[ext_resource type="PackedScene" uid="uid://jctjmh1fp4xm" path="res://Building Tools/Props/Projectiles/Bullet Projectile/blaster_bolt/blaster_bolt.tscn" id="2_l5le6"]
+[ext_resource type="PackedScene" uid="uid://bf2avvuwarxgh" path="res://Building Tools/Props/Projectiles/Blaster Bolt/blaster_bolt.tscn" id="2_bftov"]
 [ext_resource type="Script" path="res://Building Tools/Characters/Simple Turret/TurretCommand.gd" id="2_s8trj"]
 [ext_resource type="PackedScene" uid="uid://bgeyfohldmmx2" path="res://Building Tools/Properties/Health/health.tscn" id="5_r6iq5"]
+[ext_resource type="PackedScene" path="res://Building Tools/Properties/Cursor Hint/cursor_hint.tscn" id="6_3u70t"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_00l3w"]
 size = Vector3(0.5, 1, 0.5)
@@ -58,7 +59,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_p8mo8")
 
 [node name="ProjectileLauncher" parent="Gun" instance=ExtResource("1_c2dd0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.25149)
-projectile = ExtResource("2_l5le6")
+projectile = ExtResource("2_bftov")
 
 [node name="TargetNearest" parent="." node_paths=PackedStringArray("pointer") instance=ExtResource("1_8qqrb")]
 pointer = NodePath("../Gun")
@@ -70,7 +71,7 @@ script = ExtResource("2_s8trj")
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
-[node name="Hitbox" type="Area3D" parent="."]
+[node name="Hitbox" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Hitbox"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.782373, 0)
@@ -78,6 +79,9 @@ shape = SubResource("BoxShape3D_1vn34")
 
 [node name="Health" parent="Hitbox" node_paths=PackedStringArray("owningNode") instance=ExtResource("5_r6iq5")]
 owningNode = NodePath("../..")
+
+[node name="CursorHint" parent="Hitbox" instance=ExtResource("6_3u70t")]
+hint = "Turret"
 
 [connection signal="timeout" from="Timer" to="Command" method="_on_timer_timeout"]
 [connection signal="ko" from="Hitbox/Health" to="Command" method="_on_health_ko"]

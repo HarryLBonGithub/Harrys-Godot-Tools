@@ -36,6 +36,7 @@ func heal_damage(damage):
 	
 	if toHeal + currentHealth > maxHealth:
 		toHeal = maxHealth - currentHealth
+		
 	
 	currentHealth += toHeal
 	
