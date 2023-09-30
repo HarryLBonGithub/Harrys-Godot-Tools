@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://dtg5r0ox5x83s"]
+
+[ext_resource type="PackedScene" uid="uid://bgeyfohldmmx2" path="res://Building Tools/Properties/Health/health.tscn" id="1_u5hva"]
+[ext_resource type="PackedScene" path="res://Building Tools/Properties/Cursor Hint/cursor_hint.tscn" id="2_d50t5"]
+[ext_resource type="Script" path="res://Building Tools/Characters/Dummy/DummyInteraction.gd" id="3_r63x4"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jvcyp"]
+radius = 0.4
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ow8dd"]
+radius = 0.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1rtnm"]
+albedo_color = Color(0.827451, 0, 0.219608, 1)
+
+[node name="Dummy" type="CharacterBody3D" groups=["enemy"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_jvcyp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_ow8dd")
+surface_material_override/0 = SubResource("StandardMaterial3D_1rtnm")
+
+[node name="Health" parent="." instance=ExtResource("1_u5hva")]
+
+[node name="CursorHint" parent="." instance=ExtResource("2_d50t5")]
+hint = "Dummy"
+
+[node name="Interaction" type="Node" parent="."]
+script = ExtResource("3_r63x4")

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://carpdnyb0mhex"
+path="res://.godot/imported/Blaster Error.wav-935c1b5df6cf6c796168f7421dfc36a0.sample"
+
+[deps]
+
+source_file="res://Building Tools/Filler Assets/Blaster Error.wav"
+dest_files=["res://.godot/imported/Blaster Error.wav-935c1b5df6cf6c796168f7421dfc36a0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

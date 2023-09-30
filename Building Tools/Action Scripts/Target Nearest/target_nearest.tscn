@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbuof615a47rw"]
+
+[ext_resource type="Script" path="res://Building Tools/Action Scripts/Target Nearest/TargetNearest.gd" id="1_13ypp"]
+
+[node name="TargetNearest" type="Node"]
+script = ExtResource("1_13ypp")

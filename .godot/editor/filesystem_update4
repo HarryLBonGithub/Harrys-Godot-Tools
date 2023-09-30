@@ -1,16 +1,8 @@
-res://Themes/FillerTheme.tres
-res://Character Controllers/fps_character_controller_extended.tscn
-res://Testing Rooms/testing_room_alpha.tscn
-res://Props/Handhelds/Projectile Launcher/projectile_launcher.tscn
-res://Props/Handhelds/Projectile Tool/projectile_tool.tscn
-res://Props/Handhelds/Tool Frame/tool_frame.tscn
-res://Props/Handhelds/Tool Frame/tool_frame.gd
-res://Props/Handhelds/Projectile Launcher/projectile_launcher.gd
-res://Organizers/Hand/hand.tscn
-res://Organizers/Hand/hand.gd
-res://Props/Handhelds/Basic Hitscan Gun/hitscan_gun_basic.tscn
-res://Props/Handhelds/Basic Hitscan Gun/HitscanGunBasic.gd
-res://Props/Handhelds/Tool Frame/Simple Blaster/simple_blaster.tscn
-res://Props/Projectiles/Bullet Projectile/bullet_projectile.tscn
-res://Props/Projectiles/projectile.tscn
-res://Props/Projectiles/Bullet Projectile/blaster_bolt/blaster_bolt.tscn
+res://Building Tools/Testing Rooms/testing_room_alpha.tscn
+res://Building Tools/Themes/FillerTheme.tres
+res://Building Tools/Characters/Dummy/dummy.tscn
+res://Building Tools/Character Controllers/fps_character_controller_extended.tscn
+res://Building Tools/Action Scripts/Target Nearest/target_nearest.tscn
+res://Building Tools/Action Scripts/Target Nearest/TargetNearest.gd
+res://Building Tools/Characters/Simple Turret/simple_turret.tscn
+res://Building Tools/Characters/Simple Turret/TurretCommand.gd

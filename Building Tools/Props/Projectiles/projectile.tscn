@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1h1nawfw1pbb"]
+
+[ext_resource type="Script" path="res://Building Tools/Props/Projectiles/projectile.gd" id="1_3qbe2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l3ow5"]
+resource_local_to_scene = true
+size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="SphereMesh" id="SphereMesh_mehym"]
+resource_local_to_scene = true
+radius = 0.25
+height = 0.5
+
+[node name="Projectile" type="RigidBody3D"]
+collision_layer = 0
+script = ExtResource("1_3qbe2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_l3ow5")
+
+[node name="Lifetime" type="Timer" parent="."]
+autostart = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_mehym")
+
+[connection signal="timeout" from="Lifetime" to="." method="_on_lifetime_timeout"]

@@ -1,13 +1,2 @@
-res://Props/Handhelds/Tool Frame
-res://HUD Items/Ammo Tracker
-res://Organizers/Hand
-res://Props/Projectiles
-res://Properties/Ammo
-res://Themes
-res://Props/Handhelds/Projectile Launcher
-res://Props/Projectiles/Bullet Projectile
-res://Properties/Health
-res://Properties/Damage Box
-res://Properties/Interaction
-res://Props/Handhelds/Basic Hitscan Gun
-res://HUD Items/Crosshair
+res://Building Tools/Characters/Simple Turret
+res://Building Tools/Action Scripts/Target Nearest

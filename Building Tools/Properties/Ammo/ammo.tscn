@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvc7fwcb2lppn"]
+
+[ext_resource type="Script" path="res://Building Tools/Properties/Ammo/Ammo.gd" id="1_k364m"]
+
+[node name="Ammo" type="Node"]
+script = ExtResource("1_k364m")

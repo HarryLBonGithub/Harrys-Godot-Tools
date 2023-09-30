@@ -1,0 +1,72 @@
+[gd_scene load_steps=14 format=3 uid="uid://tn5wrhb6kwdw"]
+
+[ext_resource type="PackedScene" uid="uid://dbuof615a47rw" path="res://Building Tools/Action Scripts/Target Nearest/target_nearest.tscn" id="1_8qqrb"]
+[ext_resource type="PackedScene" uid="uid://dim0l6a2xqttt" path="res://Building Tools/Props/Handhelds/Projectile Launcher/projectile_launcher.tscn" id="1_c2dd0"]
+[ext_resource type="PackedScene" uid="uid://jctjmh1fp4xm" path="res://Building Tools/Props/Projectiles/Bullet Projectile/blaster_bolt/blaster_bolt.tscn" id="2_l5le6"]
+[ext_resource type="Script" path="res://Building Tools/Characters/Simple Turret/TurretCommand.gd" id="2_s8trj"]
+[ext_resource type="PackedScene" uid="uid://bgeyfohldmmx2" path="res://Building Tools/Properties/Health/health.tscn" id="5_r6iq5"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_00l3w"]
+size = Vector3(0.5, 1, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3uv72"]
+albedo_color = Color(0.2, 0.203922, 0.192157, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0hd7x"]
+size = Vector3(0.75, 0.75, 0.75)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iqwml"]
+albedo_color = Color(0.152941, 0.298039, 0.180392, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0j73q"]
+size = Vector3(0.25, 0.25, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4rhkr"]
+albedo_color = Color(0.529412, 0.529412, 0.529412, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_o4xhf"]
+size = Vector3(0.25, 0.25, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p8mo8"]
+albedo_color = Color(0.376471, 0.34902, 0.141176, 1)
+
+[node name="SimpleTurret" type="Node3D"]
+
+[node name="Base" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+mesh = SubResource("BoxMesh_00l3w")
+surface_material_override/0 = SubResource("StandardMaterial3D_3uv72")
+
+[node name="Gun" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("BoxMesh_0hd7x")
+surface_material_override/0 = SubResource("StandardMaterial3D_iqwml")
+metadata/_edit_group_ = true
+
+[node name="Barrel" type="MeshInstance3D" parent="Gun"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
+mesh = SubResource("BoxMesh_0j73q")
+surface_material_override/0 = SubResource("StandardMaterial3D_4rhkr")
+
+[node name="Hatch" type="MeshInstance3D" parent="Gun"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.287713, 0)
+mesh = SubResource("BoxMesh_o4xhf")
+surface_material_override/0 = SubResource("StandardMaterial3D_p8mo8")
+
+[node name="ProjectileLauncher" parent="Gun" instance=ExtResource("1_c2dd0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.25149)
+projectile = ExtResource("2_l5le6")
+
+[node name="TargetNearest" parent="." node_paths=PackedStringArray("pointer") instance=ExtResource("1_8qqrb")]
+pointer = NodePath("../Gun")
+targetGroup = "enemy"
+
+[node name="Command" type="Node" parent="."]
+script = ExtResource("2_s8trj")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Health" parent="." instance=ExtResource("5_r6iq5")]
+
+[connection signal="timeout" from="Timer" to="Command" method="_on_timer_timeout"]

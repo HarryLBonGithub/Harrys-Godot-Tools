@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddjlj2gpevbbb"]
+
+[ext_resource type="Script" path="res://Building Tools/HUD Items/Ammo Tracker/ammo_tracker.gd" id="1_0h3lq"]
+
+[node name="AmmoTracker" type="Panel"]
+script = ExtResource("1_0h3lq")
+
+[node name="AmmoContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+offset_right = 108.0
+offset_bottom = 40.0
+alignment = 2
+
+[node name="Name" type="Label" parent="AmmoContainer"]
+layout_mode = 2
+text = "Name:"
+
+[node name="Current" type="Label" parent="AmmoContainer"]
+layout_mode = 2
+text = "10"
+
+[node name="Seperator" type="Label" parent="AmmoContainer"]
+layout_mode = 2
+text = "/"
+
+[node name="Max" type="Label" parent="AmmoContainer"]
+layout_mode = 2
+text = "10"

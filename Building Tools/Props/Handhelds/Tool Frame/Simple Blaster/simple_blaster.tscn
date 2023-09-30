@@ -1,0 +1,45 @@
+[gd_scene load_steps=9 format=3 uid="uid://de7t6wqk65bq5"]
+
+[ext_resource type="Script" path="res://Building Tools/Props/Handhelds/Tool Frame/tool_frame.gd" id="1_vpjjj"]
+[ext_resource type="PackedScene" uid="uid://dim0l6a2xqttt" path="res://Building Tools/Props/Handhelds/Projectile Launcher/projectile_launcher.tscn" id="2_hjowm"]
+[ext_resource type="PackedScene" uid="uid://jctjmh1fp4xm" path="res://Building Tools/Props/Projectiles/Bullet Projectile/blaster_bolt/blaster_bolt.tscn" id="3_gi1qi"]
+[ext_resource type="AudioStream" uid="uid://dxamylo73r2t5" path="res://Building Tools/Filler Assets/Blaster Fire 2 Clipped.wav" id="4_3ixag"]
+[ext_resource type="PackedScene" uid="uid://cvc7fwcb2lppn" path="res://Building Tools/Properties/Ammo/ammo.tscn" id="5_i7rsq"]
+[ext_resource type="AudioStream" uid="uid://carpdnyb0mhex" path="res://Building Tools/Filler Assets/Blaster Error.wav" id="6_qkmfp"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ct0jp"]
+size = Vector3(0.25, 0.5, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xrtcg"]
+albedo_color = Color(0.25098, 0.25098, 0.25098, 1)
+
+[node name="SimpleBlaster" type="Node3D" node_paths=PackedStringArray("actionTool", "ammoNode", "fireRate", "useSound", "emptySound")]
+script = ExtResource("1_vpjjj")
+toolName = "Simple Blaster"
+actionTool = NodePath("ProjectileLauncher")
+ammoNode = NodePath("Ammo")
+fireRate = NodePath("Timer")
+useSound = NodePath("blast")
+emptySound = NodePath("empty")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_ct0jp")
+surface_material_override/0 = SubResource("StandardMaterial3D_xrtcg")
+
+[node name="ProjectileLauncher" parent="." instance=ExtResource("2_hjowm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.851349)
+projectile = ExtResource("3_gi1qi")
+
+[node name="blast" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_3ixag")
+
+[node name="Ammo" parent="." instance=ExtResource("5_i7rsq")]
+maxAmmo = 100
+currentAmmo = 100
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="empty" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00209653, -0.00454473, 0.000233412)
+stream = ExtResource("6_qkmfp")

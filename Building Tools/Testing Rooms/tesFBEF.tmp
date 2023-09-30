@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://cwpk3o2hdiphh"]
+
+[ext_resource type="Script" path="res://Building Tools/Testing Rooms/testing_rooms.gd" id="1_lvbwn"]
+[ext_resource type="PackedScene" uid="uid://dtg5r0ox5x83s" path="res://Building Tools/Characters/Dummy/dummy.tscn" id="4_jhemo"]
+[ext_resource type="PackedScene" uid="uid://baqs2t4p5a58i" path="res://Building Tools/Character Controllers/fps_character_controller_extended.tscn" id="4_yfru2"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_nb5n6"]
+size = Vector3(20, 1, 20)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_k2gn4"]
+data = PackedVector3Array(-10, 0.5, 10, 10, 0.5, 10, -10, -0.5, 10, 10, 0.5, 10, 10, -0.5, 10, -10, -0.5, 10, 10, 0.5, -10, -10, 0.5, -10, 10, -0.5, -10, -10, 0.5, -10, -10, -0.5, -10, 10, -0.5, -10, 10, 0.5, 10, 10, 0.5, -10, 10, -0.5, 10, 10, 0.5, -10, 10, -0.5, -10, 10, -0.5, 10, -10, 0.5, -10, -10, 0.5, 10, -10, -0.5, -10, -10, 0.5, 10, -10, -0.5, 10, -10, -0.5, -10, 10, 0.5, 10, -10, 0.5, 10, 10, 0.5, -10, -10, 0.5, 10, -10, 0.5, -10, 10, 0.5, -10, -10, -0.5, 10, 10, -0.5, 10, -10, -0.5, -10, 10, -0.5, 10, 10, -0.5, -10, -10, -0.5, -10)
+
+[node name="TestingRoomAlpha" type="Node3D"]
+script = ExtResource("1_lvbwn")
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_nb5n6")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k2gn4")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.475778, 0.879566, 0, -0.879566, 0.475778, 0, 11.1154, 0)
+shadow_enabled = true
+
+[node name="Dummy" parent="." instance=ExtResource("4_jhemo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -2.95903)
+
+[node name="FPSCharacterController" parent="." instance=ExtResource("4_yfru2")]
+transform = Transform3D(-0.0214834, 0, 0.999769, 0, 1, 0, -0.999769, 0, -0.0214834, 3.76567, 1.5, 1.52736)
