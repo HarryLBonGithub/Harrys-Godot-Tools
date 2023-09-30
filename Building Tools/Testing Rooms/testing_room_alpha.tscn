@@ -28,13 +28,19 @@ transform = Transform3D(1, 0, 0, 0, 0.475778, 0.879566, 0, -0.879566, 0.475778, 
 shadow_enabled = true
 
 [node name="FPSCharacterController" parent="." instance=ExtResource("4_yfru2")]
-transform = Transform3D(-0.0214834, 0, 0.999769, 0, 1, 0, -0.999769, 0, -0.0214834, 3.76567, 1.5, 1.52736)
+transform = Transform3D(-0.0214834, 0, 0.999769, 0, 1, 0, -0.999769, 0, -0.0214834, 8.63297, 1.5, 7.41954)
 
 [node name="SimpleTurret" parent="." instance=ExtResource("4_xa2t1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.483391, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.75996, 0.483391, -8.69371)
 
 [node name="Dummy" parent="." instance=ExtResource("4_jhemo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.41921, 1.61337, 0)
 
 [node name="HealthPickup" parent="." instance=ExtResource("5_yl6wb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.19592, 5.91257)
+
+[node name="HealthPickup2" parent="." instance=ExtResource("5_yl6wb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.31076, 1.19592, -6.76053)
+
+[node name="HealthPickup3" parent="." instance=ExtResource("5_yl6wb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.72794, 0.830379, -1.63218)
