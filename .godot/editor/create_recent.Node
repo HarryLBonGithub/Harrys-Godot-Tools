@@ -1,8 +1,8 @@
+Node
 CollisionShape3D
 Area3D
 StaticBody3D
 Timer
-Node
 MeshInstance3D
 WorldEnvironment
 AudioStreamPlayer3D

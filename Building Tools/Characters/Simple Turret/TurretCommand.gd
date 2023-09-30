@@ -3,6 +3,8 @@ extends Node
 @onready var targettingNode = $"../TargetNearest"
 @onready var launcher = $"../Gun/ProjectileLauncher"
 
+
+
 func _process(delta):
 	targettingNode.target()
 	
@@ -12,3 +14,6 @@ func _process(delta):
 
 func _on_timer_timeout():
 	launcher.use()
+
+func _on_health_ko():
+	$"..".queue_free()

@@ -18,9 +18,26 @@ func _ready():
 func take_damage(damage):
 	currentHealth -= damage
 	
+	emit_signal("hit")
+	
 	if healthUI:
 		healthUI.value = currentHealth
 	
 	if currentHealth <= 0:
-		if owningNode:
-			owningNode.queue_free()
+		emit_signal("ko")
+
+func heal_damage(damage):
+	if currentHealth >= maxHealth:
+		return
+	
+	emit_signal("healed")
+	
+	var toHeal = damage
+	
+	if toHeal + currentHealth > maxHealth:
+		toHeal = maxHealth - currentHealth
+	
+	currentHealth += toHeal
+	
+	if healthUI:
+		healthUI.value = currentHealth

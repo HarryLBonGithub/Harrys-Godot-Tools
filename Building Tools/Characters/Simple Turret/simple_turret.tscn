@@ -80,3 +80,4 @@ shape = SubResource("BoxShape3D_1vn34")
 owningNode = NodePath("../..")
 
 [connection signal="timeout" from="Timer" to="Command" method="_on_timer_timeout"]
+[connection signal="ko" from="Hitbox/Health" to="Command" method="_on_health_ko"]
