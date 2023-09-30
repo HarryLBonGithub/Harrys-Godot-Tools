@@ -35,13 +35,14 @@ func _process(delta):
 func updateUI():
 	if !ammoUI:
 		return
+	ammoUI.toolName.text = str(belt[activeTool].toolName)
 	if !belt[activeTool].has_node("Ammo"):
-		ammoUI.toolName.text = "NA"
+		
 		ammoUI.max.text = "NA"
 		ammoUI.current.text = "NA"
 		return
 	
-	ammoUI.toolName.text = str(belt[activeTool].toolName)
+	
 	
 	var toolAmmo = belt[activeTool].find_child("Ammo")
 	

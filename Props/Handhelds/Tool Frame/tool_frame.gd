@@ -6,6 +6,9 @@ extends Node3D
 @export var ammoNode : Ammo
 @export var ammoUI : AmmoTracker
 @export var fireRate : Timer
+@export var useSound : AudioStreamPlayer3D
+@export var emptySound : AudioStreamPlayer3D
+@export var reloadSound : AudioStreamPlayer3D
 
 @export var active = true
 
@@ -36,13 +39,16 @@ func useTool():
 		if ammoNode:
 			if ammoNode.currentAmmo <=0:
 				dryFire()
+				readyToFire = false
 				return
 			else:
 				ammoNode.currentAmmo -= 1
+				
+		actionTool.use()
+		readyToFire = false
 		
-		if Input.is_action_pressed("use_tool"):
-			actionTool.use()
-			readyToFire = false
+		if useSound:
+			useSound.play()
 		
 		if fireRate:
 			fireRate.one_shot = true
@@ -60,4 +66,6 @@ func readyTool():
 		readyToFire = true
 
 func dryFire():
+	if emptySound and readyToFire:
+		emptySound.play()
 	return

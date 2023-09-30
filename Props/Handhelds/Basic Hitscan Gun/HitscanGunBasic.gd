@@ -7,6 +7,7 @@ extends RayCast3D
 
 var active = true
 
+var toolName = "B.H.G."
 
 func _process(delta):
 	

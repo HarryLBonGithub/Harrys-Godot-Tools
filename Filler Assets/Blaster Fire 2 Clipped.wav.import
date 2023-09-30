@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dxamylo73r2t5"
+path="res://.godot/imported/Blaster Fire 2 Clipped.wav-b94c0ce2327a5d063b787646470d34de.sample"
+
+[deps]
+
+source_file="res://Filler Assets/Blaster Fire 2 Clipped.wav"
+dest_files=["res://.godot/imported/Blaster Fire 2 Clipped.wav-b94c0ce2327a5d063b787646470d34de.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
