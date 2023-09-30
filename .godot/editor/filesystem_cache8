@@ -1,10 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1695992447
+::res://::1696023442
 icon.svg::CompressedTexture2D::8360453262726188600::1692578138::1692578154::1::::<><>::
-::res://Character Controllers/::1695786055
+::res://Character Controllers/::1696023527
 FPSCharacterController.gd::GDScript::-1::1694224156::0::1::::<>CharacterBody3D<>::
 fps_character_controller.tscn::PackedScene::934947315899202677::1695696186::0::1::::<><>::res://Character Controllers/FPSCharacterController.gd
-fps_character_controller_extended.tscn::PackedScene::2420592893527924066::1695786055::0::1::::<><>::res://Character Controllers/FPSCharacterController.gd<>uid://ggljq5ed622m::::res://HUD Items/Crosshair/crosshair.tscn<>uid://cgh22dltjhw5u::::res://HUD Items/Info Checker/info_checker.tscn<>uid://bm00ewhu0i4vl::::res://Properties/Interaction/interaction_ray.tscn<>uid://dim0l6a2xqttt::::res://Props/Handhelds/Projectile Launcher/projectile_launcher.tscn<>uid://bgeyfohldmmx2::::res://Properties/Health/health.tscn<>uid://cmjnqicbnobds::::res://Themes/FillerTheme.tres<>uid://b8pmopdg2rid5::::res://Organizers/Hand/hand.tscn<>uid://ddjlj2gpevbbb::::res://HUD Items/Ammo Tracker/ammo_tracker.tscn<>uid://c1h4sh4rgqpbq::::res://Props/Handhelds/Basic Hitscan Gun/hitscan_gun_basic.tscn
+fps_character_controller_extended.tscn::PackedScene::2420592893527924066::1696023527::0::1::::<><>::res://Character Controllers/FPSCharacterController.gd<>uid://ggljq5ed622m::::res://HUD Items/Crosshair/crosshair.tscn<>uid://cgh22dltjhw5u::::res://HUD Items/Info Checker/info_checker.tscn<>uid://bm00ewhu0i4vl::::res://Properties/Interaction/interaction_ray.tscn<>uid://bgeyfohldmmx2::::res://Properties/Health/health.tscn<>uid://cmjnqicbnobds::::res://Themes/FillerTheme.tres<>uid://b8pmopdg2rid5::::res://Organizers/Hand/hand.tscn<>uid://ddjlj2gpevbbb::::res://HUD Items/Ammo Tracker/ammo_tracker.tscn<>uid://c1h4sh4rgqpbq::::res://Props/Handhelds/Basic Hitscan Gun/hitscan_gun_basic.tscn
 ::res://Characters/::1692578138
 ::res://Characters/Dummy/::1694315541
 dummy.tscn::PackedScene::8507089550802717638::1694315541::0::1::::<><>::uid://bgeyfohldmmx2
@@ -42,25 +42,25 @@ health.tscn::PackedScene::2817278139978272009::1695696186::0::1::::<><>::res://P
 interaction_ray.gd::GDScript::-1::1694223707::0::1::::<>RayCast3D<>::
 interaction_ray.tscn::PackedScene::3281822486465564889::1694315541::0::1::::<><>::res://Properties/Interaction/interaction_ray.gd
 ::res://Props/::1695155383
-::res://Props/Handhelds/::1695487339
+::res://Props/Handhelds/::1696032426
 ::res://Props/Handhelds/Basic Flashlight/::1692578154
 basic_flashlight.gd::GDScript::-1::1692578138::0::1::::<>Node3D<>::
 basic_flashlight.tscn::PackedScene::5252629116502310218::1692578138::0::1::::<><>::res://Props/Handhelds/Basic Flashlight/basic_flashlight.gd<>uid://cj2vn66jxnpp
 Click.mp3::AudioStreamMP3::160634679653233577::1692578138::1692578154::1::::<><>::
 ::res://Props/Handhelds/Basic Hitscan Gun/::1695784591
 HitscanGunBasic.gd::GDScript::-1::1695784591::0::1::::<>RayCast3D<>::
-hitscan_gun_basic.tscn::PackedScene::6613995296577823662::1695784591::0::1::::<><>::res://Props/Handhelds/Basic Hitscan Gun/HitscanGunBasic.gd<>uid://bkgssfcgruuf8::::res://Filler Assets/Gunshot Short.wav
-::res://Props/Handhelds/Projectile Launcher/::1695786595
-projectile_launcher.gd::GDScript::-1::1695786043::0::1::::<>Node3D<>::
-projectile_launcher.tscn::PackedScene::7747084531266393141::1695786595::0::1::::<><>::res://Props/Handhelds/Projectile Launcher/projectile_launcher.gd<>uid://b2aexqm1egw0n::::res://Props/Projectiles/Bullet Projectile/bullet_projectile.tscn<>uid://cvc7fwcb2lppn::::res://Properties/Ammo/ammo.tscn
+hitscan_gun_basic.tscn::PackedScene::6613995296577823662::1695784591::0::1::::<><>::res://Props/Handhelds/Basic Hitscan Gun/HitscanGunBasic.gd<>uid://bkgssfcgruuf8
+::res://Props/Handhelds/Projectile Launcher/::1696023526
+projectile_launcher.gd::GDScript::-1::1695993285::0::1::::<>Node3D<>::
+projectile_launcher.tscn::PackedScene::7747084531266393141::1696023526::0::1::::<><>::res://Props/Handhelds/Projectile Launcher/projectile_launcher.gd<>uid://b2aexqm1egw0n::::res://Props/Projectiles/Bullet Projectile/bullet_projectile.tscn
 ::res://Props/Projectiles/::1695696186
 projectile.gd::GDScript::-1::1695695911::0::1::::Projectile<>RigidBody3D<>::
 projectile.tscn::PackedScene::6613803837629467183::1695696186::0::1::::<><>::res://Props/Projectiles/projectile.gd
 ::res://Props/Projectiles/Bullet Projectile/::1695696213
 bullet_projectile.gd::GDScript::-1::1695157812::0::1::::<>RigidBody3D<>::
 bullet_projectile.tscn::PackedScene::4281804263249037671::1695696213::0::1::::<><>::uid://c1h1nawfw1pbb
-::res://Testing Rooms/::1695786595
+::res://Testing Rooms/::1696023526
 testing_rooms.gd::GDScript::-1::1692578138::0::1::::<>Node3D<>::
-testing_room_alpha.tscn::PackedScene::6348619543249823169::1695786595::0::1::::<><>::res://Testing Rooms/testing_rooms.gd<>uid://dtg5r0ox5x83s::::res://Characters/Dummy/dummy.tscn<>uid://baqs2t4p5a58i::::res://Character Controllers/fps_character_controller_extended.tscn
-::res://Themes/::1695771001
-FillerTheme.tres::Theme::5634505207777340380::1695771001::0::1::::<><>::
+testing_room_alpha.tscn::PackedScene::6348619543249823169::1696023526::0::1::::<><>::res://Testing Rooms/testing_rooms.gd<>uid://dtg5r0ox5x83s::::res://Characters/Dummy/dummy.tscn<>uid://baqs2t4p5a58i::::res://Character Controllers/fps_character_controller_extended.tscn
+::res://Themes/::1696023492
+FillerTheme.tres::Theme::5634505207777340380::1696023492::0::1::::<><>::

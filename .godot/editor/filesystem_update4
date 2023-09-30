@@ -1,4 +1,8 @@
-res://Testing Rooms/testing_room_alpha.tscn
 res://Themes/FillerTheme.tres
+res://Character Controllers/fps_character_controller_extended.tscn
+res://Testing Rooms/testing_room_alpha.tscn
 res://Props/Handhelds/Projectile Launcher/projectile_launcher.tscn
+res://Props/Handhelds/Projectile Tool/projectile_tool.tscn
+res://Props/Handhelds/Tool Frame/tool_frame.tscn
+res://Props/Handhelds/Tool Frame/tool_frame.gd
 res://Props/Handhelds/Projectile Launcher/projectile_launcher.gd

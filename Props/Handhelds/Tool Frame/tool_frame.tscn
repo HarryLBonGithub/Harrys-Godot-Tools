@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://d3bu2prcof0ca"]
+
+[ext_resource type="Script" path="res://Props/Handhelds/Tool Frame/tool_frame.gd" id="1_0pe6u"]
+[ext_resource type="PackedScene" uid="uid://dim0l6a2xqttt" path="res://Props/Handhelds/Projectile Launcher/projectile_launcher.tscn" id="2_egnec"]
+[ext_resource type="PackedScene" uid="uid://c1h1nawfw1pbb" path="res://Props/Projectiles/projectile.tscn" id="3_o8ku1"]
+[ext_resource type="PackedScene" uid="uid://cvc7fwcb2lppn" path="res://Properties/Ammo/ammo.tscn" id="4_6fl7y"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ct0jp"]
+size = Vector3(0.25, 0.5, 1)
+
+[node name="ToolFrame" type="Node3D" node_paths=PackedStringArray("actionTool", "ammoNode", "fireRate")]
+script = ExtResource("1_0pe6u")
+actionTool = NodePath("ProjectileLauncher")
+ammoNode = NodePath("Ammo")
+fireRate = NodePath("Timer")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_ct0jp")
+
+[node name="ProjectileLauncher" parent="." instance=ExtResource("2_egnec")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.978298)
+projectile = ExtResource("3_o8ku1")
+
+[node name="Ammo" parent="." instance=ExtResource("4_6fl7y")]
+maxAmmo = 100
+currentAmmo = 100
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.25
+one_shot = true

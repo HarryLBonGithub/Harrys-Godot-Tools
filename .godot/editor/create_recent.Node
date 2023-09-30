@@ -1,8 +1,8 @@
 Timer
+MeshInstance3D
 Label
 HBoxContainer
 Panel
-MeshInstance3D
 Node
 ProgressBar
 CanvasLayer
