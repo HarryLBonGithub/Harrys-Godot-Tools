@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://jctjmh1fp4xm"]
+
+[ext_resource type="PackedScene" uid="uid://c1h1nawfw1pbb" path="res://Props/Projectiles/projectile.tscn" id="1_glspr"]
+[ext_resource type="Script" path="res://Props/Projectiles/Bullet Projectile/bullet_projectile.gd" id="2_apd2i"]
+[ext_resource type="PackedScene" uid="uid://j2lecpaynqf8" path="res://Properties/Damage Box/damage_box.tscn" id="3_jlel0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4jvod"]
+resource_local_to_scene = true
+size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ajae5"]
+radius = 0.332077
+height = 1.17729
+
+[sub_resource type="BoxMesh" id="BoxMesh_wyquo"]
+size = Vector3(0.25, 0.25, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dyluj"]
+albedo_color = Color(0.843137, 0, 0.00392157, 1)
+emission_enabled = true
+emission = Color(0.854902, 0.0823529, 0, 1)
+
+[node name="BulletProjectile" instance=ExtResource("1_glspr")]
+gravity_scale = 0.0
+script = ExtResource("2_apd2i")
+speed = 50
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("BoxShape3D_4jvod")
+
+[node name="Lifetime" parent="." index="1"]
+wait_time = 2.0
+
+[node name="DamageBox" parent="." index="2" instance=ExtResource("3_jlel0")]
+damage = 5
+
+[node name="DamageShape" parent="DamageBox" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.0195987, 0.999808, 0, -0.999808, 0.0195987, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_ajae5")
+
+[node name="MeshInstance3D" parent="." index="3"]
+mesh = SubResource("BoxMesh_wyquo")
+surface_material_override/0 = SubResource("StandardMaterial3D_dyluj")
+
+[connection signal="area_entered" from="DamageBox" to="." method="_on_damage_box_area_entered"]
+[connection signal="body_entered" from="DamageBox" to="." method="_on_damage_box_body_entered"]
+
+[editable path="DamageBox"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b2aexqm1egw0n"]
+[gd_scene load_steps=6 format=3 uid="uid://b2aexqm1egw0n"]
 
 [ext_resource type="PackedScene" uid="uid://c1h1nawfw1pbb" path="res://Props/Projectiles/projectile.tscn" id="1_lo61r"]
 [ext_resource type="Script" path="res://Props/Projectiles/Bullet Projectile/bullet_projectile.gd" id="2_qye1a"]
@@ -6,9 +6,6 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4jvod"]
 resource_local_to_scene = true
-size = Vector3(0.5, 0.5, 0.5)
-
-[sub_resource type="BoxMesh" id="BoxMesh_qcb3x"]
 size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ajae5"]
@@ -22,10 +19,7 @@ script = ExtResource("2_qye1a")
 [node name="CollisionShape3D" parent="." index="0"]
 shape = SubResource("BoxShape3D_4jvod")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="." index="2"]
-mesh = SubResource("BoxMesh_qcb3x")
-
-[node name="DamageBox" parent="." index="3" instance=ExtResource("3_23pi6")]
+[node name="DamageBox" parent="." index="2" instance=ExtResource("3_23pi6")]
 
 [node name="DamageShape" parent="DamageBox" index="0"]
 transform = Transform3D(1, 0, 0, 0, 0.0195987, 0.999808, 0, -0.999808, 0.0195987, 0, 0, 0)

@@ -29,6 +29,7 @@ func _process(delta):
 		return
 	useTool()
 	readyTool()
+	dryFire()
 
 func useTool():
 	if Input.is_action_pressed("use_tool"):
@@ -38,7 +39,6 @@ func useTool():
 		
 		if ammoNode:
 			if ammoNode.currentAmmo <=0:
-				dryFire()
 				readyToFire = false
 				return
 			else:
@@ -66,6 +66,11 @@ func readyTool():
 		readyToFire = true
 
 func dryFire():
-	if emptySound and readyToFire:
+	if not ammoNode:
+		return
+	
+	if ammoNode.currentAmmo > 0:
+		return
+	
+	if Input.is_action_just_pressed("use_tool"):
 		emptySound.play()
-	return

@@ -8,7 +8,7 @@
 [ext_resource type="Theme" uid="uid://cmjnqicbnobds" path="res://Themes/FillerTheme.tres" id="7_1cndl"]
 [ext_resource type="PackedScene" uid="uid://b8pmopdg2rid5" path="res://Organizers/Hand/hand.tscn" id="7_lncrl"]
 [ext_resource type="PackedScene" uid="uid://ddjlj2gpevbbb" path="res://HUD Items/Ammo Tracker/ammo_tracker.tscn" id="8_ercnn"]
-[ext_resource type="PackedScene" uid="uid://d3bu2prcof0ca" path="res://Props/Handhelds/Tool Frame/tool_frame.tscn" id="8_swgbu"]
+[ext_resource type="PackedScene" uid="uid://de7t6wqk65bq5" path="res://Props/Handhelds/Tool Frame/Simple Blaster/simple_blaster.tscn" id="8_vk2bx"]
 [ext_resource type="PackedScene" uid="uid://c1h4sh4rgqpbq" path="res://Props/Handhelds/Basic Hitscan Gun/hitscan_gun_basic.tscn" id="9_36jqq"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_smuhl"]
@@ -75,8 +75,8 @@ info = NodePath("../../PlayerUI/info")
 [node name="Hand" parent="Head" node_paths=PackedStringArray("ammoUI") instance=ExtResource("7_lncrl")]
 ammoUI = NodePath("../../PlayerUI/AmmoTracker")
 
-[node name="ToolFrame" parent="Head/Hand" instance=ExtResource("8_swgbu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.265213, -0.403045, -1.18143)
+[node name="SimpleBlaster" parent="Head/Hand" instance=ExtResource("8_vk2bx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.376497, -0.409535, -1.18817)
 
 [node name="HitscanGunBasic" parent="Head/Hand" instance=ExtResource("9_36jqq")]
 
