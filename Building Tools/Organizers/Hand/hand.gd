@@ -5,6 +5,7 @@ var belt = []
 @onready var activeTool = 0
 
 @export var ammoUI : AmmoTracker
+@export var targettingRay : RayCast3D
 
 func _ready():
 	
@@ -21,6 +22,13 @@ func _ready():
 	belt[activeTool].visible = true
 	
 	updateUI()
+	
+	if targettingRay:
+	
+		for item in belt:
+			if item.has_node("AdjustAim"):
+				var aimAdjuster = item.find_child("AdjustAim")
+				aimAdjuster.targettingRay = targettingRay
 
 func _process(delta):
 	if len(belt) < 1:
@@ -41,8 +49,6 @@ func updateUI():
 		ammoUI.max.text = "NA"
 		ammoUI.current.text = "NA"
 		return
-	
-	
 	
 	var toolAmmo = belt[activeTool].find_child("Ammo")
 	

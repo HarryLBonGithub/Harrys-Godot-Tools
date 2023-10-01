@@ -1,6 +1,7 @@
+RayCast3D
+Node
 StaticBody3D
 Timer
-Node
 MeshInstance3D
 CollisionShape3D
 RigidBody3D
@@ -13,5 +14,4 @@ Panel
 ProgressBar
 CanvasLayer
 Node3D
-RayCast3D
 TextureRect

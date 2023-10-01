@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://baqs2t4p5a58i"]
+[gd_scene load_steps=14 format=3 uid="uid://baqs2t4p5a58i"]
 
 [ext_resource type="Script" path="res://Building Tools/Character Controllers/FPSCharacterController.gd" id="1_cawun"]
 [ext_resource type="Theme" uid="uid://cmjnqicbnobds" path="res://Building Tools/Themes/FillerTheme.tres" id="2_qnxyh"]
@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://bm00ewhu0i4vl" path="res://Building Tools/Properties/Interaction/interaction_ray.tscn" id="6_6sjcx"]
 [ext_resource type="PackedScene" uid="uid://b8pmopdg2rid5" path="res://Building Tools/Organizers/Hand/hand.tscn" id="7_mhc5k"]
 [ext_resource type="PackedScene" uid="uid://de7t6wqk65bq5" path="res://Building Tools/Props/Handhelds/Tool Frame/Simple Blaster/simple_blaster.tscn" id="8_83wnm"]
-[ext_resource type="PackedScene" uid="uid://c1h4sh4rgqpbq" path="res://Building Tools/Props/Handhelds/Basic Hitscan Gun/hitscan_gun_basic.tscn" id="9_qpa7a"]
 [ext_resource type="PackedScene" uid="uid://cg3obfppionlq" path="res://Building Tools/Props/Handhelds/Basic Flashlight/basic_flashlight.tscn" id="10_h0suf"]
 [ext_resource type="PackedScene" uid="uid://bgeyfohldmmx2" path="res://Building Tools/Properties/Health/health.tscn" id="11_wxiug"]
 [ext_resource type="Script" path="res://Building Tools/Character Controllers/FPSCharExtCommand.gd" id="12_ld36a"]
@@ -69,18 +68,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.71, 0)
 
 [node name="PlayerCamera" type="Camera3D" parent="Head"]
 
+[node name="Aim" type="RayCast3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.87656)
+target_position = Vector3(0, 0, -20)
+
 [node name="InfoChecker" parent="Head" node_paths=PackedStringArray("info") instance=ExtResource("5_38ppm")]
 info = NodePath("../../PlayerUI/info")
 
 [node name="InteractionRay" parent="Head" instance=ExtResource("6_6sjcx")]
 
-[node name="Hand" parent="Head" node_paths=PackedStringArray("ammoUI") instance=ExtResource("7_mhc5k")]
+[node name="Hand" parent="Head" node_paths=PackedStringArray("ammoUI", "targettingRay") instance=ExtResource("7_mhc5k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.291575, -0.665785, -0.675044)
 ammoUI = NodePath("../../PlayerUI/AmmoTracker")
+targettingRay = NodePath("../Aim")
 
 [node name="SimpleBlaster" parent="Head/Hand" instance=ExtResource("8_83wnm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.376497, -0.409535, -1.18817)
-
-[node name="HitscanGunBasic" parent="Head/Hand" instance=ExtResource("9_qpa7a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.392744)
 
 [node name="BasicFlashlight" parent="Head" instance=ExtResource("10_h0suf")]
 

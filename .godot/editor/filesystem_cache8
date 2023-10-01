@@ -1,23 +1,23 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1696094397
+::res://::1696132987
 ::res://Building Tools/::1696079822
 icon.svg::CompressedTexture2D::8360453262726188600::1692578138::1696040421::1::::<><>::
 ::res://Building Tools/Action Scripts/::1696079828
 ::res://Building Tools/Action Scripts/Target Nearest/::1696082321
 TargetNearest.gd::GDScript::-1::1696082321::0::1::::<>Node<>::
 target_nearest.tscn::PackedScene::7271599086419795456::1696082002::0::1::::<><>::res://Building Tools/Action Scripts/Target Nearest/TargetNearest.gd
-::res://Building Tools/Character Controllers/::1696093386
+::res://Building Tools/Character Controllers/::1696132749
 FPSCharacterController.gd::GDScript::-1::1694224156::0::1::::<>CharacterBody3D<>::
 FPSCharExtCommand.gd::GDScript::-1::1696084213::0::1::::<>Node<>::
 fps_character_controller.tscn::PackedScene::934947315899202677::1696040420::0::1::::<><>::res://Building Tools/Character Controllers/FPSCharacterController.gd
-fps_character_controller_extended.tscn::PackedScene::2420592893527924066::1696093386::0::1::::<><>::res://Building Tools/Character Controllers/FPSCharacterController.gd<>uid://cmjnqicbnobds::::res://Building Tools/Themes/FillerTheme.tres<>uid://ddjlj2gpevbbb::::res://Building Tools/HUD Items/Ammo Tracker/ammo_tracker.tscn<>uid://ggljq5ed622m::::res://Building Tools/HUD Items/Crosshair/crosshair.tscn<>uid://cgh22dltjhw5u::::res://Building Tools/HUD Items/Info Checker/info_checker.tscn<>uid://bm00ewhu0i4vl::::res://Building Tools/Properties/Interaction/interaction_ray.tscn<>uid://b8pmopdg2rid5::::res://Building Tools/Organizers/Hand/hand.tscn<>uid://de7t6wqk65bq5::::res://Building Tools/Props/Handhelds/Tool Frame/Simple Blaster/simple_blaster.tscn<>uid://c1h4sh4rgqpbq::::res://Building Tools/Props/Handhelds/Basic Hitscan Gun/hitscan_gun_basic.tscn<>uid://cg3obfppionlq::::res://Building Tools/Props/Handhelds/Basic Flashlight/basic_flashlight.tscn<>uid://bgeyfohldmmx2::::res://Building Tools/Properties/Health/health.tscn<>res://Building Tools/Character Controllers/FPSCharExtCommand.gd
+fps_character_controller_extended.tscn::PackedScene::2420592893527924066::1696132749::0::1::::<><>::res://Building Tools/Character Controllers/FPSCharacterController.gd<>uid://cmjnqicbnobds::::res://Building Tools/Themes/FillerTheme.tres<>uid://ddjlj2gpevbbb::::res://Building Tools/HUD Items/Ammo Tracker/ammo_tracker.tscn<>uid://ggljq5ed622m::::res://Building Tools/HUD Items/Crosshair/crosshair.tscn<>uid://cgh22dltjhw5u::::res://Building Tools/HUD Items/Info Checker/info_checker.tscn<>uid://bm00ewhu0i4vl::::res://Building Tools/Properties/Interaction/interaction_ray.tscn<>uid://b8pmopdg2rid5::::res://Building Tools/Organizers/Hand/hand.tscn<>uid://de7t6wqk65bq5::::res://Building Tools/Props/Handhelds/Tool Frame/Simple Blaster/simple_blaster.tscn<>uid://cg3obfppionlq::::res://Building Tools/Props/Handhelds/Basic Flashlight/basic_flashlight.tscn<>uid://bgeyfohldmmx2::::res://Building Tools/Properties/Health/health.tscn<>res://Building Tools/Character Controllers/FPSCharExtCommand.gd
 ::res://Building Tools/Characters/::1696081205
 ::res://Building Tools/Characters/Dummy/::1696093386
-dummy.tscn::PackedScene::8507089550802717638::1696093386::0::1::::<><>::uid://bgeyfohldmmx2::::res://Building Tools/Properties/Health/health.tscn<>res://Building Tools/Properties/Cursor Hint/cursor_hint.tscn<>res://Building Tools/Characters/Dummy/DummyInteraction.gd<>res://Building Tools/Characters/Dummy/DummyCommand.gd
+dummy.tscn::PackedScene::8507089550802717638::1696093386::0::1::::<><>::uid://bgeyfohldmmx2
 DummyCommand.gd::GDScript::-1::1696084044::0::1::::<>Node<>::
 DummyInteraction.gd::GDScript::-1::1696084044::0::1::::<>Node<>::
-::res://Building Tools/Characters/Simple Turret/::1696093386
-simple_turret.tscn::PackedScene::1362286640972157812::1696093386::0::1::::<><>::uid://dbuof615a47rw::::res://Building Tools/Action Scripts/Target Nearest/target_nearest.tscn<>uid://dim0l6a2xqttt::::res://Building Tools/Props/Handhelds/Projectile Launcher/projectile_launcher.tscn<>uid://jctjmh1fp4xm::::res://Building Tools/Props/Projectiles/Bullet Projectile/blaster_bolt/blaster_bolt.tscn<>res://Building Tools/Characters/Simple Turret/TurretCommand.gd<>uid://bgeyfohldmmx2::::res://Building Tools/Properties/Health/health.tscn
+::res://Building Tools/Characters/Simple Turret/::1696132749
+simple_turret.tscn::PackedScene::1362286640972157812::1696132749::0::1::::<><>::uid://dbuof615a47rw::::res://Building Tools/Action Scripts/Target Nearest/target_nearest.tscn<>uid://dim0l6a2xqttt::::res://Building Tools/Props/Handhelds/Projectile Launcher/projectile_launcher.tscn<>uid://bf2avvuwarxgh::::res://Building Tools/Props/Projectiles/Blaster Bolt/blaster_bolt.tscn<>res://Building Tools/Characters/Simple Turret/TurretCommand.gd<>uid://bgeyfohldmmx2::::res://Building Tools/Properties/Health/health.tscn<>res://Building Tools/Properties/Cursor Hint/cursor_hint.tscn
 TurretCommand.gd::GDScript::-1::1696083943::0::1::::<>Node<>::
 ::res://Building Tools/Filler Assets/::1696040421
 Basic Crosshair.png::CompressedTexture2D::4145395000262071667::1692677783::1696040421::1::::<><>::
@@ -45,14 +45,14 @@ ammo.tscn::PackedScene::6252888870716331759::1696040420::0::1::::<><>::res://Bui
 ::res://Building Tools/Properties/Cursor Hint/::1696040420
 cursor_hint.gd::GDScript::-1::1692578138::0::1::::<>Node<>::
 cursor_hint.tscn::PackedScene::-1::1696040420::0::1::::<><>::res://Building Tools/Properties/Cursor Hint/cursor_hint.gd
-::res://Building Tools/Properties/Damage and Health Box/::1696093685
-damage_box.gd::GDScript::-1::1696093565::0::1::::<>Area3D<>::
-damage_box.tscn::PackedScene::688112950449324339::1696093685::0::1::::<><>::res://Building Tools/Properties/Damage and Health Box/damage_box.gd
-healing_box.gd::GDScript::-1::1696093625::0::1::::<>Area3D<>::
-healing_box.tscn::PackedScene::212354741325510853::1696093685::0::1::::<><>::res://Building Tools/Properties/Damage and Health Box/healing_box.gd
-::res://Building Tools/Properties/Health/::1696093685
+::res://Building Tools/Properties/Damage and Health Box/::1696096283
+damage_box.gd::GDScript::-1::1696095397::0::1::::<>Area3D<>::
+damage_box.tscn::PackedScene::688112950449324339::1696095633::0::1::::<><>::res://Building Tools/Properties/Damage and Health Box/damage_box.gd
+healing_box.gd::GDScript::-1::1696096283::0::1::::<>Area3D<>::
+healing_box.tscn::PackedScene::212354741325510853::1696095633::0::1::::<><>::res://Building Tools/Properties/Damage and Health Box/healing_box.gd
+::res://Building Tools/Properties/Health/::1696095633
 Health.gd::GDScript::-1::1696093565::0::1::::<>Node<>::
-health.tscn::PackedScene::2817278139978272009::1696093685::0::1::::<><>::res://Building Tools/Properties/Health/Health.gd
+health.tscn::PackedScene::2817278139978272009::1696095633::0::1::::<><>::res://Building Tools/Properties/Health/Health.gd
 ::res://Building Tools/Properties/Interaction/::1696040420
 interaction_ray.gd::GDScript::-1::1694223707::0::1::::<>RayCast3D<>::
 interaction_ray.tscn::PackedScene::3281822486465564889::1696040420::0::1::::<><>::res://Building Tools/Properties/Interaction/interaction_ray.gd
@@ -71,18 +71,20 @@ projectile_launcher.tscn::PackedScene::7747084531266393141::1696040420::0::1::::
 ::res://Building Tools/Props/Handhelds/Tool Frame/::1696040534
 tool_frame.gd::GDScript::-1::1696036859::0::1::::<>Node3D<>::
 tool_frame.tscn::PackedScene::9127877421210763440::1696040534::0::1::::<><>::res://Building Tools/Props/Handhelds/Tool Frame/tool_frame.gd
-::res://Building Tools/Props/Handhelds/Tool Frame/Simple Blaster/::1696040420
-simple_blaster.tscn::PackedScene::7507287676962495458::1696040420::0::1::::<><>::res://Building Tools/Props/Handhelds/Tool Frame/tool_frame.gd<>uid://dim0l6a2xqttt
+::res://Building Tools/Props/Handhelds/Tool Frame/Simple Blaster/::1696095495
+simple_blaster.tscn::PackedScene::7507287676962495458::1696095495::0::1::::<><>::res://Building Tools/Props/Handhelds/Tool Frame/tool_frame.gd<>uid://dim0l6a2xqttt
 ::res://Building Tools/Props/Pickups/::1696093121
-::res://Building Tools/Props/Pickups/Health Pickup/::1696093707
+::res://Building Tools/Props/Pickups/Health Pickup/::1696132749
 HealthPickupCommand.gd::GDScript::-1::1696093683::0::1::::<>Node<>::
-health_pickup.tscn::PackedScene::2416847714529656596::1696093707::0::1::::<><>::uid://da4pmajrtya4::::res://Building Tools/Properties/Damage and Health Box/healing_box.tscn<>res://Building Tools/Props/Pickups/Health Pickup/HealthPickupCommand.gd
-::res://Building Tools/Props/Projectiles/::1696094403
+health_pickup.tscn::PackedScene::2416847714529656596::1696132749::0::1::::<><>::uid://da4pmajrtya4::::res://Building Tools/Properties/Damage and Health Box/healing_box.tscn<>res://Building Tools/Props/Pickups/Health Pickup/HealthPickupCommand.gd
+::res://Building Tools/Props/Projectiles/::1696095797
 projectile.gd::GDScript::-1::1696094341::0::1::::Projectile<>RigidBody3D<>::
-projectile.tscn::PackedScene::6613803837629467183::1696094341::0::1::::<><>::res://Building Tools/Props/Projectiles/projectile.gd
-::res://Building Tools/Props/Projectiles/blaster_bolt/::1696093802
-::res://Building Tools/Testing Rooms/::1696093685
+projectile.tscn::PackedScene::6613803837629467183::1696095797::0::1::::<><>::res://Building Tools/Props/Projectiles/projectile.gd
+::res://Building Tools/Props/Projectiles/Blaster Bolt/::1696095797
+BlasterBoltCommand.gd::GDScript::-1::1696095397::0::1::::<>Node<>::
+blaster_bolt.tscn::PackedScene::2793141737801595383::1696095797::0::1::::<><>::res://Building Tools/Props/Projectiles/projectile.gd<>uid://j2lecpaynqf8
+::res://Building Tools/Testing Rooms/::1696132749
 testing_rooms.gd::GDScript::-1::1692578138::0::1::::<>Node3D<>::
-testing_room_alpha.tscn::PackedScene::6348619543249823169::1696093685::0::1::::<><>::res://Building Tools/Testing Rooms/testing_rooms.gd<>uid://dtg5r0ox5x83s::::res://Building Tools/Characters/Dummy/dummy.tscn<>uid://tn5wrhb6kwdw::::res://Building Tools/Characters/Simple Turret/simple_turret.tscn<>uid://baqs2t4p5a58i::::res://Building Tools/Character Controllers/fps_character_controller_extended.tscn<>uid://bao0em3qrnooi::::res://Building Tools/Props/Pickups/Health Pickup/health_pickup.tscn
-::res://Building Tools/Themes/::1696092931
-FillerTheme.tres::Theme::5634505207777340380::1696092931::0::1::::<><>::
+testing_room_alpha.tscn::PackedScene::6348619543249823169::1696132749::0::1::::<><>::res://Building Tools/Testing Rooms/testing_rooms.gd<>uid://dtg5r0ox5x83s::::res://Building Tools/Characters/Dummy/dummy.tscn<>uid://tn5wrhb6kwdw::::res://Building Tools/Characters/Simple Turret/simple_turret.tscn<>uid://baqs2t4p5a58i::::res://Building Tools/Character Controllers/fps_character_controller_extended.tscn<>uid://bao0em3qrnooi::::res://Building Tools/Props/Pickups/Health Pickup/health_pickup.tscn
+::res://Building Tools/Themes/::1696132545
+FillerTheme.tres::Theme::5634505207777340380::1696132545::0::1::::<><>::
