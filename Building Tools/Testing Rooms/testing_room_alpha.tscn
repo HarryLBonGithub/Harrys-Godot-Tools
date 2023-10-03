@@ -1,9 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://cwpk3o2hdiphh"]
+[gd_scene load_steps=10 format=3 uid="uid://cwpk3o2hdiphh"]
 
 [ext_resource type="Script" path="res://Building Tools/Testing Rooms/testing_rooms.gd" id="1_lvbwn"]
 [ext_resource type="PackedScene" uid="uid://dtg5r0ox5x83s" path="res://Building Tools/Characters/Dummy/dummy.tscn" id="4_jhemo"]
 [ext_resource type="PackedScene" uid="uid://tn5wrhb6kwdw" path="res://Building Tools/Characters/Simple Turret/simple_turret.tscn" id="4_xa2t1"]
-[ext_resource type="PackedScene" uid="uid://3075ittygldj" path="res://Building Tools/Character Controllers/6dfps_character_controller.tscn" id="5_81kxq"]
+[ext_resource type="PackedScene" uid="uid://d4isdea68tl18" path="res://Building Tools/Character Controllers/6dfps_character_controller_extended.tscn" id="5_7j6qq"]
 [ext_resource type="PackedScene" uid="uid://bao0em3qrnooi" path="res://Building Tools/Props/Pickups/Health Pickup/health_pickup.tscn" id="5_yl6wb"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_nb5n6"]
@@ -11,6 +11,12 @@ size = Vector3(20, 1, 20)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_k2gn4"]
 data = PackedVector3Array(-10, 0.5, 10, 10, 0.5, 10, -10, -0.5, 10, 10, 0.5, 10, 10, -0.5, 10, -10, -0.5, 10, 10, 0.5, -10, -10, 0.5, -10, 10, -0.5, -10, -10, 0.5, -10, -10, -0.5, -10, 10, -0.5, -10, 10, 0.5, 10, 10, 0.5, -10, 10, -0.5, 10, 10, 0.5, -10, 10, -0.5, -10, 10, -0.5, 10, -10, 0.5, -10, -10, 0.5, 10, -10, -0.5, -10, -10, 0.5, 10, -10, -0.5, 10, -10, -0.5, -10, 10, 0.5, 10, -10, 0.5, 10, 10, 0.5, -10, -10, 0.5, 10, -10, 0.5, -10, 10, 0.5, -10, -10, -0.5, 10, 10, -0.5, 10, -10, -0.5, -10, 10, -0.5, 10, 10, -0.5, -10, -10, -0.5, -10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n6580"]
+size = Vector3(2, 2, 2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_82kew"]
+size = Vector3(2, 2, 2)
 
 [node name="TestingRoomAlpha" type="Node3D"]
 script = ExtResource("1_lvbwn")
@@ -42,5 +48,32 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.31076, 1.19592, -6.76053)
 [node name="HealthPickup3" parent="." instance=ExtResource("5_yl6wb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.72794, 0.830379, -1.63218)
 
-[node name="6DFPSCharacterController" parent="." instance=ExtResource("5_81kxq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.98525, 3.00863, 0)
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.1405, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_n6580")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_82kew")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.69076, 6.38508, 9.22331)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
+shape = SubResource("BoxShape3D_n6580")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2"]
+mesh = SubResource("BoxMesh_82kew")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.69076, 10.1611, -1.75481)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3"]
+shape = SubResource("BoxShape3D_n6580")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D3"]
+mesh = SubResource("BoxMesh_82kew")
+
+[node name="6DFPSCharacterController" parent="." instance=ExtResource("5_7j6qq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.35184, 3.97547, 19.7839)

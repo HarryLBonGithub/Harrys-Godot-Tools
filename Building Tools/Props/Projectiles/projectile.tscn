@@ -3,5 +3,4 @@
 [ext_resource type="Script" path="res://Building Tools/Props/Projectiles/projectile.gd" id="1_3qbe2"]
 
 [node name="Projectile" type="RigidBody3D"]
-collision_layer = 0
 script = ExtResource("1_3qbe2")

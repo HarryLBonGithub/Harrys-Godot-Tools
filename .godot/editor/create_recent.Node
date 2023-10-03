@@ -1,12 +1,13 @@
-Node3D
+CanvasLayer
 RayCast3D
+MeshInstance3D
+CollisionShape3D
+StaticBody3D
+Node3D
 Camera3D
 ShapeCast3D
-CollisionShape3D
-MeshInstance3D
 CharacterBody3D
 Node
-StaticBody3D
 Timer
 RigidBody3D
 Area3D
@@ -16,5 +17,4 @@ Label
 HBoxContainer
 Panel
 ProgressBar
-CanvasLayer
 TextureRect

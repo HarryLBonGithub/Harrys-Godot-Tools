@@ -11,6 +11,7 @@ radius = 1.0
 
 [node name="6DFPSCharacterController" type="CharacterBody3D"]
 script = ExtResource("1_m1bbc")
+rollEnabled = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("SphereMesh_wlmqe")
@@ -18,8 +19,6 @@ mesh = SubResource("SphereMesh_wlmqe")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_4r2dw")
 
-[node name="Roller" type="Node3D" parent="."]
+[node name="Head" type="Node3D" parent="."]
 
-[node name="Head" type="Node3D" parent="Roller"]
-
-[node name="Camera3D" type="Camera3D" parent="Roller/Head"]
+[node name="Camera3D" type="Camera3D" parent="Head"]

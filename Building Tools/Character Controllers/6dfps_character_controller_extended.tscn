@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://d4isdea68tl18"]
+
+[ext_resource type="Script" path="res://Building Tools/Character Controllers/6dfps_character_controller.gd" id="1_aph17"]
+[ext_resource type="PackedScene" uid="uid://b8pmopdg2rid5" path="res://Building Tools/Organizers/Hand/hand.tscn" id="2_yuqyn"]
+[ext_resource type="PackedScene" uid="uid://de7t6wqk65bq5" path="res://Building Tools/Props/Handhelds/Tool Frame/Simple Blaster/simple_blaster.tscn" id="3_cypro"]
+[ext_resource type="PackedScene" uid="uid://ggljq5ed622m" path="res://Building Tools/HUD Items/Crosshair/crosshair.tscn" id="4_f200d"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_wlmqe"]
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_4r2dw"]
+radius = 1.0
+
+[node name="6DFPSCharacterController" type="CharacterBody3D"]
+script = ExtResource("1_aph17")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_wlmqe")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_4r2dw")
+
+[node name="Head" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+
+[node name="CenterTarget" type="RayCast3D" parent="Head/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.88401)
+target_position = Vector3(0, 0, -20)
+
+[node name="RightHand" parent="Head" node_paths=PackedStringArray("targettingRay") instance=ExtResource("2_yuqyn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.399737, -0.22061, -0.701616)
+targettingRay = NodePath("../Camera3D/CenterTarget")
+
+[node name="SimpleBlaster" parent="Head/RightHand" instance=ExtResource("3_cypro")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.29501, -0.629827)
+
+[node name="LeftHand" parent="Head" node_paths=PackedStringArray("targettingRay") instance=ExtResource("2_yuqyn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, -0.221, -0.702)
+targettingRay = NodePath("../Camera3D/CenterTarget")
+
+[node name="SimpleBlaster" parent="Head/LeftHand" instance=ExtResource("3_cypro")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.026502, -0.343915, -0.614339)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Crosshair" parent="CanvasLayer" instance=ExtResource("4_f200d")]

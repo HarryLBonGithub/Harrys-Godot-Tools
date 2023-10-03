@@ -63,6 +63,7 @@ projectile = ExtResource("2_bftov")
 
 [node name="TargetNearest" parent="." node_paths=PackedStringArray("pointer") instance=ExtResource("1_8qqrb")]
 pointer = NodePath("../Gun")
+targetGroup = "player"
 
 [node name="Command" type="Node" parent="."]
 script = ExtResource("2_s8trj")
