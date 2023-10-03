@@ -1,9 +1,13 @@
+Node3D
 RayCast3D
+Camera3D
+ShapeCast3D
+CollisionShape3D
+MeshInstance3D
+CharacterBody3D
 Node
 StaticBody3D
 Timer
-MeshInstance3D
-CollisionShape3D
 RigidBody3D
 Area3D
 WorldEnvironment
@@ -13,5 +17,4 @@ HBoxContainer
 Panel
 ProgressBar
 CanvasLayer
-Node3D
 TextureRect

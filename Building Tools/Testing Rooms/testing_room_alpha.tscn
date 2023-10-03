@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Building Tools/Testing Rooms/testing_rooms.gd" id="1_lvbwn"]
 [ext_resource type="PackedScene" uid="uid://dtg5r0ox5x83s" path="res://Building Tools/Characters/Dummy/dummy.tscn" id="4_jhemo"]
 [ext_resource type="PackedScene" uid="uid://tn5wrhb6kwdw" path="res://Building Tools/Characters/Simple Turret/simple_turret.tscn" id="4_xa2t1"]
-[ext_resource type="PackedScene" uid="uid://baqs2t4p5a58i" path="res://Building Tools/Character Controllers/fps_character_controller_extended.tscn" id="4_yfru2"]
+[ext_resource type="PackedScene" uid="uid://3075ittygldj" path="res://Building Tools/Character Controllers/6dfps_character_controller.tscn" id="5_81kxq"]
 [ext_resource type="PackedScene" uid="uid://bao0em3qrnooi" path="res://Building Tools/Props/Pickups/Health Pickup/health_pickup.tscn" id="5_yl6wb"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_nb5n6"]
@@ -27,9 +27,6 @@ shape = SubResource("ConcavePolygonShape3D_k2gn4")
 transform = Transform3D(1, 0, 0, 0, 0.475778, 0.879566, 0, -0.879566, 0.475778, 0, 11.1154, 0)
 shadow_enabled = true
 
-[node name="FPSCharacterController" parent="." instance=ExtResource("4_yfru2")]
-transform = Transform3D(-0.0214834, 0, 0.999769, 0, 1, 0, -0.999769, 0, -0.0214834, 8.63297, 1.5, 7.41954)
-
 [node name="SimpleTurret" parent="." instance=ExtResource("4_xa2t1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.75996, 0.483391, -8.69371)
 
@@ -44,3 +41,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.31076, 1.19592, -6.76053)
 
 [node name="HealthPickup3" parent="." instance=ExtResource("5_yl6wb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.72794, 0.830379, -1.63218)
+
+[node name="6DFPSCharacterController" parent="." instance=ExtResource("5_81kxq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.98525, 3.00863, 0)
