@@ -1,0 +1,2 @@
+- light switch
+	node for activating or deactivating a list of nodes from one place

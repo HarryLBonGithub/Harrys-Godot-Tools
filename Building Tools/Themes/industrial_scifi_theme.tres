@@ -1,0 +1,129 @@
+[gd_resource type="Theme" load_steps=14 format=3 uid="uid://drgrjv6r6nje"]
+
+[ext_resource type="FontFile" uid="uid://djw7s2vnkcctf" path="res://Building Tools/Fonts/Px437_DOS-V_TWN16.ttf" id="1_tojgt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rmy43"]
+bg_color = Color(0, 0, 0, 0.509804)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 0.509804)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ktlmf"]
+bg_color = Color(0, 0.709804, 0.117647, 0.509804)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nx2vh"]
+bg_color = Color(0, 0.709804, 0.117647, 0.509804)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p34wy"]
+bg_color = Color(0, 0, 0, 0.509804)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mlnyx"]
+bg_color = Color(1, 1, 1, 0.686275)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8h0rq"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0.709804, 0.117647, 1)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mtdo8"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ryqb"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ticyl"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3718v"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vafsb"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0.709804, 0.117647, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bxj44"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+
+[resource]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 28
+Button/fonts/font = ExtResource("1_tojgt")
+Button/styles/disabled = SubResource("StyleBoxFlat_rmy43")
+Button/styles/focus = SubResource("StyleBoxFlat_ktlmf")
+Button/styles/hover = SubResource("StyleBoxFlat_nx2vh")
+Button/styles/normal = SubResource("StyleBoxFlat_p34wy")
+Button/styles/pressed = SubResource("StyleBoxFlat_mlnyx")
+Label/font_sizes/font_size = 16
+Label/fonts/font = ExtResource("1_tojgt")
+LineEdit/colors/caret_color = Color(1, 1, 1, 1)
+LineEdit/fonts/font = ExtResource("1_tojgt")
+LineEdit/styles/focus = SubResource("StyleBoxFlat_8h0rq")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_mtdo8")
+LineEdit/styles/read_only = SubResource("StyleBoxFlat_2ryqb")
+ProgressBar/colors/font_color = Color(0, 0, 0, 1)
+ProgressBar/colors/font_outline_color = Color(0, 0, 0, 1)
+ProgressBar/fonts/font = ExtResource("1_tojgt")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_ticyl")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_3718v")
+TextEdit/colors/font_color = Color(1, 1, 1, 1)
+TextEdit/fonts/font = ExtResource("1_tojgt")
+TextEdit/styles/focus = SubResource("StyleBoxFlat_vafsb")
+TextEdit/styles/normal = SubResource("StyleBoxFlat_bxj44")
+TextEdit/styles/read_only = SubResource("StyleBoxFlat_bxj44")

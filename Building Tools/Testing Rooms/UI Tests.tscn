@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://vuc2eoo6ep6t"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 47.0
+offset_top = 41.0
+offset_right = 47.0
+offset_bottom = 41.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 414.0
+offset_top = 170.0
+offset_right = 563.0
+offset_bottom = 246.0
+text = "HOWDY"
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 103.0
+offset_top = 51.0
+offset_right = 391.0
+offset_bottom = 120.0

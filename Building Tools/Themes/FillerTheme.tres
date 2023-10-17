@@ -1,4 +1,6 @@
-[gd_resource type="Theme" load_steps=3 format=3 uid="uid://cmjnqicbnobds"]
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://cmjnqicbnobds"]
+
+[ext_resource type="FontFile" uid="uid://djw7s2vnkcctf" path="res://Building Tools/Fonts/Px437_DOS-V_TWN16.ttf" id="1_oauny"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rfexm"]
 bg_color = Color(0, 0, 0, 0)
@@ -17,5 +19,6 @@ border_color = Color(0.8, 0.8, 0.8, 0)
 
 [resource]
 HealthBar/base_type = &"ProgressBar"
+HealthBar/fonts/font = ExtResource("1_oauny")
 HealthBar/styles/background = SubResource("StyleBoxFlat_rfexm")
 HealthBar/styles/fill = SubResource("StyleBoxFlat_fpuad")

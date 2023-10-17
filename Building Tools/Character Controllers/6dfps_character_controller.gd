@@ -11,14 +11,21 @@ extends CharacterBody3D
 @export var acceleration = 2
 @export var deceleration = 6
 @export var rollSpeed = 1.0
-@export var rollAcceleration = 3
-@export var rollDeceleration = 6
+@export var rollAcceleration = 3.0
+@export var rollDeceleration = 6.0
 
 #movement toggles
 @export var movementEnabled = true
+@export var forwardEnabled = true
+@export var backEnabled = true
+@export var leftEnabled = true
+@export var rightEnabled = true
+@export var upEnabled = true
+@export var downEnabled = true
 @export var lookEnabled = true
 @export var lookUpDownEnabled = true
 @export var rollEnabled = true
+
 
 #running variables
 var cameraMotion = Vector2()
@@ -46,7 +53,8 @@ func _input(event):
 
 func _physics_process(delta):
 	fly(delta)
-	rotations(delta)
+	roll(delta)
+	look(delta)
 
 func aim():
 	
@@ -65,17 +73,17 @@ func fly(delta):
 	if not movementEnabled:
 		return
 		
-	if Input.is_action_pressed("move_forward"):
+	if Input.is_action_pressed("move_forward") and forwardEnabled:
 		motion -= headNode.global_transform.basis.z
-	if Input.is_action_pressed("move_backward"):
+	if Input.is_action_pressed("move_backward") and backEnabled:
 		motion += headNode.global_transform.basis.z
-	if Input.is_action_pressed("move_left"):
+	if Input.is_action_pressed("move_left") and leftEnabled:
 		motion -= headNode.global_transform.basis.x
-	if Input.is_action_pressed("move_right"):
+	if Input.is_action_pressed("move_right") and rightEnabled:
 		motion += headNode.global_transform.basis.x
-	if Input.is_action_pressed("jump"):
+	if Input.is_action_pressed("jump") and upEnabled:
 		motion += headNode.global_transform.basis.y
-	if Input.is_action_pressed("crouch"):
+	if Input.is_action_pressed("crouch") and downEnabled:
 		motion -= headNode.global_transform.basis.y
 	motion = motion.normalized()
 	
@@ -104,28 +112,28 @@ func fly(delta):
 	
 	move_and_slide()
 
-func rotations(delta):
+func roll(delta):
 	
-	
-	if rollEnabled:
-		var accelDecel = rollAcceleration
-		if Input.is_action_pressed("roll_left"):
-			rollAmmount = abs(rollAmmount)
-			rollTargetSpeed = abs(rollSpeed)
-		elif  Input.is_action_pressed("roll_right"):
-			rollAmmount = abs(rollAmmount) * -1
-			rollTargetSpeed = abs(rollSpeed) * -1
-		else:
-			rollTargetSpeed = 0
-			accelDecel = rollDeceleration
-			
-		rollAmmount = lerp(float(rollAmmount),float(rollTargetSpeed), accelDecel * delta)
-		transform.basis = transform.basis.rotated(transform.basis.z, rollAmmount * delta)
+	if !rollEnabled:
+		return
+	var accelDecel = rollAcceleration
+	if Input.is_action_pressed("roll_left"):
+		rollTargetSpeed = abs(rollSpeed)
+	elif  Input.is_action_pressed("roll_right"):
+		rollTargetSpeed = abs(rollSpeed) * -1
+	else:
+		rollTargetSpeed = 0
+		accelDecel = rollDeceleration
 		
-	
-	if lookEnabled:
-		transform.basis = transform.basis.rotated(-transform.basis.x, cameraMotion.y * mouseSensitivity * delta)
-		transform.basis = transform.basis.rotated(-transform.basis.y, cameraMotion.x * mouseSensitivity * delta)
+	rollAmmount = lerp(float(rollAmmount),float(rollTargetSpeed), accelDecel * delta)
+	transform.basis = transform.basis.rotated(transform.basis.z, rollAmmount * delta)
+
+func look(delta):
+	if !lookEnabled:
+		return
+
+	transform.basis = transform.basis.rotated(-transform.basis.x, cameraMotion.y * mouseSensitivity * delta)
+	transform.basis = transform.basis.rotated(-transform.basis.y, cameraMotion.x * mouseSensitivity * delta)
 	
 	transform.basis = transform.basis.orthonormalized()
 	cameraMotion = Vector2()

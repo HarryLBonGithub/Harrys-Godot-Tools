@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bopktkuhq7ixb"
+path="res://.godot/imported/MiningPodV2.obj-2799c32f90b360b705b394b35fabbe9b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/MiningPodV2.obj-2799c32f90b360b705b394b35fabbe9b.mesh"]
+
+source_file="res://Building Tools/Filler Assets/Models/MiningPodV2.obj"
+dest_files=["res://.godot/imported/MiningPodV2.obj-2799c32f90b360b705b394b35fabbe9b.mesh", "res://.godot/imported/MiningPodV2.obj-2799c32f90b360b705b394b35fabbe9b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

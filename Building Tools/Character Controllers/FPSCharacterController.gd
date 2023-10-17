@@ -21,6 +21,10 @@ extends CharacterBody3D
 
 #movement toggles
 @export var movementEnabled = true
+@export var forwardEnabled = true
+@export var backEnabled = true
+@export var leftEnabled = true
+@export var rightEnabled = true
 @export var lookEnabled = true
 @export var lookUpDownEnabled = true
 @export var jumpEnabled = true
@@ -82,13 +86,13 @@ func walk(delta): #needs more documentation
 	if not movementEnabled:
 		return
 
-	if Input.is_action_pressed("move_forward"):
+	if Input.is_action_pressed("move_forward") and forwardEnabled:
 		motion -= global_transform.basis.z
-	if Input.is_action_pressed("move_backward"):
+	if Input.is_action_pressed("move_backward") and backEnabled:
 		motion += global_transform.basis.z
-	if Input.is_action_pressed("move_left"):
+	if Input.is_action_pressed("move_left") and leftEnabled:
 		motion -= global_transform.basis.x
-	if Input.is_action_pressed("move_right"):
+	if Input.is_action_pressed("move_right") and rightEnabled:
 		motion += global_transform.basis.x
 	
 	motion = motion.normalized()

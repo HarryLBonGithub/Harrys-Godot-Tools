@@ -1,49 +1,78 @@
-[gd_scene load_steps=7 format=3 uid="uid://d4isdea68tl18"]
+[gd_scene load_steps=13 format=3 uid="uid://d4isdea68tl18"]
 
 [ext_resource type="Script" path="res://Building Tools/Character Controllers/6dfps_character_controller.gd" id="1_aph17"]
+[ext_resource type="ArrayMesh" uid="uid://bopktkuhq7ixb" path="res://Building Tools/Filler Assets/Models/MiningPodV2.obj" id="2_8ydyr"]
+[ext_resource type="PackedScene" uid="uid://bm00ewhu0i4vl" path="res://Building Tools/Properties/Interaction/interaction_ray.tscn" id="2_fe2qx"]
 [ext_resource type="PackedScene" uid="uid://b8pmopdg2rid5" path="res://Building Tools/Organizers/Hand/hand.tscn" id="2_yuqyn"]
+[ext_resource type="Texture2D" uid="uid://dwxr8hbku5g1" path="res://Building Tools/Filler Assets/Models/Paints/MiningPod_C.png" id="3_46lo6"]
 [ext_resource type="PackedScene" uid="uid://de7t6wqk65bq5" path="res://Building Tools/Props/Handhelds/Tool Frame/Simple Blaster/simple_blaster.tscn" id="3_cypro"]
+[ext_resource type="PackedScene" uid="uid://cgh22dltjhw5u" path="res://Building Tools/HUD Items/Info Checker/info_checker.tscn" id="3_tbbxa"]
 [ext_resource type="PackedScene" uid="uid://ggljq5ed622m" path="res://Building Tools/HUD Items/Crosshair/crosshair.tscn" id="4_f200d"]
+[ext_resource type="Texture2D" uid="uid://dl0muc52c4tsw" path="res://Building Tools/Filler Assets/Models/Paints/MiningPod_E.png" id="4_opm3r"]
+[ext_resource type="Texture2D" uid="uid://cysh8t0ys1bmk" path="res://Building Tools/Filler Assets/Models/Paints/MiningPod_N.png" id="5_e3ymu"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_wlmqe"]
-radius = 1.0
-height = 2.0
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d3gdg"]
+albedo_texture = ExtResource("3_46lo6")
+emission_enabled = true
+emission_texture = ExtResource("4_opm3r")
+normal_enabled = true
+normal_texture = ExtResource("5_e3ymu")
+texture_filter = 0
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_4r2dw"]
-radius = 1.0
+[sub_resource type="BoxShape3D" id="BoxShape3D_0fgyn"]
+size = Vector3(4.10171, 4.30076, 6.1601)
 
 [node name="6DFPSCharacterController" type="CharacterBody3D"]
 script = ExtResource("1_aph17")
+crawlSpeed = 10
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-visible = false
-mesh = SubResource("SphereMesh_wlmqe")
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -0.11892, 0)
+mesh = ExtResource("2_8ydyr")
+surface_material_override/0 = SubResource("StandardMaterial3D_d3gdg")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("SphereShape3D_4r2dw")
+shape = SubResource("BoxShape3D_0fgyn")
 
 [node name="Head" type="Node3D" parent="."]
 
 [node name="Camera3D" type="Camera3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.61685)
 
 [node name="CenterTarget" type="RayCast3D" parent="Head/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.88401)
 target_position = Vector3(0, 0, -20)
 
+[node name="InteractionRay" parent="Head/Camera3D" instance=ExtResource("2_fe2qx")]
+
+[node name="InfoChecker" parent="Head/Camera3D" node_paths=PackedStringArray("info") instance=ExtResource("3_tbbxa")]
+info = NodePath("../../../CanvasLayer/Info")
+
 [node name="RightHand" parent="Head" node_paths=PackedStringArray("targettingRay") instance=ExtResource("2_yuqyn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.399737, -0.22061, -0.701616)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1, -1.5, -3)
 targettingRay = NodePath("../Camera3D/CenterTarget")
 
 [node name="SimpleBlaster" parent="Head/RightHand" instance=ExtResource("3_cypro")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.29501, -0.629827)
 
 [node name="LeftHand" parent="Head" node_paths=PackedStringArray("targettingRay") instance=ExtResource("2_yuqyn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, -0.221, -0.702)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1, -1.5, -3)
 targettingRay = NodePath("../Camera3D/CenterTarget")
 
 [node name="SimpleBlaster" parent="Head/LeftHand" instance=ExtResource("3_cypro")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.026502, -0.343915, -0.614339)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Crosshair" parent="CanvasLayer" instance=ExtResource("4_f200d")]
+
+[node name="Info" type="Label" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -23.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
