@@ -1,6 +1,9 @@
-Node
-CollisionShape3D
+Camera3D
 MeshInstance3D
+CollisionShape3D
+CharacterBody3D
+CharacterBody2D
+Node
 StaticBody3D
 SpotLight3D
 LightmapGI
@@ -13,9 +16,7 @@ Label
 CanvasLayer
 RayCast3D
 Node3D
-Camera3D
 ShapeCast3D
-CharacterBody3D
 Timer
 Area3D
 WorldEnvironment

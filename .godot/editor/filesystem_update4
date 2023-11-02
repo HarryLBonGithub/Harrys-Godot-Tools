@@ -1,9 +1,12 @@
 res://Building Tools/Themes/industrial_scifi_theme.tres
-res://Building Tools/Organizers/On Off Switch/light_switch.tscn
-res://Building Tools/Organizers/On Off Switch/light_switch.gd
-res://Building Tools/Testing Rooms/testing_room_alpha.tscn
 res://Building Tools/Themes/FillerTheme.tres
-res://Building Tools/Junk Scripts/lightswitchtestInteract.gd
+res://Building Tools/Testing Rooms/testingRooms2D.gd
+res://Building Tools/Testing Rooms/testing_room_alpha.tscn
+res://Building Tools/Organizers/On Off Switch/light_switch.tscn
 res://Building Tools/Properties/Interaction/interaction_ray.tscn
-res://Building Tools/Character Controllers/fps_character_controller_extended.tscn
-res://Building Tools/Characters/Dummy/dummy.tscn
+res://Building Tools/Character Controllers/6dfps_character_controller.tscn
+res://Building Tools/Testing Rooms/2d_testing_room_top_down.tscn
+res://Building Tools/Character Controllers/fps_character_controller.tscn
+res://Building Tools/Character Controllers/top_down_character_controller.tscn
+res://Building Tools/Testing Rooms/testing_room_beta.tscn
+res://Building Tools/Character Controllers/top_down_character_controller.gd

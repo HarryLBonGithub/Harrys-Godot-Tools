@@ -24,7 +24,10 @@ extends CharacterBody3D
 @export var downEnabled = true
 @export var lookEnabled = true
 @export var lookUpDownEnabled = true
+
 @export var rollEnabled = true
+@export var rollLeftEnabled = true
+@export var rollRightEnabled = true
 
 
 #running variables
@@ -114,12 +117,16 @@ func fly(delta):
 
 func roll(delta):
 	
-	if !rollEnabled:
+	if not movementEnabled:
 		return
+	
+	if not rollEnabled:
+		return
+	
 	var accelDecel = rollAcceleration
-	if Input.is_action_pressed("roll_left"):
+	if Input.is_action_pressed("roll_left") and rollLeftEnabled:
 		rollTargetSpeed = abs(rollSpeed)
-	elif  Input.is_action_pressed("roll_right"):
+	elif  Input.is_action_pressed("roll_right") and rollRightEnabled:
 		rollTargetSpeed = abs(rollSpeed) * -1
 	else:
 		rollTargetSpeed = 0
