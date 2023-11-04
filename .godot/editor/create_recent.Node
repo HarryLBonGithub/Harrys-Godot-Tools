@@ -1,10 +1,11 @@
-Camera3D
-MeshInstance3D
 CollisionShape3D
+MeshInstance3D
+StaticBody3D
+Node3D
+Camera3D
 CharacterBody3D
 CharacterBody2D
 Node
-StaticBody3D
 SpotLight3D
 LightmapGI
 OmniLight3D
@@ -15,7 +16,6 @@ Button
 Label
 CanvasLayer
 RayCast3D
-Node3D
 ShapeCast3D
 Timer
 Area3D

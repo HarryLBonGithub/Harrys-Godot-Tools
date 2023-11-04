@@ -30,7 +30,8 @@ extends CharacterBody3D
 var playerVelocity = Vector3()
 
 @onready var initialYRot
-@onready var cameraNode = $CharacterCamera
+@onready var cameraMount = $CameraMount
+@onready var cameraNode = $CameraMount/CharacterCamera
 @onready var fillerMeshNode = $FillerMesh
 
 func _ready():
@@ -47,13 +48,13 @@ func walk(delta):
 		return
 	
 	if Input.is_action_pressed("move_forward") and forwardEnabled:
-		motion -= cameraNode.global_transform.basis.z
+		motion -= cameraMount.global_transform.basis.z
 	if Input.is_action_pressed("move_backward") and backEnabled:
-		motion += cameraNode.global_transform.basis.z
+		motion += cameraMount.global_transform.basis.z
 	if Input.is_action_pressed("move_left") and leftEnabled:
-		motion -= cameraNode.global_transform.basis.x
+		motion -= cameraMount.global_transform.basis.x
 	if Input.is_action_pressed("move_right") and rightEnabled:
-		motion += cameraNode.global_transform.basis.x
+		motion += cameraMount.global_transform.basis.x
 	
 	motion = motion.normalized()
 	

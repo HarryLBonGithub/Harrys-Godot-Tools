@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://uxs674muviix"]
+[gd_scene load_steps=10 format=3 uid="uid://uxs674muviix"]
 
 [ext_resource type="Script" path="res://Building Tools/Testing Rooms/testing_rooms.gd" id="1_x2f4i"]
 [ext_resource type="Texture2D" uid="uid://cr86samdwmj8y" path="res://Building Tools/Filler Assets/Models/Paints/Rock_Plain_Support_C.png" id="2_22orq"]
@@ -20,6 +20,12 @@ texture_filter = 0
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_k2gn4"]
 data = PackedVector3Array(-10, 0.5, 10, 10, 0.5, 10, -10, -0.5, 10, 10, 0.5, 10, 10, -0.5, 10, -10, -0.5, 10, 10, 0.5, -10, -10, 0.5, -10, 10, -0.5, -10, -10, 0.5, -10, -10, -0.5, -10, 10, -0.5, -10, 10, 0.5, 10, 10, 0.5, -10, 10, -0.5, 10, 10, 0.5, -10, 10, -0.5, -10, 10, -0.5, 10, -10, 0.5, -10, -10, 0.5, 10, -10, -0.5, -10, -10, 0.5, 10, -10, -0.5, 10, -10, -0.5, -10, 10, 0.5, 10, -10, 0.5, 10, 10, 0.5, -10, -10, 0.5, 10, -10, 0.5, -10, 10, 0.5, -10, -10, -0.5, 10, 10, -0.5, 10, -10, -0.5, -10, 10, -0.5, 10, 10, -0.5, -10, -10, -0.5, -10)
 
+[sub_resource type="BoxMesh" id="BoxMesh_twt8x"]
+size = Vector3(3, 3, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tdjto"]
+size = Vector3(3, 3, 3)
+
 [node name="TestingRoomAlpha" type="Node3D"]
 script = ExtResource("1_x2f4i")
 
@@ -38,3 +44,13 @@ shadow_enabled = true
 
 [node name="TopDownCharacterController" parent="." instance=ExtResource("4_fyp43")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+jumpHeight = 8
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -4.70345)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_twt8x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_tdjto")
