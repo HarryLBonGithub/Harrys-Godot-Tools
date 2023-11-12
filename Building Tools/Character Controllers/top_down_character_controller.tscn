@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://pxersbeolk40"]
+[gd_scene load_steps=10 format=3 uid="uid://pxersbeolk40"]
 
 [ext_resource type="Script" path="res://Building Tools/Character Controllers/top_down_character_controller.gd" id="1_l88sa"]
+[ext_resource type="Script" path="res://Building Tools/Character Controllers/topDownCamera.gd" id="2_spxp7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kvfne"]
 albedo_color = Color(0.239216, 0.878431, 0, 1)
@@ -19,8 +20,19 @@ size = Vector3(0.5, 0.5, 0.5)
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wxunk"]
 radius = 0.4
 
-[node name="TopDownCharacterController" type="CharacterBody3D"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jumw8"]
+albedo_color = Color(0, 0.698039, 0.890196, 1)
+
+[sub_resource type="PrismMesh" id="PrismMesh_pq6qt"]
+material = SubResource("StandardMaterial3D_jumw8")
+size = Vector3(1, 1, 0.5)
+
+[node name="TopDownCharacterController" type="CharacterBody3D" groups=["player"]]
 script = ExtResource("1_l88sa")
+walkingSpeed = 5
+runningSpeed = 10
+acceleration = 10
+deceleration = 10
 
 [node name="FillerMesh" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_hoh8t")
@@ -32,8 +44,17 @@ mesh = SubResource("PrismMesh_yg237")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_wxunk")
 
-[node name="CameraMount" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.07373, 4)
+[node name="CameraSwing" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
 
-[node name="CharacterCamera" type="Camera3D" parent="CameraMount"]
-transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0)
+[node name="CameraMount" type="Node3D" parent="CameraSwing"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="MountIndicator" type="MeshInstance3D" parent="CameraSwing/CameraMount"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+visible = false
+mesh = SubResource("PrismMesh_pq6qt")
+
+[node name="CharacterCamera" type="Camera3D" parent="CameraSwing/CameraMount" node_paths=PackedStringArray("target")]
+script = ExtResource("2_spxp7")
+target = NodePath("../../..")

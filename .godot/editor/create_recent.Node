@@ -1,7 +1,8 @@
-CollisionShape3D
-MeshInstance3D
-StaticBody3D
 Node3D
+SpringArm3D
+MeshInstance3D
+CollisionShape3D
+StaticBody3D
 Camera3D
 CharacterBody3D
 CharacterBody2D

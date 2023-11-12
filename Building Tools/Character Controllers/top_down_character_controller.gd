@@ -1,5 +1,8 @@
 extends CharacterBody3D
 
+#mouse variables
+@export var mouseSensitivity = 0.3
+
 #movement variables
 @export var walkingSpeed = 10
 @export var runningSpeed = 20
@@ -22,6 +25,8 @@ extends CharacterBody3D
 @export var lookUpDownEnabled = true
 @export var jumpEnabled = true
 
+@export var cameraControllEnabled = true
+
 #editor toggles
 @export var meshOn = true
 
@@ -29,17 +34,36 @@ extends CharacterBody3D
 
 var playerVelocity = Vector3()
 
+var cameraMotion = Vector2()
+var cameraAngleV = 0 #camera vertical angle
+var cameraAngleH = 0 #camera horizontal angle
+
 @onready var initialYRot
-@onready var cameraMount = $CameraMount
+@onready var cameraSwing = $CameraSwing
+@onready var cameraMount = $CameraSwing/CameraMount
 @onready var cameraNode = $CameraMount/CharacterCamera
 @onready var fillerMeshNode = $FillerMesh
 
 func _ready():
 	initialYRot = fillerMeshNode.global_rotation.y
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+
+func _input(event):
+	if event is InputEventMouseMotion:
+		cameraMotion = event.relative #stores the mouses movement
 
 func _physics_process(delta):
 	walk(delta)
 	meshFlip()
+	cameraAngle()
+
+func cameraAngle():
+	if not cameraControllEnabled:
+		return
+		
+	if cameraMotion.length() > 0: #if the camera has moved
+		cameraSwing.rotate_y(deg_to_rad(-cameraMotion.x * mouseSensitivity))
+	cameraMotion = Vector2()
 
 func walk(delta):
 	var motion = Vector3()
@@ -98,10 +122,10 @@ func walk(delta):
 
 func meshFlip():
 	if Input.is_action_pressed("move_forward") and forwardEnabled:
-		fillerMeshNode.global_rotation.y = initialYRot 
+		fillerMeshNode.global_rotation.y = cameraMount.global_rotation.y 
 	if Input.is_action_pressed("move_backward") and backEnabled:
-		fillerMeshNode.global_rotation.y = initialYRot - deg_to_rad(180)
+		fillerMeshNode.global_rotation.y = cameraMount.global_rotation.y  - deg_to_rad(180)
 	if Input.is_action_pressed("move_left") and leftEnabled:
-		fillerMeshNode.global_rotation.y = initialYRot + deg_to_rad(90)
+		fillerMeshNode.global_rotation.y = cameraMount.global_rotation.y  + deg_to_rad(90)
 	if Input.is_action_pressed("move_right") and rightEnabled:
-		fillerMeshNode.global_rotation.y = initialYRot - deg_to_rad(90)
+		fillerMeshNode.global_rotation.y = cameraMount.global_rotation.y  - deg_to_rad(90)
