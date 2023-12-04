@@ -1,0 +1,154 @@
+[gd_scene load_steps=13 format=3 uid="uid://wirbkrxcnojw"]
+
+[ext_resource type="Texture2D" uid="uid://dsej1eqt5ypvf" path="res://Building Tools/Filler Assets/Models/Paints/1 Meter White Box.png" id="1_w40el"]
+[ext_resource type="Script" path="res://Building Tools/Set Pieces/Hallway Segment/hall_segment_wall.gd" id="2_sfjwy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cwx6y"]
+size = Vector3(3, 0.5, 3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3fnua"]
+albedo_color = Color(0.592157, 0.611765, 0.596078, 1)
+albedo_texture = ExtResource("1_w40el")
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_8fsil"]
+material = SubResource("StandardMaterial3D_3fnua")
+size = Vector3(3, 0.5, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ru4j3"]
+size = Vector3(3, 3, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n526i"]
+albedo_color = Color(1, 0.807843, 0.180392, 1)
+albedo_texture = ExtResource("1_w40el")
+uv1_scale = Vector3(3, 3, 3)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_pi2kp"]
+material = SubResource("StandardMaterial3D_n526i")
+size = Vector2(3, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_na5qi"]
+size = Vector3(3, 0.5, 3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cexd7"]
+albedo_color = Color(0.00392157, 0.431373, 0, 1)
+albedo_texture = ExtResource("1_w40el")
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_xr6gw"]
+material = SubResource("StandardMaterial3D_cexd7")
+size = Vector3(3, 0.5, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_atsby"]
+size = Vector3(2.5, 2.5, 2.5)
+
+[node name="HallSegment" type="Node3D"]
+
+[node name="Roof" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75, 0)
+
+[node name="RoofShape" type="CollisionShape3D" parent="Roof"]
+shape = SubResource("BoxShape3D_cwx6y")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Roof"]
+mesh = SubResource("BoxMesh_8fsil")
+
+[node name="Wall" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.5)
+script = ExtResource("2_sfjwy")
+metadata/_edit_group_ = true
+
+[node name="WallShape" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
+shape = SubResource("BoxShape3D_ru4j3")
+
+[node name="WallMesh" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("PlaneMesh_pi2kp")
+
+[node name="NeighborDetector" type="RayCast3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
+target_position = Vector3(0, 0, -1.5)
+collision_mask = 2
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="Wall2" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.5, 0, 0)
+script = ExtResource("2_sfjwy")
+metadata/_edit_group_ = true
+
+[node name="WallShape" type="CollisionShape3D" parent="Wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
+shape = SubResource("BoxShape3D_ru4j3")
+
+[node name="WallMesh" type="MeshInstance3D" parent="Wall2"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("PlaneMesh_pi2kp")
+
+[node name="NeighborDetector" type="RayCast3D" parent="Wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
+target_position = Vector3(0, 0, -1.5)
+collision_mask = 2
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="Wall3" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 1.5)
+script = ExtResource("2_sfjwy")
+metadata/_edit_group_ = true
+
+[node name="WallShape" type="CollisionShape3D" parent="Wall3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
+shape = SubResource("BoxShape3D_ru4j3")
+
+[node name="WallMesh" type="MeshInstance3D" parent="Wall3"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("PlaneMesh_pi2kp")
+
+[node name="NeighborDetector" type="RayCast3D" parent="Wall3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
+target_position = Vector3(0, 0, -1.5)
+collision_mask = 2
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="Wall4" type="StaticBody3D" parent="."]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -1.5, 0, 0)
+script = ExtResource("2_sfjwy")
+metadata/_edit_group_ = true
+
+[node name="WallShape" type="CollisionShape3D" parent="Wall4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
+shape = SubResource("BoxShape3D_ru4j3")
+
+[node name="WallMesh" type="MeshInstance3D" parent="Wall4"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("PlaneMesh_pi2kp")
+
+[node name="NeighborDetector" type="RayCast3D" parent="Wall4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
+target_position = Vector3(0, 0, -1.5)
+collision_mask = 2
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="Floor" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
+metadata/_edit_group_ = true
+
+[node name="FloorShape" type="CollisionShape3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+shape = SubResource("BoxShape3D_na5qi")
+
+[node name="FloorMesh" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+mesh = SubResource("BoxMesh_xr6gw")
+
+[node name="HallAreaMarker" type="Area3D" parent="."]
+collision_layer = 2
+
+[node name="HallMarkerCollider" type="CollisionShape3D" parent="HallAreaMarker"]
+shape = SubResource("BoxShape3D_atsby")

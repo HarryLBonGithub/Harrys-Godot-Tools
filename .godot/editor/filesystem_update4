@@ -1,5 +1,7 @@
-res://Building Tools/Character Controllers/top_down_character_controller.tscn
 res://Building Tools/Themes/industrial_scifi_theme.tres
-res://Building Tools/Character Controllers/fps_character_controller.tscn
+res://Building Tools/Themes/FillerTheme.tres
+res://Building Tools/Set Pieces/Hallway Segment/hall_segment.tscn
 res://Building Tools/Testing Rooms/testing_room_beta.tscn
-res://Building Tools/Character Controllers/top_down_character_controller.gd
+res://Building Tools/Testing Rooms/testing_room_alpha.tscn
+res://Building Tools/Set Pieces/Hallway Segment/hall_segment_wall.gd
+res://Building Tools/HUD Items/Info Checker/info_checker.tscn

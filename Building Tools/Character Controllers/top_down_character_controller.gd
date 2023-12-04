@@ -2,6 +2,8 @@ extends CharacterBody3D
 
 #mouse variables
 @export var mouseSensitivity = 0.3
+@export var mouseMaxAngle = 80
+@export var mouseMinAngle = 1
 
 #movement variables
 @export var walkingSpeed = 10
@@ -47,7 +49,9 @@ var cameraAngleH = 0 #camera horizontal angle
 func _ready():
 	initialYRot = fillerMeshNode.global_rotation.y
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-
+	cameraAngleV = -cameraSwing.rotation_degrees.x
+	cameraMount.rotation_degrees.x = -cameraSwing.rotation_degrees.x
+	
 func _input(event):
 	if event is InputEventMouseMotion:
 		cameraMotion = event.relative #stores the mouses movement
@@ -63,6 +67,7 @@ func cameraAngle():
 		
 	if cameraMotion.length() > 0: #if the camera has moved
 		cameraSwing.rotate_y(deg_to_rad(-cameraMotion.x * mouseSensitivity))
+
 	cameraMotion = Vector2()
 
 func walk(delta):

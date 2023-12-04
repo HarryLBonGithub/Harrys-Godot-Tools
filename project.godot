@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Harry's Godot Tools"
-config/features=PackedStringArray("4.1", "Forward Plus")
+config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://Building Tools/icon.svg"
 
 [display]
@@ -98,3 +98,4 @@ roll_right={
 [layer_names]
 
 3d_physics/layer_1="Physical Boundries"
+3d_physics/layer_2="Set Generator Logic"
