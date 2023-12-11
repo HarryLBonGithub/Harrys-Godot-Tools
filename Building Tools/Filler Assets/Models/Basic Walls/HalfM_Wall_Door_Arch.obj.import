@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cf25ymt1gjtj0"
+path="res://.godot/imported/HalfM_Wall_Door_Arch.obj-7b2df7da5e3e81b21361c2e15e4c69cd.mesh"
+
+[deps]
+
+files=["res://.godot/imported/HalfM_Wall_Door_Arch.obj-7b2df7da5e3e81b21361c2e15e4c69cd.mesh"]
+
+source_file="res://Building Tools/Filler Assets/Models/Basic Walls/HalfM_Wall_Door_Arch.obj"
+dest_files=["res://.godot/imported/HalfM_Wall_Door_Arch.obj-7b2df7da5e3e81b21361c2e15e4c69cd.mesh", "res://.godot/imported/HalfM_Wall_Door_Arch.obj-7b2df7da5e3e81b21361c2e15e4c69cd.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
