@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://culx5s7b5r33a"]
+
+[ext_resource type="Script" path="res://Building Tools/Properties/Inventories/key_ring.gd" id="1_2rwo0"]
+
+[node name="KeyRing" type="Node"]
+script = ExtResource("1_2rwo0")

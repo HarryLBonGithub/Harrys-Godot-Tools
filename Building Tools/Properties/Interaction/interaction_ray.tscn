@@ -4,4 +4,5 @@
 
 [node name="InteractionRay" type="RayCast3D"]
 target_position = Vector3(0, 0, -2)
+collide_with_areas = true
 script = ExtResource("1_ipnyl")

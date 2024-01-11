@@ -2,5 +2,5 @@ extends Node
 
 @onready var parent = get_parent()
 
-func interact():
+func interact(user):
 	parent.queue_free()

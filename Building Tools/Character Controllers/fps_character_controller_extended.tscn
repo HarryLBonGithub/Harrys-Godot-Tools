@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://baqs2t4p5a58i"]
+[gd_scene load_steps=15 format=3 uid="uid://baqs2t4p5a58i"]
 
 [ext_resource type="Script" path="res://Building Tools/Character Controllers/FPSCharacterController.gd" id="1_cawun"]
 [ext_resource type="Theme" uid="uid://cmjnqicbnobds" path="res://Building Tools/Themes/FillerTheme.tres" id="2_qnxyh"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://de7t6wqk65bq5" path="res://Building Tools/Props/Handhelds/Tool Frame/Simple Blaster/simple_blaster.tscn" id="8_83wnm"]
 [ext_resource type="PackedScene" uid="uid://cg3obfppionlq" path="res://Building Tools/Props/Handhelds/Basic Flashlight/basic_flashlight.tscn" id="10_h0suf"]
 [ext_resource type="PackedScene" uid="uid://bgeyfohldmmx2" path="res://Building Tools/Properties/Health/health.tscn" id="11_wxiug"]
+[ext_resource type="PackedScene" uid="uid://culx5s7b5r33a" path="res://Building Tools/Properties/Inventories/key_ring.tscn" id="12_lam6a"]
 [ext_resource type="Script" path="res://Building Tools/Character Controllers/FPSCharExtCommand.gd" id="12_ld36a"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_smuhl"]
@@ -75,7 +76,8 @@ target_position = Vector3(0, 0, -20)
 [node name="InfoChecker" parent="Head" node_paths=PackedStringArray("info") instance=ExtResource("5_38ppm")]
 info = NodePath("../../PlayerUI/info")
 
-[node name="InteractionRay" parent="Head" instance=ExtResource("6_6sjcx")]
+[node name="InteractionRay" parent="Head" node_paths=PackedStringArray("user") instance=ExtResource("6_6sjcx")]
+user = NodePath("../..")
 
 [node name="Hand" parent="Head" node_paths=PackedStringArray("ammoUI", "targettingRay") instance=ExtResource("7_mhc5k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.291575, -0.665785, -0.675044)
@@ -103,6 +105,8 @@ owningNode = NodePath("..")
 
 [node name="FPSCharExtCommand" type="Node" parent="."]
 script = ExtResource("12_ld36a")
+
+[node name="KeyRing" parent="." instance=ExtResource("12_lam6a")]
 
 [connection signal="ko" from="Health" to="FPSCharExtCommand" method="_on_health_ko"]
 

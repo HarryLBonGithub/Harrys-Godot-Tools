@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://biny2b1a1w754"]
+
+[ext_resource type="Script" path="res://Building Tools/Props/Pickups/Keys/key.gd" id="1_t50on"]
+[ext_resource type="PackedScene" path="res://Building Tools/Properties/Cursor Hint/cursor_hint.tscn" id="2_1t7o0"]
+[ext_resource type="Script" path="res://Building Tools/Props/Pickups/Keys/Key_Interaction.gd" id="3_o4603"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_s1rgg"]
+size = Vector3(0.1, 0.1, 0.25)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f1gjj"]
+albedo_color = Color(1, 0.701961, 0, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5jkd2"]
+size = Vector3(0.1, 0.1, 0.3)
+
+[node name="key" type="Area3D"]
+script = ExtResource("1_t50on")
+
+[node name="keyMesh" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_s1rgg")
+surface_material_override/0 = SubResource("StandardMaterial3D_f1gjj")
+
+[node name="keyCollider" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49012e-08, 1.49012e-08, 2.98023e-08)
+shape = SubResource("BoxShape3D_5jkd2")
+
+[node name="CursorHint" parent="." instance=ExtResource("2_1t7o0")]
+hint = "Key"
+
+[node name="Interaction" type="Node" parent="."]
+script = ExtResource("3_o4603")

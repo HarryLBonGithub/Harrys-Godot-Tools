@@ -2,6 +2,9 @@ extends Node
 
 signal interacted
 
-func interact():
+var lastUser : Node
+
+func interact(user):
+	lastUser = user
 	emit_signal("interacted")
 	

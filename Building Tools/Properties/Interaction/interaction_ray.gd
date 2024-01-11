@@ -1,5 +1,6 @@
 extends RayCast3D
 
+@export var user : Node
 
 func _process(delta):
 
@@ -17,4 +18,4 @@ func _process(delta):
 			
 		if body.has_node("Interaction"):
 			var target = body.find_child("Interaction")
-			target.interact();
+			target.interact(user);

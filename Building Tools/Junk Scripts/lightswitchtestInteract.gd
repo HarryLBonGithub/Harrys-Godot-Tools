@@ -1,4 +1,4 @@
 extends Node
 
-func interact():
+func interact(user):
 	$"../LightSwitch".toggle()
