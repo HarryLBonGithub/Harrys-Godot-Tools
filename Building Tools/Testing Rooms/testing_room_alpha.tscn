@@ -167,3 +167,5 @@ mesh = ExtResource("11_rmd80")
 [node name="key" parent="." instance=ExtResource("12_aukw6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 1, 0)
 key_ID = "door"
+
+[editable path="Dummy"]

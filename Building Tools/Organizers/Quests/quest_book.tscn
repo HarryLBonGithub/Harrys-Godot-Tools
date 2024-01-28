@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dko0qmg6bo3st"]
+
+[ext_resource type="Script" path="res://Building Tools/Organizers/Quests/quest_book.gd" id="1_qm1y0"]
+
+[node name="QuestBook" type="Node"]
+script = ExtResource("1_qm1y0")

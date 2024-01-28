@@ -1,4 +1,6 @@
 Node
+VBoxContainer
+Panel
 CollisionShape3D
 MeshInstance3D
 Area3D
@@ -10,5 +12,3 @@ AnimatableBody3D
 StaticBody3D
 RayCast3D
 SpringArm3D
-Camera3D
-CharacterBody3D

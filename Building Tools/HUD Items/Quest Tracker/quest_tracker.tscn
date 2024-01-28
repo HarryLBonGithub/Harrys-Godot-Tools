@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7vkxyf0bypq3"]
+
+[ext_resource type="Script" path="res://Building Tools/HUD Items/Quest Tracker/quest_tracker.gd" id="1_pakxo"]
+
+[node name="QuestTracker" type="Panel"]
+script = ExtResource("1_pakxo")
+
+[node name="LabelContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 223.0
+offset_bottom = 40.0
