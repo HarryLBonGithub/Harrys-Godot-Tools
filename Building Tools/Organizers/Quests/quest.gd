@@ -13,6 +13,7 @@ var delivered = false
 var failed = false
 
 func giveTo(target):
+	given = true
 	reparent(target)
 
 func activeToggle():

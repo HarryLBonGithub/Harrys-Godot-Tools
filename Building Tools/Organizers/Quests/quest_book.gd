@@ -12,6 +12,7 @@ func track(quest:Quest):
 	var newQuestLabel = Label.new()
 	newQuestLabel.text = quest.summary
 	questUI.containerNode.add_child(newQuestLabel)
+	quest.active = true
 
 func untrack(quest:Quest):
 	if not questUI:
@@ -21,3 +22,4 @@ func untrack(quest:Quest):
 	for labels in labelChildren:
 		if labels.text == quest.summary:
 			labels.queue_free()
+	quest.active = false

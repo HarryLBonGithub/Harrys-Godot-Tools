@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cwpk3o2hdiphh"]
+[gd_scene load_steps=23 format=3 uid="uid://cwpk3o2hdiphh"]
 
 [ext_resource type="Script" path="res://Building Tools/Testing Rooms/testing_rooms.gd" id="1_lvbwn"]
 [ext_resource type="PackedScene" uid="uid://dtg5r0ox5x83s" path="res://Building Tools/Characters/Dummy/dummy.tscn" id="4_jhemo"]
@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://ra5ugkfqhc7" path="res://Building Tools/Set Pieces/Sliding Door/sliding_door.tscn" id="10_188ib"]
 [ext_resource type="ArrayMesh" uid="uid://cf25ymt1gjtj0" path="res://Building Tools/Filler Assets/Models/Basic Walls/HalfM_Wall_Door_Arch.obj" id="11_rmd80"]
 [ext_resource type="PackedScene" uid="uid://biny2b1a1w754" path="res://Building Tools/Props/Pickups/Keys/key.tscn" id="12_aukw6"]
+[ext_resource type="PackedScene" path="res://Building Tools/Properties/Cursor Hint/cursor_hint.tscn" id="13_fv535"]
+[ext_resource type="Script" path="res://Building Tools/Junk Scripts/questcube_interaction.gd" id="14_je23k"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_nb5n6"]
 size = Vector3(20, 1, 20)
@@ -43,6 +45,10 @@ texture_filter = 0
 [sub_resource type="BoxMesh" id="BoxMesh_82kew"]
 material = SubResource("StandardMaterial3D_s3inf")
 size = Vector3(8, 8, 8)
+
+[sub_resource type="BoxMesh" id="BoxMesh_eqq8u"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1fjgu"]
 
 [node name="TestingRoomAlpha" type="Node3D"]
 script = ExtResource("1_lvbwn")
@@ -167,5 +173,20 @@ mesh = ExtResource("11_rmd80")
 [node name="key" parent="." instance=ExtResource("12_aukw6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 1, 0)
 key_ID = "door"
+
+[node name="QuestCube" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 2, 6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="QuestCube"]
+mesh = SubResource("BoxMesh_eqq8u")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="QuestCube"]
+shape = SubResource("BoxShape3D_1fjgu")
+
+[node name="CursorHint" parent="QuestCube" instance=ExtResource("13_fv535")]
+hint = "quest cube"
+
+[node name="Interaction" type="Node" parent="QuestCube"]
+script = ExtResource("14_je23k")
 
 [editable path="Dummy"]
