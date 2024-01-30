@@ -1,25 +1,13 @@
 extends Node
+class_name QuestBook
 
-signal new_quest
+var quests:Array[Quest] = []
 
-@export var questUI = Node
+func addQuest(quest:Quest):
+	quests.append(quest)
 
-func track(quest:Quest):
-	if not questUI:
-		print("no ui")
-		return
-	print("creating label")
-	var newQuestLabel = Label.new()
-	newQuestLabel.text = quest.summary
-	questUI.containerNode.add_child(newQuestLabel)
-	quest.active = true
+func removeQuest(quest:Quest):
+	quest.erase(quest) #erase moves the first occurance of an item. otherwise does nothing
 
-func untrack(quest:Quest):
-	if not questUI:
-		return
-	var labelChildren = questUI.containerNode.get_children()
-	
-	for labels in labelChildren:
-		if labels.text == quest.summary:
-			labels.queue_free()
-	quest.active = false
+func getQuests():
+	return quests

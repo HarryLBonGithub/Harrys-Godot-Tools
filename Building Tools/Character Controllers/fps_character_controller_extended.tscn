@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://baqs2t4p5a58i"]
+[gd_scene load_steps=16 format=3 uid="uid://baqs2t4p5a58i"]
 
 [ext_resource type="Script" path="res://Building Tools/Character Controllers/FPSCharacterController.gd" id="1_cawun"]
 [ext_resource type="Theme" uid="uid://cmjnqicbnobds" path="res://Building Tools/Themes/FillerTheme.tres" id="2_qnxyh"]
@@ -13,7 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://bgeyfohldmmx2" path="res://Building Tools/Properties/Health/health.tscn" id="11_wxiug"]
 [ext_resource type="PackedScene" uid="uid://culx5s7b5r33a" path="res://Building Tools/Properties/Inventories/key_ring.tscn" id="12_lam6a"]
 [ext_resource type="Script" path="res://Building Tools/Character Controllers/FPSCharExtCommand.gd" id="12_ld36a"]
-[ext_resource type="PackedScene" uid="uid://dko0qmg6bo3st" path="res://Building Tools/Organizers/Quests/quest_book.tscn" id="14_n1rao"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_smuhl"]
 radius = 0.4
@@ -118,11 +117,7 @@ script = ExtResource("12_ld36a")
 
 [node name="KeyRing" parent="." instance=ExtResource("12_lam6a")]
 
-[node name="QuestBook" parent="." node_paths=PackedStringArray("questUI") instance=ExtResource("14_n1rao")]
-questUI = NodePath("../PlayerUI/QuestTracker")
-
 [connection signal="ko" from="Health" to="FPSCharExtCommand" method="_on_health_ko"]
-[connection signal="new_quest" from="QuestBook" to="FPSCharExtCommand" method="_on_quest_book_new_quest"]
 
 [editable path="PlayerUI/AmmoTracker"]
 [editable path="PlayerUI/QuestTracker"]
