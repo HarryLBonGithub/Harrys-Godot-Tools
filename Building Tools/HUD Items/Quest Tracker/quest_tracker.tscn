@@ -3,6 +3,12 @@
 [ext_resource type="Script" path="res://Building Tools/HUD Items/Quest Tracker/quest_tracker.gd" id="1_pakxo"]
 
 [node name="QuestTracker" type="Panel"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
 script = ExtResource("1_pakxo")
 
 [node name="LabelContainer" type="VBoxContainer" parent="."]
@@ -12,4 +18,3 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-alignment = 2

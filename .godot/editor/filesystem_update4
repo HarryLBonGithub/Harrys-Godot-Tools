@@ -14,3 +14,7 @@ res://Building Tools/Character Controllers/fps_character_controller_extended.tsc
 res://Building Tools/Organizers/Quests/Some Other Quest.tres
 res://Building Tools/Organizers/Quests/quest_board.tscn
 res://Building Tools/Organizers/Quests/quest_board.gd
+res://Building Tools/HUD Items/Quest Tracker/quest_tracker.tscn
+res://Building Tools/HUD Items/Quest Tracker/quest_tracker.gd
+res://Building Tools/Organizers/Quests/test quests/Press Some Key.tres
+res://Building Tools/Character Controllers/FPSCharExtCommand.gd

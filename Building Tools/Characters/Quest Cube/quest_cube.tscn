@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://c378cc48ttgrm"]
 
 [ext_resource type="Script" path="res://Building Tools/Junk Scripts/QuestCube.gd" id="1_7fdlm"]
-[ext_resource type="Resource" uid="uid://b7teg4ycaac7a" path="res://Building Tools/Organizers/Quests/Dummy Quest.tres" id="2_3niga"]
+[ext_resource type="Resource" uid="uid://b7teg4ycaac7a" path="res://Building Tools/Organizers/Quests/test quests/Dummy Quest.tres" id="2_3niga"]
 [ext_resource type="PackedScene" path="res://Building Tools/Properties/Cursor Hint/cursor_hint.tscn" id="2_ecfre"]
 [ext_resource type="PackedScene" uid="uid://b0gbga5dx5toq" path="res://Building Tools/Properties/Interaction/interaction.tscn" id="3_ndbu3"]
 

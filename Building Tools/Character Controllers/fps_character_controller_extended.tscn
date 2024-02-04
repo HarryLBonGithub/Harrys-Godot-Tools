@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://baqs2t4p5a58i"]
+[gd_scene load_steps=18 format=3 uid="uid://baqs2t4p5a58i"]
 
 [ext_resource type="Script" path="res://Building Tools/Character Controllers/FPSCharacterController.gd" id="1_cawun"]
 [ext_resource type="Theme" uid="uid://cmjnqicbnobds" path="res://Building Tools/Themes/FillerTheme.tres" id="2_qnxyh"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://culx5s7b5r33a" path="res://Building Tools/Properties/Inventories/key_ring.tscn" id="12_lam6a"]
 [ext_resource type="Script" path="res://Building Tools/Character Controllers/FPSCharExtCommand.gd" id="12_ld36a"]
 [ext_resource type="PackedScene" uid="uid://dn3punkb35pti" path="res://Building Tools/Organizers/Quests/quest_book.tscn" id="14_n1rao"]
+[ext_resource type="Resource" uid="uid://b5s11u4ctjw2x" path="res://Building Tools/Organizers/Quests/test quests/Press Some Key.tres" id="15_w4r4t"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_smuhl"]
 radius = 0.4
@@ -125,13 +126,15 @@ target_position = Vector3(0, -0.25, 0)
 healthUI = NodePath("../PlayerUI/healthBar")
 owningNode = NodePath("..")
 
-[node name="FPSCharExtCommand" type="Node" parent="."]
+[node name="FPSCharExtCommand" type="Node" parent="." node_paths=PackedStringArray("mainNode")]
 script = ExtResource("12_ld36a")
+mainNode = NodePath("..")
 
 [node name="KeyRing" parent="." instance=ExtResource("12_lam6a")]
 
 [node name="QuestBook" parent="." node_paths=PackedStringArray("questBookOwner", "simpleTracker") instance=ExtResource("14_n1rao")]
 questBookOwner = NodePath("..")
+quests = Array[Resource("res://Building Tools/Organizers/Quests/quest.gd")]([ExtResource("15_w4r4t")])
 simpleTracker = NodePath("../PlayerUI/ObjectiveUI/QuestTracker")
 
 [connection signal="ko" from="Health" to="FPSCharExtCommand" method="_on_health_ko"]
