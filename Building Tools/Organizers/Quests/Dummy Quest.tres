@@ -3,7 +3,10 @@
 [ext_resource type="Script" path="res://Building Tools/Organizers/Quests/quest.gd" id="1_jtw5c"]
 
 [resource]
+resource_local_to_scene = true
 script = ExtResource("1_jtw5c")
-name = ""
-description = ""
-summary = ""
+questName = "Dummy's Quest"
+description = "do the thing for dummy"
+summary = "touch the cube"
+keyToPress = ""
+progressTarget = 1.0

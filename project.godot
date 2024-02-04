@@ -14,6 +14,10 @@ config/name="Harry's Godot Tools"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://Building Tools/icon.svg"
 
+[autoload]
+
+QuestManager="*res://Building Tools/Organizers/Quests/QuestManager.gd"
+
 [display]
 
 window/stretch/mode="viewport"

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0gbga5dx5toq"]
+
+[ext_resource type="Script" path="res://Building Tools/Properties/Interaction/interaction.gd" id="1_wn22f"]
+
+[node name="Interaction" type="Node"]
+script = ExtResource("1_wn22f")

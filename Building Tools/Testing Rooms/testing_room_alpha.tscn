@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cwpk3o2hdiphh"]
+[gd_scene load_steps=22 format=3 uid="uid://cwpk3o2hdiphh"]
 
 [ext_resource type="Script" path="res://Building Tools/Testing Rooms/testing_rooms.gd" id="1_lvbwn"]
 [ext_resource type="PackedScene" uid="uid://dtg5r0ox5x83s" path="res://Building Tools/Characters/Dummy/dummy.tscn" id="4_jhemo"]
@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://ra5ugkfqhc7" path="res://Building Tools/Set Pieces/Sliding Door/sliding_door.tscn" id="10_188ib"]
 [ext_resource type="ArrayMesh" uid="uid://cf25ymt1gjtj0" path="res://Building Tools/Filler Assets/Models/Basic Walls/HalfM_Wall_Door_Arch.obj" id="11_rmd80"]
 [ext_resource type="PackedScene" uid="uid://biny2b1a1w754" path="res://Building Tools/Props/Pickups/Keys/key.tscn" id="12_aukw6"]
+[ext_resource type="PackedScene" uid="uid://c378cc48ttgrm" path="res://Building Tools/Characters/Quest Cube/quest_cube.tscn" id="13_ehwb4"]
+[ext_resource type="Script" path="res://Building Tools/Organizers/Quests/quest.gd" id="14_s8g3l"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_nb5n6"]
 size = Vector3(20, 1, 20)
@@ -44,6 +46,15 @@ texture_filter = 0
 material = SubResource("StandardMaterial3D_s3inf")
 size = Vector3(8, 8, 8)
 
+[sub_resource type="Resource" id="Resource_x0njy"]
+resource_local_to_scene = true
+script = ExtResource("14_s8g3l")
+questName = "Dummy's Quest"
+description = "do the thing for dummy"
+summary = "touch the cube"
+keyToPress = ""
+progressTarget = 0.0
+
 [node name="TestingRoomAlpha" type="Node3D"]
 script = ExtResource("1_lvbwn")
 
@@ -59,9 +70,6 @@ shape = SubResource("ConcavePolygonShape3D_k2gn4")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.475778, 0.879566, 0, -0.879566, 0.475778, 0, 11.1154, 0)
 shadow_enabled = true
-
-[node name="Dummy" parent="." instance=ExtResource("4_jhemo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.41921, 1.61337, 0)
 
 [node name="HealthPickup" parent="." instance=ExtResource("5_yl6wb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.19592, 5.91257)
@@ -168,4 +176,8 @@ mesh = ExtResource("11_rmd80")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 1, 0)
 key_ID = "door"
 
-[editable path="Dummy"]
+[node name="Dummy" parent="." instance=ExtResource("4_jhemo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1.5, 6)
+
+[node name="QuestCube" parent="." instance=ExtResource("13_ehwb4")]
+heldQuest = SubResource("Resource_x0njy")

@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://dtg5r0ox5x83s"]
+[gd_scene load_steps=10 format=3 uid="uid://dtg5r0ox5x83s"]
 
 [ext_resource type="PackedScene" uid="uid://bgeyfohldmmx2" path="res://Building Tools/Properties/Health/health.tscn" id="1_u5hva"]
 [ext_resource type="PackedScene" path="res://Building Tools/Properties/Cursor Hint/cursor_hint.tscn" id="2_d50t5"]
-[ext_resource type="Script" path="res://Building Tools/Characters/Dummy/DummyInteraction.gd" id="3_r63x4"]
 [ext_resource type="Script" path="res://Building Tools/Characters/Dummy/DummyCommand.gd" id="4_wknxs"]
+[ext_resource type="PackedScene" uid="uid://ktotwtyoakkv" path="res://Building Tools/Organizers/Quests/quest_board.tscn" id="5_ywgqx"]
+[ext_resource type="Resource" uid="uid://b7teg4ycaac7a" path="res://Building Tools/Organizers/Quests/Dummy Quest.tres" id="6_68jck"]
+[ext_resource type="PackedScene" uid="uid://b0gbga5dx5toq" path="res://Building Tools/Properties/Interaction/interaction.tscn" id="6_a2dt1"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jvcyp"]
 radius = 0.4
@@ -29,10 +31,13 @@ owningNode = NodePath("..")
 [node name="CursorHint" parent="." instance=ExtResource("2_d50t5")]
 hint = "Dummy"
 
-[node name="Interaction" type="Node" parent="."]
-script = ExtResource("3_r63x4")
-
 [node name="Command" type="Node" parent="."]
 script = ExtResource("4_wknxs")
 
+[node name="Interaction" parent="." instance=ExtResource("6_a2dt1")]
+
+[node name="QuestBoard" parent="." instance=ExtResource("5_ywgqx")]
+quests = Array[Resource("res://Building Tools/Organizers/Quests/quest.gd")]([ExtResource("6_68jck")])
+
 [connection signal="ko" from="Health" to="Command" method="_on_health_ko"]
+[connection signal="interacted" from="Interaction" to="Command" method="_on_interaction_interacted"]

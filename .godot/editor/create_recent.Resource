@@ -1,5 +1,5 @@
-Message
 Quest
+Message
 Reward
 Resource
 Theme

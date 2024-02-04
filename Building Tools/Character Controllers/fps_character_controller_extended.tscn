@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://baqs2t4p5a58i"]
+[gd_scene load_steps=17 format=3 uid="uid://baqs2t4p5a58i"]
 
 [ext_resource type="Script" path="res://Building Tools/Character Controllers/FPSCharacterController.gd" id="1_cawun"]
 [ext_resource type="Theme" uid="uid://cmjnqicbnobds" path="res://Building Tools/Themes/FillerTheme.tres" id="2_qnxyh"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bgeyfohldmmx2" path="res://Building Tools/Properties/Health/health.tscn" id="11_wxiug"]
 [ext_resource type="PackedScene" uid="uid://culx5s7b5r33a" path="res://Building Tools/Properties/Inventories/key_ring.tscn" id="12_lam6a"]
 [ext_resource type="Script" path="res://Building Tools/Character Controllers/FPSCharExtCommand.gd" id="12_ld36a"]
+[ext_resource type="PackedScene" uid="uid://dn3punkb35pti" path="res://Building Tools/Organizers/Quests/quest_book.tscn" id="14_n1rao"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_smuhl"]
 radius = 0.4
@@ -65,13 +66,25 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
 
-[node name="QuestTracker" parent="PlayerUI" instance=ExtResource("5_e07ye")]
+[node name="ObjectiveUI" type="VBoxContainer" parent="PlayerUI"]
+offset_left = 28.0
+offset_top = 72.0
+offset_right = 127.0
+offset_bottom = 92.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
 
-[node name="LabelContainer" parent="PlayerUI/QuestTracker" index="0"]
-offset_left = 32.0
-offset_top = 84.0
-offset_right = 255.0
-offset_bottom = 124.0
+[node name="ObjectiveTitle" type="Label" parent="PlayerUI/ObjectiveUI"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "OBJECTIVE
+"
+
+[node name="QuestTracker" parent="PlayerUI/ObjectiveUI" node_paths=PackedStringArray("questBook") instance=ExtResource("5_e07ye")]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+questBook = NodePath("../../../QuestBook")
 
 [node name="Head" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.71, 0)
@@ -117,8 +130,11 @@ script = ExtResource("12_ld36a")
 
 [node name="KeyRing" parent="." instance=ExtResource("12_lam6a")]
 
+[node name="QuestBook" parent="." node_paths=PackedStringArray("questBookOwner", "simpleTracker") instance=ExtResource("14_n1rao")]
+questBookOwner = NodePath("..")
+simpleTracker = NodePath("../PlayerUI/ObjectiveUI/QuestTracker")
+
 [connection signal="ko" from="Health" to="FPSCharExtCommand" method="_on_health_ko"]
 
 [editable path="PlayerUI/AmmoTracker"]
-[editable path="PlayerUI/QuestTracker"]
 [editable path="Head/InfoChecker"]
