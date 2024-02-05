@@ -1,20 +1,17 @@
-res://Building Tools/Organizers/Quests/quest_book.tscn
-res://Building Tools/Themes/industrial_scifi_theme.tres
-res://Building Tools/Organizers/Quests/QuestManager.gd
-res://Building Tools/Organizers/Quests/quest.gd
-res://Building Tools/Organizers/Quests/quest_book.gd
-res://Building Tools/Themes/FillerTheme.tres
 res://Building Tools/Testing Rooms/testing_room_alpha.tscn
-res://Building Tools/Characters/Dummy/dummy.tscn
-res://Building Tools/Characters/Dummy/DummyCommand.gd
-res://Building Tools/Organizers/Quests/Dummy Quest.tres
-res://Building Tools/Junk Scripts/QuestCube.gd
-res://Building Tools/Characters/Quest Cube/quest_cube.tscn
-res://Building Tools/Character Controllers/fps_character_controller_extended.tscn
-res://Building Tools/Organizers/Quests/Some Other Quest.tres
-res://Building Tools/Organizers/Quests/quest_board.tscn
-res://Building Tools/Organizers/Quests/quest_board.gd
-res://Building Tools/HUD Items/Quest Tracker/quest_tracker.tscn
-res://Building Tools/HUD Items/Quest Tracker/quest_tracker.gd
+res://Building Tools/Themes/industrial_scifi_theme.tres
+res://Building Tools/Themes/FillerTheme.tres
 res://Building Tools/Organizers/Quests/test quests/Press Some Key.tres
+res://Building Tools/Character Controllers/fps_character_controller_extended.tscn
+res://Building Tools/Organizers/Messages/message.gd
+res://Building Tools/HUD Items/Messenger/simple_message_display.tscn
+res://Building Tools/HUD Items/Messenger/simple_message_display.gd
+res://Building Tools/Characters/Dummy/dummy.tscn
+res://Building Tools/Organizers/Messages/message_chain.gd
+res://Building Tools/Organizers/Messages/message_carrier.tscn
+res://Building Tools/Organizers/Messages/message_carrier.gd
+res://Building Tools/Organizers/Messages/message_catcher.tscn
+res://Building Tools/Organizers/Messages/message_catcher.gd
+res://Building Tools/Characters/Dummy/DummyCommand.gd
 res://Building Tools/Character Controllers/FPSCharExtCommand.gd
+res://Building Tools/To Do List.txt

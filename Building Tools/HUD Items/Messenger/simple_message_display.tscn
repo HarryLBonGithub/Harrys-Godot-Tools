@@ -1,0 +1,52 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxkssphyydq4j"]
+
+[ext_resource type="Script" path="res://Building Tools/HUD Items/Messenger/simple_message_display.gd" id="1_csqns"]
+
+[node name="SimpleMessageDisplay" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_csqns")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HeadingContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="MessengerPortrait" type="TextureRect" parent="VBoxContainer/HeadingContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="NameContainer" type="PanelContainer" parent="VBoxContainer/HeadingContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="MessengerName" type="Label" parent="VBoxContainer/HeadingContainer/NameContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Messenger"
+
+[node name="MessageContainer" type="PanelContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MessageLabel" type="Label" parent="VBoxContainer/MessageContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 1
+text = "What they said . . ."
+
+[node name="AudioMessage" type="AudioStreamPlayer" parent="."]
+
+[connection signal="finished" from="AudioMessage" to="." method="_on_audio_message_finished"]

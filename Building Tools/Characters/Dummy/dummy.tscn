@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dtg5r0ox5x83s"]
+[gd_scene load_steps=18 format=3 uid="uid://dtg5r0ox5x83s"]
 
 [ext_resource type="PackedScene" uid="uid://bgeyfohldmmx2" path="res://Building Tools/Properties/Health/health.tscn" id="1_u5hva"]
 [ext_resource type="PackedScene" path="res://Building Tools/Properties/Cursor Hint/cursor_hint.tscn" id="2_d50t5"]
@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://ktotwtyoakkv" path="res://Building Tools/Organizers/Quests/quest_board.tscn" id="5_ywgqx"]
 [ext_resource type="Resource" uid="uid://b7teg4ycaac7a" path="res://Building Tools/Organizers/Quests/test quests/Dummy Quest.tres" id="6_68jck"]
 [ext_resource type="PackedScene" uid="uid://b0gbga5dx5toq" path="res://Building Tools/Properties/Interaction/interaction.tscn" id="6_a2dt1"]
+[ext_resource type="PackedScene" uid="uid://bgh0nuuiuk1em" path="res://Building Tools/Organizers/Messages/message_carrier.tscn" id="7_nutb2"]
+[ext_resource type="Script" path="res://Building Tools/Organizers/Messages/message.gd" id="8_vadvb"]
+[ext_resource type="Script" path="res://Building Tools/Organizers/Messages/message_chain.gd" id="9_jyw3b"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jvcyp"]
 radius = 0.4
@@ -15,6 +18,31 @@ radius = 0.4
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1rtnm"]
 albedo_color = Color(0.827451, 0, 0.219608, 1)
+
+[sub_resource type="Resource" id="Resource_eovww"]
+script = ExtResource("8_vadvb")
+text = "Hi I'm dummy!"
+messenger = "Dummy"
+
+[sub_resource type="Resource" id="Resource_wlwrr"]
+script = ExtResource("8_vadvb")
+text = "Please go touch that floating cube!"
+messenger = "Dummy"
+
+[sub_resource type="Resource" id="Resource_du51y"]
+script = ExtResource("9_jyw3b")
+messengerName = "Dummy"
+messagesArray = Array[ExtResource("8_vadvb")]([SubResource("Resource_eovww"), SubResource("Resource_wlwrr")])
+
+[sub_resource type="Resource" id="Resource_miycg"]
+script = ExtResource("8_vadvb")
+text = "The cube awaits"
+messenger = "Dummy"
+
+[sub_resource type="Resource" id="Resource_mh2e8"]
+script = ExtResource("9_jyw3b")
+messengerName = "Dummy"
+messagesArray = Array[ExtResource("8_vadvb")]([SubResource("Resource_miycg")])
 
 [node name="Dummy" type="CharacterBody3D" groups=["enemy"]]
 
@@ -38,6 +66,9 @@ script = ExtResource("4_wknxs")
 
 [node name="QuestBoard" parent="." instance=ExtResource("5_ywgqx")]
 quests = Array[Resource("res://Building Tools/Organizers/Quests/quest.gd")]([ExtResource("6_68jck")])
+
+[node name="MessageCarrier" parent="." instance=ExtResource("7_nutb2")]
+messageChains = Array[ExtResource("9_jyw3b")]([SubResource("Resource_du51y"), SubResource("Resource_mh2e8")])
 
 [connection signal="ko" from="Health" to="Command" method="_on_health_ko"]
 [connection signal="interacted" from="Interaction" to="Command" method="_on_interaction_interacted"]

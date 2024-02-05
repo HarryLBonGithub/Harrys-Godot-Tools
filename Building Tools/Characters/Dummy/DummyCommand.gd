@@ -6,7 +6,10 @@ func _on_health_ko():
 
 
 func _on_interaction_interacted(user):
-	pass
+	
+	
+	
+	
 	if not user.has_node("QuestBook"):
 		return
 	var book = user.find_child("QuestBook")
@@ -18,8 +21,14 @@ func _on_interaction_interacted(user):
 		return
 	
 	if quests[0] in book.getQuests():
+		if user.has_node("MessageCatcher"):
+			var catcher = user.find_child("MessageCatcher")
+			catcher.catchMessage($"../MessageCarrier".messageChains[1])
 		print("you already have this")
 		return
 	#
 	myBoard.giveQuest(book, quests[0])
+	if user.has_node("MessageCatcher"):
+		var catcher = user.find_child("MessageCatcher")
+		catcher.catchMessage($"../MessageCarrier".messageChains[0])
 	print("quest added")

@@ -7,7 +7,6 @@ class_name QuestBook
 
 @export var simpleTracker : Node
 
-
 func _ready():
 	connectToQuestManager()
 	updateTracker()
@@ -42,8 +41,6 @@ func progressQuest(quester, quest):
 			myQuest.progressCount +=1
 			print(myQuest.questName + " Progress: " + str(myQuest.progressCount) + "/" + str(myQuest.progressTarget))
 			completionCheck(myQuest)
-	
-
 
 func keyPressProgress(presser, key):
 	if presser != questBookOwner:
@@ -54,6 +51,15 @@ func keyPressProgress(presser, key):
 			myQuest.progressCount +=1
 			completionCheck(myQuest)
 
+func resetProgress(quester, quest):
+	if quester != questBookOwner:
+		print("Global signal emitted. Not for you " + questBookOwner.name)
+		return
+	for myQuest in quests:
+		if myQuest.questName == quest.questName:
+			myQuest.progressCount = 0
+			completionCheck(myQuest)
+			
 func completionCheck(quest:Quest):
 	if quest.progressCount >= quest.progressTarget:
 		quest.completed = true

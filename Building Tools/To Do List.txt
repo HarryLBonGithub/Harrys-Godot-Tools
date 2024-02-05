@@ -1,2 +1,5 @@
-- light switch
-	node for activating or deactivating a list of nodes from one place
+convert keys to resources
+
+make properties like health and UI totally separate from each other
+	- use a command node to hear the property's signal, then update the UI from
+	the command node
