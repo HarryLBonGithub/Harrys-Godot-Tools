@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Building Tools/Set Pieces/Sliding Door/sliding_door_command.gd" id="1_4mfjc"]
 [ext_resource type="ArrayMesh" uid="uid://pwjni4rcasao" path="res://Building Tools/Filler Assets/Models/Basic Walls/HalfM_Wall_Door_Plain.obj" id="2_bclrb"]
 [ext_resource type="Texture2D" uid="uid://dsej1eqt5ypvf" path="res://Building Tools/Filler Assets/Models/Paints/1 Meter White Box.png" id="2_yfh7y"]
-[ext_resource type="Script" path="res://Building Tools/Set Pieces/Sliding Door/DoorInteraction.gd" id="3_it4ie"]
+[ext_resource type="PackedScene" uid="uid://b0gbga5dx5toq" path="res://Building Tools/Properties/Interaction/interaction.tscn" id="5_ssh5y"]
 [ext_resource type="PackedScene" path="res://Building Tools/Properties/Cursor Hint/cursor_hint.tscn" id="5_xyyg8"]
 [ext_resource type="AudioStream" uid="uid://co8cjueks00u6" path="res://Building Tools/Filler Assets/Sounds/Scifi Door Short.wav" id="6_j76ii"]
 [ext_resource type="AudioStream" uid="uid://bu5ps1uachmo2" path="res://Building Tools/Filler Assets/Sounds/Error 2.wav" id="7_hevmy"]
@@ -106,10 +106,9 @@ surface_material_override/0 = SubResource("StandardMaterial3D_5pjdq")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 shape = SubResource("BoxShape3D_i4hmi")
 
-[node name="Interaction" type="Node" parent="DoorBody"]
-script = ExtResource("3_it4ie")
-
 [node name="CursorHint" parent="DoorBody" instance=ExtResource("5_xyyg8")]
+
+[node name="Interaction" parent="DoorBody" instance=ExtResource("5_ssh5y")]
 
 [node name="DoorAnimations" type="AnimationPlayer" parent="."]
 libraries = {

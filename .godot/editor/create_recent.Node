@@ -1,9 +1,9 @@
+Label
+PanelContainer
 Node
 AudioStreamPlayer
 TextureRect
 HBoxContainer
-Label
-PanelContainer
 Panel
 VBoxContainer
 MeshInstance3D

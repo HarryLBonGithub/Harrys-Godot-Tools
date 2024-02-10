@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dtg5r0ox5x83s"]
+[gd_scene load_steps=21 format=3 uid="uid://dtg5r0ox5x83s"]
 
 [ext_resource type="PackedScene" uid="uid://bgeyfohldmmx2" path="res://Building Tools/Properties/Health/health.tscn" id="1_u5hva"]
 [ext_resource type="PackedScene" path="res://Building Tools/Properties/Cursor Hint/cursor_hint.tscn" id="2_d50t5"]
@@ -44,6 +44,21 @@ script = ExtResource("9_jyw3b")
 messengerName = "Dummy"
 messagesArray = Array[ExtResource("8_vadvb")]([SubResource("Resource_miycg")])
 
+[sub_resource type="Resource" id="Resource_velmn"]
+script = ExtResource("8_vadvb")
+text = "Thanks! It was too far for me to reach. And as you can see, I have no legs."
+messenger = "Dummy"
+
+[sub_resource type="Resource" id="Resource_fqgrx"]
+script = ExtResource("8_vadvb")
+text = "Bye!"
+messenger = "Dummy"
+
+[sub_resource type="Resource" id="Resource_f65ur"]
+script = ExtResource("9_jyw3b")
+messengerName = "Dummy"
+messagesArray = Array[ExtResource("8_vadvb")]([SubResource("Resource_velmn"), SubResource("Resource_fqgrx")])
+
 [node name="Dummy" type="CharacterBody3D" groups=["enemy"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -68,7 +83,7 @@ script = ExtResource("4_wknxs")
 quests = Array[Resource("res://Building Tools/Organizers/Quests/quest.gd")]([ExtResource("6_68jck")])
 
 [node name="MessageCarrier" parent="." instance=ExtResource("7_nutb2")]
-messageChains = Array[ExtResource("9_jyw3b")]([SubResource("Resource_du51y"), SubResource("Resource_mh2e8")])
+messageChains = Array[ExtResource("9_jyw3b")]([SubResource("Resource_du51y"), SubResource("Resource_mh2e8"), SubResource("Resource_f65ur")])
 
 [connection signal="ko" from="Health" to="Command" method="_on_health_ko"]
 [connection signal="interacted" from="Interaction" to="Command" method="_on_interaction_interacted"]

@@ -8,7 +8,7 @@ extends Resource
 @export var reward: Reward
 
 @export var keyToPress: String
-@export var killTarget: Resource
+@export var killTarget: String
 @export var itemToCollect: Resource
 
 @export var progressTarget: float

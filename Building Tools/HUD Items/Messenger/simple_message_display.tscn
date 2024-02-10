@@ -47,6 +47,14 @@ layout_mode = 2
 size_flags_vertical = 1
 text = "What they said . . ."
 
+[node name="ContinueContainer" type="PanelContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="ToContinueLabel" type="Label" parent="VBoxContainer/ContinueContainer"]
+layout_mode = 2
+
 [node name="AudioMessage" type="AudioStreamPlayer" parent="."]
 
 [connection signal="finished" from="AudioMessage" to="." method="_on_audio_message_finished"]

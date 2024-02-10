@@ -7,9 +7,6 @@ func _on_health_ko():
 
 func _on_interaction_interacted(user):
 	
-	
-	
-	
 	if not user.has_node("QuestBook"):
 		return
 	var book = user.find_child("QuestBook")
@@ -23,6 +20,12 @@ func _on_interaction_interacted(user):
 	if quests[0] in book.getQuests():
 		if user.has_node("MessageCatcher"):
 			var catcher = user.find_child("MessageCatcher")
+			for q in book.getQuests():
+				if q.questName == quests[0].questName and q.completed == true:
+					catcher.catchMessage($"../MessageCarrier".messageChains[2])
+					return
+			
+			
 			catcher.catchMessage($"../MessageCarrier".messageChains[1])
 		print("you already have this")
 		return

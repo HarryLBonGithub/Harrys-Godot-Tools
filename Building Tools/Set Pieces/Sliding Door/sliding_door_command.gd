@@ -1,5 +1,9 @@
 extends Node3D
 
+signal failedToOpenBy(user)
+signal openedBy(user)
+signal closedBy(user)
+
 enum StateEnum {OPEN,CLOSED,LOCKED,BROKEN}
 
 @export var state: StateEnum
@@ -31,22 +35,25 @@ func _process(delta):
 		0: #open
 			hintNode.hint = openMessage
 
-func _on_interaction_interacted():
+func _on_interaction_interacted(user):
 	
 	match state:
 		3: #broken
 			brokenSoundNode.play()
+			failedToOpenBy.emit(user)
 		2: #locked
-			checkLock(interactionNode.lastUser)
+			checkLock(user)
+			
 		1: #closed
 			state = 0
 			animationsNode.play("open")
 			openSoundNode.play()
+			openedBy.emit(user)
 		0: #open
 			state = 1
 			animationsNode.play("close")
 			closeSoundNode.play()
-
+			closedBy.emit(user)
 
 func _on_exit_detector_body_exited(body):
 	if body == doorBodyNode:
@@ -61,6 +68,7 @@ func _on_exit_detector_body_exited(body):
 func checkLock(user):
 	if user.has_node("KeyRing") == false:
 		lockedSoundNode.play()
+		failedToOpenBy.emit(user)
 		return
 	
 	var keys = user.find_child("KeyRing")
@@ -70,6 +78,7 @@ func checkLock(user):
 		state = 0
 		animationsNode.play("open")
 		openSoundNode.play()
+		openedBy.emit(user)
 		return
 	
 	for k in keys.named_keys:
@@ -77,7 +86,9 @@ func checkLock(user):
 			state = 0
 			animationsNode.play("open")
 			openSoundNode.play()
+			openedBy.emit(user)
 			return
 	
+	failedToOpenBy.emit(user)
 	lockedSoundNode.play()
 	return

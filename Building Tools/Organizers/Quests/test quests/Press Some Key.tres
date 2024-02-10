@@ -9,4 +9,5 @@ questName = "Press X"
 description = "Press the X key"
 summary = "press X"
 keyToPress = "X"
+killTarget = ""
 progressTarget = 1.0
