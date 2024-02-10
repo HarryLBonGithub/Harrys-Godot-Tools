@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://6j1vri7wp66h"
+path="res://.godot/imported/Audio Message 2.wav-463f52e55b1ac8af4b4d8cfa7af3ab3e.sample"
+
+[deps]
+
+source_file="res://Building Tools/Organizers/Messages/Test Audio/Audio Message 2.wav"
+dest_files=["res://.godot/imported/Audio Message 2.wav-463f52e55b1ac8af4b4d8cfa7af3ab3e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

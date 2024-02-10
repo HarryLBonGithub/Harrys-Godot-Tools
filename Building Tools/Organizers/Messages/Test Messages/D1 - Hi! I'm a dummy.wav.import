@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://sjns1fcqmaj3"
+path="res://.godot/imported/D1 - Hi! I'm a dummy.wav-bd7e7efd919b5f5cd22967946567e538.sample"
+
+[deps]
+
+source_file="res://Building Tools/Organizers/Messages/Test Messages/D1 - Hi! I'm a dummy.wav"
+dest_files=["res://.godot/imported/D1 - Hi! I'm a dummy.wav-bd7e7efd919b5f5cd22967946567e538.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

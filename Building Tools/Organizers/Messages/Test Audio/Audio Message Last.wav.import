@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cpjkpvv8y5ql"
+path="res://.godot/imported/Audio Message Last.wav-35acaadc6301c6cd6459f66f5a6730b6.sample"
+
+[deps]
+
+source_file="res://Building Tools/Organizers/Messages/Test Audio/Audio Message Last.wav"
+dest_files=["res://.godot/imported/Audio Message Last.wav-35acaadc6301c6cd6459f66f5a6730b6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

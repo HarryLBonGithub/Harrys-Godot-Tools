@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dtg5r0ox5x83s"]
+[gd_scene load_steps=26 format=3 uid="uid://dtg5r0ox5x83s"]
 
 [ext_resource type="PackedScene" uid="uid://bgeyfohldmmx2" path="res://Building Tools/Properties/Health/health.tscn" id="1_u5hva"]
 [ext_resource type="PackedScene" path="res://Building Tools/Properties/Cursor Hint/cursor_hint.tscn" id="2_d50t5"]
@@ -8,7 +8,12 @@
 [ext_resource type="PackedScene" uid="uid://b0gbga5dx5toq" path="res://Building Tools/Properties/Interaction/interaction.tscn" id="6_a2dt1"]
 [ext_resource type="PackedScene" uid="uid://bgh0nuuiuk1em" path="res://Building Tools/Organizers/Messages/message_carrier.tscn" id="7_nutb2"]
 [ext_resource type="Script" path="res://Building Tools/Organizers/Messages/message.gd" id="8_vadvb"]
+[ext_resource type="AudioStream" uid="uid://sjns1fcqmaj3" path="res://Building Tools/Organizers/Messages/Test Messages/D1 - Hi! I'm a dummy.wav" id="8_woare"]
 [ext_resource type="Script" path="res://Building Tools/Organizers/Messages/message_chain.gd" id="9_jyw3b"]
+[ext_resource type="AudioStream" uid="uid://c5obcj22x7dn3" path="res://Building Tools/Organizers/Messages/Test Messages/D2 - Please go touch that floating cube.wav" id="10_souh1"]
+[ext_resource type="AudioStream" uid="uid://f65cvehkwjr1" path="res://Building Tools/Organizers/Messages/Test Messages/D3 - The cube awaits.wav" id="12_d2cet"]
+[ext_resource type="AudioStream" uid="uid://dhkt13s6yhgv4" path="res://Building Tools/Organizers/Messages/Test Messages/D4 - Thanks! It was too far for me to reach. And, as you can see, I have no legs.wav" id="13_vb0vv"]
+[ext_resource type="AudioStream" uid="uid://bqtdkkda7a3l" path="res://Building Tools/Organizers/Messages/Test Messages/D5 - Bye.wav" id="14_lq57t"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jvcyp"]
 radius = 0.4
@@ -22,11 +27,13 @@ albedo_color = Color(0.827451, 0, 0.219608, 1)
 [sub_resource type="Resource" id="Resource_eovww"]
 script = ExtResource("8_vadvb")
 text = "Hi I'm dummy!"
+audio = ExtResource("8_woare")
 messenger = "Dummy"
 
 [sub_resource type="Resource" id="Resource_wlwrr"]
 script = ExtResource("8_vadvb")
 text = "Please go touch that floating cube!"
+audio = ExtResource("10_souh1")
 messenger = "Dummy"
 
 [sub_resource type="Resource" id="Resource_du51y"]
@@ -37,6 +44,7 @@ messagesArray = Array[ExtResource("8_vadvb")]([SubResource("Resource_eovww"), Su
 [sub_resource type="Resource" id="Resource_miycg"]
 script = ExtResource("8_vadvb")
 text = "The cube awaits"
+audio = ExtResource("12_d2cet")
 messenger = "Dummy"
 
 [sub_resource type="Resource" id="Resource_mh2e8"]
@@ -47,11 +55,13 @@ messagesArray = Array[ExtResource("8_vadvb")]([SubResource("Resource_miycg")])
 [sub_resource type="Resource" id="Resource_velmn"]
 script = ExtResource("8_vadvb")
 text = "Thanks! It was too far for me to reach. And as you can see, I have no legs."
+audio = ExtResource("13_vb0vv")
 messenger = "Dummy"
 
 [sub_resource type="Resource" id="Resource_fqgrx"]
 script = ExtResource("8_vadvb")
 text = "Bye!"
+audio = ExtResource("14_lq57t")
 messenger = "Dummy"
 
 [sub_resource type="Resource" id="Resource_f65ur"]

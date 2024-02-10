@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dhkt13s6yhgv4"
+path="res://.godot/imported/D4 - Thanks! It was too far for me to reach. And, as you can see, I have no legs.wav-15ca0de4cfc27c7a970a6b7cae2037aa.sample"
+
+[deps]
+
+source_file="res://Building Tools/Organizers/Messages/Test Messages/D4 - Thanks! It was too far for me to reach. And, as you can see, I have no legs.wav"
+dest_files=["res://.godot/imported/D4 - Thanks! It was too far for me to reach. And, as you can see, I have no legs.wav-15ca0de4cfc27c7a970a6b7cae2037aa.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
