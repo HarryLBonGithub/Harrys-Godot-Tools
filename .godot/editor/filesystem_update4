@@ -5,3 +5,5 @@ res://Building Tools/Organizers/Quests/test quests/Press Some Key.tres
 res://Building Tools/Properties/Inventories/key_ring.tscn
 res://Building Tools/Props/Handhelds/Tool Frame/tool_frame.tscn
 res://Building Tools/Organizers/Quests/quest_book.tscn
+res://Building Tools/Character Controllers/fps_character_controller.tscn
+res://Building Tools/Character Controllers/top_down_character_controller.tscn
