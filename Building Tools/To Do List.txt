@@ -1,5 +1,14 @@
-convert keys to resources
+- Keys
+	- convert keys to resources
+	- add a "pick up" audio player for inventory nodes.
+		- should be passed a sound by the object so
 
-make properties like health and UI totally separate from each other
+- add a default animation for each door open attempt result (broken)
+
+- make properties like health and UI totally separate from each other
 	- use a command node to hear the property's signal, then update the UI from
 	the command node
+
+- tools
+	- add an "alternate" tool option for the tool frame that fires from 
+	using an "alt fire" action
