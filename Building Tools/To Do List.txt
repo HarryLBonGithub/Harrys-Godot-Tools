@@ -12,3 +12,11 @@
 - tools
 	- add an "alternate" tool option for the tool frame that fires from 
 	using an "alt fire" action
+	
+- player controller
+	- separate the actual control code to a child of the actual character
+	node
+
+-messages
+	- these just need a rework or more extensive documentation
+	- explore possible plugin alternatives
