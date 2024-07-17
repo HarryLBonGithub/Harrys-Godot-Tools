@@ -20,3 +20,7 @@
 -messages
 	- these just need a rework or more extensive documentation
 	- explore possible plugin alternatives
+
+-quests
+	- add a questCompleted(quester, quest) signal to the quest manager
+	- add the ability to listen for completed quests to quest books and quest boards
