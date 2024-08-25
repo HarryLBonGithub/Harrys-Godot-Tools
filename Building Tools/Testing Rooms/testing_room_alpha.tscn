@@ -108,9 +108,6 @@ shape = SubResource("BoxShape3D_n6580")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D3"]
 mesh = SubResource("BoxMesh_82kew")
 
-[node name="FPSCharacterControllerExt" parent="." instance=ExtResource("8_ryv78")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5423, 1.58208, 2.96653)
-
 [node name="Hallways" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 2, 0)
 
@@ -185,3 +182,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1.5, 2.5)
 
 [node name="QuestCube" parent="." instance=ExtResource("13_ehwb4")]
 heldQuest = SubResource("Resource_x0njy")
+
+[node name="FPSCharacterControllerExt" parent="." instance=ExtResource("8_ryv78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 4)

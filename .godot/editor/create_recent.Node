@@ -1,3 +1,4 @@
+Node3D
 Label
 PanelContainer
 Node
@@ -11,4 +12,3 @@ MarginContainer
 HSeparator
 AudioStreamPlayer3D
 Sprite2D
-CollisionShape3D

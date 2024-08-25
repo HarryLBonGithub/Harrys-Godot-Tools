@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://baqs2t4p5a58i"]
 
-[ext_resource type="Script" path="res://Building Tools/Character Controllers/FPSCharacterController.gd" id="1_cawun"]
+[ext_resource type="Script" path="res://Building Tools/Character Controllers/FPS_Movement_script.gd" id="1_hgisy"]
 [ext_resource type="Theme" uid="uid://cmjnqicbnobds" path="res://Building Tools/Themes/FillerTheme.tres" id="2_qnxyh"]
 [ext_resource type="PackedScene" uid="uid://ddjlj2gpevbbb" path="res://Building Tools/HUD Items/Ammo Tracker/ammo_tracker.tscn" id="3_ny2yd"]
 [ext_resource type="PackedScene" uid="uid://ggljq5ed622m" path="res://Building Tools/HUD Items/Crosshair/crosshair.tscn" id="4_bd3ad"]
@@ -25,8 +25,9 @@ radius = 0.4
 radius = 0.4
 
 [node name="FPSCharacterControllerExt" type="CharacterBody3D" groups=["player"]]
-script = ExtResource("1_cawun")
-floorCheck = true
+
+[node name="MovementControl" type="Node3D" parent="."]
+script = ExtResource("1_hgisy")
 
 [node name="PlayerUI" type="CanvasLayer" parent="."]
 

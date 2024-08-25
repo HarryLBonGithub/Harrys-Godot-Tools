@@ -18,7 +18,7 @@ func addQuest(quest:Quest):
 	updateTracker()
 
 func removeQuest(quest:Quest):
-	quest.erase(quest) #erase moves the first occurance of an item. otherwise does nothing
+	quests.erase(quest) #erase moves the first occurance of an item. otherwise does nothing
 	updateTracker()
 	
 func giveQuest(book:QuestBook, quest:Quest):
@@ -64,6 +64,7 @@ func completionCheck(quest:Quest):
 	if quest.progressCount >= quest.progressTarget:
 		quest.completed = true
 		print("You finished " + quest.questName)
+		QuestManager.completeQuest.emit(questBookOwner,quest)
 		updateTracker()
 
 func connectToQuestManager():

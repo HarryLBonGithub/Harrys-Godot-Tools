@@ -1,197 +1,197 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1721250962
-::res://Building Tools/::1721004614
-icon.svg::CompressedTexture2D::8360453262726188600::1719968559::1719968590::1::::<><>::
-To Do List.txt::TextFile::-1::1721004614::0::1::::<><>::
-::res://Building Tools/Action Scripts/::1719968559
-::res://Building Tools/Action Scripts/Adjust Aim/::1719968559
-adjust_aim.gd::GDScript::-1::1719968559::0::1::::<>Node<>::
-adjust_aim.tscn::PackedScene::981160825203707435::1719968559::0::1::::<><>::res://Building Tools/Action Scripts/Adjust Aim/adjust_aim.gd
-::res://Building Tools/Action Scripts/Target Nearest/::1719968559
-TargetNearest.gd::GDScript::-1::1719968559::0::1::::<>Node<>::
-target_nearest.tscn::PackedScene::7271599086419795456::1719968559::0::1::::<><>::res://Building Tools/Action Scripts/Target Nearest/TargetNearest.gd
-::res://Building Tools/Character Controllers/::1721004614
-6dfps_character_controller.gd::GDScript::-1::1719968559::0::1::::<>CharacterBody3D<>::
-6dfps_character_controller.tscn::PackedScene::2018894033735753707::1719968559::0::1::::<><>::res://Building Tools/Character Controllers/6dfps_character_controller.gd
-6dfps_character_controller_extended.tscn::PackedScene::9212352013412989769::1719968559::0::1::::<><>::res://Building Tools/Character Controllers/6dfps_character_controller.gd<>uid://bopktkuhq7ixb::::res://Building Tools/Filler Assets/Models/MiningPodV2.obj<>uid://bm00ewhu0i4vl::::res://Building Tools/Properties/Interaction/interaction_ray.tscn<>uid://b8pmopdg2rid5::::res://Building Tools/Organizers/Hand/hand.tscn<>uid://dwxr8hbku5g1::::res://Building Tools/Filler Assets/Models/Paints/MiningPod_C.png<>uid://de7t6wqk65bq5::::res://Building Tools/Props/Handhelds/Tool Frame/Simple Blaster/simple_blaster.tscn<>uid://cgh22dltjhw5u::::res://Building Tools/HUD Items/Info Checker/info_checker.tscn<>uid://ggljq5ed622m::::res://Building Tools/HUD Items/Crosshair/crosshair.tscn<>uid://dl0muc52c4tsw::::res://Building Tools/Filler Assets/Models/Paints/MiningPod_E.png<>uid://cysh8t0ys1bmk::::res://Building Tools/Filler Assets/Models/Paints/MiningPod_N.png
-camera_shake.gd::GDScript::-1::1719968559::0::1::::<>Camera3D<>::
-FPSCharacterController.gd::GDScript::-1::1719968559::0::1::::<>CharacterBody3D<>::
-FPSCharExtCommand.gd::GDScript::-1::1719968559::0::1::::<>Node<>::
-fps_character_controller.tscn::PackedScene::934947315899202677::1721004614::0::1::::<><>::res://Building Tools/Character Controllers/FPSCharacterController.gd
-fps_character_controller_extended.tscn::PackedScene::2420592893527924066::1719968559::0::1::::<><>::res://Building Tools/Character Controllers/FPSCharacterController.gd<>uid://cmjnqicbnobds::::res://Building Tools/Themes/FillerTheme.tres<>uid://ddjlj2gpevbbb::::res://Building Tools/HUD Items/Ammo Tracker/ammo_tracker.tscn<>uid://ggljq5ed622m::::res://Building Tools/HUD Items/Crosshair/crosshair.tscn<>uid://cgh22dltjhw5u::::res://Building Tools/HUD Items/Info Checker/info_checker.tscn<>uid://b7vkxyf0bypq3::::res://Building Tools/HUD Items/Quest Tracker/quest_tracker.tscn<>uid://cxkssphyydq4j::::res://Building Tools/HUD Items/Messenger/simple_message_display.tscn<>uid://bm00ewhu0i4vl::::res://Building Tools/Properties/Interaction/interaction_ray.tscn<>uid://b8pmopdg2rid5::::res://Building Tools/Organizers/Hand/hand.tscn<>uid://de7t6wqk65bq5::::res://Building Tools/Props/Handhelds/Tool Frame/Simple Blaster/simple_blaster.tscn<>uid://cg3obfppionlq::::res://Building Tools/Props/Handhelds/Basic Flashlight/basic_flashlight.tscn<>uid://bgeyfohldmmx2::::res://Building Tools/Properties/Health/health.tscn<>uid://culx5s7b5r33a::::res://Building Tools/Properties/Inventories/key_ring.tscn<>res://Building Tools/Character Controllers/FPSCharExtCommand.gd<>uid://dn3punkb35pti::::res://Building Tools/Organizers/Quests/quest_book.tscn<>uid://b5s11u4ctjw2x::::res://Building Tools/Organizers/Quests/test quests/Press Some Key.tres<>uid://dfgiml7orhq34::::res://Building Tools/Organizers/Messages/message_catcher.tscn
-topDownCamera.gd::GDScript::-1::1719968559::0::1::::<>Camera3D<>::
-top_down_character_controller.gd::GDScript::-1::1719968559::0::1::::<>CharacterBody3D<>::
-top_down_character_controller.tscn::PackedScene::1100587516547312019::1721004614::0::1::::<><>::res://Building Tools/Character Controllers/top_down_character_controller.gd<>res://Building Tools/Character Controllers/topDownCamera.gd
-::res://Building Tools/Character Controllers/2D/::1719968559
-top_down_2d_character.gd::GDScript::-1::1719968559::0::1::::<>CharacterBody2D<>::
-top_down_2d_character.tscn::PackedScene::5335053177091704300::1719968559::0::1::::<><>::
-::res://Building Tools/Characters/::1719968559
-::res://Building Tools/Characters/Dummy/::1719968559
-dummy.tscn::PackedScene::8507089550802717638::1719968559::0::1::::<><>::uid://bgeyfohldmmx2::::res://Building Tools/Properties/Health/health.tscn<>res://Building Tools/Properties/Cursor Hint/cursor_hint.tscn<>res://Building Tools/Characters/Dummy/DummyCommand.gd<>uid://ktotwtyoakkv::::res://Building Tools/Organizers/Quests/quest_board.tscn<>uid://b7teg4ycaac7a::::res://Building Tools/Organizers/Quests/test quests/Dummy Quest.tres<>uid://b0gbga5dx5toq::::res://Building Tools/Properties/Interaction/interaction.tscn<>uid://bgh0nuuiuk1em::::res://Building Tools/Organizers/Messages/message_carrier.tscn<>res://Building Tools/Organizers/Messages/message.gd<>uid://sjns1fcqmaj3::::res://Building Tools/Organizers/Messages/Test Messages/D1 - Hi! I'm a dummy.wav<>res://Building Tools/Organizers/Messages/message_chain.gd<>uid://c5obcj22x7dn3::::res://Building Tools/Organizers/Messages/Test Messages/D2 - Please go touch that floating cube.wav<>uid://f65cvehkwjr1::::res://Building Tools/Organizers/Messages/Test Messages/D3 - The cube awaits.wav<>uid://dhkt13s6yhgv4::::res://Building Tools/Organizers/Messages/Test Messages/D4 - Thanks! It was too far for me to reach. And, as you can see, I have no legs.wav<>uid://bqtdkkda7a3l::::res://Building Tools/Organizers/Messages/Test Messages/D5 - Bye.wav
-DummyCommand.gd::GDScript::-1::1719968559::0::1::::<>Node<>::
-DummyInteraction.gd::GDScript::-1::1719968559::0::1::::<>Node<>::
-::res://Building Tools/Characters/Quest Cube/::1719968559
-quest_cube.tscn::PackedScene::6806196461101666830::1719968559::0::1::::<><>::res://Building Tools/Junk Scripts/QuestCube.gd<>uid://b7teg4ycaac7a::::res://Building Tools/Organizers/Quests/test quests/Dummy Quest.tres<>res://Building Tools/Properties/Cursor Hint/cursor_hint.tscn<>uid://b0gbga5dx5toq::::res://Building Tools/Properties/Interaction/interaction.tscn
-::res://Building Tools/Characters/Simple Turret/::1719968559
-simple_turret.tscn::PackedScene::1362286640972157812::1719968559::0::1::::<><>::uid://dbuof615a47rw::::res://Building Tools/Action Scripts/Target Nearest/target_nearest.tscn<>uid://dim0l6a2xqttt::::res://Building Tools/Props/Handhelds/Projectile Launcher/projectile_launcher.tscn<>uid://bf2avvuwarxgh::::res://Building Tools/Props/Projectiles/Blaster Bolt/blaster_bolt.tscn<>res://Building Tools/Characters/Simple Turret/TurretCommand.gd<>uid://bgeyfohldmmx2::::res://Building Tools/Properties/Health/health.tscn<>res://Building Tools/Properties/Cursor Hint/cursor_hint.tscn
-TurretCommand.gd::GDScript::-1::1719968559::0::1::::<>Node<>::
-::res://Building Tools/Filler Assets/::1719968559
-Basic Crosshair.png::CompressedTexture2D::4145395000262071667::1719968559::1719968559::1::::<><>::
-Blaster Error.wav::AudioStreamWAV::4808852621436611531::1719968559::1719968559::1::::<><>::
-Blaster Fire 2 Clipped.wav::AudioStreamWAV::8774377518597127512::1719968559::1719968559::1::::<><>::
-Blaster Reload.wav::AudioStreamWAV::1473241762841707437::1719968559::1719968559::1::::<><>::
-Gunshot Short.wav::AudioStreamWAV::3101820702760367243::1719968559::1719968559::1::::<><>::
-::res://Building Tools/Filler Assets/Models/::1719968559
-Antenna Mount.obj::Mesh::7803758022558847150::1719968559::1719968559::1::::<><>::
-MiningPodV2.obj::Mesh::3400671817418595599::1719968559::1719968559::1::::<><>::
-::res://Building Tools/Filler Assets/Models/Basic Walls/::1719968559
-HalfM_Wall_Door_Arch.obj::Mesh::5181388814593890111::1719968559::1719968559::1::::<><>::
-HalfM_Wall_Door_Plain.obj::Mesh::1098819099176687574::1719968559::1719968559::1::::<><>::
-::res://Building Tools/Filler Assets/Models/Paints/::1719968559
-1 Meter White Box.png::CompressedTexture2D::8431511866871146379::1719968559::1719968559::1::::<><>::
-AntennaMount_C.png::CompressedTexture2D::6811212435311934978::1719968559::1719968559::1::::<><>::
-AntennaMount_E.png::CompressedTexture2D::6389441722128665859::1719968559::1719968559::1::::<><>::
-AntennaMount_N.png::CompressedTexture2D::7761426659082376718::1719968559::1719968559::1::::<><>::
-MiningPod_C.png::CompressedTexture2D::257411434977229566::1719968559::1719968559::1::::<><>::
-MiningPod_E.png::CompressedTexture2D::7983713247361873582::1719968559::1719968559::1::::<><>::
-MiningPod_N.png::CompressedTexture2D::6495017402099572950::1719968559::1719968559::1::::<><>::
-Rock_Gems_Purple_Support_C.png::CompressedTexture2D::8829377593335954846::1719968559::1719968559::1::::<><>::
-Rock_Gems_Purple_Support_N.png::CompressedTexture2D::269429541724297242::1719968559::1719968559::1::::<><>::
-Rock_Plain_Support_C.png::CompressedTexture2D::6036090564886615614::1719968559::1719968559::1::::<><>::
-Rock_Plain_Support_N.png::CompressedTexture2D::6489385862507404317::1719968559::1719968559::1::::<><>::
-::res://Building Tools/Filler Assets/Sounds/::1719968559
-Error 2.wav::AudioStreamWAV::3853073184763481343::1719968559::1719968559::1::::<><>::
-Scifi Door Short.wav::AudioStreamWAV::5823748207458946131::1719968559::1719968559::1::::<><>::
-::res://Building Tools/Fonts/::1719968559
-Px437_DOS-V_TWN16.ttf::FontFile::7838354493645176739::1719968559::1719968559::1::::<><>::
-::res://Building Tools/HUD Items/::1719968559
-::res://Building Tools/HUD Items/Ammo Tracker/::1719968559
-ammo_tracker.gd::GDScript::-1::1719968559::0::1::::AmmoTracker<>Panel<>::
-ammo_tracker.tscn::PackedScene::7389093368932497135::1719968559::0::1::::<><>::res://Building Tools/HUD Items/Ammo Tracker/ammo_tracker.gd
-::res://Building Tools/HUD Items/Crosshair/::1719968559
-crosshair.tscn::PackedScene::434204174322864182::1719968559::0::1::::<><>::uid://b0ccbx2m35igx::::res://Building Tools/Filler Assets/Basic Crosshair.png
-::res://Building Tools/HUD Items/Info Checker/::1719968559
-info_checker.gd::GDScript::-1::1719968559::0::1::::<>RayCast3D<>::
-info_checker.tscn::PackedScene::5210112824171442256::1719968559::0::1::::<><>::res://Building Tools/HUD Items/Info Checker/info_checker.gd
-::res://Building Tools/HUD Items/Messenger/::1719968559
-simple_message_display.gd::GDScript::-1::1719968559::0::1::::<>Control<>::
-simple_message_display.tscn::PackedScene::6408954398548171899::1719968559::0::1::::<><>::res://Building Tools/HUD Items/Messenger/simple_message_display.gd
-::res://Building Tools/HUD Items/Quest Tracker/::1719968559
-quest_tracker.gd::GDScript::-1::1719968559::0::1::::<>Panel<>::
-quest_tracker.tscn::PackedScene::4676465125555478568::1719968559::0::1::::<><>::res://Building Tools/HUD Items/Quest Tracker/quest_tracker.gd
-::res://Building Tools/Junk Scripts/::1719968559
-lightswitchtestInteract.gd::GDScript::-1::1719968559::0::1::::<>Node<>::
-QuestCube.gd::GDScript::-1::1719968559::0::1::::<>MeshInstance3D<>::
-questcube_interaction.gd::GDScript::-1::1719968559::0::1::::<>Node<>::
-QuestHandler.gd::GDScript::-1::1719968559::0::1::::<>Node<>::
-::res://Building Tools/Organizers/::1719968559
-::res://Building Tools/Organizers/Hand/::1719968559
-hand.gd::GDScript::-1::1719968559::0::1::::<>Node3D<>::
-hand.tscn::PackedScene::4734372587880969052::1719968559::0::1::::<><>::res://Building Tools/Organizers/Hand/hand.gd
-::res://Building Tools/Organizers/Messages/::1719968559
-message.gd::GDScript::-1::1719968559::0::1::::Message<>Resource<>::
-message_carrier.gd::GDScript::-1::1719968559::0::1::::<>Node<>::
-message_carrier.tscn::PackedScene::2823546611693363596::1719968559::0::1::::<><>::res://Building Tools/Organizers/Messages/message_carrier.gd
-message_catcher.gd::GDScript::-1::1719968559::0::1::::<>Node<>::
-message_catcher.tscn::PackedScene::7523100329112515357::1719968559::0::1::::<><>::res://Building Tools/Organizers/Messages/message_catcher.gd
-message_chain.gd::GDScript::-1::1719968559::0::1::::MessageChain<>Resource<>::
-::res://Building Tools/Organizers/Messages/Test Audio/::1719968559
-Audio Message 1.wav::AudioStreamWAV::642542019558956835::1719968559::1719968559::1::::<><>::
-Audio Message 2.wav::AudioStreamWAV::2196050602788819961::1719968559::1719968559::1::::<><>::
-Audio Message 3.wav::AudioStreamWAV::5299058223357511693::1719968559::1719968559::1::::<><>::
-Audio Message Last.wav::AudioStreamWAV::171908485751274963::1719968559::1719968559::1::::<><>::
-::res://Building Tools/Organizers/Messages/Test Messages/::1719968559
-D1 - Hi! I'm a dummy.wav::AudioStreamWAV::1282801423911223086::1719968559::1719968559::1::::<><>::
-D2 - Please go touch that floating cube.wav::AudioStreamWAV::6907472769343211122::1719968559::1719968559::1::::<><>::
-D3 - The cube awaits.wav::AudioStreamWAV::416766119438676400::1719968559::1719968559::1::::<><>::
-D4 - Thanks! It was too far for me to reach. And, as you can see, I have no legs.wav::AudioStreamWAV::7672429287491354263::1719968559::1719968559::1::::<><>::
-D5 - Bye.wav::AudioStreamWAV::104378408766376867::1719968559::1719968559::1::::<><>::
-dummy_message.tres::Resource/Resource::6124967954323607188::1719968559::0::1::::<><>::res://Building Tools/Organizers/Messages/message.gd
-::res://Building Tools/Organizers/On Off Switch/::1719968559
-light_switch.gd::GDScript::-1::1719968559::0::1::::<>Node<>::
-light_switch.tscn::PackedScene::7985847302361930498::1719968559::0::1::::<><>::res://Building Tools/Organizers/On Off Switch/light_switch.gd
-::res://Building Tools/Organizers/Quests/::1721004614
-Dummy Reward.tres::Resource/Resource::3606766743269690316::1719968559::0::1::::<><>::res://Building Tools/Organizers/Quests/reward.gd
-quest.gd::GDScript::-1::1719968559::0::1::::Quest<>Resource<>::
-QuestManager.gd::GDScript::-1::1719968559::0::1::::<>Node<>::
-quest_board.gd::GDScript::-1::1719968559::0::1::::QuestBoard<>Node<>::
-quest_board.tscn::PackedScene::741996767664540977::1719968559::0::1::::<><>::res://Building Tools/Organizers/Quests/quest_board.gd
-quest_book.gd::GDScript::-1::1719968559::0::1::::QuestBook<>Node<>::
-quest_book.tscn::PackedScene::8130466764592638746::1721004614::0::1::::<><>::res://Building Tools/Organizers/Quests/quest_book.gd
-reward.gd::GDScript::-1::1719968559::0::1::::Reward<>Resource<>::
-::res://Building Tools/Organizers/Quests/test quests/::1721004614
-Dummy Quest.tres::Resource/Resource::4671942000515102728::1719968559::0::1::::<><>::res://Building Tools/Organizers/Quests/quest.gd
-Press Some Key.tres::Resource/Quest::4530870960243576189::1721004614::0::1::::<><>::res://Building Tools/Organizers/Quests/quest.gd
-Some Other Quest.tres::Resource/Resource::7830747190368077317::1719968559::0::1::::<><>::res://Building Tools/Organizers/Quests/quest.gd
-::res://Building Tools/Properties/::1719968559
-::res://Building Tools/Properties/Ammo/::1719968559
-Ammo.gd::GDScript::-1::1719968559::0::1::::Ammo<>Node<>::
-ammo.tscn::PackedScene::6252888870716331759::1719968559::0::1::::<><>::res://Building Tools/Properties/Ammo/Ammo.gd
-::res://Building Tools/Properties/Cursor Hint/::1719968559
-cursor_hint.gd::GDScript::-1::1719968559::0::1::::<>Node<>::
-cursor_hint.tscn::PackedScene::-1::1719968559::0::1::::<><>::res://Building Tools/Properties/Cursor Hint/cursor_hint.gd
-::res://Building Tools/Properties/Damage and Health Box/::1719968559
-damage_box.gd::GDScript::-1::1719968559::0::1::::<>Area3D<>::
-damage_box.tscn::PackedScene::688112950449324339::1719968559::0::1::::<><>::res://Building Tools/Properties/Damage and Health Box/damage_box.gd
-healing_box.gd::GDScript::-1::1719968559::0::1::::<>Area3D<>::
-healing_box.tscn::PackedScene::212354741325510853::1719968559::0::1::::<><>::res://Building Tools/Properties/Damage and Health Box/healing_box.gd
-::res://Building Tools/Properties/Health/::1719968559
-Health.gd::GDScript::-1::1719968559::0::1::::<>Node<>::
-health.tscn::PackedScene::2817278139978272009::1719968559::0::1::::<><>::res://Building Tools/Properties/Health/Health.gd
-::res://Building Tools/Properties/Interaction/::1719968559
-interaction.gd::GDScript::-1::1719968559::0::1::::<>Node<>::
-interaction.tscn::PackedScene::4153599519436841208::1719968559::0::1::::<><>::res://Building Tools/Properties/Interaction/interaction.gd
-interaction_ray.gd::GDScript::-1::1719968559::0::1::::<>RayCast3D<>::
-interaction_ray.tscn::PackedScene::3281822486465564889::1719968559::0::1::::<><>::res://Building Tools/Properties/Interaction/interaction_ray.gd
-::res://Building Tools/Properties/Inventories/::1721004614
-key_ring.gd::GDScript::-1::1719968559::0::1::::<>Node<>::
-key_ring.tscn::PackedScene::6200777455032553776::1721004614::0::1::::<><>::res://Building Tools/Properties/Inventories/key_ring.gd
-::res://Building Tools/Props/::1719968559
-::res://Building Tools/Props/Handhelds/::1719968559
-::res://Building Tools/Props/Handhelds/Basic Flashlight/::1719968559
-basic_flashlight.gd::GDScript::-1::1719968559::0::1::::<>Node3D<>::
-basic_flashlight.tscn::PackedScene::5252629116502310218::1719968559::0::1::::<><>::res://Building Tools/Props/Handhelds/Basic Flashlight/basic_flashlight.gd<>uid://cj2vn66jxnpp::::res://Building Tools/Props/Handhelds/Basic Flashlight/Click.mp3
-Click.mp3::AudioStreamMP3::160634679653233577::1719968559::1719968559::1::::<><>::
-::res://Building Tools/Props/Handhelds/Basic Hitscan Gun/::1719968559
-HitscanGunBasic.gd::GDScript::-1::1719968559::0::1::::<>RayCast3D<>::
-hitscan_gun_basic.tscn::PackedScene::6613995296577823662::1719968559::0::1::::<><>::res://Building Tools/Props/Handhelds/Basic Hitscan Gun/HitscanGunBasic.gd<>uid://bkgssfcgruuf8::::res://Building Tools/Filler Assets/Gunshot Short.wav
-::res://Building Tools/Props/Handhelds/Projectile Launcher/::1719968559
-projectile_launcher.gd::GDScript::-1::1719968559::0::1::::ActionTool<>Node3D<>::
-projectile_launcher.tscn::PackedScene::7747084531266393141::1719968559::0::1::::<><>::res://Building Tools/Props/Handhelds/Projectile Launcher/projectile_launcher.gd
-::res://Building Tools/Props/Handhelds/Tool Frame/::1721004614
-tool_frame.gd::GDScript::-1::1719968559::0::1::::<>Node3D<>::
-tool_frame.tscn::PackedScene::9127877421210763440::1721004614::0::1::::<><>::res://Building Tools/Props/Handhelds/Tool Frame/tool_frame.gd
-::res://Building Tools/Props/Handhelds/Tool Frame/Simple Blaster/::1719968559
-simple_blaster.tscn::PackedScene::7507287676962495458::1719968559::0::1::::<><>::res://Building Tools/Props/Handhelds/Tool Frame/tool_frame.gd<>uid://dim0l6a2xqttt::::res://Building Tools/Props/Handhelds/Projectile Launcher/projectile_launcher.tscn<>uid://bf2avvuwarxgh::::res://Building Tools/Props/Projectiles/Blaster Bolt/blaster_bolt.tscn<>uid://dxamylo73r2t5::::res://Building Tools/Filler Assets/Blaster Fire 2 Clipped.wav<>uid://cvc7fwcb2lppn::::res://Building Tools/Properties/Ammo/ammo.tscn<>uid://carpdnyb0mhex::::res://Building Tools/Filler Assets/Blaster Error.wav<>uid://n8jtthfqjxe6::::res://Building Tools/Action Scripts/Adjust Aim/adjust_aim.tscn
-::res://Building Tools/Props/Pickups/::1719968559
-::res://Building Tools/Props/Pickups/Health Pickup/::1719968559
-HealthPickupCommand.gd::GDScript::-1::1719968559::0::1::::<>Node<>::
-health_pickup.tscn::PackedScene::2416847714529656596::1719968559::0::1::::<><>::uid://da4pmajrtya4::::res://Building Tools/Properties/Damage and Health Box/healing_box.tscn<>res://Building Tools/Props/Pickups/Health Pickup/HealthPickupCommand.gd
-::res://Building Tools/Props/Pickups/Keys/::1719968559
-key.gd::GDScript::-1::1719968559::0::1::::<>Area3D<>::
-key.tscn::PackedScene::2976273860585876969::1719968559::0::1::::<><>::res://Building Tools/Props/Pickups/Keys/key.gd<>res://Building Tools/Properties/Cursor Hint/cursor_hint.tscn<>res://Building Tools/Props/Pickups/Keys/Key_Interaction.gd
-Key_Interaction.gd::GDScript::-1::1719968559::0::1::::<>Node<>::
-::res://Building Tools/Props/Projectiles/::1719968559
-projectile.gd::GDScript::-1::1719968559::0::1::::Projectile<>RigidBody3D<>::
-projectile.tscn::PackedScene::6613803837629467183::1719968559::0::1::::<><>::res://Building Tools/Props/Projectiles/projectile.gd
-::res://Building Tools/Props/Projectiles/Blaster Bolt/::1719968559
-BlasterBoltCommand.gd::GDScript::-1::1719968559::0::1::::<>Node<>::
-blaster_bolt.tscn::PackedScene::2793141737801595383::1719968559::0::1::::<><>::res://Building Tools/Props/Projectiles/projectile.gd<>uid://j2lecpaynqf8::::res://Building Tools/Properties/Damage and Health Box/damage_box.tscn<>res://Building Tools/Props/Projectiles/Blaster Bolt/BlasterBoltCommand.gd
-::res://Building Tools/Set Pieces/::1719968559
-::res://Building Tools/Set Pieces/Hallway Segment/::1719968559
-hall_segment.tscn::PackedScene::1561704109283516840::1719968559::0::1::::<><>::uid://dsej1eqt5ypvf::::res://Building Tools/Filler Assets/Models/Paints/1 Meter White Box.png<>res://Building Tools/Set Pieces/Hallway Segment/hall_segment_wall.gd
-hall_segment_wall.gd::GDScript::-1::1719968559::0::1::::<>StaticBody3D<>::
-::res://Building Tools/Set Pieces/Sliding Door/::1719968559
-DoorInteraction.gd::GDScript::-1::1719968559::0::1::::<>Node<>::
-sliding_door.tscn::PackedScene::35149055833665424::1719968559::0::1::::<><>::res://Building Tools/Set Pieces/Sliding Door/sliding_door_command.gd<>uid://pwjni4rcasao::::res://Building Tools/Filler Assets/Models/Basic Walls/HalfM_Wall_Door_Plain.obj<>uid://dsej1eqt5ypvf::::res://Building Tools/Filler Assets/Models/Paints/1 Meter White Box.png<>uid://b0gbga5dx5toq::::res://Building Tools/Properties/Interaction/interaction.tscn<>res://Building Tools/Properties/Cursor Hint/cursor_hint.tscn<>uid://co8cjueks00u6::::res://Building Tools/Filler Assets/Sounds/Scifi Door Short.wav<>uid://bu5ps1uachmo2::::res://Building Tools/Filler Assets/Sounds/Error 2.wav
-sliding_door_command.gd::GDScript::-1::1719968559::0::1::::<>Node3D<>::
-::res://Building Tools/Testing Rooms/::1721004614
-2d_testing_room_top_down.tscn::PackedScene::1113088737808915087::1719968559::0::1::::<><>::res://Building Tools/Testing Rooms/testingRooms2D.gd
-testingRooms2D.gd::GDScript::-1::1719968559::0::1::::<>Node2D<>::
-testing_rooms.gd::GDScript::-1::1719968559::0::1::::<>Node3D<>::
-testing_room_alpha.tscn::PackedScene::6348619543249823169::1721004614::0::1::::<><>::res://Building Tools/Testing Rooms/testing_rooms.gd<>uid://dtg5r0ox5x83s::::res://Building Tools/Characters/Dummy/dummy.tscn<>uid://cr86samdwmj8y::::res://Building Tools/Filler Assets/Models/Paints/Rock_Plain_Support_C.png<>uid://bao0em3qrnooi::::res://Building Tools/Props/Pickups/Health Pickup/health_pickup.tscn<>uid://cyprica154g82::::res://Building Tools/Filler Assets/Models/Paints/Rock_Plain_Support_N.png<>uid://dx2ataf6ef7xi::::res://Building Tools/Filler Assets/Models/Paints/Rock_Gems_Purple_Support_C.png<>uid://d3rp200skwso::::res://Building Tools/Filler Assets/Models/Paints/Rock_Gems_Purple_Support_N.png<>uid://baqs2t4p5a58i::::res://Building Tools/Character Controllers/fps_character_controller_extended.tscn<>uid://wirbkrxcnojw::::res://Building Tools/Set Pieces/Hallway Segment/hall_segment.tscn<>uid://ra5ugkfqhc7::::res://Building Tools/Set Pieces/Sliding Door/sliding_door.tscn<>uid://cf25ymt1gjtj0::::res://Building Tools/Filler Assets/Models/Basic Walls/HalfM_Wall_Door_Arch.obj<>uid://biny2b1a1w754::::res://Building Tools/Props/Pickups/Keys/key.tscn<>uid://c378cc48ttgrm::::res://Building Tools/Characters/Quest Cube/quest_cube.tscn<>res://Building Tools/Organizers/Quests/quest.gd
-testing_room_beta.tscn::PackedScene::1452407552704190063::1719968559::0::1::::<><>::res://Building Tools/Testing Rooms/testing_rooms.gd<>uid://cr86samdwmj8y::::res://Building Tools/Filler Assets/Models/Paints/Rock_Plain_Support_C.png<>uid://cyprica154g82::::res://Building Tools/Filler Assets/Models/Paints/Rock_Plain_Support_N.png
-UI Tests.tscn::PackedScene::1515423154299201085::1719968559::0::1::::<><>::
-::res://Building Tools/Themes/::1721004614
-FillerTheme.tres::Theme::5634505207777340380::1721004614::0::1::::<><>::uid://djw7s2vnkcctf::::res://Building Tools/Fonts/Px437_DOS-V_TWN16.ttf
-industrial_scifi_theme.tres::Theme::246056119769589010::1721004614::0::1::::<><>::uid://djw7s2vnkcctf::::res://Building Tools/Fonts/Px437_DOS-V_TWN16.ttf
+::res://::1724620765
+::res://Building Tools/::1724016556
+icon.svg::CompressedTexture2D::8360453262726188600::1692578138::1724620768::1::::<><>::
+To Do List.txt::TextFile::-1::1724016556::0::1::::<><>::
+::res://Building Tools/Action Scripts/::1696133082
+::res://Building Tools/Action Scripts/Adjust Aim/::1701540156
+adjust_aim.gd::GDScript::-1::1696356546::0::1::::<>Node<>::
+adjust_aim.tscn::PackedScene::981160825203707435::1701540156::0::1::::<><>::res://Building Tools/Action Scripts/Adjust Aim/adjust_aim.gd
+::res://Building Tools/Action Scripts/Target Nearest/::1699101015
+TargetNearest.gd::GDScript::-1::1696082321::0::1::::<>Node<>::
+target_nearest.tscn::PackedScene::7271599086419795456::1699101015::0::1::::<><>::res://Building Tools/Action Scripts/Target Nearest/TargetNearest.gd
+::res://Building Tools/Character Controllers/::1707531616
+6dfps_character_controller.gd::GDScript::-1::1698379118::0::1::::<>CharacterBody3D<>::
+6dfps_character_controller.tscn::PackedScene::2018894033735753707::1698933422::0::1::::<><>::res://Building Tools/Character Controllers/6dfps_character_controller.gd
+6dfps_character_controller_extended.tscn::PackedScene::9212352013412989769::1696641143::0::1::::<><>::res://Building Tools/Character Controllers/6dfps_character_controller.gd<>uid://bopktkuhq7ixb::::res://Building Tools/Filler Assets/Models/MiningPodV2.obj<>uid://bm00ewhu0i4vl::::res://Building Tools/Properties/Interaction/interaction_ray.tscn<>uid://b8pmopdg2rid5::::res://Building Tools/Organizers/Hand/hand.tscn<>uid://dwxr8hbku5g1::::res://Building Tools/Filler Assets/Models/Paints/MiningPod_C.png<>uid://de7t6wqk65bq5::::res://Building Tools/Props/Handhelds/Tool Frame/Simple Blaster/simple_blaster.tscn<>uid://cgh22dltjhw5u::::res://Building Tools/HUD Items/Info Checker/info_checker.tscn<>uid://ggljq5ed622m::::res://Building Tools/HUD Items/Crosshair/crosshair.tscn<>uid://dl0muc52c4tsw::::res://Building Tools/Filler Assets/Models/Paints/MiningPod_E.png<>uid://cysh8t0ys1bmk::::res://Building Tools/Filler Assets/Models/Paints/MiningPod_N.png
+camera_shake.gd::GDScript::-1::1705624062::0::1::::<>Camera3D<>::
+FPSCharacterController.gd::GDScript::-1::1706746417::0::1::::<>CharacterBody3D<>::
+FPSCharExtCommand.gd::GDScript::-1::1707124019::0::1::::<>Node<>::
+fps_character_controller.tscn::PackedScene::934947315899202677::1701540156::0::1::::<><>::res://Building Tools/Character Controllers/FPSCharacterController.gd
+fps_character_controller_extended.tscn::PackedScene::2420592893527924066::1707531616::0::1::::<><>::res://Building Tools/Character Controllers/FPSCharacterController.gd<>uid://cmjnqicbnobds::::res://Building Tools/Themes/FillerTheme.tres<>uid://ddjlj2gpevbbb::::res://Building Tools/HUD Items/Ammo Tracker/ammo_tracker.tscn<>uid://ggljq5ed622m::::res://Building Tools/HUD Items/Crosshair/crosshair.tscn<>uid://cgh22dltjhw5u::::res://Building Tools/HUD Items/Info Checker/info_checker.tscn<>uid://b7vkxyf0bypq3::::res://Building Tools/HUD Items/Quest Tracker/quest_tracker.tscn<>uid://cxkssphyydq4j::::res://Building Tools/HUD Items/Messenger/simple_message_display.tscn<>uid://bm00ewhu0i4vl::::res://Building Tools/Properties/Interaction/interaction_ray.tscn<>uid://b8pmopdg2rid5::::res://Building Tools/Organizers/Hand/hand.tscn<>uid://de7t6wqk65bq5::::res://Building Tools/Props/Handhelds/Tool Frame/Simple Blaster/simple_blaster.tscn<>uid://cg3obfppionlq::::res://Building Tools/Props/Handhelds/Basic Flashlight/basic_flashlight.tscn<>uid://bgeyfohldmmx2::::res://Building Tools/Properties/Health/health.tscn<>uid://culx5s7b5r33a::::res://Building Tools/Properties/Inventories/key_ring.tscn<>res://Building Tools/Character Controllers/FPSCharExtCommand.gd<>uid://dn3punkb35pti::::res://Building Tools/Organizers/Quests/quest_book.tscn<>uid://b5s11u4ctjw2x::::res://Building Tools/Organizers/Quests/test quests/Press Some Key.tres<>uid://dfgiml7orhq34::::res://Building Tools/Organizers/Messages/message_catcher.tscn
+topDownCamera.gd::GDScript::-1::1699101205::0::1::::<>Camera3D<>::
+top_down_character_controller.gd::GDScript::-1::1700404752::0::1::::<>CharacterBody3D<>::
+top_down_character_controller.tscn::PackedScene::1100587516547312019::1701540156::0::1::::<><>::res://Building Tools/Character Controllers/top_down_character_controller.gd<>res://Building Tools/Character Controllers/topDownCamera.gd
+::res://Building Tools/Character Controllers/2D/::1698933551
+top_down_2d_character.gd::GDScript::-1::1698933551::0::1::::<>CharacterBody2D<>::
+top_down_2d_character.tscn::PackedScene::5335053177091704300::1698933543::0::1::::<><>::
+::res://Building Tools/Characters/::1707083594
+::res://Building Tools/Characters/Dummy/::1707531616
+dummy.tscn::PackedScene::8507089550802717638::1707531616::0::1::::<><>::uid://bgeyfohldmmx2::::res://Building Tools/Properties/Health/health.tscn<>res://Building Tools/Properties/Cursor Hint/cursor_hint.tscn<>res://Building Tools/Characters/Dummy/DummyCommand.gd<>uid://ktotwtyoakkv::::res://Building Tools/Organizers/Quests/quest_board.tscn<>uid://b7teg4ycaac7a::::res://Building Tools/Organizers/Quests/test quests/Dummy Quest.tres<>uid://b0gbga5dx5toq::::res://Building Tools/Properties/Interaction/interaction.tscn<>uid://bgh0nuuiuk1em::::res://Building Tools/Organizers/Messages/message_carrier.tscn<>res://Building Tools/Organizers/Messages/message.gd<>uid://sjns1fcqmaj3::::res://Building Tools/Organizers/Messages/Test Messages/D1 - Hi! I'm a dummy.wav<>res://Building Tools/Organizers/Messages/message_chain.gd<>uid://c5obcj22x7dn3::::res://Building Tools/Organizers/Messages/Test Messages/D2 - Please go touch that floating cube.wav<>uid://f65cvehkwjr1::::res://Building Tools/Organizers/Messages/Test Messages/D3 - The cube awaits.wav<>uid://dhkt13s6yhgv4::::res://Building Tools/Organizers/Messages/Test Messages/D4 - Thanks! It was too far for me to reach. And, as you can see, I have no legs.wav<>uid://bqtdkkda7a3l::::res://Building Tools/Organizers/Messages/Test Messages/D5 - Bye.wav
+DummyCommand.gd::GDScript::-1::1707178652::0::1::::<>Node<>::
+DummyInteraction.gd::GDScript::-1::1706740053::0::1::::<>Node<>::
+::res://Building Tools/Characters/Quest Cube/::1707091291
+quest_cube.tscn::PackedScene::6806196461101666830::1707091291::0::1::::<><>::res://Building Tools/Junk Scripts/QuestCube.gd<>uid://b7teg4ycaac7a::::res://Building Tools/Organizers/Quests/test quests/Dummy Quest.tres<>res://Building Tools/Properties/Cursor Hint/cursor_hint.tscn<>uid://b0gbga5dx5toq::::res://Building Tools/Properties/Interaction/interaction.tscn
+::res://Building Tools/Characters/Simple Turret/::1696356728
+simple_turret.tscn::PackedScene::1362286640972157812::1696356728::0::1::::<><>::uid://dbuof615a47rw::::res://Building Tools/Action Scripts/Target Nearest/target_nearest.tscn<>uid://dim0l6a2xqttt::::res://Building Tools/Props/Handhelds/Projectile Launcher/projectile_launcher.tscn<>uid://bf2avvuwarxgh::::res://Building Tools/Props/Projectiles/Blaster Bolt/blaster_bolt.tscn<>res://Building Tools/Characters/Simple Turret/TurretCommand.gd<>uid://bgeyfohldmmx2::::res://Building Tools/Properties/Health/health.tscn<>res://Building Tools/Properties/Cursor Hint/cursor_hint.tscn
+TurretCommand.gd::GDScript::-1::1696083943::0::1::::<>Node<>::
+::res://Building Tools/Filler Assets/::1702256365
+Basic Crosshair.png::CompressedTexture2D::4145395000262071667::1692677783::1696040421::1::::<><>::
+Blaster Error.wav::AudioStreamWAV::4808852621436611531::1696034997::1696040421::1::::<><>::
+Blaster Fire 2 Clipped.wav::AudioStreamWAV::8774377518597127512::1696034853::1696040421::1::::<><>::
+Blaster Reload.wav::AudioStreamWAV::1473241762841707437::1696034916::1696040421::1::::<><>::
+Gunshot Short.wav::AudioStreamWAV::3101820702760367243::1692678631::1696040421::1::::<><>::
+::res://Building Tools/Filler Assets/Models/::1701953902
+Antenna Mount.obj::Mesh::7803758022558847150::1696628893::1696628893::1::::<><>::
+MiningPodV2.obj::Mesh::3400671817418595599::1696508910::1696508911::1::::<><>::
+::res://Building Tools/Filler Assets/Models/Basic Walls/::1701953990
+HalfM_Wall_Door_Arch.obj::Mesh::5181388814593890111::1701953977::1701953978::1::::<><>::
+HalfM_Wall_Door_Plain.obj::Mesh::1098819099176687574::1701953922::1701953922::1::::<><>::
+::res://Building Tools/Filler Assets/Models/Paints/::1701660342
+1 Meter White Box.png::CompressedTexture2D::8431511866871146379::1701660337::1701660342::1::::<><>::
+AntennaMount_C.png::CompressedTexture2D::6811212435311934978::1696628900::1696629028::1::::<><>::
+AntennaMount_E.png::CompressedTexture2D::6389441722128665859::1696628900::1696629023::1::::<><>::
+AntennaMount_N.png::CompressedTexture2D::7761426659082376718::1696628900::1696629006::1::::<><>::
+MiningPod_C.png::CompressedTexture2D::257411434977229566::1696508932::1696509884::1::::<><>::
+MiningPod_E.png::CompressedTexture2D::7983713247361873582::1696508932::1696528392::1::::<><>::
+MiningPod_N.png::CompressedTexture2D::6495017402099572950::1696508932::1696508982::1::::<><>::
+Rock_Gems_Purple_Support_C.png::CompressedTexture2D::8829377593335954846::1696647973::1696648001::1::::<><>::
+Rock_Gems_Purple_Support_N.png::CompressedTexture2D::269429541724297242::1696647973::1696647999::1::::<><>::
+Rock_Plain_Support_C.png::CompressedTexture2D::6036090564886615614::1696647407::1696647516::1::::<><>::
+Rock_Plain_Support_N.png::CompressedTexture2D::6489385862507404317::1696647407::1696647519::1::::<><>::
+::res://Building Tools/Filler Assets/Sounds/::1702256886
+Error 2.wav::AudioStreamWAV::3853073184763481343::1702256416::1702256886::1::::<><>::
+Scifi Door Short.wav::AudioStreamWAV::5823748207458946131::1702256411::1702256883::1::::<><>::
+::res://Building Tools/Fonts/::1696641131
+Px437_DOS-V_TWN16.ttf::FontFile::7838354493645176739::1696637821::1696641131::1::::<><>::
+::res://Building Tools/HUD Items/::1707105589
+::res://Building Tools/HUD Items/Ammo Tracker/::1706483047
+ammo_tracker.gd::GDScript::-1::1695697923::0::1::::AmmoTracker<>Panel<>::
+ammo_tracker.tscn::PackedScene::7389093368932497135::1706483047::0::1::::<><>::res://Building Tools/HUD Items/Ammo Tracker/ammo_tracker.gd
+::res://Building Tools/HUD Items/Crosshair/::1696040420
+crosshair.tscn::PackedScene::434204174322864182::1696040420::0::1::::<><>::uid://b0ccbx2m35igx::::res://Building Tools/Filler Assets/Basic Crosshair.png
+::res://Building Tools/HUD Items/Info Checker/::1701953754
+info_checker.gd::GDScript::-1::1695487128::0::1::::<>RayCast3D<>::
+info_checker.tscn::PackedScene::5210112824171442256::1701953754::0::1::::<><>::res://Building Tools/HUD Items/Info Checker/info_checker.gd
+::res://Building Tools/HUD Items/Messenger/::1707531617
+simple_message_display.gd::GDScript::-1::1707148453::0::1::::<>Control<>::
+simple_message_display.tscn::PackedScene::6408954398548171899::1707531617::0::1::::<><>::res://Building Tools/HUD Items/Messenger/simple_message_display.gd
+::res://Building Tools/HUD Items/Quest Tracker/::1707178720
+quest_tracker.gd::GDScript::-1::1707090927::0::1::::<>Panel<>::
+quest_tracker.tscn::PackedScene::4676465125555478568::1707178720::0::1::::<><>::res://Building Tools/HUD Items/Quest Tracker/quest_tracker.gd
+::res://Building Tools/Junk Scripts/::1707087173
+lightswitchtestInteract.gd::GDScript::-1::1704950187::0::1::::<>Node<>::
+QuestCube.gd::GDScript::-1::1707087173::0::1::::<>MeshInstance3D<>::
+questcube_interaction.gd::GDScript::-1::1706502950::0::1::::<>Node<>::
+QuestHandler.gd::GDScript::-1::1706740220::0::1::::<>Node<>::
+::res://Building Tools/Organizers/::1706589537
+::res://Building Tools/Organizers/Hand/::1696255064
+hand.gd::GDScript::-1::1696134036::0::1::::<>Node3D<>::
+hand.tscn::PackedScene::4734372587880969052::1696255064::0::1::::<><>::res://Building Tools/Organizers/Hand/hand.gd
+::res://Building Tools/Organizers/Messages/::1707531210
+message.gd::GDScript::-1::1707110883::0::1::::Message<>Resource<>::
+message_carrier.gd::GDScript::-1::1707121792::0::1::::<>Node<>::
+message_carrier.tscn::PackedScene::2823546611693363596::1707148499::0::1::::<><>::res://Building Tools/Organizers/Messages/message_carrier.gd
+message_catcher.gd::GDScript::-1::1707121989::0::1::::<>Node<>::
+message_catcher.tscn::PackedScene::7523100329112515357::1707148499::0::1::::<><>::res://Building Tools/Organizers/Messages/message_catcher.gd
+message_chain.gd::GDScript::-1::1707111045::0::1::::MessageChain<>Resource<>::
+::res://Building Tools/Organizers/Messages/Test Audio/::1707531188
+Audio Message 1.wav::AudioStreamWAV::642542019558956835::1707531188::1707531188::1::::<><>::
+Audio Message 2.wav::AudioStreamWAV::2196050602788819961::1707531188::1707531188::1::::<><>::
+Audio Message 3.wav::AudioStreamWAV::5299058223357511693::1707531188::1707531188::1::::<><>::
+Audio Message Last.wav::AudioStreamWAV::171908485751274963::1707531188::1707531188::1::::<><>::
+::res://Building Tools/Organizers/Messages/Test Messages/::1707531459
+D1 - Hi! I'm a dummy.wav::AudioStreamWAV::1282801423911223086::1707531459::1707531459::1::::<><>::
+D2 - Please go touch that floating cube.wav::AudioStreamWAV::6907472769343211122::1707531459::1707531459::1::::<><>::
+D3 - The cube awaits.wav::AudioStreamWAV::416766119438676400::1707531459::1707531459::1::::<><>::
+D4 - Thanks! It was too far for me to reach. And, as you can see, I have no legs.wav::AudioStreamWAV::7672429287491354263::1707531459::1707531459::1::::<><>::
+D5 - Bye.wav::AudioStreamWAV::104378408766376867::1707531459::1707531459::1::::<><>::
+dummy_message.tres::Resource/Message::6124967954323607188::1706741033::0::1::::<><>::res://Building Tools/Organizers/Messages/message.gd
+::res://Building Tools/Organizers/On Off Switch/::1698933422
+light_switch.gd::GDScript::-1::1697553817::0::1::::<>Node<>::
+light_switch.tscn::PackedScene::7985847302361930498::1698933422::0::1::::<><>::res://Building Tools/Organizers/On Off Switch/light_switch.gd
+::res://Building Tools/Organizers/Quests/::1715990157
+Dummy Reward.tres::Resource/Reward::3606766743269690316::1706741033::0::1::::<><>::res://Building Tools/Organizers/Quests/reward.gd
+quest.gd::GDScript::-1::1707178826::0::1::::Quest<>Resource<>::
+QuestManager.gd::GDScript::-1::1707086404::0::1::::<>Node<>::
+quest_board.gd::GDScript::-1::1707088619::0::1::::QuestBoard<>Node<>::
+quest_board.tscn::PackedScene::741996767664540977::1707089129::0::1::::<><>::res://Building Tools/Organizers/Quests/quest_board.gd
+quest_book.gd::GDScript::-1::1707093721::0::1::::QuestBook<>Node<>::
+quest_book.tscn::PackedScene::8130466764592638746::1715990157::0::1::::<><>::res://Building Tools/Organizers/Quests/quest_book.gd
+reward.gd::GDScript::-1::1706588178::0::1::::Reward<>Resource<>::
+::res://Building Tools/Organizers/Quests/test quests/::1715990157
+Dummy Quest.tres::Resource/Quest::4671942000515102728::1707087394::0::1::::<><>::res://Building Tools/Organizers/Quests/quest.gd
+Press Some Key.tres::Resource/Quest::4530870960243576189::1715990157::0::1::::<><>::res://Building Tools/Organizers/Quests/quest.gd
+Some Other Quest.tres::Resource/Quest::7830747190368077317::1707086329::0::1::::<><>::res://Building Tools/Organizers/Quests/quest.gd
+::res://Building Tools/Properties/::1704949214
+::res://Building Tools/Properties/Ammo/::1706484729
+Ammo.gd::GDScript::-1::1695785958::0::1::::Ammo<>Node<>::
+ammo.tscn::PackedScene::6252888870716331759::1706484729::0::1::::<><>::res://Building Tools/Properties/Ammo/Ammo.gd
+::res://Building Tools/Properties/Cursor Hint/::1696040420
+cursor_hint.gd::GDScript::-1::1692578138::0::1::::<>Node<>::
+cursor_hint.tscn::PackedScene::-1::1696040420::0::1::::<><>::res://Building Tools/Properties/Cursor Hint/cursor_hint.gd
+::res://Building Tools/Properties/Damage and Health Box/::1696356583
+damage_box.gd::GDScript::-1::1696355463::0::1::::<>Area3D<>::
+damage_box.tscn::PackedScene::688112950449324339::1696356583::0::1::::<><>::res://Building Tools/Properties/Damage and Health Box/damage_box.gd
+healing_box.gd::GDScript::-1::1696096283::0::1::::<>Area3D<>::
+healing_box.tscn::PackedScene::212354741325510853::1696095633::0::1::::<><>::res://Building Tools/Properties/Damage and Health Box/healing_box.gd
+::res://Building Tools/Properties/Health/::1696095633
+Health.gd::GDScript::-1::1696093565::0::1::::<>Node<>::
+health.tscn::PackedScene::2817278139978272009::1696095633::0::1::::<><>::res://Building Tools/Properties/Health/Health.gd
+::res://Building Tools/Properties/Interaction/::1706746324
+interaction.gd::GDScript::-1::1706741033::0::1::::<>Node<>::
+interaction.tscn::PackedScene::4153599519436841208::1706746324::0::1::::<><>::res://Building Tools/Properties/Interaction/interaction.gd
+interaction_ray.gd::GDScript::-1::1704948958::0::1::::<>RayCast3D<>::
+interaction_ray.tscn::PackedScene::3281822486465564889::1704950096::0::1::::<><>::res://Building Tools/Properties/Interaction/interaction_ray.gd
+::res://Building Tools/Properties/Inventories/::1715990157
+key_ring.gd::GDScript::-1::1708127128::0::1::::<>Node<>::
+key_ring.tscn::PackedScene::6200777455032553776::1715990157::0::1::::<><>::res://Building Tools/Properties/Inventories/key_ring.gd
+::res://Building Tools/Props/::1696093111
+::res://Building Tools/Props/Handhelds/::1696032436
+::res://Building Tools/Props/Handhelds/Basic Flashlight/::1696040421
+basic_flashlight.gd::GDScript::-1::1692578138::0::1::::<>Node3D<>::
+basic_flashlight.tscn::PackedScene::5252629116502310218::1696040420::0::1::::<><>::res://Building Tools/Props/Handhelds/Basic Flashlight/basic_flashlight.gd<>uid://cj2vn66jxnpp::::res://Building Tools/Props/Handhelds/Basic Flashlight/Click.mp3
+Click.mp3::AudioStreamMP3::160634679653233577::1692578138::1696040421::1::::<><>::
+::res://Building Tools/Props/Handhelds/Basic Hitscan Gun/::1696040420
+HitscanGunBasic.gd::GDScript::-1::1696034621::0::1::::<>RayCast3D<>::
+hitscan_gun_basic.tscn::PackedScene::6613995296577823662::1696040420::0::1::::<><>::res://Building Tools/Props/Handhelds/Basic Hitscan Gun/HitscanGunBasic.gd<>uid://bkgssfcgruuf8::::res://Building Tools/Filler Assets/Gunshot Short.wav
+::res://Building Tools/Props/Handhelds/Projectile Launcher/::1706484333
+projectile_launcher.gd::GDScript::-1::1696033835::0::1::::ActionTool<>Node3D<>::
+projectile_launcher.tscn::PackedScene::7747084531266393141::1706484333::0::1::::<><>::res://Building Tools/Props/Handhelds/Projectile Launcher/projectile_launcher.gd
+::res://Building Tools/Props/Handhelds/Tool Frame/::1715990157
+tool_frame.gd::GDScript::-1::1696036859::0::1::::<>Node3D<>::
+tool_frame.tscn::PackedScene::9127877421210763440::1715990157::0::1::::<><>::res://Building Tools/Props/Handhelds/Tool Frame/tool_frame.gd
+::res://Building Tools/Props/Handhelds/Tool Frame/Simple Blaster/::1706629430
+simple_blaster.tscn::PackedScene::7507287676962495458::1706629430::0::1::::<><>::res://Building Tools/Props/Handhelds/Tool Frame/tool_frame.gd<>uid://dim0l6a2xqttt::::res://Building Tools/Props/Handhelds/Projectile Launcher/projectile_launcher.tscn<>uid://bf2avvuwarxgh::::res://Building Tools/Props/Projectiles/Blaster Bolt/blaster_bolt.tscn<>uid://dxamylo73r2t5::::res://Building Tools/Filler Assets/Blaster Fire 2 Clipped.wav<>uid://cvc7fwcb2lppn::::res://Building Tools/Properties/Ammo/ammo.tscn<>uid://carpdnyb0mhex::::res://Building Tools/Filler Assets/Blaster Error.wav<>uid://n8jtthfqjxe6::::res://Building Tools/Action Scripts/Adjust Aim/adjust_aim.tscn
+::res://Building Tools/Props/Pickups/::1704949818
+::res://Building Tools/Props/Pickups/Health Pickup/::1696255064
+HealthPickupCommand.gd::GDScript::-1::1696093683::0::1::::<>Node<>::
+health_pickup.tscn::PackedScene::2416847714529656596::1696255064::0::1::::<><>::uid://da4pmajrtya4::::res://Building Tools/Properties/Damage and Health Box/healing_box.tscn<>res://Building Tools/Props/Pickups/Health Pickup/HealthPickupCommand.gd
+::res://Building Tools/Props/Pickups/Keys/::1706746324
+key.gd::GDScript::-1::1704949929::0::1::::<>Area3D<>::
+key.tscn::PackedScene::2976273860585876969::1706746324::0::1::::<><>::res://Building Tools/Props/Pickups/Keys/key.gd<>res://Building Tools/Properties/Cursor Hint/cursor_hint.tscn<>res://Building Tools/Props/Pickups/Keys/Key_Interaction.gd
+Key_Interaction.gd::GDScript::-1::1704949929::0::1::::<>Node<>::
+::res://Building Tools/Props/Projectiles/::1696356728
+projectile.gd::GDScript::-1::1696094341::0::1::::Projectile<>RigidBody3D<>::
+projectile.tscn::PackedScene::6613803837629467183::1696356728::0::1::::<><>::res://Building Tools/Props/Projectiles/projectile.gd
+::res://Building Tools/Props/Projectiles/Blaster Bolt/::1696356728
+BlasterBoltCommand.gd::GDScript::-1::1696355746::0::1::::<>Node<>::
+blaster_bolt.tscn::PackedScene::2793141737801595383::1696356728::0::1::::<><>::res://Building Tools/Props/Projectiles/projectile.gd<>uid://j2lecpaynqf8::::res://Building Tools/Properties/Damage and Health Box/damage_box.tscn<>res://Building Tools/Props/Projectiles/Blaster Bolt/BlasterBoltCommand.gd
+::res://Building Tools/Set Pieces/::1701954056
+::res://Building Tools/Set Pieces/Hallway Segment/::1706419611
+hall_segment.tscn::PackedScene::1561704109283516840::1706419611::0::1::::<><>::uid://dsej1eqt5ypvf::::res://Building Tools/Filler Assets/Models/Paints/1 Meter White Box.png<>res://Building Tools/Set Pieces/Hallway Segment/hall_segment_wall.gd
+hall_segment_wall.gd::GDScript::-1::1701661493::0::1::::<>StaticBody3D<>::
+::res://Building Tools/Set Pieces/Sliding Door/::1707531616
+DoorInteraction.gd::GDScript::-1::1704949072::0::1::::<>Node<>::
+sliding_door.tscn::PackedScene::35149055833665424::1707531616::0::1::::<><>::res://Building Tools/Set Pieces/Sliding Door/sliding_door_command.gd<>uid://pwjni4rcasao::::res://Building Tools/Filler Assets/Models/Basic Walls/HalfM_Wall_Door_Plain.obj<>uid://dsej1eqt5ypvf::::res://Building Tools/Filler Assets/Models/Paints/1 Meter White Box.png<>uid://b0gbga5dx5toq::::res://Building Tools/Properties/Interaction/interaction.tscn<>res://Building Tools/Properties/Cursor Hint/cursor_hint.tscn<>uid://co8cjueks00u6::::res://Building Tools/Filler Assets/Sounds/Scifi Door Short.wav<>uid://bu5ps1uachmo2::::res://Building Tools/Filler Assets/Sounds/Error 2.wav
+sliding_door_command.gd::GDScript::-1::1707530728::0::1::::<>Node3D<>::
+::res://Building Tools/Testing Rooms/::1715990157
+2d_testing_room_top_down.tscn::PackedScene::1113088737808915087::1698933422::0::1::::<><>::res://Building Tools/Testing Rooms/testingRooms2D.gd
+testingRooms2D.gd::GDScript::-1::1698933418::0::1::::<>Node2D<>::
+testing_rooms.gd::GDScript::-1::1696605947::0::1::::<>Node3D<>::
+testing_room_alpha.tscn::PackedScene::6348619543249823169::1715990157::0::1::::<><>::res://Building Tools/Testing Rooms/testing_rooms.gd<>uid://dtg5r0ox5x83s::::res://Building Tools/Characters/Dummy/dummy.tscn<>uid://cr86samdwmj8y::::res://Building Tools/Filler Assets/Models/Paints/Rock_Plain_Support_C.png<>uid://bao0em3qrnooi::::res://Building Tools/Props/Pickups/Health Pickup/health_pickup.tscn<>uid://cyprica154g82::::res://Building Tools/Filler Assets/Models/Paints/Rock_Plain_Support_N.png<>uid://dx2ataf6ef7xi::::res://Building Tools/Filler Assets/Models/Paints/Rock_Gems_Purple_Support_C.png<>uid://d3rp200skwso::::res://Building Tools/Filler Assets/Models/Paints/Rock_Gems_Purple_Support_N.png<>uid://baqs2t4p5a58i::::res://Building Tools/Character Controllers/fps_character_controller_extended.tscn<>uid://wirbkrxcnojw::::res://Building Tools/Set Pieces/Hallway Segment/hall_segment.tscn<>uid://ra5ugkfqhc7::::res://Building Tools/Set Pieces/Sliding Door/sliding_door.tscn<>uid://cf25ymt1gjtj0::::res://Building Tools/Filler Assets/Models/Basic Walls/HalfM_Wall_Door_Arch.obj<>uid://biny2b1a1w754::::res://Building Tools/Props/Pickups/Keys/key.tscn<>uid://c378cc48ttgrm::::res://Building Tools/Characters/Quest Cube/quest_cube.tscn<>res://Building Tools/Organizers/Quests/quest.gd
+testing_room_beta.tscn::PackedScene::1452407552704190063::1702257191::0::1::::<><>::res://Building Tools/Testing Rooms/testing_rooms.gd<>uid://cr86samdwmj8y::::res://Building Tools/Filler Assets/Models/Paints/Rock_Plain_Support_C.png<>uid://cyprica154g82::::res://Building Tools/Filler Assets/Models/Paints/Rock_Plain_Support_N.png
+UI Tests.tscn::PackedScene::1515423154299201085::1696641143::0::1::::<><>::
+::res://Building Tools/Themes/::1715990157
+FillerTheme.tres::Theme::5634505207777340380::1715990157::0::1::::<><>::uid://djw7s2vnkcctf::::res://Building Tools/Fonts/Px437_DOS-V_TWN16.ttf
+industrial_scifi_theme.tres::Theme::246056119769589010::1715990157::0::1::::<><>::uid://djw7s2vnkcctf::::res://Building Tools/Fonts/Px437_DOS-V_TWN16.ttf

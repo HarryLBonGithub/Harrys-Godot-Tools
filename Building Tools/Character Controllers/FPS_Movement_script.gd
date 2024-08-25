@@ -1,10 +1,10 @@
-extends CharacterBody3D
+extends Node3D
 
 #mouse setting variables
+
 @export var mouseSensitivity = 0.3
 @export var headTiltMax = 90
 @export var headTurnMaxSitting = 90
-
 
 #movement variables
 @export var walkingSpeed = 10
@@ -42,9 +42,10 @@ var cameraAngleH = 0 #camera horizontal angle
 var playerVelocity = Vector3()
 
 #node variables
-@onready var cameraNode = $Head/PlayerCamera
-@onready var floorCheckNode = $FloorCheck
-@onready var headNode = $Head
+@onready var body = $".."
+@onready var cameraNode = $"../Head/PlayerCamera"
+@onready var floorCheckNode = $"../FloorCheck"
+@onready var headNode = $"../Head"
 
 
 
@@ -71,7 +72,7 @@ func aim():
 		return
 	
 	if cameraMotion.length() > 0: #if the camera has moved
-		rotate_y(deg_to_rad(-cameraMotion.x * mouseSensitivity)) #turn the whole body left/right
+		body.rotate_y(deg_to_rad(-cameraMotion.x * mouseSensitivity)) #turn the whole body left/right
 		
 		if lookUpDownEnabled:
 			var change = -cameraMotion.y * mouseSensitivity #stores the ammount of potential change
@@ -88,18 +89,18 @@ func walk(delta): #needs more documentation
 		return
 
 	if Input.is_action_pressed("move_forward") and forwardEnabled:
-		motion -= global_transform.basis.z
+		motion -= body.global_transform.basis.z
 	if Input.is_action_pressed("move_backward") and backEnabled:
-		motion += global_transform.basis.z
+		motion += body.global_transform.basis.z
 	if Input.is_action_pressed("move_left") and leftEnabled:
-		motion -= global_transform.basis.x
+		motion -= body.global_transform.basis.x
 	if Input.is_action_pressed("move_right") and rightEnabled:
-		motion += global_transform.basis.x
+		motion += body.global_transform.basis.x
 	
 	motion = motion.normalized()
 	
 	#player falls if not on the floor
-	if not is_on_floor(): 
+	if not body.is_on_floor(): 
 		playerVelocity.y += gravityActual * delta
 	
 	#creates a temporary velocity that has no 'up/down'
@@ -129,9 +130,9 @@ func walk(delta): #needs more documentation
 	playerVelocity.z = tempVelocity.z
 	
 	if jumpEnabled:
-		if Input.is_action_just_pressed("jump") and is_on_floor():
+		if Input.is_action_just_pressed("jump") and body.is_on_floor():
 			playerVelocity.y = jumpHeight
 	
-	velocity = playerVelocity
+	body.velocity = playerVelocity
 	
-	move_and_slide()
+	body.move_and_slide()
