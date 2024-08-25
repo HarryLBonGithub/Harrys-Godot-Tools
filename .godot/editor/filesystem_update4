@@ -13,3 +13,5 @@ res://Building Tools/To Do List.txt
 res://Building Tools/Character Controllers/fps_character_controller_extended.tscn
 res://Building Tools/Character Controllers/FPSCharacterController.gd
 res://Building Tools/Character Controllers/FPS_Movement_script.gd
+res://Building Tools/Character Controllers/fps_character_controller_extended.gd
+res://Building Tools/Characters/Dummy/dummy.tscn
