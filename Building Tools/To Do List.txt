@@ -12,6 +12,8 @@
 - tools
 	- add an "alternate" tool option for the tool frame that fires from 
 	using an "alt fire" action
+	- tools and tool managers need a state so they can be paused when in menus or messages
+		- possible to do through a "pause_use" function in the manager, and a simple exported variable on the tool
 	
 - player controller
 	- separate the actual control code to a child of the actual character
