@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://dyomg7evme6ij"]
+
+[ext_resource type="Script" path="res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_input_controller.gd" id="1_5bh0e"]
+[ext_resource type="PackedScene" uid="uid://hq6jwok23ddh" path="res://Building Tools/Filler Assets/Models/Basic Characters/Low Poly Human V4/Lowpoly Cartoon Humans_V4.glb" id="1_4458p"]
+[ext_resource type="Script" path="res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_camera_controller.gd" id="2_515ce"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_he2iy"]
+
+[node name="3rdPersonCharacterController" type="CharacterBody3D"]
+
+[node name="MovementInputs" type="Node" parent="."]
+script = ExtResource("1_5bh0e")
+
+[node name="MovementCollider" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_he2iy")
+
+[node name="MovementController" type="Node3D" parent="."]
+
+[node name="MeshRoot" type="Node3D" parent="."]
+
+[node name="Lowpoly Cartoon Humans_V4" parent="MeshRoot" instance=ExtResource("1_4458p")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="CamRoot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, -0.05)
+script = ExtResource("2_515ce")
+
+[node name="CamYaw" type="Node3D" parent="CamRoot"]
+
+[node name="CamPitch" type="Node3D" parent="CamRoot/CamYaw"]
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CamRoot/CamYaw/CamPitch"]
+spring_length = 3.0
+
+[node name="Camera3D" type="Camera3D" parent="CamRoot/CamYaw/CamPitch/SpringArm3D"]

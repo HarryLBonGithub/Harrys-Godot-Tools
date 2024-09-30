@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cyprica154g82" path="res://Building Tools/Filler Assets/Models/Paints/Rock_Plain_Support_N.png" id="6_kkpyt"]
 [ext_resource type="Texture2D" uid="uid://dx2ataf6ef7xi" path="res://Building Tools/Filler Assets/Models/Paints/Rock_Gems_Purple_Support_C.png" id="7_mkpwd"]
 [ext_resource type="Texture2D" uid="uid://d3rp200skwso" path="res://Building Tools/Filler Assets/Models/Paints/Rock_Gems_Purple_Support_N.png" id="8_jcib3"]
-[ext_resource type="PackedScene" uid="uid://baqs2t4p5a58i" path="res://Building Tools/Character Controllers/fps_character_controller_extended.tscn" id="8_ryv78"]
+[ext_resource type="PackedScene" uid="uid://baqs2t4p5a58i" path="res://Building Tools/Character Controllers/3D/FPS/fps_character_controller_extended.tscn" id="8_ryv78"]
 [ext_resource type="PackedScene" uid="uid://wirbkrxcnojw" path="res://Building Tools/Set Pieces/Hallway Segment/hall_segment.tscn" id="9_8gmi6"]
 [ext_resource type="PackedScene" uid="uid://ra5ugkfqhc7" path="res://Building Tools/Set Pieces/Sliding Door/sliding_door.tscn" id="10_188ib"]
 [ext_resource type="ArrayMesh" uid="uid://cf25ymt1gjtj0" path="res://Building Tools/Filler Assets/Models/Basic Walls/HalfM_Wall_Door_Arch.obj" id="11_rmd80"]

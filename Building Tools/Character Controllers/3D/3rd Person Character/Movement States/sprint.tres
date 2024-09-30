@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MovementState" load_steps=2 format=3 uid="uid://dgv1efh1kv6e3"]
+
+[ext_resource type="Script" path="res://Building Tools/Character Controllers/3D/3rd Person Character/movement_state.gd" id="1_ahaov"]
+
+[resource]
+script = ExtResource("1_ahaov")
+id = 3
+movement_speed = 12.0
+acceleration = 4.0
+camera_fov = 85.0
+animation_speed = 1.5

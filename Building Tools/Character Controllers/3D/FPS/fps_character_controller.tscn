@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://nk5pfhu0daef"]
 
-[ext_resource type="Script" path="res://Building Tools/Character Controllers/FPS_Movement_script.gd" id="1_w7qm7"]
+[ext_resource type="Script" path="res://Building Tools/Character Controllers/3D/FPS/FPS_Movement_script.gd" id="1_w7qm7"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_smuhl"]
 radius = 0.4

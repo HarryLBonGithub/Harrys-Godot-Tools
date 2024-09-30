@@ -1,7 +1,7 @@
 [gd_scene load_steps=20 format=3 uid="uid://baqs2t4p5a58i"]
 
-[ext_resource type="Script" path="res://Building Tools/Character Controllers/fps_character_controller_extended.gd" id="1_1okdc"]
-[ext_resource type="Script" path="res://Building Tools/Character Controllers/FPS_Movement_script.gd" id="1_hgisy"]
+[ext_resource type="Script" path="res://Building Tools/Character Controllers/3D/FPS/fps_character_controller_extended.gd" id="1_1okdc"]
+[ext_resource type="Script" path="res://Building Tools/Character Controllers/3D/FPS/FPS_Movement_script.gd" id="1_hgisy"]
 [ext_resource type="Theme" uid="uid://cmjnqicbnobds" path="res://Building Tools/Themes/FillerTheme.tres" id="2_qnxyh"]
 [ext_resource type="PackedScene" uid="uid://ddjlj2gpevbbb" path="res://Building Tools/HUD Items/Ammo Tracker/ammo_tracker.tscn" id="3_ny2yd"]
 [ext_resource type="PackedScene" uid="uid://ggljq5ed622m" path="res://Building Tools/HUD Items/Crosshair/crosshair.tscn" id="4_bd3ad"]
