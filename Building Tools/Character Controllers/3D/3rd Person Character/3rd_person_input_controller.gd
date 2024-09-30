@@ -1,4 +1,6 @@
-extends Node3D
+extends Node
+
+#this code takes player input and emits a signal depending on those inputs and wether or not the player is moving
 
 signal set_movement_state(_movement_state: MovementState)
 signal set_movement_direction(_movement_direction: Vector3)
@@ -13,8 +15,8 @@ func _ready():
 	
 func _input(event):
 	if event.is_action("character movement"):
-		movement_direction.x = Input.get_action_strength("move_left") - Input.get_action_strength("move_right")
-		movement_direction.z = Input.get_action_strength("move_forward") - Input.get_action_strength("move_backward")
+		movement_direction.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
+		movement_direction.z = Input.get_action_strength("move_backward") - Input.get_action_strength("move_forward")
 		
 		if is_movement_ongoing():
 			if Input.is_action_pressed("run"):

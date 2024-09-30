@@ -1,4 +1,5 @@
 Node
+AnimationTree
 SpringArm3D
 Camera3D
 Node3D
@@ -11,4 +12,3 @@ TextureRect
 HBoxContainer
 Panel
 VBoxContainer
-MeshInstance3D

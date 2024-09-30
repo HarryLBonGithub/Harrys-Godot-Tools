@@ -20,3 +20,4 @@ res://Building Tools/Character Controllers/3D/3rd Person Character/Movement Stat
 res://Building Tools/Character Controllers/3D/3rd Person Character/Movement States/sprint.tres
 res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_movement_controller.gd
 res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_input_controller.gd
+res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_animation_controller.gd
