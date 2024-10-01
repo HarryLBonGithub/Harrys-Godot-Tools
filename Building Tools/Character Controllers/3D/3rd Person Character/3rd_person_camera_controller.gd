@@ -9,7 +9,7 @@ signal set_cam_rotation(_cam_rotation : float)
 @export var look_enabled = true
 @export var yaw_enabled = true
 @export var pitch_enabled = true
-
+@export var invert_pitch = false
 
 var yaw : float = 0
 var pitch : float = 0
@@ -34,6 +34,7 @@ func _input(event):
 		pitch += event.relative.y * pitch_sensitivity
 
 func _physics_process(delta):
+	#set prevent the camera from flipping over or under the player
 	pitch = clamp(pitch, pitch_min, pitch_max)
 	
 	if not look_enabled:
@@ -43,7 +44,10 @@ func _physics_process(delta):
 		yaw_node.rotation_degrees.y = lerp(yaw_node.rotation_degrees.y, yaw, yaw_acceleration * delta)
 		
 	if pitch_enabled:
-		pitch_node.rotation_degrees.x = lerp(pitch_node.rotation_degrees.x,pitch, pitch_acceleration * delta)
+		if invert_pitch:
+			pitch_node.rotation_degrees.x = lerp(pitch_node.rotation_degrees.x,pitch * -1, pitch_acceleration * delta)
+		else:
+			pitch_node.rotation_degrees.x = lerp(pitch_node.rotation_degrees.x,pitch, pitch_acceleration * delta)
 	
 	set_cam_rotation.emit(yaw_node.rotation.y)
 
@@ -52,4 +56,5 @@ func _on_movement_inputs_set_movement_state(_movement_state : MovementState):
 		tween.kill()
 		
 	tween = create_tween()
+	#set the camera's field of view based on the current movment state
 	tween.tween_property(camera, "fov", _movement_state.camera_fov, 0.5).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
