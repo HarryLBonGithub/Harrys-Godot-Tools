@@ -1,3 +1,4 @@
+JumpState
 MovementState
 Quest
 Message

@@ -1,23 +1,14 @@
-res://Building Tools/Testing Rooms/testing_room_alpha.tscn
+res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_character_controller.tscn
 res://Building Tools/Themes/industrial_scifi_theme.tres
+res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_camera_controller.gd
 res://Building Tools/Themes/FillerTheme.tres
 res://Building Tools/Organizers/Quests/test quests/Press Some Key.tres
-res://Building Tools/Character Controllers/fps_character_controller_extended.tscn
-res://Building Tools/Character Controllers/fps_character_controller.tscn
-res://Building Tools/Character Controllers/3D/fps_character_controller_extended.tscn
+res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_input_controller.gd
+res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_movement_controller.gd
+res://Building Tools/Testing Rooms/testing_room_alpha.tscn
+res://Building Tools/Character Controllers/3D/FPS/fps_character_controller_extended.tscn
 res://Building Tools/Characters/Dummy/dummy.tscn
-res://Building Tools/Character Controllers/3D/fps_character_controller.tscn
+res://Building Tools/Character Controllers/3D/FPS/fps_character_controller.tscn
 res://Building Tools/Character Controllers/2D/top_down_2d_character.tscn
 res://Building Tools/Testing Rooms/testing_room_beta.tscn
-res://Building Tools/Character Controllers/3D/FPS/fps_character_controller_extended.tscn
-res://Building Tools/Character Controllers/3D/FPS/fps_character_controller.tscn
-res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_character_controller.tscn
-res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_camera_controller.gd
-res://Building Tools/Character Controllers/3D/3rd Person Character/movement_state.gd
-res://Building Tools/Character Controllers/3D/3rd Person Character/Movement States/stand.tres
-res://Building Tools/Character Controllers/3D/3rd Person Character/Movement States/run.tres
-res://Building Tools/Character Controllers/3D/3rd Person Character/Movement States/walk.tres
-res://Building Tools/Character Controllers/3D/3rd Person Character/Movement States/sprint.tres
-res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_movement_controller.gd
-res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_input_controller.gd
-res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_animation_controller.gd
+res://Building Tools/Character Controllers/3D/3rd Person Character/Jump States/ground_jump.tres

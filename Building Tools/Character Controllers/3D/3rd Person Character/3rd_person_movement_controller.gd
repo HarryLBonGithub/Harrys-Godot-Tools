@@ -3,7 +3,9 @@ extends Node
 @export var main_node : CharacterBody3D
 @export var mesh_root : Node3D
 @export var rotation_speed : float = 8
+@export var fall_gravity = 45
 
+var jump_gravity : float = fall_gravity
 var direction : Vector3
 var velocity : Vector3
 var acceleration : float
@@ -16,6 +18,13 @@ func _physics_process(delta):
 	velocity.x = speed * direction.normalized().x
 	velocity.z = speed * direction.normalized().z
 	
+	#set fall gravity based on whether or not the fall follows a jump
+	if not main_node.is_on_floor():
+		if velocity.y >=0:
+			velocity.y -=jump_gravity * delta
+		else:
+			velocity.y -= fall_gravity * delta
+	
 	#move the character based on the normalized velocity value
 	main_node.velocity = main_node.velocity.lerp(velocity,acceleration * delta)
 	main_node.move_and_slide()
@@ -24,6 +33,7 @@ func _physics_process(delta):
 	#maybe add if state id == aim id, look towards target instead
 	var target_rotation = atan2(direction.x, direction.z) - main_node.rotation.y
 	mesh_root.rotation.y = lerp_angle(mesh_root.rotation.y, target_rotation, rotation_speed * delta)
+	
 
 func _on_movement_inputs_set_movement_state(_movement_state):
 	#when a new movement state is set, adjust the speed and acceleration
@@ -37,3 +47,9 @@ func _on_movement_inputs_set_movement_direction(_movement_direction):
 func _on_cam_root_set_cam_rotation(_cam_rotation):
 	#when the camera moves, store that value
 	cam_rotation = _cam_rotation
+
+
+func _on_movement_inputs_pressed_jump(jump_state):
+	#calculate the jump speed basedon a passed 'jump state'
+	velocity.y = 2 * jump_state.jump_height / jump_state.apex_duration
+	jump_gravity = velocity.y / jump_state.apex_duration
