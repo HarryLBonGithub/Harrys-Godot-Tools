@@ -12,3 +12,5 @@ res://Building Tools/Character Controllers/3D/FPS/fps_character_controller.tscn
 res://Building Tools/Character Controllers/2D/top_down_2d_character.tscn
 res://Building Tools/Testing Rooms/testing_room_beta.tscn
 res://Building Tools/Character Controllers/3D/3rd Person Character/Jump States/ground_jump.tres
+res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_animation_controller.gd
+res://Building Tools/Character Controllers/3D/3rd Person Character/Jump States/air_jump.tres

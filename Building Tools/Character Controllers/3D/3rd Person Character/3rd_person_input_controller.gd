@@ -9,6 +9,10 @@ signal set_movement_direction(_movement_direction: Vector3)
 @export var movement_states : Dictionary
 @export var jump_states : Dictionary
 @export var max_air_jump : int = 1
+
+@export var movement_enabled : bool = true
+@export var jump_enabled : bool = true
+
 var air_jump_counter : int = 0
 
 var movement_direction : Vector3
@@ -17,6 +21,10 @@ func _ready():
 	set_movement_state.emit(movement_states["stand"])
 	
 func _input(event):
+	
+	if not movement_enabled:
+		return
+	
 	if event.is_action("character movement"):
 		movement_direction.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 		movement_direction.z = Input.get_action_strength("move_backward") - Input.get_action_strength("move_forward")
@@ -41,9 +49,14 @@ func _physics_process(delta):
 	#set the jump count to 0 whenever the player is on the floor
 	if main_node.is_on_floor():
 		air_jump_counter = 0
+	elif air_jump_counter == 0:
+		air_jump_counter = 1
 	#did the player fall off a ledge without jumping? count that as one jump
 	elif air_jump_counter == 0:
 		air_jump_counter = 1
+	
+	if not jump_enabled:
+		return
 	
 	if air_jump_counter <= max_air_jump:
 		if Input.is_action_just_pressed("jump"):

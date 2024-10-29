@@ -48,7 +48,6 @@ func _on_cam_root_set_cam_rotation(_cam_rotation):
 	#when the camera moves, store that value
 	cam_rotation = _cam_rotation
 
-
 func _on_movement_inputs_pressed_jump(jump_state):
 	#calculate the jump speed basedon a passed 'jump state'
 	velocity.y = 2 * jump_state.jump_height / jump_state.apex_duration
