@@ -1,5 +1,5 @@
-JumpState
 MovementState
+JumpState
 Quest
 Message
 Reward

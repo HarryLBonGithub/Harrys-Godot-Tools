@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MovementState" load_steps=2 format=3 uid="uid://dcgs20nl31xm1"]
+
+[ext_resource type="Script" path="res://Building Tools/Character Controllers/3D/3rd Person Character/movement_state.gd" id="1_ratmf"]
+
+[resource]
+script = ExtResource("1_ratmf")
+id = 0
+movement_speed = 0.0
+acceleration = 6.0
+camera_fov = 70.0
+animation_speed = 1.0

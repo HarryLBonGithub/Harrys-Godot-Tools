@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MovementState" load_steps=2 format=3 uid="uid://diurb53in128d"]
+
+[ext_resource type="Script" path="res://Building Tools/Character Controllers/3D/3rd Person Character/movement_state.gd" id="1_2ogsl"]
+
+[resource]
+script = ExtResource("1_2ogsl")
+id = 1
+movement_speed = 0.8
+acceleration = 5.0
+camera_fov = 72.5
+animation_speed = 1.0

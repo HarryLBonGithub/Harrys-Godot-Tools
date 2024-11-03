@@ -2,49 +2,97 @@ extends Node
 
 #this code takes player input and emits a signal depending on those inputs and wether or not the player is moving
 signal pressed_jump(jump_state : JumpState)
-signal set_movement_state(_movement_state: MovementState)
-signal set_movement_direction(_movement_direction: Vector3)
+signal changed_stance(stance : StanceState)
+signal changed_movement_state(_movement_state: MovementState)
+signal changed_movement_direction(_movement_direction: Vector3)
 
 @export var main_node : CharacterBody3D
 @export var movement_states : Dictionary
 @export var jump_states : Dictionary
+@export var stances : Dictionary
+
 @export var max_air_jump : int = 1
 
 @export var movement_enabled : bool = true
 @export var jump_enabled : bool = true
 
 var air_jump_counter : int = 0
+var current_stance_name : String = "upright"
+var current_movement_state_name : String
+var stance_antispam_timer : SceneTreeTimer
+var alert = false
+
 
 var movement_direction : Vector3
 
 func _ready():
-	set_movement_state.emit(movement_states["stand"])
+	set_movement_state("stand")
 	
 func _input(event):
 	
 	if not movement_enabled:
 		return
 	
-	if event.is_action("character movement"):
+	if event.is_action_pressed("character movement") or event.is_action_released("character movement"):
 		movement_direction.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 		movement_direction.z = Input.get_action_strength("move_backward") - Input.get_action_strength("move_forward")
 		
 		if is_movement_ongoing():
 			if Input.is_action_pressed("run"):
-				set_movement_state.emit(movement_states["run"])
+				set_movement_state("run")
 			else:
-				set_movement_state.emit(movement_states["walk"])
+				set_movement_state("walk")
 		else:
-			set_movement_state.emit(movement_states["stand"])
+			set_movement_state("stand")
+			
+	
+	
+	#aim/alert toggle
+	if Input.is_action_just_pressed("use_alt"):
+		alert = true
+		if current_stance_name == "upright" and main_node.is_on_floor():
+			set_stance("alert")
+	if Input.is_action_just_released("use_alt"):
+		alert = false
+		if current_stance_name == "alert" and main_node.is_on_floor():
+			set_stance("upright")
+	
+	
+	#stance change up
+	if Input.is_action_just_pressed("jump") and main_node.is_on_floor():
+		if current_stance_name == "upright" or current_stance_name == "alert":
+			#jump input	
+			if not jump_enabled:
+				return
+			if Input.is_action_just_pressed("jump"):
+				if air_jump_counter <= max_air_jump:
+					var jump_name = "ground_jump"
+					
+					if air_jump_counter > 0:
+						jump_name = "air_jump"
+					
+					pressed_jump.emit(jump_states[jump_name])
+					air_jump_counter += 1
+		elif current_stance_name == "crouch":
+			if alert == true:
+				set_stance("alert")
+			else:
+				set_stance("upright")
+		elif current_stance_name == "prone":
+			set_stance("crouch")
 		
+	#stance change down
+	if Input.is_action_just_pressed("crouch") and main_node.is_on_floor():
+		if current_stance_name == "upright" or current_stance_name == "alert":
+			set_stance("crouch")
+		elif current_stance_name == "crouch":
+			set_stance("prone")
 
 func _physics_process(delta):
 	# if moving, emit the direction of movement
 	if is_movement_ongoing():
-		set_movement_direction.emit(movement_direction)
-	
-	#jump input
-	
+		changed_movement_direction.emit(movement_direction)
+
 	#double jump mechanics
 	#set the jump count to 0 whenever the player is on the floor
 	if main_node.is_on_floor():
@@ -54,19 +102,33 @@ func _physics_process(delta):
 	#did the player fall off a ledge without jumping? count that as one jump
 	elif air_jump_counter == 0:
 		air_jump_counter = 1
-	
-	if not jump_enabled:
-		return
-	
-	if air_jump_counter <= max_air_jump:
-		if Input.is_action_just_pressed("jump"):
-			var jump_name = "ground_jump"
-			
-			if air_jump_counter > 0:
-				jump_name = "air_jump"
-			
-			pressed_jump.emit(jump_states[jump_name])
-			air_jump_counter += 1
-	
+
 func is_movement_ongoing() -> bool:
 	return abs(movement_direction.x) > 0 or abs(movement_direction.z) > 0
+
+func set_movement_state(state : String):
+	var stance = get_node(stances[current_stance_name])
+	current_movement_state_name = state
+	changed_movement_state.emit(stance.get_movement_state(state))
+
+func set_stance(_stance_name : String):
+	var next_stance_name : String
+	
+	next_stance_name = _stance_name
+	
+	if is_stance_blocked(next_stance_name):
+		return
+	
+	var current_stance = get_node(stances[current_stance_name])
+	current_stance.collider.disabled = true
+	
+	current_stance_name = next_stance_name
+	current_stance = get_node(stances[current_stance_name])
+	current_stance.collider.disabled = false
+	
+	changed_stance.emit(current_stance)
+	set_movement_state(current_movement_state_name)
+
+func is_stance_blocked(_stance_name : String) -> bool:
+	var stance = get_node(stances[_stance_name])
+	return stance.is_blocked()

@@ -76,6 +76,7 @@ shape = SubResource("BoxShape3D_tdjto")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.75, 0.5, -1.75)
 
 [node name="QuestCube" parent="." instance=ExtResource("5_c5a06")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 2.75, 5.5)
 heldQuest = SubResource("Resource_siqtm")
 
 [editable path="QuestCube"]

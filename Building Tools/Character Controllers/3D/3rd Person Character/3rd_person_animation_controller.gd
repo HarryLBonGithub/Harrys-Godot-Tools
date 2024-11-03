@@ -8,6 +8,7 @@ var on_floor_blend_target : float = 1
 
 var tween : Tween
 
+var current_stance_name = "upright"
 
 func _physics_process(delta):
 	
@@ -16,16 +17,21 @@ func _physics_process(delta):
 	on_floor_blend = lerp(on_floor_blend, on_floor_blend_target, 10 * delta)
 	animation_tree["parameters/on_floor_blend/blend_amount"] = on_floor_blend
 
-func _on_movement_inputs_set_movement_state(_movement_state):
+func _on_movement_inputs_pressed_jump(jump_state):
+	#takes the passed in jump state, takes the name from it, can fires the oneshot with that name in the animation tree
+	animation_tree["parameters/" + jump_state.animation_name + "/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
+
+
+func _on_movement_inputs_changed_movement_state(_movement_state):
 	if tween:
 		tween.kill()
 		
 	tween = create_tween()
 	#tween from the current position in the animation tree and the movement state ID position on the tree
-	tween.tween_property(animation_tree, "parameters/movement_blend/blend_position", _movement_state.id, 0.25)
+	tween.tween_property(animation_tree, "parameters/" + current_stance_name + "_movement_blend/blend_position", _movement_state.id, 0.25)
 	tween.parallel().tween_property(animation_tree,"parameters/movement_anim_speed/scale", _movement_state.animation_speed, 0.7)
 
 
-func _on_movement_inputs_pressed_jump(jump_state):
-	#takes the passed in jump state, takes the name from it, can fires the oneshot with that name in the animation tree
-	animation_tree["parameters/" + jump_state.animation_name + "/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
+func _on_movement_inputs_changed_stance(stance):
+	animation_tree["parameters/stance_transition/transition_request"] = stance.name
+	current_stance_name = stance.name

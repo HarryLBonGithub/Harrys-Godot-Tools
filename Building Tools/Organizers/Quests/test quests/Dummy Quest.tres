@@ -9,4 +9,5 @@ questName = "Dummy's Quest"
 description = "do the thing for dummy"
 summary = "touch the cube"
 keyToPress = ""
+killTarget = ""
 progressTarget = 1.0
