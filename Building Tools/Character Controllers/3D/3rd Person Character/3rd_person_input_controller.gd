@@ -5,6 +5,7 @@ signal pressed_jump(jump_state : JumpState)
 signal changed_stance(stance : StanceState)
 signal changed_movement_state(_movement_state: MovementState)
 signal changed_movement_direction(_movement_direction: Vector3)
+signal strafing_toggle(_strafing: bool)
 
 @export var main_node : CharacterBody3D
 @export var movement_states : Dictionary
@@ -15,13 +16,16 @@ signal changed_movement_direction(_movement_direction: Vector3)
 
 @export var movement_enabled : bool = true
 @export var jump_enabled : bool = true
+@export var crouch_enabled : bool = true
+@export var prone_enabled : bool = true
+@export var run_enabled : bool = true
 
 var air_jump_counter : int = 0
 var current_stance_name : String = "upright"
 var current_movement_state_name : String
 var stance_antispam_timer : SceneTreeTimer
+var is_strafing = false #my strafing addition
 var alert = false
-
 
 var movement_direction : Vector3
 
@@ -36,9 +40,10 @@ func _input(event):
 	if event.is_action_pressed("character movement") or event.is_action_released("character movement"):
 		movement_direction.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 		movement_direction.z = Input.get_action_strength("move_backward") - Input.get_action_strength("move_forward")
+		changed_movement_direction.emit(movement_direction)
 		
 		if is_movement_ongoing():
-			if Input.is_action_pressed("run"):
+			if Input.is_action_pressed("run") and run_enabled and is_strafing == false:
 				set_movement_state("run")
 			else:
 				set_movement_state("walk")
@@ -47,15 +52,13 @@ func _input(event):
 			
 	
 	
-	#aim/alert toggle
-	if Input.is_action_just_pressed("use_alt"):
-		alert = true
-		if current_stance_name == "upright" and main_node.is_on_floor():
-			set_stance("alert")
-	if Input.is_action_just_released("use_alt"):
-		alert = false
-		if current_stance_name == "alert" and main_node.is_on_floor():
-			set_stance("upright")
+	#toggle strafing movement
+	if Input.is_action_just_pressed("use_alt") and (current_stance_name == "alert" or current_stance_name == "upright") and main_node.is_on_floor():
+		strafing_toggle.emit(true)
+		is_strafing = true
+	elif Input.is_action_just_released("use_alt"):
+		strafing_toggle.emit(false)
+		is_strafing = false
 	
 	
 	#stance change up
@@ -83,9 +86,9 @@ func _input(event):
 		
 	#stance change down
 	if Input.is_action_just_pressed("crouch") and main_node.is_on_floor():
-		if current_stance_name == "upright" or current_stance_name == "alert":
+		if (current_stance_name == "upright" or current_stance_name == "alert") and crouch_enabled:
 			set_stance("crouch")
-		elif current_stance_name == "crouch":
+		elif current_stance_name == "crouch" and prone_enabled:
 			set_stance("prone")
 
 func _physics_process(delta):

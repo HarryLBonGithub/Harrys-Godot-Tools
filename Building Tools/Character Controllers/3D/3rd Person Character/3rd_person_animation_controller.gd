@@ -10,6 +10,8 @@ var tween : Tween
 
 var current_stance_name = "upright"
 
+var movement_direction : Vector3
+
 func _physics_process(delta):
 	
 	#blend in the falling animation when the player is falling
@@ -29,9 +31,21 @@ func _on_movement_inputs_changed_movement_state(_movement_state):
 	tween = create_tween()
 	#tween from the current position in the animation tree and the movement state ID position on the tree
 	tween.tween_property(animation_tree, "parameters/" + current_stance_name + "_movement_blend/blend_position", _movement_state.id, 0.25)
+	var direction_2D = Vector2(movement_direction.x, -movement_direction.z)
+	tween.parallel().tween_property(animation_tree,"parameters/strafing_movement_blend/blend_position", direction_2D,0.25)
 	tween.parallel().tween_property(animation_tree,"parameters/movement_anim_speed/scale", _movement_state.animation_speed, 0.7)
-
+	
+	
 
 func _on_movement_inputs_changed_stance(stance):
 	animation_tree["parameters/stance_transition/transition_request"] = stance.name
 	current_stance_name = stance.name
+
+func _on_movement_inputs_changed_movement_direction(_movement_direction):
+	movement_direction =_movement_direction
+
+func _on_movement_inputs_strafing_toggle(_strafing):
+	if _strafing == true:
+		animation_tree["parameters/strafing_transition/transition_request"] = "strafing"
+	else:
+		animation_tree["parameters/strafing_transition/transition_request"] = "not_strafing"

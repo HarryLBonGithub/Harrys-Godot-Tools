@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_3xble")
 id = 1
-movement_speed = 1.5
+movement_speed = 1.15
 acceleration = 7.0
 camera_fov = 72.5
 animation_speed = 0.8

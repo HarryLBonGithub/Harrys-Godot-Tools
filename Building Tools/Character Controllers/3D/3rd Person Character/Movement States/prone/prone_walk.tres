@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_2ogsl")
 id = 1
-movement_speed = 0.8
+movement_speed = 0.75
 acceleration = 5.0
 camera_fov = 72.5
-animation_speed = 1.0
+animation_speed = 0.8

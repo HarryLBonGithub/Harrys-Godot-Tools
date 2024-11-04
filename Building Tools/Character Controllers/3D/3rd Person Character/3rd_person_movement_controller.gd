@@ -11,6 +11,8 @@ var velocity : Vector3
 var acceleration : float
 var speed : float
 var cam_rotation : float = 0 
+var strafing = false
+var direction_changed = false
 
 func _physics_process(delta):
 	#"normalize" the movement velocity so that diagonal movement is the same speed as cardinal movement
@@ -29,12 +31,17 @@ func _physics_process(delta):
 	main_node.velocity = main_node.velocity.lerp(velocity,acceleration * delta)
 	main_node.move_and_slide()
 	
-	#point the character mesh and animations towards the direction of movement
-	#maybe add if state id == aim id, look towards target instead
-	var target_rotation = atan2(direction.x, direction.z) - main_node.rotation.y
-	mesh_root.rotation.y = lerp_angle(mesh_root.rotation.y, target_rotation, rotation_speed * delta)
-
-
+	#if the character is aiming, look in the same direction as the camera
+	#otherwise if the character has gotten some directional input, fase the direction of movement
+	if strafing:
+		var target_rotation = cam_rotation + 179
+		mesh_root.rotation.y = lerp_angle(mesh_root.rotation.y, target_rotation, rotation_speed * delta)
+	elif direction_changed:
+		var target_rotation = atan2(direction.x, direction.z) - main_node.rotation.y
+		mesh_root.rotation.y = lerp_angle(mesh_root.rotation.y, target_rotation, rotation_speed * delta)
+	
+	direction_changed = false
+	
 func _on_cam_root_set_cam_rotation(_cam_rotation):
 	#when the camera moves, store that value
 	cam_rotation = _cam_rotation
@@ -52,3 +59,7 @@ func _on_movement_inputs_changed_movement_state(_movement_state):
 func _on_movement_inputs_changed_movement_direction(_movement_direction):
 	#when a new movement direction is set, store a rotated version based on the camera's rotation
 	direction = _movement_direction.rotated(Vector3.UP, cam_rotation)
+	direction_changed = true
+
+func _on_movement_inputs_strafing_toggle(_strafing):
+	strafing = _strafing
