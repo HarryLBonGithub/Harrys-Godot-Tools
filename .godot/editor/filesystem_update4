@@ -2,10 +2,6 @@ res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_ch
 res://Building Tools/Themes/industrial_scifi_theme.tres
 res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_camera_controller.gd
 res://Building Tools/Testing Rooms/testing_room_beta.tscn
-res://Building Tools/Character Controllers/3D/3rd Person Character/Movement States/upright/upright_walk.tres
-res://Building Tools/Character Controllers/3D/3rd Person Character/Movement States/alert/alert_walk.tres
-res://Building Tools/Character Controllers/3D/3rd Person Character/Movement States/crouch/crouch_walk.tres
-res://Building Tools/Character Controllers/3D/3rd Person Character/Movement States/prone/prone_walk.tres
+res://Building Tools/Character Controllers/3D/3rd Person Character/action.gd
+res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_Person_Extended.gd
 res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_input_controller.gd
-res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_movement_controller.gd
-res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_animation_controller.gd

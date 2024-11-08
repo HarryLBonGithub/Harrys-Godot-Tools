@@ -30,7 +30,9 @@ func _on_movement_inputs_changed_movement_state(_movement_state):
 		
 	tween = create_tween()
 	#tween from the current position in the animation tree and the movement state ID position on the tree
-	tween.tween_property(animation_tree, "parameters/" + current_stance_name + "_movement_blend/blend_position", _movement_state.id, 0.25)
+	if current_stance_name != "strafing":
+		tween.tween_property(animation_tree, "parameters/" + current_stance_name + "_movement_blend/blend_position", _movement_state.id, 0.25)
+	
 	var direction_2D = Vector2(movement_direction.x, -movement_direction.z)
 	tween.parallel().tween_property(animation_tree,"parameters/strafing_movement_blend/blend_position", direction_2D,0.25)
 	tween.parallel().tween_property(animation_tree,"parameters/movement_anim_speed/scale", _movement_state.animation_speed, 0.7)
@@ -45,6 +47,8 @@ func _on_movement_inputs_changed_movement_direction(_movement_direction):
 	movement_direction =_movement_direction
 
 func _on_movement_inputs_strafing_toggle(_strafing):
+	#currently not used in implementation of strafing
+	return
 	if _strafing == true:
 		animation_tree["parameters/strafing_transition/transition_request"] = "strafing"
 	else:

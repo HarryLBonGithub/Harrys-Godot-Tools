@@ -1,6 +1,6 @@
+Node
 RayCast3D
 CollisionShape3D
-Node
 TextureRect
 Label
 CanvasLayer

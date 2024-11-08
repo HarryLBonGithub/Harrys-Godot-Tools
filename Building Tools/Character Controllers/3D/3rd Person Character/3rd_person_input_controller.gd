@@ -50,17 +50,19 @@ func _input(event):
 		else:
 			set_movement_state("stand")
 			
-	
-	
 	#toggle strafing movement
-	if Input.is_action_just_pressed("use_alt") and (current_stance_name == "alert" or current_stance_name == "upright") and main_node.is_on_floor():
-		strafing_toggle.emit(true)
-		is_strafing = true
-	elif Input.is_action_just_released("use_alt"):
-		strafing_toggle.emit(false)
-		is_strafing = false
+	if (current_stance_name == "alert" or current_stance_name == "upright" or current_stance_name == "strafing") and main_node.is_on_floor():
 	
-	
+		if Input.is_action_just_pressed("use_alt"):
+			if current_movement_state_name != "run":
+				strafing_toggle.emit(true)
+				set_stance("strafing")
+				is_strafing = true
+		elif Input.is_action_just_released("use_alt"):
+			strafing_toggle.emit(false)
+			set_stance("upright")
+			is_strafing = false
+
 	#stance change up
 	if Input.is_action_just_pressed("jump") and main_node.is_on_floor():
 		if current_stance_name == "upright" or current_stance_name == "alert":
@@ -85,7 +87,7 @@ func _input(event):
 			set_stance("crouch")
 		
 	#stance change down
-	if Input.is_action_just_pressed("crouch") and main_node.is_on_floor():
+	if Input.is_action_just_pressed("crouch") and main_node.is_on_floor() and is_strafing == false:
 		if (current_stance_name == "upright" or current_stance_name == "alert") and crouch_enabled:
 			set_stance("crouch")
 		elif current_stance_name == "crouch" and prone_enabled:
@@ -135,3 +137,9 @@ func set_stance(_stance_name : String):
 func is_stance_blocked(_stance_name : String) -> bool:
 	var stance = get_node(stances[_stance_name])
 	return stance.is_blocked()
+
+func halt():
+	movement_direction.x = 0
+	movement_direction.z = 0
+	set_movement_state("stand")
+	changed_movement_direction.emit(movement_direction)
