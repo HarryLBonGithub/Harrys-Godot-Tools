@@ -142,4 +142,9 @@ func halt():
 	movement_direction.x = 0
 	movement_direction.z = 0
 	set_movement_state("stand")
+	set_stance("upright")
+	strafing_toggle.emit(false)
 	changed_movement_direction.emit(movement_direction)
+
+func action():
+	return

@@ -1,4 +1,4 @@
-[gd_scene load_steps=98 format=3 uid="uid://dyomg7evme6ij"]
+[gd_scene load_steps=99 format=3 uid="uid://dyomg7evme6ij"]
 
 [ext_resource type="Script" path="res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_input_controller.gd" id="1_5bh0e"]
 [ext_resource type="Script" path="res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_Person_Extended.gd" id="1_7im3r"]
@@ -13862,8 +13862,10 @@ animation = &"jump"
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ijysd"]
 animation = &"jump"
 
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_0novh"]
+
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xp5t5"]
-animation = &"wave"
+animation = &"shrug"
 
 [sub_resource type="Curve" id="Curve_75gw4"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
@@ -14024,15 +14026,17 @@ max_space = 3.0
 snap = 1.0
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_nu3nw"]
-graph_offset = Vector2(-337.591, 27.9235)
+graph_offset = Vector2(-44.5907, 28.9235)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_ijysd")
-nodes/Animation/position = Vector2(1080, 360)
+nodes/Animation/position = Vector2(1080, 420)
 "nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_a2716")
 "nodes/Animation 2/position" = Vector2(700, 100)
 "nodes/Animation 3/node" = SubResource("AnimationNodeAnimation_j822u")
-"nodes/Animation 3/position" = Vector2(1240, 360)
+"nodes/Animation 3/position" = Vector2(1260, 420)
+nodes/Transition/node = SubResource("AnimationNodeTransition_0novh")
+nodes/Transition/position = Vector2(1700, 440)
 nodes/action_animation/node = SubResource("AnimationNodeAnimation_xp5t5")
-nodes/action_animation/position = Vector2(1420, 360)
+nodes/action_animation/position = Vector2(1460, 420)
 nodes/action_oneshot/node = SubResource("AnimationNodeOneShot_ygeqi")
 nodes/action_oneshot/position = Vector2(1640, 120)
 nodes/air_jump/node = SubResource("AnimationNodeOneShot_bu3i1")
@@ -14051,9 +14055,9 @@ nodes/output/position = Vector2(1820, 140)
 nodes/prone_movement_blend/node = SubResource("AnimationNodeBlendSpace1D_a1kfu")
 nodes/prone_movement_blend/position = Vector2(-480, 620)
 nodes/stance_transition/node = SubResource("AnimationNodeTransition_4yuca")
-nodes/stance_transition/position = Vector2(340, 220)
+nodes/stance_transition/position = Vector2(240, 220)
 nodes/strafing_movement_blend/node = SubResource("AnimationNodeBlendSpace2D_icmc3")
-nodes/strafing_movement_blend/position = Vector2(40, 660)
+nodes/strafing_movement_blend/position = Vector2(-100, 660)
 nodes/upright_movement_blend/node = SubResource("AnimationNodeBlendSpace1D_l7nda")
 nodes/upright_movement_blend/position = Vector2(-500, 120)
 node_connections = [&"action_oneshot", 0, &"air_jump", &"action_oneshot", 1, &"action_animation", &"air_jump", 0, &"jump", &"air_jump", 1, &"Animation 3", &"jump", 0, &"on_floor_blend", &"jump", 1, &"Animation", &"movement_anim_speed", 0, &"stance_transition", &"on_floor_blend", 0, &"Animation 2", &"on_floor_blend", 1, &"movement_anim_speed", &"output", 0, &"action_oneshot", &"stance_transition", 0, &"upright_movement_blend", &"stance_transition", 1, &"alert_movement_blend", &"stance_transition", 2, &"crouch_movement_blend", &"stance_transition", 3, &"prone_movement_blend", &"stance_transition", 4, &"strafing_movement_blend"]
@@ -14086,18 +14090,19 @@ disabled = true
 [node name="MeshRoot" type="Node3D" parent="."]
 
 [node name="Lowpoly Cartoon Humans_V4" parent="MeshRoot" instance=ExtResource("1_4458p")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="Skeleton3D" parent="MeshRoot/Lowpoly Cartoon Humans_V4/Humanoid_Armature" index="0"]
 bones/0/position = Vector3(0, 0.803488, -0.000131823)
 bones/0/rotation = Quaternion(-0.00911216, 0, 0, 0.999959)
 bones/1/rotation = Quaternion(-0.0279934, 1.19163e-07, -3.33707e-09, 0.999608)
 bones/2/rotation = Quaternion(0.00156924, -1.19209e-07, 1.87068e-10, 0.999999)
-bones/3/rotation = Quaternion(0.0328954, -6.6968e-18, 3.99022e-16, 0.999459)
-bones/4/rotation = Quaternion(0.0875993, 3.01473e-22, 8.97605e-23, 0.996156)
+bones/3/rotation = Quaternion(0.0345833, -6.69687e-18, 3.99022e-16, 0.999402)
+bones/4/rotation = Quaternion(0.0851636, -1.16666e-22, -1.31925e-24, 0.996367)
 bones/5/rotation = Quaternion(-0.0666481, -1.65702e-16, -4.48693e-16, 0.997777)
-bones/6/rotation = Quaternion(0.0393505, 0.0644783, -0.851157, 0.519449)
+bones/6/rotation = Quaternion(0.0391503, 0.0646001, -0.852764, 0.516805)
 bones/6/scale = Vector3(1, 1, 1)
-bones/7/rotation = Quaternion(-0.0159098, -0.00968863, -0.477877, 0.878229)
+bones/7/rotation = Quaternion(-0.0151192, -0.0101165, -0.474602, 0.880013)
 bones/8/rotation = Quaternion(0.138039, -9.68823e-05, -0.000923103, 0.990426)
 bones/9/rotation = Quaternion(-0.0139434, -0.00071114, -0.0509462, 0.998604)
 bones/9/scale = Vector3(1, 1, 1)
@@ -14124,9 +14129,9 @@ bones/21/scale = Vector3(1, 1, 1)
 bones/22/rotation = Quaternion(-0.0172772, -0.00616089, -0.0604931, 0.998)
 bones/22/scale = Vector3(1, 1, 1)
 bones/23/rotation = Quaternion(0.0246917, 0.00880069, -0.0818636, 0.996299)
-bones/24/rotation = Quaternion(0.0390558, -0.0646572, 0.853519, 0.515558)
+bones/24/rotation = Quaternion(0.0389149, -0.0647421, 0.854639, 0.513699)
 bones/24/scale = Vector3(1, 1, 1)
-bones/25/rotation = Quaternion(0.0242233, 0.026822, 0.471262, 0.881252)
+bones/25/rotation = Quaternion(0.0253133, 0.0275649, 0.468545, 0.882647)
 bones/26/rotation = Quaternion(0.136514, 9.54701e-05, 0.000923246, 0.990638)
 bones/27/rotation = Quaternion(-0.0351943, -0.000782082, 0.104639, 0.993887)
 bones/27/scale = Vector3(1, 1, 1)
@@ -14169,6 +14174,13 @@ bones/49/scale = Vector3(1, 1, 1)
 [node name="Male_Mesh_Rigged" parent="MeshRoot/Lowpoly Cartoon Humans_V4/Humanoid_Armature/Skeleton3D" index="1"]
 visible = false
 
+[node name="aim_IK" type="SkeletonIK3D" parent="MeshRoot/Lowpoly Cartoon Humans_V4/Humanoid_Armature/Skeleton3D" index="2"]
+process_priority = 1
+root_bone = &"gut"
+tip_bone = &"upper_chest"
+use_magnet = true
+target_node = NodePath("../../../../../CamRoot/CamYaw/CamPitch/aim_IK_target")
+
 [node name="AnimationTree" type="AnimationTree" parent="MeshRoot"]
 root_node = NodePath("../Lowpoly Cartoon Humans_V4")
 libraries = {
@@ -14176,6 +14188,9 @@ libraries = {
 }
 tree_root = SubResource("AnimationNodeBlendTree_nu3nw")
 anim_player = NodePath("../Lowpoly Cartoon Humans_V4/AnimationPlayer")
+parameters/Transition/current_state = ""
+parameters/Transition/transition_request = ""
+parameters/Transition/current_index = -1
 parameters/action_oneshot/active = false
 parameters/action_oneshot/internal_active = false
 parameters/action_oneshot/request = 0
@@ -14210,6 +14225,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1, 0, 0)
 spring_length = 1.5
 
 [node name="Camera3D" type="Camera3D" parent="CamRoot/CamYaw/CamPitch/SpringArm3D"]
+
+[node name="aim_IK_target" type="Marker3D" parent="CamRoot/CamYaw/CamPitch"]
+transform = Transform3D(-1, -1.96658e-08, -8.51821e-08, 0, 0.97437, -0.224951, 8.74228e-08, -0.224951, -0.97437, -1.1, 0.276052, 0)
 
 [node name="MovementController" type="Node" parent="." node_paths=PackedStringArray("main_node", "mesh_root")]
 script = ExtResource("1_akyeu")
@@ -14296,7 +14314,7 @@ col_raycast = NodePath("../../UprightCollider/RayCast3D")
 
 [node name="Wave" type="Node" parent="Actions"]
 script = ExtResource("24_ptpvj")
-animation_name = "wave"
+anim_1 = "wave"
 
 [connection signal="animation_finished" from="MeshRoot/AnimationTree" to="." method="_on_animation_tree_animation_finished"]
 [connection signal="set_cam_rotation" from="CamRoot" to="MovementController" method="_on_cam_root_set_cam_rotation"]

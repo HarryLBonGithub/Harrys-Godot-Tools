@@ -5,6 +5,9 @@ extends Node
 @export var rotation_speed : float = 8
 @export var fall_gravity = 45
 
+
+@onready var aiming_IK = $"../MeshRoot/Lowpoly Cartoon Humans_V4/Humanoid_Armature/Skeleton3D/aim_IK"
+
 var jump_gravity : float = fall_gravity
 var direction : Vector3
 var velocity : Vector3
@@ -34,11 +37,13 @@ func _physics_process(delta):
 	#if the character is aiming, look in the same direction as the camera
 	#otherwise if the character has gotten some directional input, fase the direction of movement
 	if strafing:
-		var target_rotation = cam_rotation + 179
+		var target_rotation = cam_rotation
 		mesh_root.rotation.y = lerp_angle(mesh_root.rotation.y, target_rotation, rotation_speed * delta)
+		aiming_IK.interpolation = lerpf(aiming_IK.interpolation,1, 0.1)
+		# mesh_root.rotation.y = target_rotation
 	elif direction_changed:
 		var target_rotation = atan2(direction.x, direction.z) - main_node.rotation.y
-		mesh_root.rotation.y = lerp_angle(mesh_root.rotation.y, target_rotation, rotation_speed * delta)
+		mesh_root.rotation.y = lerp_angle(mesh_root.rotation.y, target_rotation - 179, rotation_speed * delta)
 	
 	direction_changed = false
 	
@@ -63,3 +68,10 @@ func _on_movement_inputs_changed_movement_direction(_movement_direction):
 
 func _on_movement_inputs_strafing_toggle(_strafing):
 	strafing = _strafing
+	
+	aiming_IK.interpolation = 0
+	
+	if strafing == true:
+		aiming_IK.start()
+	else:
+		aiming_IK.stop()

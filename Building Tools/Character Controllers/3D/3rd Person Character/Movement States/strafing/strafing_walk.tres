@@ -7,5 +7,5 @@ script = ExtResource("1_g1vut")
 id = 1
 movement_speed = 2.0
 acceleration = 7.0
-camera_fov = 72.5
+camera_fov = 65.0
 animation_speed = 1.0

@@ -5,3 +5,9 @@ res://Building Tools/Testing Rooms/testing_room_beta.tscn
 res://Building Tools/Character Controllers/3D/3rd Person Character/action.gd
 res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_Person_Extended.gd
 res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_input_controller.gd
+res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_movement_controller.gd
+res://Building Tools/Testing Rooms/testing_room_alpha.tscn
+res://Building Tools/Themes/FillerTheme.tres
+res://Building Tools/Organizers/Quests/test quests/Press Some Key.tres
+res://Building Tools/Character Controllers/3D/3rd Person Character/Movement States/strafing/strafing_walk.tres
+res://Building Tools/Character Controllers/3D/3rd Person Character/Movement States/strafing/strafing_idle.tres

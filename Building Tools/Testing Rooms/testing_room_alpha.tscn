@@ -7,12 +7,12 @@
 [ext_resource type="Texture2D" uid="uid://cyprica154g82" path="res://Building Tools/Filler Assets/Models/Paints/Rock_Plain_Support_N.png" id="6_kkpyt"]
 [ext_resource type="Texture2D" uid="uid://dx2ataf6ef7xi" path="res://Building Tools/Filler Assets/Models/Paints/Rock_Gems_Purple_Support_C.png" id="7_mkpwd"]
 [ext_resource type="Texture2D" uid="uid://d3rp200skwso" path="res://Building Tools/Filler Assets/Models/Paints/Rock_Gems_Purple_Support_N.png" id="8_jcib3"]
-[ext_resource type="PackedScene" uid="uid://baqs2t4p5a58i" path="res://Building Tools/Character Controllers/3D/FPS/fps_character_controller_extended.tscn" id="8_ryv78"]
 [ext_resource type="PackedScene" uid="uid://wirbkrxcnojw" path="res://Building Tools/Set Pieces/Hallway Segment/hall_segment.tscn" id="9_8gmi6"]
 [ext_resource type="PackedScene" uid="uid://ra5ugkfqhc7" path="res://Building Tools/Set Pieces/Sliding Door/sliding_door.tscn" id="10_188ib"]
 [ext_resource type="ArrayMesh" uid="uid://cf25ymt1gjtj0" path="res://Building Tools/Filler Assets/Models/Basic Walls/HalfM_Wall_Door_Arch.obj" id="11_rmd80"]
 [ext_resource type="PackedScene" uid="uid://biny2b1a1w754" path="res://Building Tools/Props/Pickups/Keys/key.tscn" id="12_aukw6"]
 [ext_resource type="PackedScene" uid="uid://c378cc48ttgrm" path="res://Building Tools/Characters/Quest Cube/quest_cube.tscn" id="13_ehwb4"]
+[ext_resource type="PackedScene" uid="uid://dyomg7evme6ij" path="res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_character_controller.tscn" id="14_6t44k"]
 [ext_resource type="Script" path="res://Building Tools/Organizers/Quests/quest.gd" id="14_s8g3l"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_nb5n6"]
@@ -183,5 +183,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1.5, 2.5)
 [node name="QuestCube" parent="." instance=ExtResource("13_ehwb4")]
 heldQuest = SubResource("Resource_x0njy")
 
-[node name="FPSCharacterControllerExt" parent="." instance=ExtResource("8_ryv78")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 4)
+[node name="3rdPersonCharacterController" parent="." instance=ExtResource("14_6t44k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0.5, 0)
