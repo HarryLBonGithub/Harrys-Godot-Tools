@@ -9,12 +9,18 @@ extends Node3D
 @export var useSound : AudioStreamPlayer3D
 @export var emptySound : AudioStreamPlayer3D
 @export var reloadSound : AudioStreamPlayer3D
+@export var aimRay : RayCast3D
 
 @export var active = true
 
 var readyToFire = true
 
 func _ready():
+	if aimRay:
+		if has_node("AdjustAim"):
+			var aimNode = find_child("AdjustAim")
+			aimNode.targettingRay = aimRay
+	
 	if not active:
 		return
 	

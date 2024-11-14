@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://m4suvn4t4ju2"
-path="res://.godot/imported/Lowpoly Cartoon Humans_V4.glb-d76344a8be4285b987f316617bb9307c.scn"
+uid="uid://drx3dflj6sdqq"
+path="res://.godot/imported/Lowpoly_Cartoon_Human_V4.glb-ac37c0577f2ee2f9290fcfb31c9045b8.scn"
 
 [deps]
 
-source_file="res://Building Tools/Filler Assets/Models/Basic Characters/Low Poly Human V4/Lowpoly Cartoon Humans_V4.glb"
-dest_files=["res://.godot/imported/Lowpoly Cartoon Humans_V4.glb-d76344a8be4285b987f316617bb9307c.scn"]
+source_file="res://Building Tools/Filler Assets/Models/Basic Characters/Low Poly Human V4/Lowpoly_Cartoon_Human_V4.glb"
+dest_files=["res://.godot/imported/Lowpoly_Cartoon_Human_V4.glb-ac37c0577f2ee2f9290fcfb31c9045b8.scn"]
 
 [params]
 

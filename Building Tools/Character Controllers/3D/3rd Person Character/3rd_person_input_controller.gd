@@ -19,6 +19,7 @@ signal strafing_toggle(_strafing: bool)
 @export var crouch_enabled : bool = true
 @export var prone_enabled : bool = true
 @export var run_enabled : bool = true
+@export var aim_enabled : bool = true
 
 var air_jump_counter : int = 0
 var current_stance_name : String = "upright"
@@ -53,12 +54,12 @@ func _input(event):
 	#toggle strafing movement
 	if (current_stance_name == "alert" or current_stance_name == "upright" or current_stance_name == "strafing") and main_node.is_on_floor():
 	
-		if Input.is_action_just_pressed("use_alt"):
+		if Input.is_action_just_pressed("use_alt") and aim_enabled:
 			if current_movement_state_name != "run":
 				strafing_toggle.emit(true)
 				set_stance("strafing")
 				is_strafing = true
-		elif Input.is_action_just_released("use_alt"):
+		elif Input.is_action_just_released("use_alt") and aim_enabled:
 			strafing_toggle.emit(false)
 			set_stance("upright")
 			is_strafing = false

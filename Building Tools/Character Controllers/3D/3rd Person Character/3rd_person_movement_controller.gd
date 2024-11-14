@@ -6,7 +6,7 @@ extends Node
 @export var fall_gravity = 45
 
 
-@onready var aiming_IK = $"../MeshRoot/Lowpoly Cartoon Humans_V4/Humanoid_Armature/Skeleton3D/aim_IK"
+@onready var aiming_IK = $"../MeshRoot/Lowpoly_Cartoon_Human_V4/Humanoid_Armature/Skeleton3D/aim_IK"
 
 var jump_gravity : float = fall_gravity
 var direction : Vector3

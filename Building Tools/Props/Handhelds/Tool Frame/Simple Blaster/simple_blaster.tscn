@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://n8jtthfqjxe6" path="res://Building Tools/Action Scripts/Adjust Aim/adjust_aim.tscn" id="7_iwna1"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ct0jp"]
-size = Vector3(0.25, 0.5, 1)
+size = Vector3(0.1, 0.15, 0.33)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xrtcg"]
 albedo_color = Color(0.25098, 0.25098, 0.25098, 1)
@@ -28,8 +28,14 @@ mesh = SubResource("BoxMesh_ct0jp")
 surface_material_override/0 = SubResource("StandardMaterial3D_xrtcg")
 
 [node name="ProjectileLauncher" parent="." instance=ExtResource("2_hjowm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.851349)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.169817)
 projectile = ExtResource("3_6o3fi")
+
+[node name="RayCast3D" type="RayCast3D" parent="ProjectileLauncher"]
+target_position = Vector3(0, 0, -20)
+collide_with_bodies = false
+debug_shape_custom_color = Color(0, 0.929412, 0.164706, 1)
+debug_shape_thickness = 5
 
 [node name="blast" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("4_3ixag")
@@ -39,7 +45,7 @@ maxAmmo = 100
 currentAmmo = 100
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.1
+wait_time = 0.5
 
 [node name="empty" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00209653, -0.00454473, 0.000233412)

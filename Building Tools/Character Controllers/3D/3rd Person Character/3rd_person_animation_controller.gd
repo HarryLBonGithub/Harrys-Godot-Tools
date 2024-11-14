@@ -51,5 +51,9 @@ func _on_movement_inputs_strafing_toggle(_strafing):
 	return
 	if _strafing == true:
 		animation_tree["parameters/strafing_transition/transition_request"] = "strafing"
+		
+		
 	else:
 		animation_tree["parameters/strafing_transition/transition_request"] = "not_strafing"
+		
+		
