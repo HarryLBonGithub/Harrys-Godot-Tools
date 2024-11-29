@@ -5,6 +5,8 @@ extends CharacterBody3D
 @onready var animation_tree = $MeshRoot/AnimationTree
 @onready var simple_blaster = $MeshRoot/Lowpoly_Cartoon_Human_V4/Humanoid_Armature/Skeleton3D/RightHandAttach/RightHandOffset/SimpleBlaster
 
+var current_stance_name = "upright"
+var current_movement_name = "idle"
 var current_action = ""
 var tween : Tween
 
@@ -12,7 +14,7 @@ var tween : Tween
 func _process(delta):
 	
 	# set combat mode
-	if Input.is_action_just_pressed("use_alt"):
+	if Input.is_action_just_pressed("use_alt") and Input.is_action_pressed("run") == false:
 		if tween:
 			tween.kill()
 		
@@ -53,3 +55,11 @@ func _on_animation_tree_animation_finished(anim_name):
 		movement_node.movement_enabled = true
 		current_action = ""
 
+
+
+func _on_movement_inputs_changed_movement_state(_movement_state):
+	current_movement_name = _movement_state
+
+
+func _on_movement_inputs_changed_stance(stance):
+	pass # Replace with function body.

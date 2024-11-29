@@ -2,11 +2,6 @@ res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_ch
 res://Building Tools/Themes/industrial_scifi_theme.tres
 res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_camera_controller.gd
 res://Building Tools/Testing Rooms/testing_room_beta.tscn
-res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_movement_controller.gd
 res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_animation_controller.gd
 res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_Person_Extended.gd
-res://Building Tools/Props/Handhelds/Tool Frame/Simple Blaster/simple_blaster.tscn
-res://Building Tools/Props/Handhelds/Tool Frame/tool_frame.tscn
-res://Building Tools/Props/Handhelds/Tool Frame/tool_frame.gd
-res://Building Tools/Action Scripts/Adjust Aim/adjust_aim.tscn
-res://Building Tools/Action Scripts/Adjust Aim/adjust_aim.gd
+res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_input_controller.gd

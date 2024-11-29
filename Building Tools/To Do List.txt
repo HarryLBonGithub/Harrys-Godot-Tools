@@ -23,10 +23,9 @@
 NEXT PROJECT ESSENTIALS
 
 - 3rd person Character Controller
-	- aim and fire tools
-	- damage animations
-	- jump bounce animation glitch (can probably be fixed by removing the double jump functionality)
-	- crouch and prone movement
+	- action interruption control
+	- melee attack animations
+	- camera position control
 
 - Enemies
 	- Aggressor: Actively searches for the player to attack them once they know they're there

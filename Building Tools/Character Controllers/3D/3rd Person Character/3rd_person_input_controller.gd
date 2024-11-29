@@ -54,11 +54,10 @@ func _input(event):
 	#toggle strafing movement
 	if (current_stance_name == "alert" or current_stance_name == "upright" or current_stance_name == "strafing") and main_node.is_on_floor():
 	
-		if Input.is_action_just_pressed("use_alt") and aim_enabled:
-			if current_movement_state_name != "run":
-				strafing_toggle.emit(true)
-				set_stance("strafing")
-				is_strafing = true
+		if Input.is_action_just_pressed("use_alt") and can_aim():
+			strafing_toggle.emit(true)
+			set_stance("strafing")
+			is_strafing = true
 		elif Input.is_action_just_released("use_alt") and aim_enabled:
 			strafing_toggle.emit(false)
 			set_stance("upright")
@@ -142,10 +141,17 @@ func is_stance_blocked(_stance_name : String) -> bool:
 func halt():
 	movement_direction.x = 0
 	movement_direction.z = 0
-	set_movement_state("stand")
 	set_stance("upright")
+	set_movement_state("stand")
 	strafing_toggle.emit(false)
 	changed_movement_direction.emit(movement_direction)
 
-func action():
-	return
+func can_aim():
+	if aim_enabled == false:
+		return false
+	if main_node.is_on_floor() == false:
+		return false
+	if current_movement_state_name == "run":
+		return false
+
+	return true

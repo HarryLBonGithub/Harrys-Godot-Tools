@@ -23,7 +23,6 @@ func _on_movement_inputs_pressed_jump(jump_state):
 	#takes the passed in jump state, takes the name from it, can fires the oneshot with that name in the animation tree
 	animation_tree["parameters/" + jump_state.animation_name + "/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
 
-
 func _on_movement_inputs_changed_movement_state(_movement_state):
 	if tween:
 		tween.kill()
@@ -37,8 +36,6 @@ func _on_movement_inputs_changed_movement_state(_movement_state):
 	tween.parallel().tween_property(animation_tree,"parameters/strafing_movement_blend/blend_position", direction_2D,0.25)
 	tween.parallel().tween_property(animation_tree,"parameters/movement_anim_speed/scale", _movement_state.animation_speed, 0.7)
 	
-	
-
 func _on_movement_inputs_changed_stance(stance):
 	animation_tree["parameters/stance_transition/transition_request"] = stance.name
 	current_stance_name = stance.name
@@ -46,14 +43,3 @@ func _on_movement_inputs_changed_stance(stance):
 func _on_movement_inputs_changed_movement_direction(_movement_direction):
 	movement_direction =_movement_direction
 
-func _on_movement_inputs_strafing_toggle(_strafing):
-	#currently not used in implementation of strafing
-	return
-	if _strafing == true:
-		animation_tree["parameters/strafing_transition/transition_request"] = "strafing"
-		
-		
-	else:
-		animation_tree["parameters/strafing_transition/transition_request"] = "not_strafing"
-		
-		
