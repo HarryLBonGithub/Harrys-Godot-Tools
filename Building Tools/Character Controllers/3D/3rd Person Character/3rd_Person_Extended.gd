@@ -8,6 +8,7 @@ extends CharacterBody3D
 
 var current_stance_name = "upright"
 var current_movement_name = "idle"
+var combat_mode = false
 var current_action = ""
 var tween : Tween
 
@@ -15,8 +16,16 @@ var tween : Tween
 func _process(delta):
 	if Input.is_action_just_pressed("debug_k"):
 		input_controller.switch_combat_mode(true)
-	elif Input.is_action_just_pressed("holster"):
+		simple_blaster.visible=true
+	elif Input.is_action_just_pressed("holster") or Input.is_action_just_pressed("crouch"):
 		input_controller.switch_combat_mode(false)
+		simple_blaster.visible=false
+	
+	if Input.is_action_just_pressed("aim") and combat_mode==true:
+		simple_blaster.active=true
+	if Input.is_action_just_released("aim"):
+		simple_blaster.active=false
+		
 func _input(event):
 	
 	pass
@@ -46,4 +55,8 @@ func _on_movement_inputs_changed_movement_state(_movement_state):
 
 
 func _on_movement_inputs_changed_stance(stance):
-	pass # Replace with function body.
+	current_stance_name=stance.name
+
+
+func _on_movement_inputs_combat_mode_toggle(_combat_mode):
+	combat_mode=_combat_mode

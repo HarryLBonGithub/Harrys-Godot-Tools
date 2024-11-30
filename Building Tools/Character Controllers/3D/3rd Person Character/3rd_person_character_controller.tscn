@@ -18389,12 +18389,12 @@ bones/0/position = Vector3(0, 0.803488, -0.000131823)
 bones/0/rotation = Quaternion(-0.00911216, 0, 0, 0.999959)
 bones/1/rotation = Quaternion(-0.0279934, 1.19163e-07, -3.33707e-09, 0.999608)
 bones/2/rotation = Quaternion(0.00156924, -1.19209e-07, 1.87068e-10, 0.999999)
-bones/3/rotation = Quaternion(0.0263638, -8.06834e-18, 3.90771e-16, 0.999652)
-bones/4/rotation = Quaternion(0.0969738, 1.87578e-18, 1.17946e-17, 0.995287)
+bones/3/rotation = Quaternion(0.0264645, -9.69208e-18, 3.81015e-16, 0.99965)
+bones/4/rotation = Quaternion(0.0968292, 4.09639e-18, 2.57564e-17, 0.995301)
 bones/5/rotation = Quaternion(-0.0666481, -1.65702e-16, -4.48693e-16, 0.997777)
-bones/6/rotation = Quaternion(0.0401559, 0.0639798, -0.844576, 0.53008)
+bones/6/rotation = Quaternion(0.0401717, 0.0639699, -0.844446, 0.530288)
 bones/6/scale = Vector3(1, 1, 1)
-bones/7/rotation = Quaternion(-0.0190988, -0.00795993, -0.491027, 0.870899)
+bones/7/rotation = Quaternion(-0.0192258, -0.00789098, -0.491548, 0.870602)
 bones/8/rotation = Quaternion(0.138039, -9.68823e-05, -0.000923103, 0.990426)
 bones/9/rotation = Quaternion(-0.0139434, -0.00071114, -0.0509462, 0.998604)
 bones/9/scale = Vector3(1, 1, 1)
@@ -18421,9 +18421,9 @@ bones/21/scale = Vector3(1, 1, 1)
 bones/22/rotation = Quaternion(-0.0172772, -0.00616089, -0.0604931, 0.998)
 bones/22/scale = Vector3(1, 1, 1)
 bones/23/rotation = Quaternion(0.0246917, 0.00880069, -0.0818636, 0.996299)
-bones/24/rotation = Quaternion(0.0396218, -0.0643119, 0.848961, 0.523029)
+bones/24/rotation = Quaternion(0.0396142, -0.0643166, 0.849023, 0.522929)
 bones/24/scale = Vector3(1, 1, 1)
-bones/25/rotation = Quaternion(0.0198264, 0.0238244, 0.482163, 0.875533)
+bones/25/rotation = Quaternion(0.0196511, 0.0237048, 0.482595, 0.875302)
 bones/26/rotation = Quaternion(0.136514, 9.54701e-05, 0.000923246, 0.990638)
 bones/27/rotation = Quaternion(-0.0351943, -0.000782082, 0.104639, 0.993887)
 bones/27/scale = Vector3(1, 1, 1)
@@ -18473,7 +18473,7 @@ target_node = NodePath("../../../../../CamRoot/CamYaw/CamPitch/aim_IK_target")
 visible = false
 
 [node name="RightHandAttach" type="BoneAttachment3D" parent="MeshRoot/Lowpoly_Cartoon_Human_V4/Humanoid_Armature/Skeleton3D" index="3"]
-transform = Transform3D(-0.993679, 0.111629, 0.0118747, -0.109191, -0.985664, 0.128621, 0.0260623, 0.126512, 0.991622, -0.227381, 0.869075, 0.00461071)
+transform = Transform3D(-0.993549, 0.112808, 0.0115864, -0.110413, -0.985606, 0.128023, 0.0258616, 0.125918, 0.991703, -0.226736, 0.868964, 0.00430651)
 bone_name = "hand.r"
 bone_idx = 27
 use_external_skeleton = true
@@ -18658,6 +18658,7 @@ col_raycast = NodePath("../../UprightCollider/RayCast3D")
 [connection signal="changed_stance" from="MovementInputs" to="CamRoot" method="_on_movement_inputs_changed_stance"]
 [connection signal="changed_stance" from="MovementInputs" to="AnimationController" method="_on_movement_inputs_changed_stance"]
 [connection signal="changed_tool_state" from="MovementInputs" to="AnimationController" method="_on_movement_inputs_changed_tool_state"]
+[connection signal="combat_mode_toggle" from="MovementInputs" to="." method="_on_movement_inputs_combat_mode_toggle"]
 [connection signal="combat_mode_toggle" from="MovementInputs" to="AnimationController" method="_on_movement_inputs_combat_mode_toggle"]
 [connection signal="pressed_jump" from="MovementInputs" to="MovementController" method="_on_movement_inputs_pressed_jump"]
 [connection signal="pressed_jump" from="MovementInputs" to="AnimationController" method="_on_movement_inputs_pressed_jump"]
