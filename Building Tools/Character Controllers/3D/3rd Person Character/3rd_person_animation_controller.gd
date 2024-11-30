@@ -43,3 +43,27 @@ func _on_movement_inputs_changed_stance(stance):
 func _on_movement_inputs_changed_movement_direction(_movement_direction):
 	movement_direction =_movement_direction
 
+func _on_movement_inputs_combat_mode_toggle(_combat_mode):
+	if _combat_mode == true:
+		if tween:
+			tween.kill()
+		tween = create_tween()
+		tween.tween_property(animation_tree,"parameters/combat_mode_blend/blend_amount",1.0,0.25)
+	else:
+		if tween:
+			tween.kill()
+		tween = create_tween()
+		tween.tween_property(animation_tree,"parameters/combat_mode_blend/blend_amount",0.0,0.25)
+
+func _on_movement_inputs_changed_tool_state(_tool_state):
+	if _tool_state == "aim":
+		animation_tree["parameters/combat_transition/transition_request"] = "aim"
+	elif _tool_state == "ready":
+		animation_tree["parameters/combat_transition/transition_request"] = "ready"
+		
+func _on_movement_inputs_tool_use(_anim):
+	animation_tree["parameters/" + _anim + "_one_shot/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
+
+
+func _on_movement_inputs_tool_melee():
+	animation_tree["parameters/melee_one_shot/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE

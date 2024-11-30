@@ -5,7 +5,11 @@ signal pressed_jump(jump_state : JumpState)
 signal changed_stance(stance : StanceState)
 signal changed_movement_state(_movement_state: MovementState)
 signal changed_movement_direction(_movement_direction: Vector3)
+signal changed_tool_state(_tool_state: String)
 signal strafing_toggle(_strafing: bool)
+signal combat_mode_toggle(_combat_mode: bool)
+signal tool_use(_anim: String)
+signal tool_melee()
 
 @export var main_node : CharacterBody3D
 @export var movement_states : Dictionary
@@ -27,6 +31,9 @@ var current_movement_state_name : String
 var stance_antispam_timer : SceneTreeTimer
 var is_strafing = false #my strafing addition
 var alert = false
+var current_tool_state = "ready"
+var combat_mode = false
+var can_use_tool = true
 
 var movement_direction : Vector3
 
@@ -51,17 +58,28 @@ func _input(event):
 		else:
 			set_movement_state("stand")
 			
-	#toggle strafing movement
-	if (current_stance_name == "alert" or current_stance_name == "upright" or current_stance_name == "strafing") and main_node.is_on_floor():
+	#toggle strafing movement and aim weapon
+	if (current_stance_name !="prone") and main_node.is_on_floor():
 	
-		if Input.is_action_just_pressed("use_alt") and can_aim():
+		if Input.is_action_just_pressed("aim") and can_aim():
 			strafing_toggle.emit(true)
 			set_stance("strafing")
+			set_tool_state("aim")
 			is_strafing = true
-		elif Input.is_action_just_released("use_alt") and aim_enabled:
+		elif Input.is_action_just_released("aim") and aim_enabled:
 			strafing_toggle.emit(false)
 			set_stance("upright")
+			set_tool_state("ready")
 			is_strafing = false
+
+	#tool calls
+	if Input.is_action_pressed("use_tool") and can_use_tool:
+		if current_tool_state == "ready":
+			fire_tool_melee()
+		else:
+			fire_tool_oneshot("use")
+	if Input.is_action_just_pressed("reload"):
+		fire_tool_oneshot("reload")
 
 	#stance change up
 	if Input.is_action_just_pressed("jump") and main_node.is_on_floor():
@@ -155,3 +173,21 @@ func can_aim():
 		return false
 
 	return true
+
+func switch_combat_mode(mode: bool):
+	if mode==true:
+		combat_mode=true
+		combat_mode_toggle.emit(true)
+	else:
+		combat_mode=true
+		combat_mode_toggle.emit(true)
+
+func set_tool_state(_state: String):
+	current_tool_state = _state
+	changed_tool_state.emit(_state)
+
+func fire_tool_oneshot(_anim: String):
+	tool_use.emit(_anim)
+
+func fire_tool_melee():
+	tool_melee.emit()
