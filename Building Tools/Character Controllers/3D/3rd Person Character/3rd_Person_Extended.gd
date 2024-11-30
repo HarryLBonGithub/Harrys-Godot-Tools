@@ -15,7 +15,8 @@ var tween : Tween
 func _process(delta):
 	if Input.is_action_just_pressed("debug_k"):
 		input_controller.switch_combat_mode(true)
-	
+	elif Input.is_action_just_pressed("holster"):
+		input_controller.switch_combat_mode(false)
 func _input(event):
 	
 	pass

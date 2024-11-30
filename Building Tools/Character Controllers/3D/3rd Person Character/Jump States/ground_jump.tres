@@ -6,4 +6,4 @@
 script = ExtResource("1_rscl5")
 animation_name = "jump"
 jump_height = 1.5
-apex_duration = 0.15
+apex_duration = 0.3

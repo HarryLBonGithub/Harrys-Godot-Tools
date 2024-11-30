@@ -7,6 +7,7 @@ var on_floor_blend : float = 1
 var on_floor_blend_target : float = 1
 
 var tween : Tween
+var tween2 : Tween
 
 var current_stance_name = "upright"
 
@@ -15,7 +16,7 @@ var movement_direction : Vector3
 func _physics_process(delta):
 	
 	#blend in the falling animation when the player is falling
-	on_floor_blend_target = 1 if main_node.is_on_floor() else 0
+	on_floor_blend_target = 0 if main_node.is_on_floor() else 1
 	on_floor_blend = lerp(on_floor_blend, on_floor_blend_target, 10 * delta)
 	animation_tree["parameters/on_floor_blend/blend_amount"] = on_floor_blend
 
@@ -45,15 +46,16 @@ func _on_movement_inputs_changed_movement_direction(_movement_direction):
 
 func _on_movement_inputs_combat_mode_toggle(_combat_mode):
 	if _combat_mode == true:
-		if tween:
-			tween.kill()
-		tween = create_tween()
-		tween.tween_property(animation_tree,"parameters/combat_mode_blend/blend_amount",1.0,0.25)
+		if tween2:
+			tween2.kill()
+		tween2 = create_tween()
+		tween2.parallel().tween_property(animation_tree,"parameters/combat_mode_blend/blend_amount",1.0,0.25)
+	
 	else:
-		if tween:
-			tween.kill()
-		tween = create_tween()
-		tween.tween_property(animation_tree,"parameters/combat_mode_blend/blend_amount",0.0,0.25)
+		if tween2:
+			tween2.kill()
+		tween2 = create_tween()
+		tween2.parallel().tween_property(animation_tree,"parameters/combat_mode_blend/blend_amount",0.0,0.25)
 
 func _on_movement_inputs_changed_tool_state(_tool_state):
 	if _tool_state == "aim":

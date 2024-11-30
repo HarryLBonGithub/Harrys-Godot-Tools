@@ -109,6 +109,7 @@ func _input(event):
 		if (current_stance_name == "upright" or current_stance_name == "alert") and crouch_enabled:
 			set_stance("crouch")
 		elif current_stance_name == "crouch" and prone_enabled:
+			switch_combat_mode(false)
 			set_stance("prone")
 
 func _physics_process(delta):
@@ -179,8 +180,8 @@ func switch_combat_mode(mode: bool):
 		combat_mode=true
 		combat_mode_toggle.emit(true)
 	else:
-		combat_mode=true
-		combat_mode_toggle.emit(true)
+		combat_mode=false
+		combat_mode_toggle.emit(false)
 
 func set_tool_state(_state: String):
 	current_tool_state = _state
