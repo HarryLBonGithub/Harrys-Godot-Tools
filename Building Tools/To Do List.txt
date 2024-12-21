@@ -26,6 +26,7 @@ NEXT PROJECT ESSENTIALS
 	- action interruption control
 	- melee attack animations
 	- camera position control
+	- alertness toggle based on context
 
 - Enemies
 	- Aggressor: Actively searches for the player to attack them once they know they're there

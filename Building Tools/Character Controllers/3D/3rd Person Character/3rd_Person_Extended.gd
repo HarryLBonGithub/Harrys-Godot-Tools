@@ -11,6 +11,7 @@ var current_movement_name = "idle"
 var combat_mode = false
 var current_action = ""
 var tween : Tween
+var alert = false
 
 
 func _process(delta):
