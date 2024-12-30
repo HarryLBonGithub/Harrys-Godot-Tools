@@ -165,6 +165,32 @@ func halt():
 	strafing_toggle.emit(false)
 	changed_movement_direction.emit(movement_direction)
 
+func continue_movement():
+	if not movement_enabled:
+		return
+	if Input.is_action_pressed("character movement"):
+		movement_direction.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
+		movement_direction.z = Input.get_action_strength("move_backward") - Input.get_action_strength("move_forward")
+		changed_movement_direction.emit(movement_direction)
+		
+		if is_movement_ongoing():
+			if Input.is_action_pressed("run") and run_enabled and is_strafing == false:
+				set_movement_state("run")
+			else:
+				set_movement_state("walk")
+		else:
+			set_movement_state("stand")
+		
+		#toggle strafing movement and aim weapon
+	if (current_stance_name !="prone") and main_node.is_on_floor():
+	
+		if Input.is_action_pressed("aim") and can_aim():
+			strafing_toggle.emit(true)
+			set_stance("strafing")
+			set_tool_state("aim")
+			is_strafing = true
+	
+	
 func can_aim():
 	if aim_enabled == false:
 		return false
