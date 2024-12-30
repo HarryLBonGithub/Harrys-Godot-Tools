@@ -39,7 +39,7 @@ var movement_direction : Vector3
 
 func _ready():
 	set_movement_state("stand")
-	
+
 func _input(event):
 	
 	if not movement_enabled:
@@ -189,8 +189,7 @@ func continue_movement():
 			set_stance("strafing")
 			set_tool_state("aim")
 			is_strafing = true
-	
-	
+
 func can_aim():
 	if aim_enabled == false:
 		return false

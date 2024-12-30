@@ -23,7 +23,6 @@
 NEXT PROJECT ESSENTIALS
 
 - 3rd person Character Controller
-	- action interruption control
 	- melee attack animations
 	- camera position control
 	- alertness toggle based on context
