@@ -18,6 +18,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("debug_k"):
 		input_controller.switch_combat_mode(true)
 		simple_blaster.visible=true
+		input_controller.toggle_alert(true)
 	elif Input.is_action_just_pressed("holster") or Input.is_action_just_pressed("crouch"):
 		input_controller.switch_combat_mode(false)
 		simple_blaster.visible=false

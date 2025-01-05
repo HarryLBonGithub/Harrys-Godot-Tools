@@ -68,7 +68,10 @@ func _input(event):
 			is_strafing = true
 		elif Input.is_action_just_released("aim") and aim_enabled:
 			strafing_toggle.emit(false)
-			set_stance("upright")
+			if alert == true:
+				set_stance("alert")
+			else:
+				set_stance("upright")
 			set_tool_state("ready")
 			is_strafing = false
 
@@ -160,7 +163,10 @@ func is_stance_blocked(_stance_name : String) -> bool:
 func halt():
 	movement_direction.x = 0
 	movement_direction.z = 0
-	set_stance("upright")
+	if alert == true:
+		set_stance("alert")
+	else: 
+		set_stance("upright")
 	set_movement_state("stand")
 	strafing_toggle.emit(false)
 	changed_movement_direction.emit(movement_direction)
@@ -217,3 +223,14 @@ func fire_tool_oneshot(_anim: String):
 
 func fire_tool_melee():
 	tool_melee.emit()
+
+func toggle_alert(toggle: bool):
+	if toggle == false:
+		alert = false
+		if current_stance_name == "alert":
+			set_stance("upright")
+		
+	else:
+		alert = true
+		if current_stance_name == "upright":
+			set_stance("alert")
