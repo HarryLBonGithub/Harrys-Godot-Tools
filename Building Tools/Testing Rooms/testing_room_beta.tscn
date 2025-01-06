@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://uxs674muviix"]
+[gd_scene load_steps=14 format=3 uid="uid://uxs674muviix"]
 
 [ext_resource type="Script" path="res://Building Tools/Testing Rooms/testing_rooms.gd" id="1_x2f4i"]
 [ext_resource type="Texture2D" uid="uid://cr86samdwmj8y" path="res://Building Tools/Filler Assets/Models/Paints/Rock_Plain_Support_C.png" id="2_22orq"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dyomg7evme6ij" path="res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_character_controller.tscn" id="4_jnbne"]
 [ext_resource type="PackedScene" uid="uid://c378cc48ttgrm" path="res://Building Tools/Characters/Quest Cube/quest_cube.tscn" id="5_c5a06"]
 [ext_resource type="Script" path="res://Building Tools/Organizers/Quests/quest.gd" id="6_32ns7"]
+[ext_resource type="PackedScene" uid="uid://tn5wrhb6kwdw" path="res://Building Tools/Characters/Simple Turret/simple_turret.tscn" id="7_y3qya"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_nb5n6"]
 size = Vector3(30, 1, 30)
@@ -78,5 +79,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.75, 0.5, -1.75)
 [node name="QuestCube" parent="." instance=ExtResource("5_c5a06")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 2.75, 5.5)
 heldQuest = SubResource("Resource_siqtm")
+
+[node name="SimpleTurret" parent="." instance=ExtResource("7_y3qya")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.75, 0.308742, 11.25)
 
 [editable path="QuestCube"]

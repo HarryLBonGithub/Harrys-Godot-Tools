@@ -18354,7 +18354,7 @@ nodes/use_one_shot/node = SubResource("AnimationNodeOneShot_l7wlf")
 nodes/use_one_shot/position = Vector2(1260, 2660)
 node_connections = [&"action_oneshot", 0, &"air_jump", &"action_oneshot", 1, &"action_animation", &"air_jump", 0, &"jump", &"air_jump", 1, &"Animation 3", &"check_one_shot", 0, &"combat_transition", &"check_one_shot", 1, &"check_animation", &"combat_mode_blend", 0, &"movement_anim_speed", &"combat_mode_blend", 1, &"holster_one_shot", &"combat_transition", 0, &"ready_animation", &"combat_transition", 1, &"use_one_shot", &"draw_one_shot", 0, &"check_one_shot", &"draw_one_shot", 1, &"draw_animation", &"holster_one_shot", 0, &"reload_one_shot", &"holster_one_shot", 1, &"holster_animation", &"jump", 0, &"melee_one_shot", &"jump", 1, &"Animation", &"melee_one_shot", 0, &"on_floor_blend", &"melee_one_shot", 1, &"melee_transition", &"melee_transition", 0, &"melee_1", &"melee_transition", 1, &"melee_2", &"movement_anim_speed", 0, &"stance_transition", &"on_floor_blend", 0, &"combat_mode_blend", &"on_floor_blend", 1, &"Animation 2", &"output", 0, &"action_oneshot", &"reload_one_shot", 0, &"draw_one_shot", &"reload_one_shot", 1, &"reload_animation", &"stance_transition", 0, &"upright_movement_blend", &"stance_transition", 1, &"alert_movement_blend", &"stance_transition", 2, &"crouch_movement_blend", &"stance_transition", 3, &"prone_movement_blend", &"stance_transition", 4, &"strafing_movement_blend", &"use_one_shot", 0, &"aim_animation", &"use_one_shot", 1, &"use_animation"]
 
-[node name="3rdPersonCharacterController" type="CharacterBody3D"]
+[node name="3rdPersonCharacterController" type="CharacterBody3D" groups=["player"]]
 script = ExtResource("1_7im3r")
 
 [node name="UprightCollider" type="CollisionShape3D" parent="."]
@@ -18389,12 +18389,12 @@ bones/0/position = Vector3(0, 0.803488, -0.000131823)
 bones/0/rotation = Quaternion(-0.00911216, 0, 0, 0.999959)
 bones/1/rotation = Quaternion(-0.0279934, 1.19163e-07, -3.33707e-09, 0.999608)
 bones/2/rotation = Quaternion(0.00156924, -1.19209e-07, 1.87068e-10, 0.999999)
-bones/3/rotation = Quaternion(0.0266347, -6.69667e-18, 3.99013e-16, 0.999645)
-bones/4/rotation = Quaternion(0.0965848, -1.4129e-22, 1.75004e-24, 0.995325)
+bones/3/rotation = Quaternion(0.0286758, -6.6965e-18, 3.99017e-16, 0.999589)
+bones/4/rotation = Quaternion(0.093638, 2.23906e-22, -4.34729e-23, 0.995606)
 bones/5/rotation = Quaternion(-0.0666481, -1.65702e-16, -4.48693e-16, 0.997777)
-bones/6/rotation = Quaternion(0.0400913, 0.0640203, -0.845111, 0.529227)
+bones/6/rotation = Quaternion(0.0398449, 0.0641739, -0.847139, 0.525974)
 bones/6/scale = Vector3(1, 1, 1)
-bones/7/rotation = Quaternion(-0.0188391, -0.0081009, -0.489959, 0.871504)
+bones/7/rotation = Quaternion(-0.017876, -0.00862333, -0.485996, 0.873736)
 bones/8/rotation = Quaternion(0.138039, -9.68823e-05, -0.000923103, 0.990426)
 bones/9/rotation = Quaternion(-0.0139434, -0.00071114, -0.0509462, 0.998604)
 bones/9/scale = Vector3(1, 1, 1)
@@ -18420,9 +18420,9 @@ bones/21/scale = Vector3(1, 1, 1)
 bones/22/rotation = Quaternion(-0.0172772, -0.00616089, -0.0604931, 0.998)
 bones/22/scale = Vector3(1, 1, 1)
 bones/23/rotation = Quaternion(0.0246917, 0.00880069, -0.0818636, 0.996299)
-bones/24/rotation = Quaternion(0.0395744, -0.0643411, 0.849346, 0.522403)
+bones/24/rotation = Quaternion(0.0394053, -0.0644448, 0.850715, 0.520171)
 bones/24/scale = Vector3(1, 1, 1)
-bones/25/rotation = Quaternion(0.020185, 0.0240689, 0.481277, 0.876005)
+bones/25/rotation = Quaternion(0.0215146, 0.0249756, 0.477989, 0.877747)
 bones/26/rotation = Quaternion(0.136514, 9.54701e-05, 0.000923246, 0.990638)
 bones/27/rotation = Quaternion(-0.0351943, -0.000782082, 0.104639, 0.993887)
 bones/27/scale = Vector3(1, 1, 1)
@@ -18471,7 +18471,7 @@ target_node = NodePath("../../../../../CamRoot/CamYaw/CamPitch/aim_IK_target")
 visible = false
 
 [node name="RightHandAttach" type="BoneAttachment3D" parent="MeshRoot/Lowpoly_Cartoon_Human_V4/Humanoid_Armature/Skeleton3D" index="3"]
-transform = Transform3D(-0.993738, 0.111096, 0.0119578, -0.108645, -0.985686, 0.128922, 0.0261093, 0.126815, 0.991582, -0.22758, 0.868956, 0.00483233)
+transform = Transform3D(-0.993975, 0.108912, 0.0123161, -0.106458, -0.986047, 0.127976, 0.0260824, 0.125893, 0.991701, -0.22844, 0.868494, 0.00487918)
 bone_name = "hand.r"
 bone_idx = 27
 use_external_skeleton = true
@@ -18546,7 +18546,7 @@ invert_pitch = true
 [node name="CamYaw" type="Node3D" parent="CamRoot"]
 
 [node name="CamPitch" type="Node3D" parent="CamRoot/CamYaw"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 0, 0)
 
 [node name="SpringArm3D" type="SpringArm3D" parent="CamRoot/CamYaw/CamPitch"]
 spring_length = 1.5
@@ -18557,7 +18557,7 @@ spring_length = 1.5
 target_position = Vector3(0, 0, -100)
 
 [node name="aim_IK_target" type="Marker3D" parent="CamRoot/CamYaw/CamPitch"]
-transform = Transform3D(-1, -1.96658e-08, -8.51821e-08, 0, 0.97437, -0.224951, 8.74228e-08, -0.224951, -0.97437, -1.1, 0.276, 0)
+transform = Transform3D(-1, -1.96658e-08, -8.51821e-08, 0, 0.97437, -0.224951, 8.74228e-08, -0.224951, -0.97437, -0.75, 0.276, 0)
 
 [node name="MovementController" type="Node" parent="." node_paths=PackedStringArray("main_node", "mesh_root")]
 script = ExtResource("1_akyeu")
