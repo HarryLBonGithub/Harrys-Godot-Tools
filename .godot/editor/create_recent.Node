@@ -1,3 +1,4 @@
+Label
 MeshInstance3D
 RayCast3D
 CanvasLayer
@@ -8,8 +9,6 @@ SkeletonIK3D
 Node
 CollisionShape3D
 TextureRect
-Label
 AnimationTree
 SpringArm3D
 Camera3D
-CharacterBody3D

@@ -30,7 +30,8 @@ func _process(delta):
 		
 func _input(event):
 	
-
+	return
+	"""
 	if event.is_action_pressed("interact"):
 		
 		if animation_tree.get_tree_root().get_node("action_animation").animation == current_action:
@@ -41,6 +42,7 @@ func _input(event):
 		animation_tree.get_tree_root().get_node("action_animation").animation = "shrug"
 		current_action = "shrug"
 		animation_tree["parameters/action_oneshot/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
+	"""
 
 func _on_animation_tree_animation_finished(anim_name):
 

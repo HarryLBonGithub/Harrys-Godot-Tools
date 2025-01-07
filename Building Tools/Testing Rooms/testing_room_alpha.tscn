@@ -163,7 +163,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -3)
 
 [node name="SlidingDoor" parent="." instance=ExtResource("10_188ib")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
-state = 2
+state = 1
 keyID = "door"
 
 [node name="HalfMWallDoorArch" type="MeshInstance3D" parent="."]
@@ -184,4 +184,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1.5, 2.5)
 heldQuest = SubResource("Resource_x0njy")
 
 [node name="3rdPersonCharacterController" parent="." instance=ExtResource("14_6t44k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.5, 2.5)
