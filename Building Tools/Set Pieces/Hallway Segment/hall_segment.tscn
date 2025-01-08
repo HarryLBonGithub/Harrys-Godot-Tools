@@ -66,6 +66,7 @@ shape = SubResource("BoxShape3D_ru4j3")
 
 [node name="WallMesh" type="MeshInstance3D" parent="Wall"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+cast_shadow = 2
 mesh = SubResource("PlaneMesh_pi2kp")
 
 [node name="NeighborDetector" type="RayCast3D" parent="Wall"]
@@ -86,6 +87,7 @@ shape = SubResource("BoxShape3D_ru4j3")
 
 [node name="WallMesh" type="MeshInstance3D" parent="Wall2"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+cast_shadow = 2
 mesh = SubResource("PlaneMesh_pi2kp")
 
 [node name="NeighborDetector" type="RayCast3D" parent="Wall2"]
@@ -106,6 +108,7 @@ shape = SubResource("BoxShape3D_ru4j3")
 
 [node name="WallMesh" type="MeshInstance3D" parent="Wall3"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+cast_shadow = 2
 mesh = SubResource("PlaneMesh_pi2kp")
 
 [node name="NeighborDetector" type="RayCast3D" parent="Wall3"]
@@ -126,6 +129,7 @@ shape = SubResource("BoxShape3D_ru4j3")
 
 [node name="WallMesh" type="MeshInstance3D" parent="Wall4"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+cast_shadow = 2
 mesh = SubResource("PlaneMesh_pi2kp")
 
 [node name="NeighborDetector" type="RayCast3D" parent="Wall4"]
