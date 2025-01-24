@@ -1,14 +1,14 @@
+Node3D
+CollisionShape3D
+CharacterBody3D
 Label
 MeshInstance3D
 RayCast3D
 CanvasLayer
-Node3D
 BoneAttachment3D
 Marker3D
 SkeletonIK3D
 Node
-CollisionShape3D
 TextureRect
 AnimationTree
 SpringArm3D
-Camera3D
