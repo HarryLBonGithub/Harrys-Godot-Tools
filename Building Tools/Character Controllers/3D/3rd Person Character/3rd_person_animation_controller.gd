@@ -13,6 +13,8 @@ var current_stance_name = "upright"
 
 var movement_direction : Vector3
 
+var melee_step = 1
+
 func _physics_process(delta):
 	
 	#blend in the falling animation when the player is falling
@@ -68,4 +70,17 @@ func _on_movement_inputs_tool_use(_anim):
 
 
 func _on_movement_inputs_tool_melee():
-	animation_tree["parameters/melee_one_shot/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
+	if melee_step == 1:
+		animation_tree["parameters/melee_transition/transition_request"] = "melee_1"
+		animation_tree["parameters/melee_one_shot/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
+		melee_step = 2
+	else:
+		animation_tree["parameters/melee_transition/transition_request"] = "melee_2"
+		animation_tree["parameters/melee_one_shot/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
+		melee_step = 1
+
+func _on_movement_inputs_strafe_high(high):
+	if high == true:
+		animation_tree["parameters/strafe_high_low_transition/transition_request"] = "high"
+	else:
+		animation_tree["parameters/strafe_high_low_transition/transition_request"] = "low"

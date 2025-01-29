@@ -19,9 +19,11 @@ func _process(delta):
 		input_controller.switch_combat_mode(true)
 		simple_blaster.visible=true
 		input_controller.toggle_alert(true)
+
 	elif Input.is_action_just_pressed("holster") or Input.is_action_just_pressed("crouch"):
-		input_controller.switch_combat_mode(false)
 		simple_blaster.visible=false
+		input_controller.switch_combat_mode(false)
+		
 	
 	if Input.is_action_just_pressed("aim") and combat_mode==true:
 		simple_blaster.active=true
@@ -50,7 +52,6 @@ func _on_animation_tree_animation_finished(anim_name):
 		movement_node.movement_enabled = true
 		current_action = ""
 		movement_node.continue_movement()
-
 
 func _on_movement_inputs_changed_movement_state(_movement_state):
 	current_movement_name = _movement_state

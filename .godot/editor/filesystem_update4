@@ -6,5 +6,6 @@ res://Building Tools/Testing Rooms/testing_room_beta.tscn
 res://Building Tools/Testing Rooms/testing_room_alpha.tscn
 res://Building Tools/Characters/Simple Turret/simple_turret.tscn
 res://Building Tools/Set Pieces/Hallway Segment/hall_segment.tscn
-res://Building Tools/Characters/Character Enemy/character_enemy.tscn
 res://Building Tools/Characters/NP Character/np_character.tscn
+res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_animation_controller.gd
+res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_input_controller.gd

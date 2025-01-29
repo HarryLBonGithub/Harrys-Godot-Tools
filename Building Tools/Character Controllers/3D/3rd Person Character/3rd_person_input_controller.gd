@@ -10,6 +10,7 @@ signal strafing_toggle(_strafing: bool)
 signal combat_mode_toggle(_combat_mode: bool)
 signal tool_use(_anim: String)
 signal tool_melee()
+signal strafe_high(high)
 
 @export var main_node : CharacterBody3D
 @export var movement_states : Dictionary
@@ -34,6 +35,7 @@ var alert = false
 var current_tool_state = "ready"
 var combat_mode = false
 var can_use_tool = true
+var strafing_high = true
 
 var movement_direction : Vector3
 
@@ -44,12 +46,15 @@ func _input(event):
 	
 	if not movement_enabled:
 		return
-	
+		
+	#sets the movement direction and changes the animation to match
+	#sets this based on a state, each stance has a series of states 
 	if event.is_action_pressed("character movement") or event.is_action_released("character movement"):
 		movement_direction.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 		movement_direction.z = Input.get_action_strength("move_backward") - Input.get_action_strength("move_forward")
 		changed_movement_direction.emit(movement_direction)
 		
+		# sets the movement speed and camera focus. Cannot change if the player is currently aiming/strafing
 		if is_movement_ongoing():
 			if Input.is_action_pressed("run") and run_enabled and is_strafing == false:
 				set_movement_state("run")
@@ -59,6 +64,9 @@ func _input(event):
 			set_movement_state("stand")
 			
 	#toggle strafing movement and aim weapon
+	#strafing is a snace on the same level as alert/upright/crouch/prone
+	#checks if the player is not prone, and on the floor. this means the player will pop up to aim if they are currently crouched
+	#makes the player able to use a tool while aiming
 	if (current_stance_name !="prone") and main_node.is_on_floor():
 	
 		if Input.is_action_just_pressed("aim") and can_aim():
@@ -68,23 +76,32 @@ func _input(event):
 			is_strafing = true
 		elif Input.is_action_just_released("aim") and aim_enabled:
 			strafing_toggle.emit(false)
-			if alert == true:
-				set_stance("alert")
+			if strafing_high == false:
+				set_stance("crouch")
 			else:
-				set_stance("upright")
+				if alert == true:
+					set_stance("alert")
+				else:
+					set_stance("upright")
 			set_tool_state("ready")
 			is_strafing = false
 
 	#tool calls
+	#if the tool-state is 'ready' the player will activate the current 'melee' animation
+	#if the tool-state is 'aim' the player will activate the primary 'use' function and the current 'use' animation
 	if Input.is_action_pressed("use_tool") and can_use_tool:
 		if current_tool_state == "ready":
 			fire_tool_melee()
 		else:
 			fire_tool_oneshot("use")
+	#plays the current reload animation
 	if Input.is_action_just_pressed("reload"):
 		fire_tool_oneshot("reload")
 
 	#stance change up
+	#if the player is not aiming, they will ascend through stances based on their current one
+	#prone -> crouch -> upright/alert -> jump
+	#this changes stances
 	if Input.is_action_just_pressed("jump") and main_node.is_on_floor():
 		if current_stance_name == "upright" or current_stance_name == "alert":
 			#jump input	
@@ -108,7 +125,10 @@ func _input(event):
 			set_stance("crouch")
 		
 	#stance change down
-	if Input.is_action_just_pressed("crouch") and main_node.is_on_floor() and is_strafing == false:
+	#if the player is not aiming, they will descend through stances based on their current one
+	#upright/alert -> crouch -> prone
+	#this changes stances
+	if Input.is_action_just_pressed("crouch") and main_node.is_on_floor():
 		if (current_stance_name == "upright" or current_stance_name == "alert") and crouch_enabled:
 			set_stance("crouch")
 		elif current_stance_name == "crouch" and prone_enabled:
