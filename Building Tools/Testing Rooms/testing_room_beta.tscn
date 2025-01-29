@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dyomg7evme6ij" path="res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_character_controller.tscn" id="4_jnbne"]
 [ext_resource type="PackedScene" uid="uid://c378cc48ttgrm" path="res://Building Tools/Characters/Quest Cube/quest_cube.tscn" id="5_c5a06"]
 [ext_resource type="Script" path="res://Building Tools/Organizers/Quests/quest.gd" id="6_32ns7"]
-[ext_resource type="PackedScene" uid="uid://cxkb5iny4defv" path="res://Building Tools/Characters/Character Enemy/character_enemy.tscn" id="7_w8vl2"]
+[ext_resource type="PackedScene" uid="uid://cxkb5iny4defv" path="res://Building Tools/Characters/NP Character/np_character.tscn" id="7_w8vl2"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_nb5n6"]
 size = Vector3(30, 1, 30)

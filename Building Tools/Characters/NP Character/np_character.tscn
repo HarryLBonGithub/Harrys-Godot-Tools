@@ -1,0 +1,104 @@
+[gd_scene load_steps=7 format=3 uid="uid://cxkb5iny4defv"]
+
+[ext_resource type="PackedScene" uid="uid://drx3dflj6sdqq" path="res://Building Tools/Filler Assets/Models/Basic Characters/Low Poly Human V4/Lowpoly_Cartoon_Human_V4.glb" id="1_c366p"]
+[ext_resource type="Texture2D" uid="uid://k6it52r0u7in" path="res://Building Tools/Filler Assets/Models/Basic Characters/Low Poly Human V4/Corpo Vampire Paint/SpaceVampireV1_C.png" id="2_u3lr0"]
+[ext_resource type="Texture2D" uid="uid://c3q4waii2lt8a" path="res://Building Tools/Filler Assets/Models/Basic Characters/Low Poly Human V4/Corpo Vampire Paint/SpaceVampireV1_E.png" id="3_km84l"]
+[ext_resource type="Texture2D" uid="uid://0cxbg05wyjyb" path="res://Building Tools/Filler Assets/Models/Basic Characters/Low Poly Human V4/Corpo Vampire Paint/SpaceVampireV1_N.png" id="4_uaixy"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ej7jp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u3gt7"]
+albedo_texture = ExtResource("2_u3lr0")
+emission_enabled = true
+emission_texture = ExtResource("3_km84l")
+normal_enabled = true
+normal_texture = ExtResource("4_uaixy")
+texture_filter = 0
+
+[node name="NP_Character" type="CharacterBody3D"]
+
+[node name="MovementShape" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_ej7jp")
+
+[node name="Meshroot" type="Node3D" parent="."]
+
+[node name="Lowpoly_Cartoon_Human_V4" parent="Meshroot" instance=ExtResource("1_c366p")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="Skeleton3D" parent="Meshroot/Lowpoly_Cartoon_Human_V4/Humanoid_Armature" index="0"]
+bones/0/rotation = Quaternion(-0.00911216, 0, 0, 0.999958)
+bones/1/rotation = Quaternion(-0.0279934, 1.19163e-07, -3.33707e-09, 0.999608)
+bones/2/rotation = Quaternion(-0.0241121, -1.19175e-07, -2.87439e-09, 0.999709)
+bones/6/rotation = Quaternion(0.0383568, 0.0650743, -0.859024, 0.506331)
+bones/6/scale = Vector3(1, 1, 1)
+bones/7/rotation = Quaternion(-0.0167583, -0.0023671, 0.139839, 0.99003)
+bones/8/rotation = Quaternion(0.0308823, 2.79801e-06, -0.00092817, 0.999523)
+bones/9/rotation = Quaternion(-0.0139553, -0.000416215, -0.0298242, 0.999458)
+bones/9/scale = Vector3(1, 1, 1)
+bones/10/rotation = Quaternion(0.0494754, 0.013566, -0.0167581, 0.998543)
+bones/11/rotation = Quaternion(0.0392833, 0.0121938, 0.0181908, 0.998988)
+bones/11/scale = Vector3(1, 1, 1)
+bones/12/rotation = Quaternion(-0.0054074, -0.00156348, 0.00213875, 0.999982)
+bones/12/scale = Vector3(1, 1, 1)
+bones/13/rotation = Quaternion(2.03677e-08, 2.32276e-07, 0.000589714, 1)
+bones/13/scale = Vector3(1, 1, 1)
+bones/14/rotation = Quaternion(-2.03393e-08, 1.21996e-07, 0.00877931, 0.999961)
+bones/15/rotation = Quaternion(3.95425e-08, -1.1061e-07, -0.0170667, 0.999854)
+bones/16/rotation = Quaternion(8.89176e-08, 3.4919e-07, -0.00723917, 0.999974)
+bones/17/rotation = Quaternion(-0.039531, -0.0115345, 0.0170257, 0.999007)
+bones/17/scale = Vector3(1, 1, 1)
+bones/18/rotation = Quaternion(-0.017772, -0.00521832, -0.0187387, 0.999653)
+bones/19/rotation = Quaternion(0.383105, 0.19115, -0.174457, 0.886711)
+bones/19/scale = Vector3(1, 1, 1)
+bones/20/rotation = Quaternion(-0.0706451, -0.0182971, -0.0468012, 0.996235)
+bones/21/rotation = Quaternion(0.0261452, 0.00888618, 0.00204853, 0.999617)
+bones/21/scale = Vector3(1, 1, 1)
+bones/22/rotation = Quaternion(-0.0176722, -0.00491456, 0.0107493, 0.999774)
+bones/22/scale = Vector3(1, 1, 1)
+bones/23/rotation = Quaternion(0.0251968, 0.00722887, -0.0189833, 0.999476)
+bones/24/rotation = Quaternion(0.0383568, -0.0650743, 0.859024, 0.506331)
+bones/24/scale = Vector3(1, 1, 1)
+bones/25/rotation = Quaternion(-0.0167583, 0.0023671, -0.139839, 0.99003)
+bones/26/rotation = Quaternion(0.0308823, -2.79801e-06, 0.00092817, 0.999523)
+bones/27/rotation = Quaternion(-0.0139553, 0.000416215, 0.0298242, 0.999458)
+bones/27/scale = Vector3(1, 1, 1)
+bones/28/rotation = Quaternion(0.0494754, -0.013566, 0.0167581, 0.998543)
+bones/29/rotation = Quaternion(0.0392833, -0.0121938, -0.0181908, 0.998988)
+bones/29/scale = Vector3(1, 1, 1)
+bones/30/rotation = Quaternion(-0.0054074, 0.00156348, -0.00213875, 0.999982)
+bones/30/scale = Vector3(1, 1, 1)
+bones/31/rotation = Quaternion(2.03677e-08, -2.32276e-07, -0.000589714, 1)
+bones/31/scale = Vector3(1, 1, 1)
+bones/32/rotation = Quaternion(-2.03393e-08, -1.21996e-07, -0.00877931, 0.999961)
+bones/33/rotation = Quaternion(3.95425e-08, 1.1061e-07, 0.0170667, 0.999854)
+bones/34/rotation = Quaternion(8.89176e-08, -3.4919e-07, 0.00723917, 0.999974)
+bones/35/rotation = Quaternion(-0.039531, 0.0115345, -0.0170257, 0.999007)
+bones/35/scale = Vector3(1, 1, 1)
+bones/36/rotation = Quaternion(-0.017772, 0.00521832, 0.0187387, 0.999653)
+bones/37/rotation = Quaternion(0.383105, -0.19115, 0.174457, 0.886711)
+bones/37/scale = Vector3(1, 1, 1)
+bones/38/rotation = Quaternion(-0.0706451, 0.0182971, 0.0468012, 0.996235)
+bones/39/rotation = Quaternion(0.0261452, -0.00888618, -0.00204853, 0.999617)
+bones/39/scale = Vector3(1, 1, 1)
+bones/40/rotation = Quaternion(-0.0176722, 0.00491456, -0.0107493, 0.999774)
+bones/40/scale = Vector3(1, 1, 1)
+bones/41/rotation = Quaternion(0.0251968, -0.00722887, 0.0189833, 0.999476)
+bones/42/rotation = Quaternion(0.000722208, -0.0469675, 0.998575, -0.0253274)
+bones/44/rotation = Quaternion(0.392144, -0.00627097, -0.0277, 0.919465)
+bones/44/scale = Vector3(1, 1, 1)
+bones/45/rotation = Quaternion(0.454857, 1.32542e-05, 2.61372e-05, 0.890565)
+bones/45/scale = Vector3(1, 1, 1)
+bones/46/rotation = Quaternion(-0.000722208, -0.0469675, 0.998575, 0.0253274)
+bones/48/rotation = Quaternion(0.392144, 0.00627097, 0.0277, 0.919465)
+bones/48/scale = Vector3(1, 1, 1)
+bones/49/rotation = Quaternion(0.454857, -1.32542e-05, -2.61372e-05, 0.890565)
+bones/49/scale = Vector3(1, 1, 1)
+
+[node name="Female_Mesh_Rigged" parent="Meshroot/Lowpoly_Cartoon_Human_V4/Humanoid_Armature/Skeleton3D" index="0"]
+visible = false
+
+[node name="Male_Mesh_Rigged" parent="Meshroot/Lowpoly_Cartoon_Human_V4/Humanoid_Armature/Skeleton3D" index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_u3gt7")
+
+[editable path="Meshroot/Lowpoly_Cartoon_Human_V4"]
