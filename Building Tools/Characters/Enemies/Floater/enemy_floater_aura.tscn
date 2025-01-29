@@ -1,0 +1,117 @@
+[gd_scene load_steps=11 format=3 uid="uid://ut7wls38jswd"]
+
+[ext_resource type="Script" path="res://Building Tools/Characters/Enemies/Floater/enemy_floater_aura.gd" id="1_ixle5"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_7xnw5"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_qepdl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3864i"]
+albedo_color = Color(0.658824, 0.203922, 0.203922, 1)
+
+[sub_resource type="Animation" id="Animation_rxqnb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshRoot_Filler/FillerMesh:surface_material_override/0:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.658824, 0.203922, 0.203922, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_6p1md"]
+resource_name = "waiting"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshRoot_Filler/FillerMesh:surface_material_override/0:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.658824, 0.203922, 0.203922, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_7l04m"]
+resource_name = "charge_up"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshRoot_Filler/FillerMesh:surface_material_override/0:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.564706, 0.537255, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_s4y3w"]
+resource_name = "attack"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshRoot_Filler/FillerMesh:surface_material_override/0:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.945098, 0.356863, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6ffsg"]
+_data = {
+"RESET": SubResource("Animation_rxqnb"),
+"attack": SubResource("Animation_s4y3w"),
+"charge_up": SubResource("Animation_7l04m"),
+"waiting": SubResource("Animation_6p1md")
+}
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_4wjk4"]
+radius = 2.0
+
+[node name="EnemyFloaterAura" type="CharacterBody3D"]
+motion_mode = 1
+script = ExtResource("1_ixle5")
+
+[node name="CharacterCollider" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_7xnw5")
+
+[node name="MeshRoot_Filler" type="Node3D" parent="."]
+
+[node name="FillerMesh" type="MeshInstance3D" parent="MeshRoot_Filler"]
+mesh = SubResource("SphereMesh_qepdl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_3864i")
+
+[node name="FillerAnimations" type="AnimationPlayer" parent="MeshRoot_Filler"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_6ffsg")
+}
+autoplay = "waiting"
+
+[node name="AttackTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="AttackDetectionArea" type="Area3D" parent="."]
+
+[node name="AttackDetectionCollider" type="CollisionShape3D" parent="AttackDetectionArea"]
+shape = SubResource("SphereShape3D_4wjk4")
+
+[connection signal="animation_finished" from="MeshRoot_Filler/FillerAnimations" to="." method="_on_filler_animations_animation_finished"]
+[connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
+[connection signal="body_entered" from="AttackDetectionArea" to="." method="_on_attack_detection_area_body_entered"]
+[connection signal="body_exited" from="AttackDetectionArea" to="." method="_on_attack_detection_area_body_exited"]

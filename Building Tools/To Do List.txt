@@ -33,11 +33,20 @@ NEXT PROJECT ESSENTIALS
 		- hunt
 		- chase
 		- attack
+			- ranged or melee
 	- Obsticle: Follows a set path, or randomized pattern and passively damages player
 		- wander
 	- Turret: Attacks player when aware of them, but goes to sleep when they aren't around
 		- dormant
 		- attack
+	- Floater: Hovers in one spot. Damages the player when they are near
+		- Dormant
+		- Charge Up
+		- Attack
+	- Diver: When the player is in range, flies directly at them and damages them. Dies on impact
+		- Dormant
+		- Chase
+		- Attack
 		
 - Save Games
 

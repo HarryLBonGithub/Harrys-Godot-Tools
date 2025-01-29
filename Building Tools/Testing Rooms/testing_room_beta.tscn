@@ -3,10 +3,10 @@
 [ext_resource type="Script" path="res://Building Tools/Testing Rooms/testing_rooms.gd" id="1_x2f4i"]
 [ext_resource type="Texture2D" uid="uid://cr86samdwmj8y" path="res://Building Tools/Filler Assets/Models/Paints/Rock_Plain_Support_C.png" id="2_22orq"]
 [ext_resource type="Texture2D" uid="uid://cyprica154g82" path="res://Building Tools/Filler Assets/Models/Paints/Rock_Plain_Support_N.png" id="3_d7147"]
-[ext_resource type="PackedScene" uid="uid://dyomg7evme6ij" path="res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_character_controller.tscn" id="4_jnbne"]
 [ext_resource type="PackedScene" uid="uid://c378cc48ttgrm" path="res://Building Tools/Characters/Quest Cube/quest_cube.tscn" id="5_c5a06"]
 [ext_resource type="Script" path="res://Building Tools/Organizers/Quests/quest.gd" id="6_32ns7"]
-[ext_resource type="PackedScene" uid="uid://cxkb5iny4defv" path="res://Building Tools/Characters/NP Character/np_character.tscn" id="7_w8vl2"]
+[ext_resource type="PackedScene" uid="uid://ut7wls38jswd" path="res://Building Tools/Characters/Enemies/Floater/enemy_floater_aura.tscn" id="7_df7pb"]
+[ext_resource type="PackedScene" uid="uid://baqs2t4p5a58i" path="res://Building Tools/Character Controllers/3D/FPS/fps_character_controller_extended.tscn" id="7_y1vpi"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_nb5n6"]
 size = Vector3(30, 1, 30)
@@ -73,14 +73,14 @@ mesh = SubResource("BoxMesh_twt8x")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
 shape = SubResource("BoxShape3D_tdjto")
 
-[node name="3rdPersonCharacterController" parent="." instance=ExtResource("4_jnbne")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.75, 0.5, -1.75)
-
 [node name="QuestCube" parent="." instance=ExtResource("5_c5a06")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 2.75, 5.5)
 heldQuest = SubResource("Resource_siqtm")
 
-[node name="CharacterEnemy" parent="." instance=ExtResource("7_w8vl2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0.75)
+[node name="EnemyFloaterAura" parent="." instance=ExtResource("7_df7pb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 2)
+
+[node name="FPSCharacterControllerExt" parent="." instance=ExtResource("7_y1vpi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 2, -1)
 
 [editable path="QuestCube"]
