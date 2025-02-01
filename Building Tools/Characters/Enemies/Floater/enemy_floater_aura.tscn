@@ -24,8 +24,9 @@ tracks/0/keys = {
 "values": [Color(0.658824, 0.203922, 0.203922, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_6p1md"]
-resource_name = "waiting"
+[sub_resource type="Animation" id="Animation_s4y3w"]
+resource_name = "attack"
+length = 3.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -36,7 +37,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(0.658824, 0.203922, 0.203922, 1)]
+"values": [Color(0.945098, 0.356863, 0, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_7l04m"]
@@ -54,9 +55,8 @@ tracks/0/keys = {
 "values": [Color(0.564706, 0.537255, 0, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_s4y3w"]
-resource_name = "attack"
-length = 3.0
+[sub_resource type="Animation" id="Animation_6p1md"]
+resource_name = "waiting"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -67,7 +67,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(0.945098, 0.356863, 0, 1)]
+"values": [Color(0.658824, 0.203922, 0.203922, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6ffsg"]
@@ -102,11 +102,14 @@ libraries = {
 }
 autoplay = "waiting"
 
+[node name="MeshRoot" type="Node3D" parent="."]
+
 [node name="AttackTimer" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true
 
 [node name="AttackDetectionArea" type="Area3D" parent="."]
+collision_layer = 0
 
 [node name="AttackDetectionCollider" type="CollisionShape3D" parent="AttackDetectionArea"]
 shape = SubResource("SphereShape3D_4wjk4")

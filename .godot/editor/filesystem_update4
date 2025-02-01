@@ -1,15 +1,11 @@
-res://Building Tools/Characters/Simple Turret/simple_turret.tscn
+res://Building Tools/Characters/Enemies/Floater/enemy_floater_aura.tscn
 res://Building Tools/Themes/industrial_scifi_theme.tres
 res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_camera_controller.gd
 res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_Person_Extended.gd
-res://Building Tools/To Do List.txt
-res://Building Tools/Testing Rooms/testing_room_beta.tscn
-res://Building Tools/Characters/Enemies/Floater/enemy_floater_aura.tscn
-res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_character_controller.tscn
-res://Building Tools/Set Pieces/Hallway Segment/hall_segment.tscn
-res://Building Tools/Characters/NP Character/np_character.tscn
-res://Building Tools/Characters/Enemies/Floater/Floater_Command.gd
-res://Building Tools/Characters/Enemies/Floater/enemy_floater_aura.gd
 res://Building Tools/Themes/FillerTheme.tres
 res://Building Tools/Organizers/Quests/test quests/Press Some Key.tres
+res://Building Tools/Testing Rooms/testing_room_beta.tscn
+res://Building Tools/Characters/Enemies/Floater/enemy_floater_aura.gd
 res://Building Tools/Properties/Damage and Health Box/damage_box.tscn
+res://Building Tools/Props/Projectiles/projectile.tscn
+res://Building Tools/Props/Projectiles/Blaster Bolt/blaster_bolt.tscn

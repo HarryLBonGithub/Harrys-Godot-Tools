@@ -1,9 +1,9 @@
+Node3D
 Area3D
 AnimationPlayer
 Timer
 Node
 CollisionShape3D
-Node3D
 MeshInstance3D
 CharacterBody3D
 Label
@@ -12,4 +12,3 @@ CanvasLayer
 BoneAttachment3D
 Marker3D
 SkeletonIK3D
-TextureRect
