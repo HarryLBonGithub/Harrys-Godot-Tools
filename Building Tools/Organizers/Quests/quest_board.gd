@@ -10,4 +10,3 @@ func giveQuest(book:QuestBook, quest:Quest):
 
 func getQuests():
 	return quests
-

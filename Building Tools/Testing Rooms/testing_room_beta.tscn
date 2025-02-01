@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://cyprica154g82" path="res://Building Tools/Filler Assets/Models/Paints/Rock_Plain_Support_N.png" id="3_d7147"]
 [ext_resource type="PackedScene" uid="uid://c378cc48ttgrm" path="res://Building Tools/Characters/Quest Cube/quest_cube.tscn" id="5_c5a06"]
 [ext_resource type="Script" path="res://Building Tools/Organizers/Quests/quest.gd" id="6_32ns7"]
+[ext_resource type="PackedScene" uid="uid://dyomg7evme6ij" path="res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_character_controller.tscn" id="7_8di4b"]
 [ext_resource type="PackedScene" uid="uid://ut7wls38jswd" path="res://Building Tools/Characters/Enemies/Floater/enemy_floater_aura.tscn" id="7_df7pb"]
-[ext_resource type="PackedScene" uid="uid://baqs2t4p5a58i" path="res://Building Tools/Character Controllers/3D/FPS/fps_character_controller_extended.tscn" id="7_y1vpi"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_nb5n6"]
 size = Vector3(30, 1, 30)
@@ -80,7 +80,7 @@ heldQuest = SubResource("Resource_siqtm")
 [node name="EnemyFloaterAura" parent="." instance=ExtResource("7_df7pb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 2)
 
-[node name="FPSCharacterControllerExt" parent="." instance=ExtResource("7_y1vpi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 2, -1)
+[node name="3rdPersonCharacterController" parent="." instance=ExtResource("7_8di4b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 
 [editable path="QuestCube"]

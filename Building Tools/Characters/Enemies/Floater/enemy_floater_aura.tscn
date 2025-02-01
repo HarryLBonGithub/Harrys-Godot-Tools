@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://ut7wls38jswd"]
+[gd_scene load_steps=12 format=3 uid="uid://ut7wls38jswd"]
 
 [ext_resource type="Script" path="res://Building Tools/Characters/Enemies/Floater/enemy_floater_aura.gd" id="1_ixle5"]
+[ext_resource type="PackedScene" uid="uid://llyfb82e2clx" path="res://Building Tools/Filler Assets/Models/Basic Characters/Cinn Jelli/Cinnamon Jelli.glb" id="2_aa2nr"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_7xnw5"]
 
@@ -89,6 +90,7 @@ script = ExtResource("1_ixle5")
 shape = SubResource("SphereShape3D_7xnw5")
 
 [node name="MeshRoot_Filler" type="Node3D" parent="."]
+visible = false
 
 [node name="FillerMesh" type="MeshInstance3D" parent="MeshRoot_Filler"]
 mesh = SubResource("SphereMesh_qepdl")
@@ -104,6 +106,21 @@ autoplay = "waiting"
 
 [node name="MeshRoot" type="Node3D" parent="."]
 
+[node name="Cinnamon Jelli2" parent="MeshRoot" instance=ExtResource("2_aa2nr")]
+
+[node name="Skeleton3D" parent="MeshRoot/Cinnamon Jelli2/Armature" index="0"]
+bones/1/position = Vector3(0.157313, 0.37051, 0.125883)
+bones/2/position = Vector3(0.156425, 0.369556, -0.114065)
+bones/2/rotation = Quaternion(0.974351, 0.0345128, 0.153563, -0.160832)
+bones/3/rotation = Quaternion(0.706734, 0.022963, -0.706734, 0.022963)
+bones/4/rotation = Quaternion(-0.00543237, 4.0585e-10, -4.15612e-10, 0.999985)
+bones/5/position = Vector3(-0.157313, 0.37051, 0.125883)
+bones/6/position = Vector3(-0.156425, 0.369556, -0.114065)
+bones/6/rotation = Quaternion(0.974351, -0.0345128, -0.153563, -0.160832)
+
+[node name="AnimationPlayer" parent="MeshRoot/Cinnamon Jelli2" index="1"]
+autoplay = "idle"
+
 [node name="AttackTimer" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true
@@ -118,3 +135,5 @@ shape = SubResource("SphereShape3D_4wjk4")
 [connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
 [connection signal="body_entered" from="AttackDetectionArea" to="." method="_on_attack_detection_area_body_entered"]
 [connection signal="body_exited" from="AttackDetectionArea" to="." method="_on_attack_detection_area_body_exited"]
+
+[editable path="MeshRoot/Cinnamon Jelli2"]
