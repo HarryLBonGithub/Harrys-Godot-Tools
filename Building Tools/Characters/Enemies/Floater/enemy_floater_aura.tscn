@@ -1,7 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://ut7wls38jswd"]
+[gd_scene load_steps=14 format=3 uid="uid://ut7wls38jswd"]
 
 [ext_resource type="Script" path="res://Building Tools/Characters/Enemies/Floater/enemy_floater_aura.gd" id="1_ixle5"]
-[ext_resource type="PackedScene" uid="uid://llyfb82e2clx" path="res://Building Tools/Filler Assets/Models/Basic Characters/Cinn Jelli/Cinnamon Jelli.glb" id="2_aa2nr"]
+[ext_resource type="PackedScene" uid="uid://br470w41tj4oy" path="res://Building Tools/Filler Assets/Models/Basic Characters/Cinn Jelli/Cinnamon Jelli.glb" id="2_aa2nr"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_7xnw5"]
 
@@ -79,6 +79,15 @@ _data = {
 "waiting": SubResource("Animation_6p1md")
 }
 
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_d1d0c"]
+states/Start/position = Vector2(222, 113)
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_f0w83"]
+nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_d1d0c")
+nodes/StateMachine/position = Vector2(600, 100)
+nodes/output/position = Vector2(1180, 140)
+node_connections = [&"output", 0, &"StateMachine"]
+
 [sub_resource type="SphereShape3D" id="SphereShape3D_4wjk4"]
 radius = 2.0
 
@@ -109,17 +118,19 @@ autoplay = "waiting"
 [node name="Cinnamon Jelli2" parent="MeshRoot" instance=ExtResource("2_aa2nr")]
 
 [node name="Skeleton3D" parent="MeshRoot/Cinnamon Jelli2/Armature" index="0"]
-bones/1/position = Vector3(0.157313, 0.37051, 0.125883)
-bones/2/position = Vector3(0.156425, 0.369556, -0.114065)
 bones/2/rotation = Quaternion(0.974351, 0.0345128, 0.153563, -0.160832)
-bones/3/rotation = Quaternion(0.706734, 0.022963, -0.706734, 0.022963)
-bones/4/rotation = Quaternion(-0.00543237, 4.0585e-10, -4.15612e-10, 0.999985)
-bones/5/position = Vector3(-0.157313, 0.37051, 0.125883)
-bones/6/position = Vector3(-0.156425, 0.369556, -0.114065)
-bones/6/rotation = Quaternion(0.974351, -0.0345128, -0.153563, -0.160832)
+bones/2/scale = Vector3(1, 1, 0.999999)
+bones/4/rotation = Quaternion(0.974351, -0.0345128, -0.153563, -0.160832)
+bones/4/scale = Vector3(1, 1, 0.999999)
+bones/5/scale = Vector3(1, 1, 1)
 
 [node name="AnimationPlayer" parent="MeshRoot/Cinnamon Jelli2" index="1"]
 autoplay = "idle"
+
+[node name="AnimationTree" type="AnimationTree" parent="MeshRoot"]
+root_node = NodePath("../Cinnamon Jelli2")
+tree_root = SubResource("AnimationNodeBlendTree_f0w83")
+anim_player = NodePath("../Cinnamon Jelli2/AnimationPlayer")
 
 [node name="AttackTimer" type="Timer" parent="."]
 wait_time = 3.0

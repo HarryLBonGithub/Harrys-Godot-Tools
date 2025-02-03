@@ -1,3 +1,4 @@
+AnimationTree
 Node3D
 Area3D
 AnimationPlayer
@@ -11,4 +12,3 @@ RayCast3D
 CanvasLayer
 BoneAttachment3D
 Marker3D
-SkeletonIK3D

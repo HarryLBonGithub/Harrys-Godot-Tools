@@ -2,21 +2,24 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnd6c4iwe0kp4"
-path="res://.godot/imported/Cinnamon Jelli_Cinn_Jelli_C.png-c03b35cea9e9990d9dd7efe97a394312.ctex"
+uid="uid://dsnm05eawe7yh"
+path.s3tc="res://.godot/imported/Cinnamon Jelli_Cinn_Jelli_C.png-c03b35cea9e9990d9dd7efe97a394312.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
-generator_parameters={}
+generator_parameters={
+"md5": "b52ed6f37b2f29d69101beec6c373123"
+}
 
 [deps]
 
 source_file="res://Building Tools/Filler Assets/Models/Basic Characters/Cinn Jelli/Cinnamon Jelli_Cinn_Jelli_C.png"
-dest_files=["res://.godot/imported/Cinnamon Jelli_Cinn_Jelli_C.png-c03b35cea9e9990d9dd7efe97a394312.ctex"]
+dest_files=["res://.godot/imported/Cinnamon Jelli_Cinn_Jelli_C.png-c03b35cea9e9990d9dd7efe97a394312.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
