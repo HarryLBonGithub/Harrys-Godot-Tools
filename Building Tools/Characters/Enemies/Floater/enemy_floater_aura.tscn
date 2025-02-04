@@ -1,10 +1,11 @@
-[gd_scene load_steps=40 format=4 uid="uid://ut7wls38jswd"]
+[gd_scene load_steps=41 format=4 uid="uid://ut7wls38jswd"]
 
 [ext_resource type="Script" path="res://Building Tools/Characters/Enemies/Floater/enemy_floater_aura.gd" id="1_ixle5"]
 [ext_resource type="PackedScene" uid="uid://br470w41tj4oy" path="res://Building Tools/Filler Assets/Models/Basic Characters/Cinn Jelli/Cinnamon Jelli.glb" id="2_aa2nr"]
 [ext_resource type="Texture2D" uid="uid://dsnm05eawe7yh" path="res://Building Tools/Filler Assets/Models/Basic Characters/Cinn Jelli/Cinnamon Jelli_Cinn_Jelli_C.png" id="3_6ps6b"]
 [ext_resource type="PackedScene" uid="uid://bgeyfohldmmx2" path="res://Building Tools/Properties/Health/health.tscn" id="3_7h3j4"]
 [ext_resource type="Texture2D" uid="uid://1f0mkifekfd" path="res://Building Tools/Filler Assets/Models/Basic Characters/Cinn Jelli/Cinnamon Jelli_Cinn_Jelli_N.png" id="4_jumj2"]
+[ext_resource type="Script" path="res://Building Tools/Action Scripts/Target Nearest/TargetNearest.gd" id="6_327hq"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_7xnw5"]
 radius = 0.345186
@@ -1104,6 +1105,7 @@ radius = 2.0
 [node name="EnemyFloaterAura" type="CharacterBody3D"]
 motion_mode = 1
 script = ExtResource("1_ixle5")
+movementEnabled = true
 
 [node name="CharacterCollider" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_7xnw5")
@@ -1113,22 +1115,22 @@ shape = SubResource("SphereShape3D_7xnw5")
 [node name="Cinnamon Jelli2" parent="MeshRoot" instance=ExtResource("2_aa2nr")]
 
 [node name="Skeleton3D" parent="MeshRoot/Cinnamon Jelli2/Armature" index="0"]
-bones/0/scale = Vector3(1, 0.941002, 1)
-bones/1/position = Vector3(0.157313, 0.354591, 0.125883)
-bones/1/rotation = Quaternion(0.697381, -0.0633613, -0.686775, 0.194896)
+bones/1/position = Vector3(0.157313, 0.37051, 0.125883)
+bones/1/rotation = Quaternion(0.702316, -0.0639705, -0.694126, 0.144391)
 bones/1/scale = Vector3(1, 1, 0.999999)
-bones/2/position = Vector3(0.156425, 0.353637, -0.114065)
-bones/2/rotation = Quaternion(0.96624, 0.0639367, 0.147246, -0.201521)
+bones/2/position = Vector3(0.156425, 0.369556, -0.114065)
+bones/2/rotation = Quaternion(0.974351, 0.0345128, 0.153563, -0.160832)
 bones/2/scale = Vector3(1, 1, 0.999999)
-bones/3/position = Vector3(-0.157313, 0.354591, 0.125883)
-bones/3/rotation = Quaternion(0.697381, 0.0633613, 0.686775, 0.194896)
+bones/3/position = Vector3(-0.157313, 0.37051, 0.125883)
+bones/3/rotation = Quaternion(0.702316, 0.0639705, 0.694126, 0.144391)
 bones/3/scale = Vector3(1, 1, 0.999999)
-bones/4/position = Vector3(-0.156425, 0.353637, -0.114065)
-bones/4/rotation = Quaternion(0.96624, -0.0639367, -0.147246, -0.201521)
+bones/4/position = Vector3(-0.156425, 0.369556, -0.114065)
+bones/4/rotation = Quaternion(0.974351, -0.0345128, -0.153563, -0.160832)
 bones/4/scale = Vector3(1, 1, 0.999999)
-bones/5/rotation = Quaternion(0.707052, -0.00883187, -0.707052, -0.00883188)
+bones/5/position = Vector3(0, 0.0013845, 0)
+bones/5/rotation = Quaternion(0.707107, 0, -0.707107, 0)
 bones/5/scale = Vector3(1, 1, 1)
-bones/6/rotation = Quaternion(0.0157828, 7.34638e-10, 1.3594e-09, 0.999875)
+bones/6/rotation = Quaternion(0, 3.55271e-15, 0, 1)
 bones/6/scale = Vector3(1, 1, 1)
 
 [node name="Cinnamon Jelli" parent="MeshRoot/Cinnamon Jelli2/Armature/Skeleton3D" index="0"]
@@ -1156,7 +1158,25 @@ shape = SubResource("SphereShape3D_4wjk4")
 
 [node name="Health" parent="." instance=ExtResource("3_7h3j4")]
 
+[node name="LineOfSight" type="RayCast3D" parent="." node_paths=PackedStringArray("pointer")]
+target_position = Vector3(0, 0, -5)
+collision_mask = 5
+collide_with_areas = true
+collide_with_bodies = false
+script = ExtResource("6_327hq")
+pointer = NodePath(".")
+targetGroup = "player"
+
+[node name="ProximityChecker" type="RayCast3D" parent="." node_paths=PackedStringArray("pointer")]
+target_position = Vector3(0, 0, -1.5)
+collision_mask = 5
+collide_with_areas = true
+script = ExtResource("6_327hq")
+pointer = NodePath(".")
+targetGroup = "player"
+
 [connection signal="animation_finished" from="MeshRoot/AnimationTree" to="." method="_on_animation_tree_animation_finished"]
+[connection signal="animation_started" from="MeshRoot/AnimationTree" to="." method="_on_animation_tree_animation_started"]
 [connection signal="area_entered" from="AttackDetectionArea" to="." method="_on_attack_detection_area_area_entered"]
 [connection signal="area_exited" from="AttackDetectionArea" to="." method="_on_attack_detection_area_area_exited"]
 [connection signal="hit" from="Health" to="." method="_on_health_hit"]

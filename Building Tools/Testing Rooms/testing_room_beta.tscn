@@ -77,10 +77,13 @@ shape = SubResource("BoxShape3D_tdjto")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 2.75, 5.5)
 heldQuest = SubResource("Resource_siqtm")
 
+[node name="EnemyFloaterAura2" parent="." instance=ExtResource("7_df7pb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 3.25, 2)
+
 [node name="EnemyFloaterAura" parent="." instance=ExtResource("7_df7pb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0.75)
 
 [node name="3rdPersonCharacterController" parent="." instance=ExtResource("7_8di4b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 8.75)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 7.5)
 
 [editable path="QuestCube"]
