@@ -12,6 +12,7 @@ class_name StanceState
 
 @export_category("Collision")
 @export var collider : CollisionShape3D
+@export var collider_size : float = 2
 @export var col_raycast : RayCast3D
 @export var higher_stances : Array[StanceState]
 

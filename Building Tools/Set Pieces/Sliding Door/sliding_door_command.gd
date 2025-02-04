@@ -65,6 +65,16 @@ func _on_exit_detector_body_exited(body):
 			animationsNode.play("close")
 			closeSoundNode.play()
 
+func _on_exit_detector_area_exited(area):
+	if area == doorBodyNode:
+		return
+	
+	match state:
+		0: #open
+			state = 1
+			animationsNode.play("close")
+			closeSoundNode.play()
+
 func checkLock(user):
 	if user.has_node("KeyRing") == false:
 		lockedSoundNode.play()

@@ -4,3 +4,11 @@ res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_Person_Ex
 res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_camera_controller.gd
 res://Building Tools/Characters/Enemies/Floater/enemy_floater_aura.tscn
 res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_character_controller.tscn
+res://Building Tools/Characters/Enemies/Floater/enemy_floater_aura.gd
+res://Building Tools/Character Controllers/3D/3rd Person Character/stance_state.gd
+res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_input_controller.gd
+res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_movement_controller.gd
+res://Building Tools/Set Pieces/Sliding Door/sliding_door.tscn
+res://Building Tools/Testing Rooms/testing_room_alpha.tscn
+res://Building Tools/Set Pieces/Sliding Door/sliding_door_command.gd
+res://Building Tools/Props/Projectiles/projectile.tscn

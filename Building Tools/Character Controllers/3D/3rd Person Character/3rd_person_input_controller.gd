@@ -26,6 +26,10 @@ signal strafe_high(high)
 @export var run_enabled : bool = true
 @export var aim_enabled : bool = true
 
+
+@onready var main_collider = $"../UprightCollider"
+@onready var mesh_root = $"../MeshRoot"
+
 var air_jump_counter : int = 0
 var current_stance_name : String = "upright"
 var current_movement_state_name : String
@@ -38,6 +42,7 @@ var can_use_tool = true
 var strafing_high = true
 
 var movement_direction : Vector3
+var height_tween : Tween
 
 func _ready():
 	set_movement_state("stand")
@@ -46,7 +51,6 @@ func _input(event):
 	
 	if not movement_enabled:
 		return
-		
 	#sets the movement direction and changes the animation to match
 	#sets this based on a state, each stance has a series of states 
 	if event.is_action_pressed("character movement") or event.is_action_released("character movement"):
@@ -165,7 +169,7 @@ func set_stance(_stance_name : String):
 	
 	if is_stance_blocked(next_stance_name):
 		return
-	
+		
 	var current_stance = get_node(stances[current_stance_name])
 	current_stance.collider.disabled = true
 	
