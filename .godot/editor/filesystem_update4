@@ -4,9 +4,3 @@ res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_Person_Ex
 res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_camera_controller.gd
 res://Building Tools/Characters/Enemies/Floater/enemy_floater_aura.tscn
 res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_character_controller.tscn
-res://Building Tools/Action Scripts/Target Nearest/target_nearest.tscn
-res://Building Tools/Characters/Enemies/Floater/enemy_floater_aura.gd
-res://Building Tools/Characters/Simple Turret/simple_turret.tscn
-res://Building Tools/HUD Items/Info Checker/info_checker.tscn
-res://Building Tools/Character Controllers/3D/FPS/fps_character_controller_extended.tscn
-res://Building Tools/Themes/FillerTheme.tres

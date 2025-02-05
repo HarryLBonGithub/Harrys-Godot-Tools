@@ -20,7 +20,7 @@ QuestManager="*res://Building Tools/Organizers/Quests/QuestManager.gd"
 
 [display]
 
-window/stretch/mode="viewport"
+window/size/window_height_override=960
 
 [gui]
 
