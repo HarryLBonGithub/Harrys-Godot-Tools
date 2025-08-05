@@ -1,73 +1,7 @@
-res://Building Tools/Action Scripts/Adjust Aim/adjust_aim.tscn
-res://Building Tools/Action Scripts/Target Nearest/target_nearest.tscn
-res://Building Tools/Character Controllers/2D/top_down_2d_character.tscn
-res://Building Tools/Character Controllers/3D/3rd Person Character/Jump States/air_jump.tres
-res://Building Tools/Character Controllers/3D/3rd Person Character/Jump States/ground_jump.tres
-res://Building Tools/Character Controllers/3D/3rd Person Character/Movement States/alert/alert_idle.tres
-res://Building Tools/Character Controllers/3D/3rd Person Character/Movement States/alert/alert_run.tres
-res://Building Tools/Character Controllers/3D/3rd Person Character/Movement States/alert/alert_sprint.tres
-res://Building Tools/Character Controllers/3D/3rd Person Character/Movement States/alert/alert_walk.tres
-res://Building Tools/Character Controllers/3D/3rd Person Character/Movement States/crouch/crouch_idle.tres
-res://Building Tools/Character Controllers/3D/3rd Person Character/Movement States/crouch/crouch_run.tres
-res://Building Tools/Character Controllers/3D/3rd Person Character/Movement States/crouch/crouch_walk.tres
-res://Building Tools/Character Controllers/3D/3rd Person Character/Movement States/prone/prone_idle.tres
-res://Building Tools/Character Controllers/3D/3rd Person Character/Movement States/prone/prone_walk.tres
-res://Building Tools/Character Controllers/3D/3rd Person Character/Movement States/strafing/strafing_idle.tres
-res://Building Tools/Character Controllers/3D/3rd Person Character/Movement States/strafing/strafing_walk.tres
-res://Building Tools/Character Controllers/3D/3rd Person Character/Movement States/upright/upright_idle.tres
-res://Building Tools/Character Controllers/3D/3rd Person Character/Movement States/upright/upright_run.tres
-res://Building Tools/Character Controllers/3D/3rd Person Character/Movement States/upright/upright_sprint.tres
-res://Building Tools/Character Controllers/3D/3rd Person Character/Movement States/upright/upright_walk.tres
-res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_character_controller.tscn
-res://Building Tools/Character Controllers/3D/FPS/6dfps_character_controller.tscn
-res://Building Tools/Character Controllers/3D/FPS/6dfps_character_controller_extended.tscn
-res://Building Tools/Character Controllers/3D/FPS/fps_character_controller.tscn
-res://Building Tools/Character Controllers/3D/FPS/fps_character_controller_extended.tscn
-res://Building Tools/Character Controllers/3D/Top Down/top_down_character_controller.tscn
-res://Building Tools/Characters/Dummy/dummy.tscn
-res://Building Tools/Characters/Enemies/Floater/enemy_floater_aura.tscn
-res://Building Tools/Characters/NP Character/np_character.tscn
-res://Building Tools/Characters/Quest Cube/quest_cube.tscn
-res://Building Tools/Characters/Simple Turret/simple_turret.tscn
-res://Building Tools/HUD Items/Ammo Tracker/ammo_tracker.tscn
-res://Building Tools/HUD Items/Crosshair/crosshair.tscn
-res://Building Tools/HUD Items/Info Checker/info_checker.tscn
-res://Building Tools/HUD Items/Messenger/simple_message_display.tscn
-res://Building Tools/HUD Items/Quest Tracker/quest_tracker.tscn
-res://Building Tools/Organizers/Hand/hand.tscn
-res://Building Tools/Organizers/Messages/Test Messages/dummy_message.tres
-res://Building Tools/Organizers/Messages/message_carrier.tscn
-res://Building Tools/Organizers/Messages/message_catcher.tscn
-res://Building Tools/Organizers/On Off Switch/light_switch.tscn
-res://Building Tools/Organizers/Quests/test quests/Dummy Quest.tres
-res://Building Tools/Organizers/Quests/test quests/Press Some Key.tres
-res://Building Tools/Organizers/Quests/test quests/Some Other Quest.tres
-res://Building Tools/Organizers/Quests/Dummy Reward.tres
-res://Building Tools/Organizers/Quests/quest_board.tscn
-res://Building Tools/Organizers/Quests/quest_book.tscn
-res://Building Tools/Properties/Ammo/ammo.tscn
-res://Building Tools/Properties/Cursor Hint/cursor_hint.tscn
-res://Building Tools/Properties/Damage and Health Box/damage_box.tscn
-res://Building Tools/Properties/Damage and Health Box/healing_box.tscn
-res://Building Tools/Properties/Health/health.tscn
-res://Building Tools/Properties/Interaction/interaction.tscn
-res://Building Tools/Properties/Interaction/interaction_ray.tscn
-res://Building Tools/Properties/Inventories/key_ring.tscn
-res://Building Tools/Props/Handhelds/Basic Flashlight/basic_flashlight.tscn
-res://Building Tools/Props/Handhelds/Basic Hitscan Gun/hitscan_gun_basic.tscn
-res://Building Tools/Props/Handhelds/Projectile Launcher/projectile_launcher.tscn
-res://Building Tools/Props/Handhelds/Tool Frame/Simple Blaster/simple_blaster.tscn
-res://Building Tools/Props/Handhelds/Tool Frame/tool_frame.tscn
-res://Building Tools/Props/Pickups/Health Pickup/health_pickup.tscn
-res://Building Tools/Props/Pickups/Keys/key.tscn
-res://Building Tools/Props/Projectiles/Blaster Bolt/blaster_bolt.tscn
-res://Building Tools/Props/Projectiles/projectile.tscn
-res://Building Tools/Set Pieces/Hallway Segment/hall_segment.tscn
-res://Building Tools/Set Pieces/Sliding Door/sliding_door.tscn
-res://Building Tools/Testing Rooms/2d_testing_room_top_down.tscn
-res://Building Tools/Testing Rooms/testing_room_alpha.tscn
 res://Building Tools/Testing Rooms/testing_room_beta.tscn
-res://Building Tools/Testing Rooms/UI Tests.tscn
 res://Building Tools/Themes/industrial_scifi_theme.tres
 res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_Person_Extended.gd
 res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_camera_controller.gd
+res://test_text.txt
+res://Building Tools/Characters/Enemies/Floater/enemy_floater_aura.tscn
+res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_character_controller.tscn
