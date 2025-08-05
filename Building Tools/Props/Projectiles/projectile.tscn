@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c1h1nawfw1pbb"]
 
-[ext_resource type="Script" path="res://Building Tools/Props/Projectiles/projectile.gd" id="1_3qbe2"]
+[ext_resource type="Script" uid="uid://3di67h0s12ud" path="res://Building Tools/Props/Projectiles/projectile.gd" id="1_3qbe2"]
 
 [node name="Projectile" type="RigidBody3D"]
 script = ExtResource("1_3qbe2")

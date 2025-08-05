@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dbuof615a47rw" path="res://Building Tools/Action Scripts/Target Nearest/target_nearest.tscn" id="1_8qqrb"]
 [ext_resource type="PackedScene" uid="uid://dim0l6a2xqttt" path="res://Building Tools/Props/Handhelds/Projectile Launcher/projectile_launcher.tscn" id="1_c2dd0"]
 [ext_resource type="PackedScene" uid="uid://bf2avvuwarxgh" path="res://Building Tools/Props/Projectiles/Blaster Bolt/blaster_bolt.tscn" id="2_bftov"]
-[ext_resource type="Script" path="res://Building Tools/Characters/Simple Turret/TurretCommand.gd" id="2_s8trj"]
+[ext_resource type="Script" uid="uid://cef6wxwoeovwd" path="res://Building Tools/Characters/Simple Turret/TurretCommand.gd" id="2_s8trj"]
 [ext_resource type="PackedScene" uid="uid://bgeyfohldmmx2" path="res://Building Tools/Properties/Health/health.tscn" id="5_r6iq5"]
 [ext_resource type="PackedScene" path="res://Building Tools/Properties/Cursor Hint/cursor_hint.tscn" id="6_3u70t"]
 

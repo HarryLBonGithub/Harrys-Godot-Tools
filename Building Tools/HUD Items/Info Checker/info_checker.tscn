@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cgh22dltjhw5u"]
 
-[ext_resource type="Script" path="res://Building Tools/HUD Items/Info Checker/info_checker.gd" id="1_id7at"]
+[ext_resource type="Script" uid="uid://bbe4g2xu1jcbs" path="res://Building Tools/HUD Items/Info Checker/info_checker.gd" id="1_id7at"]
 
 [node name="InfoChecker" type="RayCast3D"]
 target_position = Vector3(0, 0, -2)

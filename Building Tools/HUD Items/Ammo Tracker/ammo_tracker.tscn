@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ddjlj2gpevbbb"]
 
-[ext_resource type="Script" path="res://Building Tools/HUD Items/Ammo Tracker/ammo_tracker.gd" id="1_0h3lq"]
+[ext_resource type="Script" uid="uid://c5rie8tgib7rc" path="res://Building Tools/HUD Items/Ammo Tracker/ammo_tracker.gd" id="1_0h3lq"]
 
 [node name="AmmoTracker" type="Panel"]
 script = ExtResource("1_0h3lq")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://d3bu2prcof0ca"]
 
-[ext_resource type="Script" path="res://Building Tools/Props/Handhelds/Tool Frame/tool_frame.gd" id="1_jy4ar"]
+[ext_resource type="Script" uid="uid://bokonpx70mr66" path="res://Building Tools/Props/Handhelds/Tool Frame/tool_frame.gd" id="1_jy4ar"]
 
 [node name="ToolFrame" type="Node3D"]
 script = ExtResource("1_jy4ar")

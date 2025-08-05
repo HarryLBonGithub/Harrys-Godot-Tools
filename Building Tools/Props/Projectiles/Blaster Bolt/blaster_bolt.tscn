@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://bf2avvuwarxgh"]
 
-[ext_resource type="Script" path="res://Building Tools/Props/Projectiles/projectile.gd" id="1_v83yn"]
+[ext_resource type="Script" uid="uid://3di67h0s12ud" path="res://Building Tools/Props/Projectiles/projectile.gd" id="1_v83yn"]
 [ext_resource type="PackedScene" uid="uid://j2lecpaynqf8" path="res://Building Tools/Properties/Damage and Health Box/damage_box.tscn" id="2_s0plg"]
-[ext_resource type="Script" path="res://Building Tools/Props/Projectiles/Blaster Bolt/BlasterBoltCommand.gd" id="2_v5cfw"]
+[ext_resource type="Script" uid="uid://dfa8j3sy364m6" path="res://Building Tools/Props/Projectiles/Blaster Bolt/BlasterBoltCommand.gd" id="2_v5cfw"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_8bulw"]
 size = Vector3(0.1, 0.1, 0.5)

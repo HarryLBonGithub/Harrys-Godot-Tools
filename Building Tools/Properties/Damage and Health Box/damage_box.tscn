@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://j2lecpaynqf8"]
 
-[ext_resource type="Script" path="res://Building Tools/Properties/Damage and Health Box/damage_box.gd" id="1_fcdvb"]
+[ext_resource type="Script" uid="uid://comjcdwv0w50i" path="res://Building Tools/Properties/Damage and Health Box/damage_box.gd" id="1_fcdvb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pelgg"]
 resource_local_to_scene = true

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Quest" load_steps=2 format=3 uid="uid://b7teg4ycaac7a"]
 
-[ext_resource type="Script" path="res://Building Tools/Organizers/Quests/quest.gd" id="1_jtw5c"]
+[ext_resource type="Script" uid="uid://cmvtosbnsokx2" path="res://Building Tools/Organizers/Quests/quest.gd" id="1_jtw5c"]
 
 [resource]
 resource_local_to_scene = true

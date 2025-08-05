@@ -1,11 +1,11 @@
 [gd_scene load_steps=41 format=4 uid="uid://ut7wls38jswd"]
 
-[ext_resource type="Script" path="res://Building Tools/Characters/Enemies/Floater/enemy_floater_aura.gd" id="1_ixle5"]
+[ext_resource type="Script" uid="uid://or4ptd2c8fj" path="res://Building Tools/Characters/Enemies/Floater/enemy_floater_aura.gd" id="1_ixle5"]
 [ext_resource type="PackedScene" uid="uid://br470w41tj4oy" path="res://Building Tools/Filler Assets/Models/Basic Characters/Cinn Jelli/Cinnamon Jelli.glb" id="2_aa2nr"]
 [ext_resource type="Texture2D" uid="uid://dsnm05eawe7yh" path="res://Building Tools/Filler Assets/Models/Basic Characters/Cinn Jelli/Cinnamon Jelli_Cinn_Jelli_C.png" id="3_6ps6b"]
 [ext_resource type="PackedScene" uid="uid://bgeyfohldmmx2" path="res://Building Tools/Properties/Health/health.tscn" id="3_7h3j4"]
 [ext_resource type="Texture2D" uid="uid://1f0mkifekfd" path="res://Building Tools/Filler Assets/Models/Basic Characters/Cinn Jelli/Cinnamon Jelli_Cinn_Jelli_N.png" id="4_jumj2"]
-[ext_resource type="Script" path="res://Building Tools/Action Scripts/Target Nearest/TargetNearest.gd" id="6_327hq"]
+[ext_resource type="Script" uid="uid://bc1yj72vc72lo" path="res://Building Tools/Action Scripts/Target Nearest/TargetNearest.gd" id="6_327hq"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_7xnw5"]
 radius = 0.345186
@@ -1011,14 +1011,14 @@ tracks/17/keys = PackedFloat32Array(0, 1, 1, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gx8pw"]
 _data = {
-"Default": SubResource("Animation_fygmh"),
-"RESET": SubResource("Animation_0pglq"),
-"attack": SubResource("Animation_yq02s"),
-"charge": SubResource("Animation_fvhgu"),
-"damage": SubResource("Animation_wuo7k"),
-"die": SubResource("Animation_k3yrt"),
-"idle": SubResource("Animation_albnb"),
-"interact": SubResource("Animation_aj8k7")
+&"Default": SubResource("Animation_fygmh"),
+&"RESET": SubResource("Animation_0pglq"),
+&"attack": SubResource("Animation_yq02s"),
+&"charge": SubResource("Animation_fvhgu"),
+&"damage": SubResource("Animation_wuo7k"),
+&"die": SubResource("Animation_k3yrt"),
+&"idle": SubResource("Animation_albnb"),
+&"interact": SubResource("Animation_aj8k7")
 }
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ie57x"]
@@ -1139,7 +1139,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_ku5k0")
 
 [node name="AnimationPlayer" parent="MeshRoot/Cinnamon Jelli2" index="1"]
 libraries = {
-"": SubResource("AnimationLibrary_gx8pw")
+&"": SubResource("AnimationLibrary_gx8pw")
 }
 autoplay = "idle"
 

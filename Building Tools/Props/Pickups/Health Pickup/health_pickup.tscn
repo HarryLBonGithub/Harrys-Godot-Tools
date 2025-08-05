@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bao0em3qrnooi"]
 
 [ext_resource type="PackedScene" uid="uid://da4pmajrtya4" path="res://Building Tools/Properties/Damage and Health Box/healing_box.tscn" id="1_ouyra"]
-[ext_resource type="Script" path="res://Building Tools/Props/Pickups/Health Pickup/HealthPickupCommand.gd" id="2_k6mme"]
+[ext_resource type="Script" uid="uid://buv3sdsbinnv" path="res://Building Tools/Props/Pickups/Health Pickup/HealthPickupCommand.gd" id="2_k6mme"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_g3qg3"]
 radius = 0.25

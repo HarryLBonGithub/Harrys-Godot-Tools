@@ -1,10 +1,10 @@
 [gd_scene load_steps=14 format=3 uid="uid://uxs674muviix"]
 
-[ext_resource type="Script" path="res://Building Tools/Testing Rooms/testing_rooms.gd" id="1_x2f4i"]
+[ext_resource type="Script" uid="uid://dfe8hj6iudp8a" path="res://Building Tools/Testing Rooms/testing_rooms.gd" id="1_x2f4i"]
 [ext_resource type="Texture2D" uid="uid://cr86samdwmj8y" path="res://Building Tools/Filler Assets/Models/Paints/Rock_Plain_Support_C.png" id="2_22orq"]
 [ext_resource type="Texture2D" uid="uid://cyprica154g82" path="res://Building Tools/Filler Assets/Models/Paints/Rock_Plain_Support_N.png" id="3_d7147"]
 [ext_resource type="PackedScene" uid="uid://c378cc48ttgrm" path="res://Building Tools/Characters/Quest Cube/quest_cube.tscn" id="5_c5a06"]
-[ext_resource type="Script" path="res://Building Tools/Organizers/Quests/quest.gd" id="6_32ns7"]
+[ext_resource type="Script" uid="uid://cmvtosbnsokx2" path="res://Building Tools/Organizers/Quests/quest.gd" id="6_32ns7"]
 [ext_resource type="PackedScene" uid="uid://dyomg7evme6ij" path="res://Building Tools/Character Controllers/3D/3rd Person Character/3rd_person_character_controller.tscn" id="7_8di4b"]
 [ext_resource type="PackedScene" uid="uid://ut7wls38jswd" path="res://Building Tools/Characters/Enemies/Floater/enemy_floater_aura.tscn" id="7_df7pb"]
 

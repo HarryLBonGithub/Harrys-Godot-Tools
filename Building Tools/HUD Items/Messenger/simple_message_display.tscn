@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cxkssphyydq4j"]
 
-[ext_resource type="Script" path="res://Building Tools/HUD Items/Messenger/simple_message_display.gd" id="1_csqns"]
+[ext_resource type="Script" uid="uid://d0hok8a01ym1j" path="res://Building Tools/HUD Items/Messenger/simple_message_display.gd" id="1_csqns"]
 
 [node name="SimpleMessageDisplay" type="Control"]
 visible = false

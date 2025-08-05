@@ -1,7 +1,7 @@
 [gd_scene load_steps=22 format=3 uid="uid://baqs2t4p5a58i"]
 
-[ext_resource type="Script" path="res://Building Tools/Character Controllers/3D/FPS/fps_character_controller_extended.gd" id="1_1okdc"]
-[ext_resource type="Script" path="res://Building Tools/Character Controllers/3D/FPS/FPS_Movement_script.gd" id="1_hgisy"]
+[ext_resource type="Script" uid="uid://2h748vxjd2ob" path="res://Building Tools/Character Controllers/3D/FPS/fps_character_controller_extended.gd" id="1_1okdc"]
+[ext_resource type="Script" uid="uid://j2wmp2173j1h" path="res://Building Tools/Character Controllers/3D/FPS/FPS_Movement_script.gd" id="1_hgisy"]
 [ext_resource type="Theme" uid="uid://cmjnqicbnobds" path="res://Building Tools/Themes/FillerTheme.tres" id="2_qnxyh"]
 [ext_resource type="PackedScene" uid="uid://ddjlj2gpevbbb" path="res://Building Tools/HUD Items/Ammo Tracker/ammo_tracker.tscn" id="3_ny2yd"]
 [ext_resource type="PackedScene" uid="uid://ggljq5ed622m" path="res://Building Tools/HUD Items/Crosshair/crosshair.tscn" id="4_bd3ad"]
@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://bgeyfohldmmx2" path="res://Building Tools/Properties/Health/health.tscn" id="11_wxiug"]
 [ext_resource type="PackedScene" uid="uid://culx5s7b5r33a" path="res://Building Tools/Properties/Inventories/key_ring.tscn" id="12_lam6a"]
 [ext_resource type="PackedScene" uid="uid://dn3punkb35pti" path="res://Building Tools/Organizers/Quests/quest_book.tscn" id="14_n1rao"]
-[ext_resource type="Script" path="res://Building Tools/Organizers/Quests/quest.gd" id="16_u5agr"]
+[ext_resource type="Script" uid="uid://cmvtosbnsokx2" path="res://Building Tools/Organizers/Quests/quest.gd" id="16_u5agr"]
 [ext_resource type="PackedScene" uid="uid://dfgiml7orhq34" path="res://Building Tools/Organizers/Messages/message_catcher.tscn" id="17_ga32w"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_smuhl"]

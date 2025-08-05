@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dim0l6a2xqttt"]
 
-[ext_resource type="Script" path="res://Building Tools/Props/Handhelds/Projectile Launcher/projectile_launcher.gd" id="1_gxvem"]
+[ext_resource type="Script" uid="uid://d1dkjgbd5vqam" path="res://Building Tools/Props/Handhelds/Projectile Launcher/projectile_launcher.gd" id="1_gxvem"]
 
 [node name="ProjectileLauncher" type="Node3D"]
 script = ExtResource("1_gxvem")

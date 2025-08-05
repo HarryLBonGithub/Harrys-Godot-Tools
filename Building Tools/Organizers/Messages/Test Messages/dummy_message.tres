@@ -1,7 +1,8 @@
 [gd_resource type="Resource" script_class="Message" load_steps=2 format=3 uid="uid://cti8lenyqjsjs"]
 
-[ext_resource type="Script" path="res://Building Tools/Organizers/Messages/message.gd" id="1_ex7kd"]
+[ext_resource type="Script" uid="uid://o4f1jge6qmd2" path="res://Building Tools/Organizers/Messages/message.gd" id="1_ex7kd"]
 
 [resource]
 script = ExtResource("1_ex7kd")
 text = ""
+messenger = ""

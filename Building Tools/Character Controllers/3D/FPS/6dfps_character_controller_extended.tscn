@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://d4isdea68tl18"]
 
-[ext_resource type="Script" path="res://Building Tools/Character Controllers/3D/FPS/6dfps_character_controller.gd" id="1_aph17"]
+[ext_resource type="Script" uid="uid://7hatx355g24r" path="res://Building Tools/Character Controllers/3D/FPS/6dfps_character_controller.gd" id="1_aph17"]
 [ext_resource type="ArrayMesh" uid="uid://bopktkuhq7ixb" path="res://Building Tools/Filler Assets/Models/MiningPodV2.obj" id="2_8ydyr"]
 [ext_resource type="PackedScene" uid="uid://bm00ewhu0i4vl" path="res://Building Tools/Properties/Interaction/interaction_ray.tscn" id="2_fe2qx"]
 [ext_resource type="PackedScene" uid="uid://b8pmopdg2rid5" path="res://Building Tools/Organizers/Hand/hand.tscn" id="2_yuqyn"]

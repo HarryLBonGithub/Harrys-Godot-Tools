@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dl1n0drbu6veo"]
 
-[ext_resource type="Script" path="res://Building Tools/Organizers/On Off Switch/light_switch.gd" id="1_ytqxo"]
+[ext_resource type="Script" uid="uid://b43fq36qgc5g3" path="res://Building Tools/Organizers/On Off Switch/light_switch.gd" id="1_ytqxo"]
 
 [node name="LightSwitch" type="Node"]
 script = ExtResource("1_ytqxo")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://wirbkrxcnojw"]
 
 [ext_resource type="Texture2D" uid="uid://dsej1eqt5ypvf" path="res://Building Tools/Filler Assets/Models/Paints/1 Meter White Box.png" id="1_w40el"]
-[ext_resource type="Script" path="res://Building Tools/Set Pieces/Hallway Segment/hall_segment_wall.gd" id="2_sfjwy"]
+[ext_resource type="Script" uid="uid://b4rgerisvk587" path="res://Building Tools/Set Pieces/Hallway Segment/hall_segment_wall.gd" id="2_sfjwy"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cwx6y"]
 size = Vector3(3, 0.5, 3)

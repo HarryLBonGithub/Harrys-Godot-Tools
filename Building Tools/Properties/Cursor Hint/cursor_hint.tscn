@@ -1,7 +1,6 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=2 format=3 uid="uid://ceysnlclxa1uf"]
 
-[ext_resource type="Script" path="res://Building Tools/Properties/Cursor Hint/cursor_hint.gd" id="1_ynb24"]
-
+[ext_resource type="Script" uid="uid://cw8eb6oxpemkf" path="res://Building Tools/Properties/Cursor Hint/cursor_hint.gd" id="1_ynb24"]
 
 [node name="CursorHint" type="Node"]
 script = ExtResource("1_ynb24")

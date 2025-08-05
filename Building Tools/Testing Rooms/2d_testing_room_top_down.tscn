@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://p4gn5w578ie6"]
 
-[ext_resource type="Script" path="res://Building Tools/Testing Rooms/testingRooms2D.gd" id="1_hlxls"]
+[ext_resource type="Script" uid="uid://b52lma3ngsav" path="res://Building Tools/Testing Rooms/testingRooms2D.gd" id="1_hlxls"]
 
 [node name="2DTestingRoomTopDown" type="Node2D"]
 script = ExtResource("1_hlxls")

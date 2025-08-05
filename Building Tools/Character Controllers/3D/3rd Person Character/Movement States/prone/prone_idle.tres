@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="MovementState" load_steps=2 format=3 uid="uid://chbh1gqya3t2g"]
 
-[ext_resource type="Script" path="res://Building Tools/Character Controllers/3D/3rd Person Character/movement_state.gd" id="1_brmer"]
+[ext_resource type="Script" uid="uid://b4gax0i8c6ifp" path="res://Building Tools/Character Controllers/3D/3rd Person Character/movement_state.gd" id="1_brmer"]
 
 [resource]
 script = ExtResource("1_brmer")

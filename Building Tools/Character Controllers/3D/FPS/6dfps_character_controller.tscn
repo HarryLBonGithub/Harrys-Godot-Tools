@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://3075ittygldj"]
 
-[ext_resource type="Script" path="res://Building Tools/Character Controllers/3D/FPS/6dfps_character_controller.gd" id="1_m1bbc"]
+[ext_resource type="Script" uid="uid://7hatx355g24r" path="res://Building Tools/Character Controllers/3D/FPS/6dfps_character_controller.gd" id="1_m1bbc"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_wlmqe"]
 radius = 1.0

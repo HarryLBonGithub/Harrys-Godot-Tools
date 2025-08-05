@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://de7t6wqk65bq5"]
 
-[ext_resource type="Script" path="res://Building Tools/Props/Handhelds/Tool Frame/tool_frame.gd" id="1_vpjjj"]
+[ext_resource type="Script" uid="uid://bokonpx70mr66" path="res://Building Tools/Props/Handhelds/Tool Frame/tool_frame.gd" id="1_vpjjj"]
 [ext_resource type="PackedScene" uid="uid://dim0l6a2xqttt" path="res://Building Tools/Props/Handhelds/Projectile Launcher/projectile_launcher.tscn" id="2_hjowm"]
 [ext_resource type="PackedScene" uid="uid://bf2avvuwarxgh" path="res://Building Tools/Props/Projectiles/Blaster Bolt/blaster_bolt.tscn" id="3_6o3fi"]
 [ext_resource type="AudioStream" uid="uid://dxamylo73r2t5" path="res://Building Tools/Filler Assets/Blaster Fire 2 Clipped.wav" id="4_3ixag"]

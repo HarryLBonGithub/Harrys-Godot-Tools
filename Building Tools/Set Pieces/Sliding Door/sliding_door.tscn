@@ -1,10 +1,10 @@
 [gd_scene load_steps=16 format=3 uid="uid://ra5ugkfqhc7"]
 
-[ext_resource type="Script" path="res://Building Tools/Set Pieces/Sliding Door/sliding_door_command.gd" id="1_4mfjc"]
+[ext_resource type="Script" uid="uid://sqhtcvfnp3s0" path="res://Building Tools/Set Pieces/Sliding Door/sliding_door_command.gd" id="1_4mfjc"]
 [ext_resource type="ArrayMesh" uid="uid://pwjni4rcasao" path="res://Building Tools/Filler Assets/Models/Basic Walls/HalfM_Wall_Door_Plain.obj" id="2_bclrb"]
 [ext_resource type="Texture2D" uid="uid://dsej1eqt5ypvf" path="res://Building Tools/Filler Assets/Models/Paints/1 Meter White Box.png" id="2_yfh7y"]
 [ext_resource type="PackedScene" uid="uid://b0gbga5dx5toq" path="res://Building Tools/Properties/Interaction/interaction.tscn" id="5_ssh5y"]
-[ext_resource type="PackedScene" path="res://Building Tools/Properties/Cursor Hint/cursor_hint.tscn" id="5_xyyg8"]
+[ext_resource type="PackedScene" uid="uid://ceysnlclxa1uf" path="res://Building Tools/Properties/Cursor Hint/cursor_hint.tscn" id="5_xyyg8"]
 [ext_resource type="AudioStream" uid="uid://co8cjueks00u6" path="res://Building Tools/Filler Assets/Sounds/Scifi Door Short.wav" id="6_j76ii"]
 [ext_resource type="AudioStream" uid="uid://bu5ps1uachmo2" path="res://Building Tools/Filler Assets/Sounds/Error 2.wav" id="7_hevmy"]
 
@@ -83,10 +83,10 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_d4qse"]
 _data = {
-"RESET": SubResource("Animation_xhugl"),
-"close": SubResource("Animation_jk2r4"),
-"default": SubResource("Animation_4fruo"),
-"open": SubResource("Animation_xjf6x")
+&"RESET": SubResource("Animation_xhugl"),
+&"close": SubResource("Animation_jk2r4"),
+&"default": SubResource("Animation_4fruo"),
+&"open": SubResource("Animation_xjf6x")
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_04n45"]

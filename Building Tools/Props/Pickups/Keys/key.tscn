@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://biny2b1a1w754"]
 
-[ext_resource type="Script" path="res://Building Tools/Props/Pickups/Keys/key.gd" id="1_t50on"]
-[ext_resource type="PackedScene" path="res://Building Tools/Properties/Cursor Hint/cursor_hint.tscn" id="2_1t7o0"]
-[ext_resource type="Script" path="res://Building Tools/Props/Pickups/Keys/Key_Interaction.gd" id="3_o4603"]
+[ext_resource type="Script" uid="uid://witxoeivrrj6" path="res://Building Tools/Props/Pickups/Keys/key.gd" id="1_t50on"]
+[ext_resource type="PackedScene" uid="uid://ceysnlclxa1uf" path="res://Building Tools/Properties/Cursor Hint/cursor_hint.tscn" id="2_1t7o0"]
+[ext_resource type="Script" uid="uid://b7318mtagct53" path="res://Building Tools/Props/Pickups/Keys/Key_Interaction.gd" id="3_o4603"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_s1rgg"]
 size = Vector3(0.1, 0.1, 0.25)

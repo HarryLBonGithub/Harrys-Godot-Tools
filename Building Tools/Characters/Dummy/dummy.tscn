@@ -1,15 +1,16 @@
-[gd_scene load_steps=26 format=3 uid="uid://dtg5r0ox5x83s"]
+[gd_scene load_steps=27 format=3 uid="uid://dtg5r0ox5x83s"]
 
 [ext_resource type="PackedScene" uid="uid://bgeyfohldmmx2" path="res://Building Tools/Properties/Health/health.tscn" id="1_u5hva"]
 [ext_resource type="PackedScene" path="res://Building Tools/Properties/Cursor Hint/cursor_hint.tscn" id="2_d50t5"]
-[ext_resource type="Script" path="res://Building Tools/Characters/Dummy/DummyCommand.gd" id="4_wknxs"]
+[ext_resource type="Script" uid="uid://dsg4jgylqexad" path="res://Building Tools/Characters/Dummy/DummyCommand.gd" id="4_wknxs"]
 [ext_resource type="PackedScene" uid="uid://ktotwtyoakkv" path="res://Building Tools/Organizers/Quests/quest_board.tscn" id="5_ywgqx"]
 [ext_resource type="Resource" uid="uid://b7teg4ycaac7a" path="res://Building Tools/Organizers/Quests/test quests/Dummy Quest.tres" id="6_68jck"]
 [ext_resource type="PackedScene" uid="uid://b0gbga5dx5toq" path="res://Building Tools/Properties/Interaction/interaction.tscn" id="6_a2dt1"]
+[ext_resource type="Script" uid="uid://cmvtosbnsokx2" path="res://Building Tools/Organizers/Quests/quest.gd" id="6_ujc53"]
 [ext_resource type="PackedScene" uid="uid://bgh0nuuiuk1em" path="res://Building Tools/Organizers/Messages/message_carrier.tscn" id="7_nutb2"]
-[ext_resource type="Script" path="res://Building Tools/Organizers/Messages/message.gd" id="8_vadvb"]
+[ext_resource type="Script" uid="uid://o4f1jge6qmd2" path="res://Building Tools/Organizers/Messages/message.gd" id="8_vadvb"]
 [ext_resource type="AudioStream" uid="uid://sjns1fcqmaj3" path="res://Building Tools/Organizers/Messages/Test Messages/D1 - Hi! I'm a dummy.wav" id="8_woare"]
-[ext_resource type="Script" path="res://Building Tools/Organizers/Messages/message_chain.gd" id="9_jyw3b"]
+[ext_resource type="Script" uid="uid://cjldijj1401qu" path="res://Building Tools/Organizers/Messages/message_chain.gd" id="9_jyw3b"]
 [ext_resource type="AudioStream" uid="uid://c5obcj22x7dn3" path="res://Building Tools/Organizers/Messages/Test Messages/D2 - Please go touch that floating cube.wav" id="10_souh1"]
 [ext_resource type="AudioStream" uid="uid://f65cvehkwjr1" path="res://Building Tools/Organizers/Messages/Test Messages/D3 - The cube awaits.wav" id="12_d2cet"]
 [ext_resource type="AudioStream" uid="uid://dhkt13s6yhgv4" path="res://Building Tools/Organizers/Messages/Test Messages/D4 - Thanks! It was too far for me to reach. And, as you can see, I have no legs.wav" id="13_vb0vv"]
@@ -90,7 +91,7 @@ script = ExtResource("4_wknxs")
 [node name="Interaction" parent="." instance=ExtResource("6_a2dt1")]
 
 [node name="QuestBoard" parent="." instance=ExtResource("5_ywgqx")]
-quests = Array[Resource("res://Building Tools/Organizers/Quests/quest.gd")]([ExtResource("6_68jck")])
+quests = Array[ExtResource("6_ujc53")]([ExtResource("6_68jck")])
 
 [node name="MessageCarrier" parent="." instance=ExtResource("7_nutb2")]
 messageChains = Array[ExtResource("9_jyw3b")]([SubResource("Resource_du51y"), SubResource("Resource_mh2e8"), SubResource("Resource_f65ur")])

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c1h4sh4rgqpbq"]
 
-[ext_resource type="Script" path="res://Building Tools/Props/Handhelds/Basic Hitscan Gun/HitscanGunBasic.gd" id="1_nhixu"]
+[ext_resource type="Script" uid="uid://npf65sdjifd1" path="res://Building Tools/Props/Handhelds/Basic Hitscan Gun/HitscanGunBasic.gd" id="1_nhixu"]
 [ext_resource type="AudioStream" uid="uid://bkgssfcgruuf8" path="res://Building Tools/Filler Assets/Gunshot Short.wav" id="2_xedna"]
 
 [node name="HitscanGunBasic" type="RayCast3D"]

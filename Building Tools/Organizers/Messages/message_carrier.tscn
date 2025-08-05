@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bgh0nuuiuk1em"]
 
-[ext_resource type="Script" path="res://Building Tools/Organizers/Messages/message_carrier.gd" id="1_5e3kj"]
+[ext_resource type="Script" uid="uid://cp5rfj7s567il" path="res://Building Tools/Organizers/Messages/message_carrier.gd" id="1_5e3kj"]
 
 [node name="MessageCarrier" type="Node"]
 script = ExtResource("1_5e3kj")
